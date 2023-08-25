@@ -25,7 +25,10 @@ class OpsImageOverlay : public QFrame, public Ui::OpsImageOverlay
         virtual ~OpsImageOverlay() override = default;
         void syncOptions();
         QTableWidget *table();
+        QGroupBox *tableTitleBox();
         QPlainTextEdit *statusDisplay();
+        QPushButton *solvePushButton();
+        QComboBox *solverProfile();
 
     private slots:
         void slotApply();

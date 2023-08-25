@@ -6,11 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>382</width>
-    <height>500</height>
+    <width>431</width>
+    <height>493</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="imageOverlayVerticalLayout_2">
+   <property name="spacing">
+    <number>3</number>
+   </property>
+   <property name="leftMargin">
+    <number>3</number>
+   </property>
+   <property name="topMargin">
+    <number>3</number>
+   </property>
+   <property name="rightMargin">
+    <number>3</number>
+   </property>
+   <property name="bottomMargin">
+    <number>3</number>
+   </property>
    <item>
     <widget class="QGroupBox" name="ImageOverlayBox">
      <property name="maximumSize">
@@ -20,50 +35,51 @@
       </size>
      </property>
      <property name="title">
-      <string>Image Overlay Options</string>
+      <string>Settings</string>
      </property>
      <layout class="QVBoxLayout">
+      <property name="spacing">
+       <number>3</number>
+      </property>
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
+       <number>3</number>
+      </property>
       <item>
        <layout class="QVBoxLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QCheckBox" name="kcfg_ShowImageOverlays">
           <property name="text">
-           <string>Show image overlay</string>
+           <string>Show image overlays</string>
           </property>
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="imageOverlayDirLayout">
-          <item>
-           <widget class="QLabel" name="imageOverlayFileLabel">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="whatsThis">
-             <string>Specify the image overlay directory to use.</string>
-            </property>
-            <property name="text">
-             <string>Image overlay directory:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="kcfg_ImageOverlayDirectory">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QCheckBox" name="kcfg_ShowSelectedImageOverlay">
+          <property name="toolTip">
+           <string>Center SkyMap over the selected overlay image in the table below (if it's solved).</string>
+          </property>
+          <property name="text">
+           <string>Center SkyMap on selection</string>
+          </property>
+         </widget>
         </item>
         <item>
          <layout class="QHBoxLayout" name="imageOverlayMaxDimensionLayout">
+          <property name="spacing">
+           <number>3</number>
+          </property>
           <item>
            <widget class="QLabel" name="imageOverlayMaxDimensionLabel">
             <property name="sizePolicy">
@@ -118,6 +134,50 @@
             </property>
            </spacer>
           </item>
+          <item>
+           <widget class="QPushButton" name="imageOverlayShowDirButton">
+            <property name="toolTip">
+             <string>Open overlay directory. Copy or move images to this directory to process them.</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font-weight:bold;</string>
+            </property>
+            <property name="text">
+             <string>Overlay Directory</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="refreshB">
+            <property name="minimumSize">
+             <size>
+              <width>28</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>28</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Refresh from the overlay directory. Add overlays that have been added there, and remove overlays that are no longer there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset theme="system-reboot"/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>28</width>
+              <height>28</height>
+             </size>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
        </layout>
@@ -131,6 +191,21 @@
       <string>Image Overlays</string>
      </property>
      <layout class="QVBoxLayout" name="ImageOverlayTableLayout">
+      <property name="spacing">
+       <number>3</number>
+      </property>
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
+       <number>3</number>
+      </property>
       <item>
        <widget class="QTableWidget" name="imageOverlayTable">
         <property name="sizePolicy">
@@ -149,6 +224,9 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="imageOverlayButtonLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QPushButton" name="solveButton">
           <property name="maximumSize">
@@ -158,7 +236,7 @@
            </size>
           </property>
           <property name="toolTip">
-           <string>Plate solve the selected overlay image(s). Uses the Align profiles, but not scale nor position.</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Plate solve the selected overlay image(s).&lt;/p&gt;&lt;p&gt;Uses the selected Align profile to the right, but not Align scale nor position. It will use the default scale to the right (a-s/px), if none is given on the table row and scale column (0 is no scale constraint). It will not use a position unless RA and DEC are entered on the table row. Uses the timeout above. You can select many rows (with click and shift click) and it will attempt to solve them all.&lt;/p&gt;&lt;p&gt;Plate solving may be difficult. You may not be able to plate solve all your images. You can try to supply scales and positions, and try different profiles. If you are unsuccessful, but still want to display an image, you can enter an RA, DEC, Scale, Orientation in the appropriate columns for the row you're interested in, then manually set the Status column to OK.&lt;/p&gt;&lt;p&gt;You cannot re-platesolve a row whose status is OK, but you can manually change the status to something else, then plate-solving is enabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
            <string>Solve</string>
@@ -166,34 +244,97 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="abortButton">
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>16777215</height>
-           </size>
+         <widget class="QComboBox" name="imageOverlaySolverProfile">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>Abort the plate solve.</string>
+           <string>Selects the Options Profile (from Align) to use for Plate Solving</string>
           </property>
-          <property name="text">
-           <string>Abort</string>
+          <property name="currentIndex">
+           <number>-1</number>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="showButton">
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>16777215</height>
-           </size>
+         <widget class="QLabel" name="imageOverlayScaleLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>Center SkyMap over the selected overlay image (if it's solved).</string>
+           <string>Default arcsec/px scale to use in solving. 0 is none. Would use what's in table if there.</string>
           </property>
           <property name="text">
-           <string>Show</string>
+           <string>Default a-s/px</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="kcfg_ImageOverlayDefaultScale">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Default arcsec/px scale to use in solving. 0 is none. Would use what's in table if there.</string>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="imageOverlayTimeoutLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Timeout for plate-solving an overlay image (seconds).</string>
+          </property>
+          <property name="text">
+           <string>Timeout</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="kcfg_ImageOverlayTimeout">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Timeout for plate-solving an overlay image (seconds).</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>200</number>
+          </property>
+          <property name="value">
+           <number>30</number>
           </property>
          </widget>
         </item>
@@ -251,7 +392,9 @@
  <tabstops>
   <tabstop>kcfg_ShowImageOverlays</tabstop>
   <tabstop>kcfg_ImageOverlayMaxDimension</tabstop>
-  <tabstop>kcfg_ImageOverlayDirectory</tabstop>
+  <tabstop>kcfg_ShowSelectedImageOverlay</tabstop>
+  <tabstop>kcfg_ImageOverlayTimeout</tabstop>
+  <tabstop>kcfg_ImageOverlayDefaultScale</tabstop>
  </tabstops>
  <resources/>
  <connections/>

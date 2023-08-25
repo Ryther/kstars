@@ -59,6 +59,7 @@ class OpsSolarSystem;
 class OpsSatellites;
 class OpsSupernovae;
 class OpsTerrain;
+class OpsImageOverlay;
 class OpsDeveloper;
 class OpsColors;
 class OpsAdvanced;
@@ -766,6 +767,9 @@ class KStars : public KXmlGuiWindow
         /** Toggle whether to show the terrain image on the skymap. */
         void slotTerrain();
 
+        /** Toggle whether to show image overlays on the skymap. */
+        void slotImageOverlays();
+
         /** Save data to config file before exiting.*/
         void slotAboutToQuit();
 
@@ -912,6 +916,7 @@ class KStars : public KXmlGuiWindow
         OpsCatalog *opcatalog { nullptr };
         OpsGuides *opguides { nullptr };
         OpsTerrain *opterrain { nullptr };
+        OpsImageOverlay *opsImageOverlay { nullptr };
         OpsDeveloper *opsdeveloper { nullptr };
         OpsSolarSystem *opsolsys { nullptr };
         OpsSatellites *opssatellites { nullptr };

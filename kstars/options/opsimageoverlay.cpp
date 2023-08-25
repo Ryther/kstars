@@ -7,6 +7,7 @@
 #include "opsimageoverlay.h"
 
 #include "ksfilereader.h"
+#include "kspaths.h"
 #include "kstars.h"
 #include "kstarsdata.h"
 #include "Options.h"
@@ -19,6 +20,7 @@
 #include <QPushButton>
 #include <QFileDialog>
 #include <QPushButton>
+#include <QDesktopServices>
 
 OpsImageOverlay::OpsImageOverlay() : QFrame(KStars::Instance())
 {
@@ -33,10 +35,33 @@ OpsImageOverlay::OpsImageOverlay() : QFrame(KStars::Instance())
                 KStarsData::Instance()->skyComposite()->imageOverlay());
     connect(solveButton, &QPushButton::clicked, overlayComponent, &ImageOverlayComponent::startSolving,
             Qt::UniqueConnection);
-    connect(abortButton, &QPushButton::clicked, overlayComponent, &ImageOverlayComponent::abortSolving,
+    connect(refreshB, &QPushButton::clicked, overlayComponent, &ImageOverlayComponent::reload,
             Qt::UniqueConnection);
-    //connect(reloadButton, &QPushButton::clicked, overlayComponent, &ImageOverlayComponent::reload, Qt::UniqueConnection);
-    connect(showButton, &QPushButton::clicked, overlayComponent, &ImageOverlayComponent::show, Qt::UniqueConnection);
+    connect(kcfg_ShowImageOverlays, &QCheckBox::stateChanged, [](int state)
+    {
+        Options::setShowImageOverlays(state);
+    });
+    connect(kcfg_ShowSelectedImageOverlay, &QCheckBox::stateChanged, [](int state)
+    {
+        Options::setShowSelectedImageOverlay(state);
+    });
+    connect(kcfg_ImageOverlayMaxDimension, QOverload<int>::of(&QSpinBox::valueChanged), [](int value)
+    {
+        Options::setImageOverlayMaxDimension(value);
+    });
+    connect(kcfg_ImageOverlayTimeout, QOverload<int>::of(&QSpinBox::valueChanged), [](int value)
+    {
+        Options::setImageOverlayTimeout(value);
+    });
+    connect(kcfg_ImageOverlayDefaultScale, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [](double value)
+    {
+        Options::setImageOverlayDefaultScale(value);
+    });
+    connect(imageOverlayShowDirButton, &QPushButton::clicked, []()
+    {
+        QDesktopServices::openUrl(QUrl::fromLocalFile(QDir(KSPaths::writableLocation(
+                                      QStandardPaths::AppLocalDataLocation)).filePath("imageOverlays")));
+    });
 
     syncOptions();
 }
@@ -46,16 +71,31 @@ QTableWidget *OpsImageOverlay::table ()
     return imageOverlayTable;
 }
 
+QGroupBox *OpsImageOverlay::tableTitleBox()
+{
+    return ImageOverlayTableBox;
+}
+
 QPlainTextEdit *OpsImageOverlay::statusDisplay ()
 {
     return imageOverlayStatus;
+}
+
+QPushButton *OpsImageOverlay::solvePushButton ()
+{
+    return solveButton;
+}
+QComboBox *OpsImageOverlay::solverProfile ()
+{
+    return imageOverlaySolverProfile;
 }
 
 void OpsImageOverlay::syncOptions()
 {
     kcfg_ShowImageOverlays->setChecked(Options::showImageOverlays());
     kcfg_ImageOverlayMaxDimension->setValue(Options::imageOverlayMaxDimension());
-    kcfg_ImageOverlayDirectory->setText(KStarsData::Instance()->skyComposite()->imageOverlay()->directory());
+    kcfg_ImageOverlayTimeout->setValue(Options::imageOverlayTimeout());
+    kcfg_ImageOverlayDefaultScale->setValue(Options::imageOverlayDefaultScale());
 }
 
 void OpsImageOverlay::slotApply()

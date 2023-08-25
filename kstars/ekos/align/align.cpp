@@ -975,7 +975,7 @@ QList<double> Align::telescopeInfo()
 {
     QList<double> result;
 
-    result << m_FocalLength << m_Aperture;
+    result << m_FocalLength << m_Aperture << m_Reducer;
 
     return result;
 }
@@ -3997,7 +3997,7 @@ void Align::refreshOpticalTrain()
 
         // DSLR Lens Aperture
         if (m_Aperture < 0 && m_FocalRatio > 0)
-            m_Aperture = m_FocalLength * m_FocalRatio;
+            m_Aperture = m_FocalLength / m_FocalRatio;
 
         auto mount = OpticalTrainManager::Instance()->getMount(name);
         setMount(mount);

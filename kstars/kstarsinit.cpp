@@ -269,6 +269,11 @@ void KStars::initActions()
                 i18n("Show Terrain"))
             << QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_T);
 
+    actionCollection()->addAction("toggle_image_overlays", this, SLOT(slotImageOverlays()))
+            << (Options::showImageOverlays() ? i18n("Hide Image Overlays") :
+                i18n("Show Image Overlays"))
+            << QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_O);
+
     actionCollection()->addAction("project_lambert", this, SLOT(slotMapProjection()))
             << i18n("&Lambert Azimuthal Equal-area") << QKeySequence("F5") << AddToGroup(projectionGroup)
             << Checked(Options::projection() == Projector::Lambert);
@@ -780,9 +785,9 @@ void KStars::repopulateHIPS()
     for (auto &action : actions)
         hipsGroup->removeAction(action);
 
-    QAction *ka = actionCollection()->addAction(i18n("None"), this, SLOT(slotHIPSSource()))
-                  << i18n("None") << AddToGroup(hipsGroup)
-                  << Checked(Options::hIPSSource() == "None");
+    auto ka = actionCollection()->addAction(i18n("None"), this, SLOT(slotHIPSSource()))
+              << i18n("None") << AddToGroup(hipsGroup)
+              << Checked(Options::hIPSSource() == "None");
 
     hipsActionMenu->addAction(ka);
     hipsActionMenu->addSeparator();
@@ -791,9 +796,11 @@ void KStars::repopulateHIPS()
     {
         QString title = source.value("obs_title");
 
-        QAction *newAction = actionCollection()->addAction(title, this, SLOT(slotHIPSSource()))
-                             << title << AddToGroup(hipsGroup)
-                             << Checked(Options::hIPSSource() == title);
+        auto newAction = actionCollection()->addAction(title, this, SLOT(slotHIPSSource()))
+                         << title << AddToGroup(hipsGroup)
+                         << Checked(Options::hIPSSource() == title);
+
+        newAction->setDisabled(Options::hIPSUseOfflineSource() && title != "DSS Colored");
 
         hipsActionMenu->addAction(newAction);
     }
