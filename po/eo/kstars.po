@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-03 00:39+0000\n"
-"PO-Revision-Date: 2023-11-02 19:54+0100\n"
-"Last-Translator: okellogg <okellogg@users.sourceforge.net>\n"
+"POT-Creation-Date: 2023-11-09 00:39+0000\n"
+"PO-Revision-Date: 2023-11-04 19:54+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -3593,7 +3593,7 @@ msgstr "Ne eblis ĝisdatigi la uzantprotokolo."
 msgid "No connected mounts found."
 msgstr "Neniuj konektitaj muntiloj trovitaj."
 
-#: dialogs/detaildialog.cpp:1119 fitsviewer/fitslabel.cpp:436
+#: dialogs/detaildialog.cpp:1119 fitsviewer/fitslabel.cpp:447
 #: kstarsactions.cpp:291 tools/observinglist.cpp:698
 #: tools/whatsinteresting/wiview.cpp:350
 #, kde-format
@@ -14484,84 +14484,7 @@ msgstr "Celo"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, formatLabel)
 #: ekos/capture/capture.ui:1094
-#, fuzzy, no-c-format, kde-format
-#| msgid ""
-#| "<html><head/><body><p>Format is used to define the image file names by "
-#| "the use of placeholder tags.</p><ul style=\"margin-top: 0px; margin-"
-#| "bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"
-#| "\"><li style=\" margin-top:12px; margin-bottom:0px; margin-left:0px; "
-#| "margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Placeholder<span "
-#| "style=\" font-weight:704;\"> %f</span> or <span style=\" font-weight:704;"
-#| "\">%filename</span>: The name of the .esq file, without extension.</"
-#| "li><li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-#| "margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Placeholder<span "
-#| "style=\" font-weight:704;\"> %D</span> or <span style=\" font-weight:704;"
-#| "\">%Datetime</span>: The current time and date <span style=\" font-"
-#| "weight:704;\">when the file is saved.</span></li><li style=\" margin-"
-#| "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-#| "indent:0; text-indent:0px;\">Placeholder<span style=\" font-weight:704;"
-#| "\"> %T</span> or <span style=\" font-weight:704;\">%Type</span>: The "
-#| "frame type eg: 'Light', 'Bias', 'Dark', 'Flat'...</li><li style=\" margin-"
-#| "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-#| "indent:0; text-indent:0px;\">Placeholder<span style=\" font-weight:704;"
-#| "\"> %e</span> or <span style=\" font-weight:704;\">%exposure</span>: The "
-#| "exposure duration in seconds, with '_secs' as suffix.</li><ul style="
-#| "\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: "
-#| "0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; margin-"
-#| "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-#| "indent:0px;\">Placeholder<span style=\" font-weight:704;\"> %E</span> or "
-#| "<span style=\" font-weight:704;\">%exp</span>: The exposure duration in "
-#| "seconds as plain number, whithout any unit as suffix.</li></ul><li style="
-#| "\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -"
-#| "qt-block-indent:0; text-indent:0px;\">Placeholder<span style=\" font-"
-#| "weight:704;\"> %F</span> or <span style=\" font-weight:704;\">%Filter</"
-#| "span>: The active filter name.</li><li style=\" margin-top:0px; margin-"
-#| "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-#| "indent:0px;\">Placeholder<span style=\" font-weight:704;\"> %t</span> or "
-#| "<span style=\" font-weight:704;\">%target</span>: The Target name.</"
-#| "li><li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-#| "margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Placeholder "
-#| "<span style=\" font-weight:600;\">%C</span> or <span style=\" font-"
-#| "weight:600;\">%temperature</span>: The camera temperature of capturing.</"
-#| "li><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; "
-#| "margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; "
-#| "margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-#| "text-indent:0px;\">Placeholder <span style=\" font-weight:600;\">%B</"
-#| "span> or <span style=\" font-weight:600;\">%bin</span>: The binning "
-#| "configured for capturing.</li><li style=\" margin-top:0px; margin-"
-#| "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-#| "indent:0px;\">Placeholder <span style=\" font-weight:600;\">%G</span> or "
-#| "<span style=\" font-weight:600;\">%gain</span>: The gain configured for "
-#| "capturing.</li></ul><li style=\" margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\">Placeholder <span style=\" font-weight:600;\">%O</span> or <span style="
-#| "\" font-weight:600;\">%offset</span>: The offset configured for capturing."
-#| "</li><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; "
-#| "margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; "
-#| "margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-#| "text-indent:0px;\">Placeholder <span style=\" font-weight:600;\">%I</"
-#| "span> or <span style=\" font-weight:600;\">%iso</span>: The ISO value "
-#| "(DSLRs only).</li></ul><li style=\" margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\">Placeholder <span style=\" font-weight:600;\">%P</span> or <span style="
-#| "\" font-weight:600;\">%pierside</span>: The current mount's pier side.</"
-#| "li><li style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; "
-#| "margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Placeholder<span "
-#| "style=\" font-weight:704;\"> %s*</span> or <span style=\" font-weight:704;"
-#| "\">%sequence</span>: The image sequence identifier where * is the number "
-#| "of digits used (1-9). <span style=\" font-weight:704;\">This tag is "
-#| "mandatory and must be the last element in the format.</span></li></"
-#| "ul><p>Arbitrary text may also be included within the Format string, <span "
-#| "style=\" font-weight:704;\">except the % and \\ characters.</span> The / "
-#| "path character can be used to define arbitrary directories.</p><p>Notes:</"
-#| "p><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; "
-#| "margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; "
-#| "margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-#| "text-indent:0px;\">Tags are case sensitive in both their short and long "
-#| "forms.</li><li style=\" margin-top:0px; margin-bottom:0px; margin-"
-#| "left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Only "
-#| "use the %Datetime tag in the filename portion of the format, not in the "
-#| "path definition.</li></ul></body></html>"
+#, no-c-format, kde-format
 msgid ""
 "<html><head/><body><p>Format is used to define the image file names by the "
 "use of placeholder tags.</p><ul style=\"margin-top: 0px; margin-bottom: 0px; "
@@ -27716,40 +27639,40 @@ msgstr "Malsukcesis ĝisdatigi historion: %1"
 msgid "Failed to write image: %1"
 msgstr "Malsukcesis skribi bildon: %1"
 
-#: fitsviewer/fitsdata.cpp:2778 fitsviewer/fitsdata.cpp:2789
-#: fitsviewer/fitsdata.cpp:2825 fitsviewer/fitsdata.cpp:2861
-#: fitsviewer/fitsdata.cpp:2908
+#: fitsviewer/fitsdata.cpp:2780 fitsviewer/fitsdata.cpp:2791
+#: fitsviewer/fitsdata.cpp:2827 fitsviewer/fitsdata.cpp:2863
+#: fitsviewer/fitsdata.cpp:2910
 #, kde-format
 msgid "No world coordinate systems found."
 msgstr "Neniuj mondaj koordinatsistemoj trovitaj."
 
-#: fitsviewer/fitsdata.cpp:3630
+#: fitsviewer/fitsdata.cpp:3632
 #, kde-format
 msgid "Only 8 and 16 bits bayered images supported."
 msgstr "Nur 8 kaj 16 bitoj bayeritaj bildoj subtenataj."
 
-#: fitsviewer/fitsdata.cpp:3663
+#: fitsviewer/fitsdata.cpp:3665
 #, kde-format
 msgid "Unsupported bayer pattern %1."
 msgstr "Nesubtenata bayer-ŝablono %1."
 
-#: fitsviewer/fitsdata.cpp:3694
+#: fitsviewer/fitsdata.cpp:3696
 #, kde-format
 msgid "Unsupported bayer offsets %1 %2."
 msgstr "Nesubtenata bayer kompensas %1 %2."
 
-#: fitsviewer/fitsdata.cpp:3762 fitsviewer/fitsdata.cpp:3809
-#: fitsviewer/fitsdata.cpp:3854 fitsviewer/fitsdata.cpp:3901
+#: fitsviewer/fitsdata.cpp:3764 fitsviewer/fitsdata.cpp:3811
+#: fitsviewer/fitsdata.cpp:3856 fitsviewer/fitsdata.cpp:3903
 #, kde-format
 msgid "Unable to allocate memory for temporary bayer buffer: %1"
 msgstr "Ne eblas atribui memoron por provizora bayer-bufro: %1"
 
-#: fitsviewer/fitsdata.cpp:3772 fitsviewer/fitsdata.cpp:3864
+#: fitsviewer/fitsdata.cpp:3774 fitsviewer/fitsdata.cpp:3866
 #, kde-format
 msgid "Unable to allocate memory for temporary bayer buffer."
 msgstr "Ne eblas atribui memoron por provizora bayer-bufro."
 
-#: fitsviewer/fitsdata.cpp:3792 fitsviewer/fitsdata.cpp:3884
+#: fitsviewer/fitsdata.cpp:3794 fitsviewer/fitsdata.cpp:3886
 #, kde-format
 msgid "Debayer failed (%1)"
 msgstr "Debayer malsukcesis (%1)"
@@ -27949,18 +27872,12 @@ msgstr "B"
 msgid "Apply"
 msgstr "Apliki"
 
-#: fitsviewer/fitslabel.cpp:284
-#, kde-format
-msgctxt "Half Flux Radius"
-msgid "HFR: %1"
-msgstr "HFR: %1"
-
-#: fitsviewer/fitslabel.cpp:342 tools/whatsinteresting/wiview.cpp:332
+#: fitsviewer/fitslabel.cpp:353 tools/whatsinteresting/wiview.cpp:332
 #, kde-format
 msgid "Continue Slew"
 msgstr "Daŭrigi Turniĝon"
 
-#: fitsviewer/fitslabel.cpp:425 fitsviewer/fitslabel.cpp:452
+#: fitsviewer/fitslabel.cpp:436 fitsviewer/fitslabel.cpp:463
 #, kde-format
 msgid "KStars did not find any active mounts."
 msgstr "KStars ne trovis aktivajn muntaĵojn."
@@ -83346,3 +83263,7 @@ msgstr "Fona koloro:"
 #, kde-format
 msgid "Set the color for the background."
 msgstr "Agordu la koloron por la fono."
+
+#~ msgctxt "Half Flux Radius"
+#~ msgid "HFR: %1"
+#~ msgstr "HFR: %1"
