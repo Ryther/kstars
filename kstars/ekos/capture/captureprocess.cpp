@@ -908,7 +908,7 @@ IPState CaptureProcess::resumeSequence()
         }
 
         // set state to capture preparation
-        state()->setCaptureState(CAPTURE_PROGRESS);
+        state()->setCaptureState(CAPTURE_CALIBRATING);
 
         // JM 2020-12-06: Check if we need to execute pre-capture script first.
         if (runCaptureScript(SCRIPT_PRE_CAPTURE) == IPS_BUSY)
@@ -2507,7 +2507,7 @@ bool CaptureProcess::saveSequenceQueue(const QString &path)
         outstream << "<Calibration>" << Qt::endl;
         outstream << "<PreAction>" << Qt::endl;
         outstream << QString("<Type>%1</Type>").arg(job->getCalibrationPreAction()) << Qt::endl;
-        if (job->getCalibrationPreAction() == ACTION_WALL)
+        if (job->getCalibrationPreAction() & ACTION_WALL)
         {
             outstream << "<Az>" << cLocale.toString(job->getWallCoord().az().Degrees()) << "</Az>" << Qt::endl;
             outstream << "<Alt>" << cLocale.toString(job->getWallCoord().alt().Degrees()) << "</Alt>" << Qt::endl;
