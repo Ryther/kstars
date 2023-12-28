@@ -30,14 +30,14 @@
 <para
 >Per a les estreles properes, mesurar la <link linkend="ai-parallax"
 >paral·laxi</link
-> és possible i s'obté la distància a l'estrela. </para>
+> és possible i s'obté la distància fins a l'estrela. </para>
 </sect2>
 
 <sect2>
 <title
 >Espelmes estàndard</title>
 <para
->Les «espelmes estàndard» són objectes amb una lluentor intrínseca que podem saber del cert. La <link linkend="ai-magnitude"
+>Les «espelmes estàndard» són objectes amb una brillantor intrínseca que podem saber del cert. La <link linkend="ai-magnitude"
 >magnitud</link
 > aparent, la qual és fàcil de mesurar, ens explica com pareix de brillant un objecte, no el brillant que és en realitat. Els objectes distants pareixen menys brillants, pel fet que la seua llum s'estén sobre una àrea més amplia. </para
 ><para
@@ -55,7 +55,7 @@
 >parsecs</link
 >. </para>
 <para
->Per a estos objectes d'espelma estàndard especials, tenim una altra manera de conéixer la seua lluminositat intrínseca, i per tant podrem calcular la seua distància. </para>
+>Per a estos objectes d'espelma estàndard especials, tenim una altra manera de conéixer la seua brillantor intrínseca, i per tant podrem calcular la seua distància. </para>
 <para
 >Les «espelmes estàndard» d'ús general en l'astronomia són: <itemizedlist>
 
@@ -88,11 +88,11 @@
 >mètode de moviment del cúmul</firstterm
 > i el <firstterm
 >mètode d'ajust de la seqüència principal</firstterm
->. La <firstterm
+>. Es pot utilitzar la <firstterm
 >relació de Tully-Fisher</firstterm
-> que es referix a la lluminositat d'una galàxia espiral a la seua rotació es pot utilitzar per a trobar el mòdul de la distància, ja que la rotació d'una galàxia és fàcil de mesurar utilitzant l'<firstterm
+> que relaciona la brillantor d'una galàxia espiral amb la seua rotació per a trobar el mòdul de la distància, ja que la rotació d'una galàxia és fàcil de mesurar utilitzant l'<firstterm
 >efecte Doppler</firstterm
->. Les distàncies a les galàxies distants es troben mesurant el <firstterm
+>. Les distàncies fins a les galàxies distants es troben mesurant el <firstterm
 >desplaçament cap al roig</firstterm
 >, el qual és el desplaçament cap al roig de la llum de galàxies distants resultant de l'expansió de l'univers. </para>
 <para

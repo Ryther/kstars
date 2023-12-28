@@ -134,7 +134,7 @@
 >El telescopi necessita ser alineat abans de poder-lo utilitzar correctament. Alineeu-lo (alineació d'una o dues estreles) segons l'il·lustrat en el vostre manual del telescopi. </para>
 
 <para
->&kstars; necessita verificar la configuració de temps i emplaçament abans de connectar amb el telescopi. Açò assegura un seguiment i sincronització adequada entre el telescopi i &kstars;. Els passos següents vos permetran connectar amb un dispositiu que estiga connectat amb el vostre ordinador. Per a connectar i controlar els dispositius remots, per favor, consulteu la secció <link linkend="indi-remote-control"
+>&kstars; necessita verificar la configuració del temps i l'emplaçament abans de connectar amb el telescopi. Açò assegura un seguiment i sincronització adequada entre el telescopi i &kstars;. Els passos següents vos permetran connectar amb un dispositiu que estiga connectat amb el vostre ordinador. Per a connectar i controlar els dispositius remots, per favor, consulteu la secció <link linkend="indi-remote-control"
 >control remot del dispositiu</link
 >. </para>
 
@@ -181,7 +181,7 @@
 >, o prement la icona amb forma de <guiicon
 >rellotge</guiicon
 > que hi ha en la barra d'eines. La finestra <guilabel
->Establiu la data i l'hora</guilabel
+>Establiment del temps</guilabel
 > utilitza un giny selector de dates estàndard de &kde;. Si sempre necessiteu reajustar el rellotge al temps actual, senzillament seleccioneu <menuchoice
 ><guimenu
 >Temps</guimenu
@@ -230,7 +230,7 @@
 <title
 >Configuracions freqüents</title>
 <para
->No vos caldrà establir l'emplaçament geogràfic i l'hora cada vegada que connecteu a un telescopi. Ajusteu tan sols les preferències necessàries. </para
+>No vos caldrà establir l'emplaçament geogràfic i el temps cada vegada que connecteu amb un telescopi. Ajusteu tan sols les preferències necessàries. </para
 ></note>
 
 <para
@@ -290,7 +290,7 @@
 >Control principal</guilabel
 > i <guilabel
 >Opcions</guilabel
->: Les característiques són l'element clau en l'arquitectura INDI. Cada dispositiu definix un joc de propietats per a comunicar-se amb el client. La posició actual del telescopi és un exemple d'una propietat. Semànticament, les propietats similars són usualment contingudes en blocs lògics o agrupacions. </para>
+>: Les característiques són l'element clau en l'arquitectura INDI. Cada dispositiu definix un conjunt de propietats per a comunicar-se amb el client. La posició actual del telescopi és un exemple d'una propietat. Semànticament, les propietats similars estan usualment contingudes en blocs lògics o agrupacions. </para>
 </listitem>
 
 <listitem>
@@ -424,8 +424,8 @@
 >. </para>
 
 <para
->FITS és el format estàndard de les captures d'imatge. Una vegada capturada i descarregada, esta serà mostrada automàticament pel <link linkend="tool-fitsviewer"
->visor FITS</link
+>FITS és el format estàndard de les captures d'imatge. Una vegada capturada i descarregada, esta serà mostrada automàticament pel <link linkend="fitsviewer"
+>visor de FITS</link
 > de &kstars;. </para>
 </sect1>
 
@@ -510,19 +510,19 @@
 ><para
 ><guilabel
 >&kstars; actualitza tots els dispositius</guilabel
->: &kstars; és la font mestra de la configuració per al temps i l'emplaçament. Tots els dispositius INDI sincronitzaran esta configuració amb la de &kstars;.</para
+>: &kstars; és la font mestra de la configuració del temps i l'emplaçament. Tots els dispositius INDI sincronitzaran esta configuració amb la de &kstars;.</para
 ></listitem>
       <listitem
 ><para
 ><guilabel
 >La muntura actualitza &kstars;</guilabel
->: El comandament de la muntura és la font mestra de la configuració del temps i emplaçament. &kstars; sincronitzarà esta configuració amb la del controlador.</para
+>: El comandament de la muntura és la font mestra de la configuració del temps i l'emplaçament. &kstars; sincronitzarà esta configuració amb la del controlador.</para
 ></listitem>
       <listitem
 ><para
 ><guilabel
 >El GPS actualitza &kstars;</guilabel
->: El controlador del GPS és la font mestra de la configuració del temps i emplaçament. &kstars; sincronitzarà esta configuració amb la del GPS.</para
+>: El controlador del GPS és la font mestra de la configuració del temps i l'emplaçament. &kstars; sincronitzarà esta configuració amb la del GPS.</para
 ></listitem>
       <listitem
 ><para
@@ -548,7 +548,7 @@
 ><para
 ><guilabel
 >Punt de mira del telescopi:</guilabel
-> Quan està marcada, &kstars; mostrarà el punt de mira de l'objectiu del telescopi en el mapa celeste. El punt de mira es mostra després d'una connexió amb èxit amb el telescopi, i el seu emplaçament és actualitzat periòdicament. El nom del telescopi es mostra al costat del punt de mira. &kstars; mostrarà un punt de mira per a cada telescopi connectat. Per a canviar el color del punt de mira del telescopi, obriu la finestra <link linkend="viewops"
+> Quan se selecciona, &kstars; mostrarà el punt de mira de l'objectiu del telescopi en el mapa celeste. El punt de mira es mostra després d'una connexió amb èxit amb el telescopi, i el seu emplaçament és actualitzat periòdicament. El nom del telescopi es mostra al costat del punt de mira. &kstars; mostrarà un punt de mira per a cada telescopi connectat. Per a canviar el color del punt de mira del telescopi, obriu la finestra <link linkend="viewops"
 >Configuració de &kstars;</link
 >. Seleccioneu la pàgina <guilabel
 >Colors</guilabel
@@ -561,7 +561,7 @@
 ><guilabel
 >Finestra independent</guilabel
 >: Fa que la finestra del <guilabel
->Visor FITS</guilabel
+>Visor de FITS</guilabel
 > siga independent.</para
 ></listitem>
       <listitem
@@ -732,7 +732,7 @@
 </listitem>
 <listitem>
 <para
->Hora: L'hora estàndard per a totes les comunicacions relacionades amb INDI és UTC (temps universal) especificada com a YYYY-MM-DDTHH:MM:SS d'acord amb l'ISO 8601. &kstars; comunica automàticament l'hora UTC correcta amb els controladors dels dispositius. Podeu in/habilitar dites actualitzacions automàtiques de l'hora des de la pàgina <guilabel
+>Temps: El temps estàndard per a totes les comunicacions relacionades amb INDI és UTC (temps universal) especificat com a YYYY-MM-DDTHH:MM:SS d'acord amb l'ISO 8601. &kstars; comunica automàticament el temps UTC correcte amb els controladors dels dispositius. Podeu in/habilitar dites actualitzacions automàtiques des de la pàgina <guilabel
 >INDI</guilabel
 > en el diàleg de configuració. </para>
 </listitem>
@@ -814,7 +814,7 @@
 >mapa celeste</guilabel
 > o <guilabel
 >Quadro de control INDI</guilabel
-> exactament segons el descrit a la secció <link linkend="indi-kstars-setup"
+> exactament segons el descrit en la secció <link linkend="indi-kstars-setup"
 >local/servidor</link
 >. És tan fàcil com açò. </para>
 
@@ -825,7 +825,7 @@
 >Mentre que &kstars; us permet desplegar amb facilitat un servidor INDI; podeu iniciar un servidor INDI des de la línia d'ordres. </para>
 
 <para
->Atés que INDI és un component de dorsal independent, podeu iniciar un servidor INDI en un client sense &kstars;. INDI es pot compilar per separat per a funcionar sobre les màquines remotes. A més, els controladors de dispositius registren missatges a <constant
+>Atés que INDI és un component de dorsal independent, podeu iniciar un servidor INDI en un amfitrió sense &kstars;. INDI es pot compilar per separat per a funcionar sobre els amfitrions remots. A més, els controladors de dispositius registren missatges a <constant
 >stderr</constant
 > (eixida d'error estàndard) i açò pot ser d'ajuda en una situació de depuració. La sintaxi per al servidor INDI és la següent: </para>
 
@@ -1027,7 +1027,7 @@ controlador : Executable o [dispositiu]@amfitrió[:port]
 </question>
 <answer>
 <para
->Sí. Podeu iniciar un servidor INDI a la màquina connectada amb el vostre telescopi i el servidor escoltarà les peticions dels clients des de &kstars;. Una vegada connectat, el podreu controlar directament des del mapa celeste. Este procediment es descriu en detall en la secció <link linkend="indi-remote-control"
+>Sí. Podeu iniciar un servidor INDI en la màquina connectada amb el vostre telescopi i el servidor escoltarà les peticions dels clients des de &kstars;. Una vegada connectat, el podreu controlar directament des del mapa celeste. Este procediment es descriu en detall en la secció <link linkend="indi-remote-control"
 >Control de dispositius remots</link
 >. </para>
 </answer>
@@ -1038,7 +1038,7 @@ controlador : Executable o [dispositiu]@amfitrió[:port]
 <para
 >Quan intente <guibutton
 >Connecta</guibutton
->, &kstars; informa que el telescopi no està connectat al port sèrie/USB. Què puc fer? </para>
+>, &kstars; informa que el telescopi no està connectat amb el port sèrie o USB. Què puc fer? </para>
 </question>
 <answer>
 <para

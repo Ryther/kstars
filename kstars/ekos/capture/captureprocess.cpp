@@ -166,6 +166,10 @@ bool CaptureProcess::setCamera(ISD::Camera *device)
 
     devices()->setActiveCamera(device);
 
+    // If we capturing, then we need to process capture timeout immediately since this is a crash recovery
+    if (state()->getCaptureTimeout().isActive() && state()->getCaptureState() == CAPTURE_CAPTURING)
+        QTimer::singleShot(100, this, &CaptureProcess::processCaptureTimeout);
+
     return true;
 
 }
@@ -645,6 +649,14 @@ void CaptureProcess::executeJob()
         return;
     }
 
+    // Double check all pointers are valid.
+    if (!activeCamera() || !devices()->getActiveChip())
+    {
+        checkCamera();
+        QTimer::singleShot(1000, this, &CaptureProcess::executeJob);
+        return;
+    }
+
     QList<FITSData::Record> FITSHeaders;
     if (Options::defaultObserver().isEmpty() == false)
         FITSHeaders.append(FITSData::Record("Observer", Options::defaultObserver(), "Observer"));
@@ -658,7 +670,6 @@ void CaptureProcess::executeJob()
 
     // Update button status
     state()->setBusy(true);
-
     state()->setUseGuideHead((devices()->getActiveChip()->getType() == ISD::CameraChip::PRIMARY_CCD) ?
                              false : true);
 
@@ -764,7 +775,8 @@ IPState CaptureProcess::checkLightFramePendingTasks()
         return IPS_BUSY;
 
     // step 7: resume guiding if it was suspended
-    if (state()->getGuideState() == GUIDE_SUSPENDED)
+    // JM 2023.12.20: Must make to resume if we have a light frame.
+    if (state()->getGuideState() == GUIDE_SUSPENDED && activeJob()->getFrameType() == FRAME_LIGHT)
     {
         emit newLog(i18n("Autoguiding resumed."));
         emit resumeGuiding();
@@ -840,7 +852,7 @@ IPState CaptureProcess::startNextExposure()
     // Since this function is looping while pending tasks are running in parallel
     // it might happen that one of them leads to abort() which sets the #activeJob() to nullptr.
     // In this case we terminate the loop by returning #IPS_IDLE without starting a new capture.
-    SequenceJob *theJob = activeJob();
+    auto theJob = activeJob();
 
     if (theJob == nullptr)
         return IPS_IDLE;
@@ -1678,6 +1690,7 @@ IPState CaptureProcess::runCaptureScript(ScriptTypes scriptType, bool precond)
         {
             state()->setCaptureScriptType(scriptType);
             m_CaptureScript.start(captureScript, generateScriptArguments());
+            //m_CaptureScript.start("/bin/bash", QStringList() << captureScript);
             emit newLog(i18n("Executing capture script %1", captureScript));
             return IPS_BUSY;
         }
@@ -1750,8 +1763,15 @@ void CaptureProcess::selectCamera(QString name)
 void CaptureProcess::checkCamera()
 {
     // Do not update any camera settings while capture is in progress.
-    if (state()->getCaptureState() == CAPTURE_CAPTURING || !activeCamera())
+    if (state()->getCaptureState() == CAPTURE_CAPTURING)
         return;
+
+    // If camera is restarted, try again in 1 second
+    if (!activeCamera())
+    {
+        QTimer::singleShot(1000, this, &CaptureProcess::checkCamera);
+        return;
+    }
 
     devices()->setActiveChip(nullptr);
 
@@ -1796,7 +1816,7 @@ void CaptureProcess::reconnectCameraDriver(const QString &camera, const QString 
     if (activeCamera() && activeCamera()->getDeviceName() == camera)
     {
         // Set camera again to the one we restarted
-        CaptureState rememberState = state()->getCaptureState();
+        auto rememberState = state()->getCaptureState();
         state()->setCaptureState(CAPTURE_IDLE);
         checkCamera();
         state()->setCaptureState(rememberState);
@@ -1869,6 +1889,7 @@ void CaptureProcess::removeDevice(const QSharedPointer<ISD::GenericDevice> &devi
     {
         activeCamera()->disconnect(this);
         devices()->setActiveCamera(nullptr);
+        devices()->setActiveChip(nullptr);
 
         QSharedPointer<ISD::GenericDevice> generic;
         if (INDIListener::findDevice(name, generic))
@@ -1876,7 +1897,7 @@ void CaptureProcess::removeDevice(const QSharedPointer<ISD::GenericDevice> &devi
 
         QTimer::singleShot(1000, this, [this]()
         {
-            emit refreshCameraSettings();
+            checkCamera();
         });
     }
 
@@ -1924,11 +1945,17 @@ void CaptureProcess::processCaptureTimeout()
         // Double check that m_Camera is valid in case it was reset due to driver restart.
         if (activeCamera() && activeJob())
         {
+            setCamera(true);
             emit newLog(i18n("Exposure timeout. Restarting exposure..."));
             activeCamera()->setEncodingFormat("FITS");
-            ISD::CameraChip *targetChip = activeCamera()->getChip(state()->useGuideHead() ?
-                                          ISD::CameraChip::GUIDE_CCD :
-                                          ISD::CameraChip::PRIMARY_CCD);
+            auto rememberState = state()->getCaptureState();
+            state()->setCaptureState(CAPTURE_IDLE);
+            checkCamera();
+            state()->setCaptureState(rememberState);
+
+            auto targetChip = activeCamera()->getChip(state()->useGuideHead() ?
+                              ISD::CameraChip::GUIDE_CCD :
+                              ISD::CameraChip::PRIMARY_CCD);
             targetChip->abortExposure();
             const double exptime = activeJob()->getCoreProperty(SequenceJob::SJ_Exposure).toDouble();
             targetChip->capture(exptime);
@@ -2246,16 +2273,17 @@ void CaptureProcess::updateFilterInfo()
             auto activeFilter = activeDevices->findWidgetByName("ACTIVE_FILTER");
             if (activeFilter)
             {
+                QString activeFilterText = QString(activeFilter->getText());
                 if (devices()->filterWheel())
                 {
-                    if (activeFilter->getText() != devices()->filterWheel()->getDeviceName())
+                    if (activeFilterText != devices()->filterWheel()->getDeviceName())
                     {
                         activeFilter->setText(devices()->filterWheel()->getDeviceName().toLatin1().constData());
                         oneDevice->sendNewProperty(activeDevices);
                     }
                 }
                 // Reset filter name in CCD driver
-                else if (QString(activeFilter->getText()).isEmpty())
+                else if (activeFilterText.isEmpty())
                 {
                     // Add debug info since this issue is reported by users. Need to know when it happens.
                     qCDebug(KSTARS_EKOS_CAPTURE) << "No active filter wheel. " << oneDevice->getDeviceName() << " ACTIVE_FILTER is reset.";
@@ -2362,7 +2390,7 @@ bool CaptureProcess::loadSequenceQueue(const QString &fileURL, QString targetNam
                 }
                 else
                 {
-                    SequenceJob *job = new SequenceJob(devices(), state(), SequenceJob::JOBTYPE_BATCH, ep, targetName);
+                    auto job = new SequenceJob(devices(), state(), SequenceJob::JOBTYPE_BATCH, ep, targetName);
                     emit addJob(job);
                 }
             }
@@ -2545,12 +2573,10 @@ void CaptureProcess::setCamera(bool connection)
     if (connection)
     {
         // TODO: do not simply forward the newExposureValue
-        connect(activeCamera(), &ISD::Camera::newExposureValue, this,
-                &CaptureProcess::setExposureProgress, Qt::UniqueConnection);
+        connect(activeCamera(), &ISD::Camera::newExposureValue, this, &CaptureProcess::setExposureProgress, Qt::UniqueConnection);
         connect(activeCamera(), &ISD::Camera::newImage, this, &CaptureProcess::processFITSData, Qt::UniqueConnection);
         connect(activeCamera(), &ISD::Camera::newRemoteFile, this, &CaptureProcess::processNewRemoteFile, Qt::UniqueConnection);
-        //connect(m_Camera, &ISD::Camera::previewFITSGenerated, this, &Capture::setGeneratedPreviewFITS, Qt::UniqueConnection);
-        connect(activeCamera(), &ISD::Camera::ready, this, &CaptureProcess::cameraReady);
+        connect(activeCamera(), &ISD::Camera::ready, this, &CaptureProcess::cameraReady, Qt::UniqueConnection);
     }
     else
     {

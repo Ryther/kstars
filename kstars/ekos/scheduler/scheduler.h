@@ -14,6 +14,7 @@
 #include "ekos/align/align.h"
 #include "indi/indiweather.h"
 #include "schedulerjob.h"
+#include "ekos/auxiliary/modulelogger.h"
 
 #include <lilxml.h>
 
@@ -46,7 +47,7 @@ class SchedulerModuleState;
  * @author Jasem Mutlaq
  * @version 1.2
  */
-class Scheduler : public QWidget, public Ui::Scheduler
+class Scheduler : public QWidget, public Ui::Scheduler, public ModuleLogger
 {
         Q_OBJECT
         Q_CLASSINFO("D-Bus Interface", "org.kde.kstars.Ekos.Scheduler")
@@ -79,7 +80,7 @@ public:
         // shortcut
         SchedulerJob *activeJob();
 
-        void appendLogText(const QString &);
+        void appendLogText(const QString &) override;
         QStringList logText()
         {
             return m_LogText;
@@ -183,28 +184,6 @@ public:
         // be moved from Scheduler and placed in a separate class,
         // e.g. SchedulerPlanner or SchedulerJobEval
 
-        /**
-             * @brief estimateJobTime Estimates the time the job takes to complete based on the sequence file and what modules to utilize during the observation run.
-             * @param job target job
-             * @param capturedFramesCount a map of what's been captured already
-             * @param scheduler instance of the scheduler used for logging. Can be nullptr.
-             * @return Estimated time in seconds.
-             */
-        static bool estimateJobTime(SchedulerJob *schedJob, const QMap<QString, uint16_t> &capturedFramesCount,
-                                    Scheduler *scheduler);
-        /**
-             * @brief loadSequenceQueue Loads what's necessary to estimate job completion time from a capture sequence queue file
-             * @param fileURL the filename
-             * @param schedJob the SchedulerJob is modified according to the contents of the sequence queue
-             * @param jobs the returned values read from the file
-             * @param hasAutoFocus a return value indicating whether autofocus can be triggered by the sequence.
-              * @param scheduler instance of the scheduler used for logging. Can be nullptr.
-             * @return Estimated time in seconds.
-             */
-
-        static bool loadSequenceQueue(const QString &fileURL, SchedulerJob *schedJob, QList<SequenceJob *> &jobs,
-                                      bool &hasAutoFocus, Scheduler *scheduler);
-
         // Scheduler Settings
         void setSettings(const QJsonObject &settings);
 
@@ -244,13 +223,20 @@ public:
         /**
          * @brief addJob Add a new job from form values
          */
-        void addJob();
+        void addJob(SchedulerJob *job = nullptr);
+
+        /**
+         * @brief createJob Create a new job from form values.
+         * @param job job to be filled from UI values
+         * @return true iff update was successful
+         */
+        bool fillJobFromUI(SchedulerJob *job);
 
         /**
          * @brief addToQueue Construct a SchedulerJob and add it to the queue or save job settings from current form values.
          * jobUnderEdit determines whether to add or edit
          */
-        void saveJob();
+        void saveJob(SchedulerJob *job = nullptr);
 
         QJsonArray getJSONJobs();
 
@@ -266,7 +252,7 @@ public:
              */
         bool createJobSequence(XMLEle *root, const QString &prefix, const QString &outputDir);
 
-        XMLEle *getSequenceJobRoot(const QString &filename) const;
+        XMLEle *getSequenceJobRoot(const QString &filename);
 
         /**
              * @brief saveScheduler Save scheduler jobs to a file
@@ -287,25 +273,8 @@ public:
         }
         
 private:
-        /**
-             * @brief processJobInfo a utility used by loadSequenceQueue() to help it read a capture sequence file
-             * @param root the filename
-             * @param schedJob the SchedulerJob is modified accoring to the contents of the sequence queue
-             * @return a capture sequence
-             */
-        static SequenceJob *processJobInfo(XMLEle *root, SchedulerJob *schedJob);
-
-        /**
-             * @brief timeHeuristics Estimates the number of seconds of overhead above and beyond imaging time, used by estimateJobTime.
-             * @param schedJob the scheduler job.
-             * @return seconds of overhead.
-             */
-        static int timeHeuristics(const SchedulerJob *schedJob);
 
         void setAlgorithm(int alg);
-
-        // Used in testing, instead of KStars::Instance() resources
-        static KStarsDateTime *storedLocalTime;
 
         friend TestSchedulerUnit;
 
@@ -406,6 +375,11 @@ protected slots:
         void loadJob(QModelIndex i);
 
         /**
+         * @brief updateSchedulerURL Update scheduler URL after succesful loading a new file.
+         */
+        void updateSchedulerURL(const QString &fileURL);
+
+        /**
              * @brief setJobAddApply Set first button state to add new job or apply changes.
              */
         void setJobAddApply(bool add_mode);
@@ -470,13 +444,6 @@ protected slots:
          * @param filename If not empty, this file will be used instead of poping up a dialog.
          */
         void load(bool clearQueue, const QString &filename = "");
-
-        /**
-         * @brief appendEkosScheduleList Append the contents of an ESL file to the queue.
-         * @param fileURL File URL to load contents from.
-         * @return True if contents were loaded successfully, else false.
-         */
-        bool appendEkosScheduleList(const QString &fileURL);
 
         void resetJobEdit();
 
@@ -592,22 +559,10 @@ private:
         bool executeJob(SchedulerJob *job);
 
         /**
-             * @brief calculateDawnDusk Get dawn and dusk times for today
-             */
-        static void calculateDawnDusk();
-
-        /**
              * @brief checkShutdownState Check shutdown procedure stages and make sure all stages are complete.
              * @return
              */
         bool checkShutdownState();
-
-        /**
-             * @brief processJobInfo Process the job information from a scheduler file and populate jobs accordingly
-             * @param root XML root element of JOB
-             * @return true on success, false on failure.
-             */
-        bool processJobInfo(XMLEle *root);
 
         /** @internal Change the current job, updating associated widgets.
          * @param job is an existing SchedulerJob to set as current, or nullptr.
@@ -631,43 +586,6 @@ private:
             * @param forced forces recounting captures unconditionally if true, else only IDLE, EVALUATION or new jobs are examined.
             */
         void updateCompletedJobsCount(bool forced = false);
-
-        /**
-         * @brief Update the flag for the given job whether light frames are required
-         * @param oneJob scheduler job where the flag should be updated
-         * @param seqjobs list of capture sequences of the job
-         * @param framesCount map capture signature -> frame count
-         * @return true iff the job need to capture light frames
-         */
-        void updateLightFramesRequired(SchedulerJob *oneJob, const QList<SequenceJob *> &seqjobs,
-                                       const SchedulerJob::CapturedFramesMap &framesCount);
-
-        /**
-         * @brief Calculate the map signature -> expected number of captures from the given list of capture sequence jobs,
-         *        i.e. the expected number of captures from a single scheduler job run.
-         * @param seqJobs list of capture sequence jobs
-         * @param expected map to be filled
-         * @return total expected number of captured frames of a single run of all jobs
-         */
-        static uint16_t calculateExpectedCapturesMap(const QList<SequenceJob *> &seqJobs, QMap<QString, uint16_t> &expected);
-
-        /**
-         * @brief Fill the map signature -> frame count so that a single iteration of the scheduled job creates as many frames as possible
-         *        in addition to the already captured ones, but does not the expected amount.
-         * @param expected map signature -> expected frames count
-         * @param capturedFramesCount map signature -> already captured frames count
-         * @param schedJob scheduler job for which these calculations are done
-         * @param capture_map map signature -> frame count that will be handed over to the capture module to control that a single iteration
-         *        of the scheduler job creates as many frames as possible, but does not exceed the expected ones.
-         * @param completedIterations How many times has the job completed its capture sequence (for repeated jobs).
-         * @return total number of captured frames, truncated to the maximal number of frames the scheduler job could produce
-         */
-        static uint16_t fillCapturedFramesMap(const QMap<QString, uint16_t> &expected,
-                                              const SchedulerJob::CapturedFramesMap &capturedFramesCount,
-                                              SchedulerJob &schedJob, SchedulerJob::CapturedFramesMap &capture_map,
-                                              int &completedIterations);
-
-        int getCompletedFiles(const QString &path);
 
         // Returns true if the job is storing its captures on the same machine as the scheduler.
         bool canCountCaptures(const SchedulerJob &job);
@@ -799,8 +717,8 @@ private:
         // the state machine holding all states
         QSharedPointer<SchedulerModuleState> m_moduleState;
         // process engine implementing all process steps
-        QPointer<SchedulerProcess> m_process;
-        QPointer<SchedulerProcess> process()
+        QSharedPointer<SchedulerProcess> m_process;
+        QSharedPointer<SchedulerProcess> process()
         {
             return m_process;
         }
@@ -828,12 +746,6 @@ private:
         int jobUnderEdit { -1 };
         /// Pointer to Geographic location
         GeoLocation *geo { nullptr };
-        /// Store next dawn to calculate dark skies range
-        static QDateTime Dawn;
-        /// Store next dusk to calculate dark skies range
-        static QDateTime Dusk;
-        /// Pre-dawn is where we stop all jobs, it is a user-configurable value before Dawn.
-        static QDateTime preDawnDateTime;
 
         /// Counter to keep debug logging in check
         uint8_t checkJobStageCounter { 0 };

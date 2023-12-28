@@ -1,4 +1,4 @@
-<sect2 id="ekos-setup">
+<sect1 id="ekos-setup">
     <title
 >Configurar Ekos</title>
 <indexterm>
@@ -29,7 +29,7 @@
 >&kstars;</ulink
 >. &kstars;/Ekos ja està inclòs amb el vostre giny de StellarMate. També està <ulink url="https://www.stellarmate.com/component/jdownloads/category/2-ekos.html?Itemid=507"
 >disponible per a &Linux;, &MacOS; i &Windows;</ulink
-> si voleu instal·lar-lo a la màquina principal. Després d'executar &kstars; al PC o sobre StellarMate (directament a través d'HDMI o a través de <link linkend="ekos-tutorials-viewer"
+> si voleu instal·lar-lo en la màquina principal. Després d'executar &kstars; al PC o sobre StellarMate (directament a través d'HDMI o a través de <link linkend="ekos-tutorials-viewer"
 >VNC</link
 >), a Ekos s'hi pot accedir des del menú <guimenu
 >Eines</guimenu
@@ -57,4 +57,4 @@
         </textobject>
     </mediaobject>
 </screenshot>
-</sect2>
+</sect1>

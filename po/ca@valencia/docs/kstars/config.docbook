@@ -36,17 +36,17 @@
 ></indexterm
 >No resulta pràctic desplaçar-se a través d'una llista amb més de 3.400 emplaçaments per a buscar una determinada ciutat. Per a facilitar les busques, podeu filtrar la llista introduint text en els quadros que hi ha davall del mapa. Per exemple, en la captura de pantalla, apareix el text <userinput
 >A</userinput
-> en el quadro <guilabel
->Filtre de ciutat:</guilabel
+> en el quadro de filtratge <guilabel
+>Ciutat:</guilabel
 >, i també s'ha introduït <userinput
 >Te</userinput
-> en el camp <guilabel
->Filtre de província:</guilabel
+> en el quadro <guilabel
+>Província:</guilabel
 > i <userinput
 >EUA</userinput
-> en el <guilabel
->Filtre de país:</guilabel
->. Observeu que totes les ciutats mostrades en la llista posseïxen noms de ciutat, província i país que comencen pel text introduït en estos camps, i que el missatge que hi ha davall dels quadros de filtre indica que s'han trobat sis ciutats coincidents. També podeu comprovar que els punts del mapa que representen a estes sis ciutats han sigut pintats en color blanc, mentre que la resta de ciutats romandrà en gris. </para
+> en el quadro <guilabel
+>País:</guilabel
+>. Observeu que totes les ciutats mostrades en la llista posseïxen noms de ciutat, província i país que comencen pel text introduït en estos camps, i que el missatge que hi ha davall dels quadros de filtratge indica que s'han trobat sis ciutats coincidents. També podeu comprovar que els punts del mapa que representen a estes sis ciutats han sigut pintats en color blanc, mentre que la resta de ciutats romandrà en gris. </para
 ><para
 >En la llista també es pot filtrar pel seu emplaçament en el mapa. Fent clic en algun lloc del mapa del món es mostraran les ciutats existents en dos graus al voltant de l'emplaçament desitjat. En esta ocasió, podreu buscar per nom o per posició, però no per ambdues opcions a la vegada. En altres paraules, quan feu clic damunt del mapa, els noms filtrats seran ignorats, i viceversa. </para
 ><para>
@@ -93,7 +93,7 @@
 <secondary
 >La simulació del rellotge</secondary
 ></indexterm
->Quan s'inicia &kstars;, la data i l'hora es prenen del rellotge del sistema de l'ordinador, i el rellotge de &kstars; comença a comptar en sincronització amb el temps real. Si voleu parar el rellotge, seleccioneu l'element de menú <menuchoice
+>Quan s'inicia &kstars;, el temps es pren del rellotge del sistema de l'ordinador, i el rellotge de &kstars; comença a comptar en sincronització amb el temps real. Si voleu parar el rellotge, seleccioneu l'element de menú <menuchoice
 ><guimenu
 >Temps</guimenu
 > <guimenuitem
@@ -101,7 +101,7 @@
 ></menuchoice
 > o bé feu clic damunt de la icona <guiicon
 >Para el rellotge</guiicon
-> de la barra d'eines. Podeu fer que el rellotge funcione més lent o més ràpid del normal, o fins i tot que vaja arrere, utilitzant el botó de selecció de valors de passos de temps que hi ha en la barra d'eines. Este botó de selecció de valors posseïx dos jocs de botons amunt/avall. El primer estarà disponible per als primers 83 passos de temps, un a un. El segon saltarà fins a la següent unitat de temps més gran (o més xicoteta), el qual us permetrà realitzar canvis més grans de passos de temps d'una manera ràpida. </para>
+> de la barra d'eines. Podeu fer que el rellotge funcione més lent o més ràpid del normal, o fins i tot que vaja arrere, utilitzant el botó de selecció de valors de passos de temps que hi ha en la barra d'eines. Este botó de selecció de valors posseïx dos jocs de botons amunt i avall. El primer estarà disponible per als primers 83 passos de temps, un a un. El segon saltarà fins a la següent unitat de temps més gran (o més xicoteta), el qual us permetrà realitzar canvis més grans de passos de temps d'una manera ràpida. </para>
 <para>
 <indexterm
 ><primary
@@ -113,17 +113,17 @@
 ><guimenu
 >Temps</guimenu
 > <guimenuitem
->Establix la data i l'hora...</guimenuitem
+>Establix l temps...</guimenuitem
 ></menuchoice
 > o bé prement la icona <guiicon
->Establix la data i l'hora</guiicon
+>Establix el temps</guiicon
 > en la barra d'eines. La finestra <guilabel
->Establiu la data i l'hora</guilabel
+>Establiment del temps</guilabel
 > utilitza un giny estàndard de &kde; per a seleccionar la data, junt amb un botó de selecció de valors per a establir l'hora i els minuts. Si voleu tornar a sincronitzar el rellotge de la simulació amb el de la CPU, senzillament seleccioneu l'element de menú <menuchoice
 ><guimenu
 >Temps</guimenu
 > <guimenuitem
->Establix l'hora a Ara</guimenuitem
+>Establix el temps a ara</guimenuitem
 ></menuchoice
 >.</para>
 
@@ -215,7 +215,7 @@
 ></indexterm
 >En la pàgina <guilabel
 >Catàlegs</guilabel
->, determinareu diverses propietats relatives a la visualització dels catàlegs d'objectes d'estreles i del cel profund. </para>
+>, determinareu diverses propietats relatives a la visualització dels catàlegs d'estreles i d'objectes del cel profund. </para>
 
 <!-- Solar System page: -->
 <para>
@@ -338,7 +338,7 @@
 
 <!-- FITS page: -->
 <para
->Per a una explicació detallada de les opcions a la pàgina <guilabel
+>Per a una explicació detallada de les opcions en la pàgina <guilabel
 >FITS</guilabel
 >, vegeu la secció <link linkend="fits-configure"
 >Configurar FITS</link
@@ -346,7 +346,7 @@
 
 <!-- INDI page: -->
 <para
->Per a una explicació detallada de les opcions a la pàgina <guilabel
+>Per a una explicació detallada de les opcions en la pàgina <guilabel
 >INDI</guilabel
 >, vegeu la secció <link linkend="indi-configure"
 >Configurar INDI</link
@@ -356,7 +356,7 @@
 <para
 >Per a una explicació detallada de la suite d'astrofotografia <guilabel
 >Ekos</guilabel
->, vegeu la secció <link linkend="tool-ekos"
+>, vegeu la secció <link linkend="ekos"
 >Ekos</link
 > d'este manual. </para>
 
@@ -671,7 +671,7 @@
 ></indexterm
 >La secció <guilabel
 >Estreles</guilabel
-> permet gestionar com es mostraran les estreles a &kstars;. Podeu optar per veure-les o no, marcant la casella de selecció <guilabel
+> permet gestionar com es mostraran les estreles a &kstars;. Podeu optar per veure-les o no, seleccionant la casella de selecció <guilabel
 >Catàlegs d'estreles</guilabel
 >. Si la marqueu, s'habilitaran múltiples opcions. Per tant, podreu establir quantes estreles es dibuixaran en el mapa emprant el control lliscant <guilabel
 >Densitat d'estreles:</guilabel
@@ -706,7 +706,7 @@
 >Densitat d'etiquetes:</guilabel
 > controla la densitat percebuda d'etiquetes per als DSO. Si les etiquetes es comencen a superposar i el mapa celeste comença a veure's massa ple, proveu ajustant esta opció. El <guilabel
 >Límit mínim de brillantor amb el zoom al màxim/mínim:</guilabel
-> regula fins a quina magnitud es mostraran els objectes en el mapa celeste (una magnitud més alta és més feble). Si es marca <guilabel
+> regula fins a quina magnitud es mostraran els objectes en el mapa celeste (una magnitud més alta és més feble). Si se selecciona <guilabel
 >Mostra els objectes de magnitud desconeguda</guilabel
 >, sempre es mostraran els objectes de magnitud desconeguda. </para>
 <para
@@ -951,7 +951,7 @@
 <para
 >Fent clic en <guilabel
 >D'acord</guilabel
->, s'afegirà un catàleg buit a la base de dades amb les metadades introduïdes en el diàleg i que després es podrà omplir amb objectes. (Vegeu <xref linkend="catalog_details"/> i <xref linkend="csv_import"/>). </para>
+>, s'afegirà un catàleg buit a dins de la base de dades amb les metadades introduïdes a dins del diàleg i que després es podrà emplenar amb objectes. (Vegeu <xref linkend="catalog_details"/> i <xref linkend="csv_import"/>). </para>
 </sect2>
 
 <sect2 id="catalog_colors">
@@ -1102,7 +1102,7 @@
 <para
 >Este diàleg permet crear o editar un objecte del cel profund (DSO). La secció <guilabel
 >Bàsics</guilabel
-> conté els camps que s'han d'omplir. </para>
+> conté els camps que s'han d'emplenar. </para>
 
 <variablelist>
   <varlistentry>
@@ -1239,7 +1239,7 @@
 <para
 >La captura de pantalla anterior mostra el diàleg <guilabel
 >Importació de CSV</guilabel
-> en el seu estat predeterminat. A la secció <guilabel
+> en el seu estat predeterminat. En la secció <guilabel
 >Entrada</guilabel
 >, podreu configurar l'analitzador de CSV. El <guilabel
 >Prefix del comentari:</guilabel
@@ -1369,9 +1369,9 @@
 >Colors</guilabel
 > des de la mateixa finestra <guilabel
 >Configuració - &kstars;</guilabel
->. A més, els satèl·lits es poden dibuixar de la mateixa manera que les estreles regulars, marcant la casella de selecció <guilabel
+>. A més, els satèl·lits es poden dibuixar de la mateixa manera que les estreles regulars, seleccionant la casella de selecció <guilabel
 >Mostra tant els satèl·lits com les estreles</guilabel
->. Per a només visualitzar els satèl·lits visibles des del vostre emplaçament geogràfic i l'hora actuals, seleccioneu <guilabel
+>. Per a només visualitzar els satèl·lits visibles des del vostre emplaçament geogràfic i el temps actuals, seleccioneu <guilabel
 >Mostra únicament els satèl·lits visibles</guilabel
 >. </para>
 <para
@@ -1389,7 +1389,7 @@
 >Busca satèl·lits</guilabel
 > i la llista es reduirà a només les millors coincidències. </para>
 <para
->Podeu afegir satèl·lits nous als satèl·lits predeterminats de &kstars;, establint per a l'edició el fitxer <filename
+>Podeu afegir satèl·lits nous als satèl·lits predeterminats establits de &kstars; editant el fitxer <filename
 >kstars/data/satellites.dat</filename
 >. Cada línia en este fitxer és un grup de satèl·lits, cal que afegiu una entrada nova per al vostre grup de satèl·lits desitjat. Una entrada haurà de tindre el següent format: <userinput
 >Nom del grup;nom_fitxer_local;URL</userinput
@@ -1423,7 +1423,7 @@
 ></indexterm
 >La pàgina <guilabel
 >Supernoves</guilabel
-> permet decidir si es mostraran o no les supernoves, marcant la casella de selecció <guilabel
+> permet decidir si es mostraran o no les supernoves, seleccionant la casella de selecció <guilabel
 >Mostra les supernoves</guilabel
 >. De manera predeterminada, les supernoves es dibuixaran com una xicoteta marca <quote
 >+</quote
@@ -1431,7 +1431,7 @@
 >Colors</guilabel
 >. </para>
 <para
->Podeu establir el límit de magnitud per a mostrar una supernova, així com un límit de magnitud per a les alertes de supernova utilitzant els botons de selecció de valors. La magnitud limitant és la magnitud aparent més gran d'un objecte en el cel que és visible amb l'ull nu o un telescopi. </para>
+>Podeu establir el límit de magnitud per a mostrar una supernova, així com un límit de magnitud per a les alertes de supernova utilitzant els botons de selecció de valors. La magnitud limitant és la magnitud aparent més gran d'un objecte celeste que és visible amb l'ull nu o un telescopi. </para>
 <para
 >La llista de supernoves recents es pot actualitzar a través de l'element de menú <menuchoice
 ><guimenu
@@ -1505,19 +1505,19 @@
 ></indexterm
 >La pàgina <guilabel
 >Terreny</guilabel
-> permet configurar si la imatge del terreny (paisatge) es mostrarà en el mapa del cel. </para>
+> permet configurar si la imatge del terreny (paisatge) es mostrarà en el mapa celeste. </para>
 <para
->L'usuari és responsable de crear una imatge parcialment transparent, esta se superposarà en el mapa del cel. Esta imatge haurà de tindre regions transparents creades per l'usuari per a permetre que es mostre el mapa del cel, i regions opaques que representen els arbres, els edificis i el paisatge al voltant del telescopi. Es requerix un format particular, i este és un esforç significatiu. Hi ha molts recursos al web que expliquen com es fa açò per a <ulink url="https://stellarium.org/landscapes.html"
+>L'usuari és responsable de crear una imatge parcialment transparent, esta se superposarà en el mapa celeste. Esta imatge haurà de tindre regions transparents creades per l'usuari per a permetre que es mostre el mapa del cel, i regions opaques que representen els arbres, els edificis i el paisatge al voltant del telescopi. Es requerix un format particular, i este és un esforç significatiu. Hi ha molts recursos al web que expliquen com es fa açò per a <ulink url="https://stellarium.org/landscapes.html"
 >Stellarium</ulink
 >. Els detalls per a la creació d'imatges són els mateixos. </para>
 <para
->Inicialment, l'usuari captura una imatge de projecció cilíndrica equidistant de tota l'esfera des d'aproximadament el mateix punt de vista que el seu telescopi. Este tipus d'imatge es pot capturar amb l'aplicació Càmera de Google o l'aplicació YouTube de Google en un iPhone, o probablement amb moltes altres aplicacions de càmera. Després, l'usuari haurà d'editar la imatge final que el cel s'esborre/siga transparent i guardar-la com a PNG. Finalment, l'usuari haurà de determinar on es troba el nord en la imatge, perquè eventualment es puga alinear amb el mapa del cel. Una vegada fet tot açò, el mapa del cel podrà simular la vista al cel local, inclòs el terreny local. </para>
+>Inicialment, l'usuari captura una imatge de projecció cilíndrica equidistant de tota l'esfera des d'aproximadament el mateix punt de vista que el seu telescopi. Este tipus d'imatge es pot capturar amb l'aplicació Càmera de Google o l'aplicació YouTube de Google en un iPhone, o probablement amb moltes altres aplicacions de càmera. Després, l'usuari haurà d'editar la imatge final que el cel s'esborre/siga transparent i guardar-la com a PNG. Finalment, l'usuari haurà de determinar on es troba el nord en la imatge, perquè eventualment es puga alinear amb el mapa celeste. Una vegada fet tot açò, el mapa celeste podrà simular la vista al cel local, inclòs el terreny local. </para>
 <para
 >Una vegada es cree la imatge, serà possible carregar-la a través de la pàgina <guilabel
 >Terreny</guilabel
-> i configurar el valor de correcció per a l'azimut (en graus) que permetrà a l'usuari fer girar la vista de manera que el nord en el mapa del cel estiga alineat amb el nord en la imatge. </para>
+> i configurar el valor de correcció per a l'azimut (en graus) que permetrà a l'usuari fer girar la vista de manera que el nord en el mapa celeste estiga alineat amb el nord en la imatge. </para>
 <para
->A més, es poden configurar algunes opcions d'acceleració per a aconseguir la millor experiència d'usuari en representar el terreny en el mapa del cel. </para>
+>A més, es poden configurar algunes opcions d'acceleració per a aconseguir la millor experiència d'usuari en representar el terreny en el mapa celeste. </para>
 <tip>
     <para
 >Podeu canviar la superposició del terreny emprant una drecera de teclat <keycombo
@@ -1578,9 +1578,9 @@
 >Superposicions d'imatges</guilabel
 > permet configurar si les superposicions d'imatges es mostraran en el mapa celeste i ajuda a afegir-les al sistema. La imatge al començament d'esta secció mostra el mapa celeste amb les superposicions d'imatges habilitades i algunes superposicions d'imatges carregades. </para>
 <para
->Cada vegada que s'inicia, &kstars; buscarà imatges superposades noves en un directori especial, paral·lel al directori de registres, anomenat <literal
+>Cada vegada que s'inicia, &kstars; buscarà imatges noves a la superposició d'imatges en un directori especial, paral·lel al directori de registres, anomenat <literal
 >imageOverlays</literal
->. A Linux, açò es pot trobar a <filename class="directory"
+>. En Linux, açò es pot trobar a <filename class="directory"
 >~/.local/share/kstars/imageOverlays</filename
 >. La ubicació exacta en el vostre sistema es pot trobar fent clic en el botó <guibutton
 >Directori de superposicions</guibutton
@@ -1592,7 +1592,7 @@
 >imageOverlays</literal
 >. Si després aneu fins a la pàgina de configuració <guilabel
 >Superposicions d'imatges</guilabel
->, hauríeu de veure els fitxers nous enumerats a la taula. Les el seu estat com a <guilabel
+>, hauríeu de veure els fitxers nous llistats en la taula. Les el seu estat com a <guilabel
 >Sense processar</guilabel
 >. Només les imatges l'estat de les quals siga <guilabel
 >D'acord</guilabel
@@ -1600,13 +1600,13 @@
 >D'acord</guilabel
 >, s'han de resoldre les plaques de les imatges o afegir manualment la informació requerida, vegeu a continuació. </para>
 <para
->Per a preparar les imatges per a visualitzar-les, s'han de resoldre les plaques de les imatges (una sola vegada). Per a fer-ho, busqueu una imatge a la taula, feu clic en el seu nom de fitxer i feu clic en <guibutton
+>Per a preparar les imatges per a visualitzar-les, s'han de resoldre les plaques de les imatges (una sola vegada). Per a fer-ho, busqueu una imatge en la taula, feu clic en el seu nom de fitxer i feu clic en <guibutton
 >Soluciona</guibutton
 > davall la taula. L'etiqueta del botó hauria de canviar a <guibutton
 >Cancel·la</guibutton
-> durant la solució, i després, quan es completa amb èxit, els paràmetres resolts es mostraran a la taula i l'estat canvia a <guilabel
+> durant la solució, i després, quan es completa amb èxit, els paràmetres resolts es mostraran en la taula i l'estat canvia a <guilabel
 >D'acord</guilabel
->. La informació d'una solució de placa amb èxit s'emmagatzema a la base de dades de l'usuari de manera que no calga repetir la solució. La imatge resolta hauria d'aparéixer a partir d'aleshores en la seua posició adequada en el mapa celeste. Podeu solucionar plaques de múltiples imatges en una sola operació fent clic damunt del nom de fitxer de la primera imatge i després fent clic damunt d'un altre nom de fitxer. S'han de seleccionar tots els fitxers d'imatge entre els noms de fitxer. Després, fent clic en <guibutton
+>. La informació d'una solució de placa amb èxit s'emmagatzema en la base de dades de l'usuari de manera que no calga repetir la solució. La imatge resolta hauria d'aparéixer a partir d'aleshores en la seua posició adequada en el mapa celeste. Podeu solucionar plaques de múltiples imatges en una sola operació fent clic damunt del nom de fitxer de la primera imatge i després fent clic damunt d'un altre nom de fitxer. S'han de seleccionar tots els fitxers d'imatge entre els noms de fitxer. Després, fent clic en <guibutton
 >Soluciona</guibutton
 >, s'intentaran solucionar totes les imatges. No obstant açò, &kstars; no intentarà resoldre les imatges l'estat de les quals siga <guilabel
 >D'acord</guilabel
@@ -1618,7 +1618,7 @@
 >Soluciona</guibutton
 >). És possible que si seleccioneu diverses imatges, algunes no es resolguen amb èxit. </para>
 <para
->La resolució de plaques d'estes imatges de vegades pot ser difícil. Açò és perquè, en este punt, el sistema no té informació sobre l'escala o la posició per on mirar i, per tant, és una solució cega. Per a millorar les vostres possibilitats d'èxit, podeu introduir una posició aproximada AR/Dec del centre del cel a les columnes <guilabel
+>La resolució de plaques d'estes imatges de vegades pot ser difícil. Açò és perquè, en este punt, el sistema no té informació sobre l'escala o la posició per on mirar i, per tant, és una solució cega. Per a millorar les vostres possibilitats d'èxit, podeu introduir una posició aproximada AR/Dec del centre del cel a dins de les columnes <guilabel
 >AR</guilabel
 > i <guilabel
 >Dec</guilabel
@@ -1626,17 +1626,17 @@
 >Soluciona</guibutton
 > en el quadro anomenat <guilabel
 >Seg. d'arc/px predeterminats</guilabel
-> de manera que tots els intents de solució utilitzen esta escala de manera predeterminada. També podeu afegir una escala directament a la taula, fila i columna, el qual anul·larà el valor predeterminat. Podeu triar quin perfil de StellarSolver utilitza el solucionador (estos perfils es poden editar a la pestanya <guilabel
+> de manera que tots els intents de solució utilitzen esta escala de manera predeterminada. També podeu afegir una escala directament a dins de la taula, fila i columna, el qual anul·larà el valor predeterminat. Podeu triar quin perfil de StellarSolver utilitza el solucionador (estos perfils es poden editar en la pestanya <guilabel
 >Alinea</guilabel
 > d'Ekos). Finalment, podeu ajustar el <guilabel
 >Temps d'espera</guilabel
 > del solucionador en segons. </para>
 <para
->Si teniu imatges problemàtiques que no es resolen, encara podreu mostrar-les introduint manualment els valors (que el solucionador no ha trobat) a la taula. Són els paràmetres AR, Dec, segon d'arc per píxel, angle d'orientació i est a la dreta (o oest a la dreta). Una vegada ho hàgeu fet, podreu canviar l'estat a <guilabel
+>Si teniu imatges problemàtiques que no es resolen, encara podreu mostrar-les introduint manualment els valors (que el solucionador no ha trobat) a dins de la taula. Són els paràmetres AR, Dec, segon d'arc per píxel, angle d'orientació i est a la dreta (o oest a la dreta). Una vegada ho hàgeu fet, podreu canviar l'estat a <guilabel
 >OK</guilabel
 > i &kstars; guardarà estos valors a la base de dades de l'usuari com si s'hagessin resolt automàticament. </para>
 <para
->Hi ha alguns controls més a la pàgina de configuració <guilabel
+>Hi ha alguns controls més en la pàgina de configuració <guilabel
 >Superposicions d'imatges</guilabel
 >. La casella de selecció <guilabel
 >Mostra les superposicions d'imatges</guilabel
@@ -1650,7 +1650,7 @@
 <para
 >La casella de selecció <guilabel
 >Centra el mapa celeste en la selecció</guilabel
-> permet navegar amb facilitat per les imatges superposades sense manipular directament el mapa celeste. Amb açò habilitat, seleccioneu una fila a la taula de superposició (&pex;, fent clic damunt del camp del nom de fitxer) i el mapa celeste es mourà fins a esta imatge si l'estat de la imatge és <guilabel
+> permet navegar amb facilitat per les imatges superposades sense manipular directament el mapa celeste. Amb açò habilitat, seleccioneu una fila en la taula de superposició (&pex;, fent clic damunt del camp del nom de fitxer) i el mapa celeste es mourà fins a esta imatge si l'estat de la imatge és <guilabel
 >D'acord</guilabel
 >. En este punt, podeu passar d'una imatge a la següent amb les ordres de teclat &Up; i &Down;. </para>
 </sect1>
@@ -1740,33 +1740,33 @@
 >article corresponent de la Wikipedia</ulink
 >. Esta pàgina permet configurar la presentació i el processament de les dades FITS en &kstars;. </para>
 <para
->El quadro esquerre és per a configurar el visor FITS. </para>
+>El quadro esquerre és per a configurar el visor de FITS. </para>
 <para
 >Marqueu l'element <guilabel
->Utilitza el visor FITS</guilabel
-> si voleu mostrar automàticament les imatges rebudes en el visor FITS. </para>
+>Utilitza el visor de FITS</guilabel
+> si voleu mostrar automàticament les imatges rebudes en el visor de FITS. </para>
 <para
 >L'opció <guilabel
 >Pestanya de previsualització única</guilabel
 > és per a mostrar totes les imatges FITS capturades en una sola pestanya en lloc de múltiples pestanyes per imatge. L'opció <guilabel
 >Finestra única de captura</guilabel
-> és per a mostrar les imatges FITS capturades de totes les càmeres en una única finestra del visor FITS, en lloc d'una finestra dedicada per a cada càmera. L'opció <guilabel
+> és per a mostrar les imatges FITS capturades de totes les càmeres en una única finestra del visor de FITS, en lloc d'una finestra dedicada per a cada càmera. L'opció <guilabel
 >Obri una única finestra</guilabel
-> és per a mostrar les imatges FITS obertes en una única finestra del visor FITS en lloc d'una finestra dedicada a cada fitxer i l'opció <guilabel
+> és per a mostrar les imatges FITS obertes en una única finestra del visor de FITS en lloc d'una finestra dedicada a cada fitxer i l'opció <guilabel
 >Finestra independent</guilabel
-> és per a fer que la finestra del visor FITS siga independent de &kstars;. </para>
+> és per a fer que la finestra del visor de FITS siga independent de &kstars;. </para>
 <para
 >El quadro dret mostra les opcions del processament. L'opció <guilabel
 >Autoestirat</guilabel
-> permet aplicar sempre l'estirament automàtic a les imatges en el visor FITS, l'opció <guilabel
+> permet aplicar sempre l'estirament automàtic a les imatges en el visor de FITS, l'opció <guilabel
 >Mode de recursos limitats</guilabel
 > és per a habilitar el mode de recursos limitats per a desactivar qualsevol operació intensiva en recursos, és a dir: <guilabel
 >Reconstrucció automàtica des de Bayer</guilabel
 > (les imatges construïdes amb el filtre mosaic de Bayer on s'aplica el filtre de Bayer no seran reconstruïdes amb el filtre mosaic de Bayer, només es mostraran les imatges en l'escala de grisos), <guilabel
 >WCS automàtic</guilabel
-> (les dades del sistema de coordenades mundial -World Coordinate System- no seran processades; les coordenades celestes dels mapes WCS a les coordenades de la imatge; les línies de la quadrícula equatorial, la identificació dels objectes i l'orientació del telescopi dins d'una imatge estan inhabilitades) i <guilabel
+> (les dades del sistema de coordenades mundial -World Coordinate System- no seran processades. Les coordenades celestes dels mapes WCS en les coordenades de la imatge, les línies de la quadrícula equatorial, la identificació dels objectes i l'orientació del telescopi dins d'una imatge estan inhabilitades) i <guilabel
 >Cub en 3D</guilabel
-> (no es processaran les imatges RGB, només es mostraran les imatges en l'escala de grisos). També podeu desactivar algunes d'estes operacions voraces de recursos per separat. </para>
+> (no es processaran les imatges RGB, només es mostraran les imatges en l'escala de grisos). També podeu desactivar per separat algunes d'estes operacions voraces de recursos. </para>
 </sect1>
 
 <sect1 id="indi_page">
@@ -1786,14 +1786,14 @@
 </mediaobject>
 </screenshot>
 <para
->Per a una explicació detallada de les opcions a la pàgina <guilabel
+>Per a una explicació detallada de les opcions en la pàgina <guilabel
 >INDI</guilabel
 >, vegeu la secció <link linkend="indi-configure"
 >Configurar INDI</link
 >. </para>
 </sect1>
 
-<sect1 id="ekos">
+<sect1 id="ekos-window">
 <title
 >Ekos</title>
 <screenshot>
@@ -1812,7 +1812,7 @@
 <para
 >Ekos és una suite d'astrofotografia, una solució completa que pot controlar tots els dispositius INDI incloent nombrosos telescopis, CCD, rèflex digitals, enfocadors, filtres i molt més. Ekos admet el seguiment d'alta precisió utilitzant un solucionador d'astrometria en línia i fora de línia, capacitats d'enfocament automàtic i guiatge automàtic, i la captura d'una o de múltiples imatges utilitzant la potent capacitat del gestor de seqüències integrat. Per a una explicació detallada sobre <guilabel
 >Ekos</guilabel
->, vegeu la <link linkend="tool-ekos"
+>, vegeu la <link linkend="ekos"
 >secció Ekos d'este manual</link
 >. </para>
 </sect1>
@@ -1924,7 +1924,7 @@
 >Oculta els objectes en moure</guilabel
 > estiga seleccionada. El temps sobre el qual els objectes restaran ocults és determinat pel botó de selecció de valors <guilabel
 >Oculta també si el pas temporal és més gran que:</guilabel
->. Podreu especificar els objectes que s'hauran d'ocultar a la secció <guilabel
+>. Podreu especificar els objectes que s'hauran d'ocultar en la secció <guilabel
 >Configura els objectes que s'han d'ocultar</guilabel
 >. </para>
 </sect1>
@@ -1976,7 +1976,7 @@
 ></listitem>
   </itemizedlist
 ><para
->Totes les imatges es guarden en carpetes paral·leles al directori de registre principal. Estan en carpetes anomenades «guide» (guia), «autofocus» (enfocament automàtic), «align» (alineació) i «align/failed» (alineació/fallida). </para>
+>Totes les imatges es guarden en carpetes paral·leles al directori de registre principal. Estan en carpetes anomenades «guide» (guiatge), «autofocus» (enfocament automàtic), «align» (alineació) i «align/failed» (alineació/fallida). </para>
 </sect1>
 
 <sect1 id="customize">
@@ -2068,9 +2068,9 @@
 >CDV</firstterm
 > és un acrònim per a <quote
 >camp de visió</quote
->. Es dibuixarà un símbol de camp de visió al centre de la finestra per a indicar cap a on apunta la pantalla. Els distints símbols disposen de mides angulars diferents; en podeu utilitzar un per a mostrar com seria la vista a través d'un telescopi en concret. Per exemple, si escolliu el camp de visió <quote
->Prismàtics 7x35</quote
->, es dibuixarà un cercle a la pantalla amb un diàmetre de 9,2 graus; este és el camp de visió per a uns prismàtics 7x35. </para>
+>. Es dibuixarà un símbol de camp de visió en el centre de la finestra per a indicar cap a on apunta la pantalla. Els distints símbols disposen de mides angulars diferents; en podeu utilitzar un per a mostrar com seria la vista a través d'un telescopi en concret. Per exemple, si escolliu el camp de visió <quote
+>Prismàtic 7x35</quote
+>, es dibuixarà un cercle en la pantalla amb un diàmetre de 9,2 graus; este és el camp de visió per a un prismàtic 7x35. </para>
 <para>
 <indexterm
 ><primary
@@ -2147,11 +2147,11 @@
   <para
 >Podeu ajustar diverses opcions de configuració perquè l'orientació del mapa celeste coincidisca amb la vista a través de l'instrument òptic, sempre que (a partir d'esta versió) l'instrument no reflectisca el camp de visió (com es fa amb prismes utilitzats amb els SCT i els refractors). </para>
   <para
->Primer, trieu el sistema de coordenades que coincidisca amb la muntura. Per a un instrument muntat equatorialment, canvieu al mode de Coordenades equatorials en el menú <guimenu
+>Primer, trieu el sistema de coordenades que coincidisca amb la muntura. Per a un instrument muntat equatorialment, canvieu al mode de Coordenades equatorials al menú <guimenu
 >Visualitza</guimenu
 >. S'hauria de veure l'opció per a canviar el sistema de coordenades <guilabel
 >Canvia a la vista horitzontal (coordenades horitzontals)</guilabel
-> quan el mode actual siga coordenades equatorials. Per a un instrument muntat en altazimut o vista senzilla, canvieu a Coordenades horitzontals, de manera que l'opció en el menú <guimenu
+> quan el mode actual siga coordenades equatorials. Per a un instrument muntat en altazimut o vista senzilla, canvieu a Coordenades horitzontals, de manera que l'opció al menú <guimenu
 >Visualitza</guimenu
 > es veja <guilabel
 >Canvia a la vista de l'esfera celeste (coordenades equatorials)</guilabel
@@ -2165,7 +2165,7 @@
 ></menuchoice
 >). Seleccioneu «Nord cap avall» o «Zenit cap avall» segons s'aplique per a establir una orientació de 180 graus. </para>
   <para
->Si esteu observant visualment a través de l'ocular d'un instrument, és possible que hàgeu de fer una mica més de correcció. Per al cas comú d'un telescopi gran de Dobson (o més generalment un disseny newtonià muntat en una muntura altazimutal), ajudarà una correcció addicional sistemàtica. Esta correcció s'aplica perquè estem en posició dreta mentre utilitzem el telescopi independentment de l'angle que tinga el tub del telescopi amb el terra. De manera que mentre movem el telescopi en altitud, cal aplicar una correcció addicional depenent de l'altitud de l'objecte per a fer que el mapa celeste coincidisca amb la vista a través de l'ocular. Esta correcció s'activa marcant la casella de selecció <guilabel
+>Si esteu observant visualment a través de l'ocular d'un instrument, és possible que hàgeu de fer una mica més de correcció. Per al cas comú d'un telescopi gran de Dobson (o més generalment un disseny newtonià muntat en una muntura altazimutal), ajudarà una correcció addicional sistemàtica. Esta correcció s'aplica perquè estem en posició dreta mentre utilitzem el telescopi independentment de l'angle que tinga el tub del telescopi amb el terra. De manera que mentre movem el telescopi en altitud, cal aplicar una correcció addicional depenent de l'altitud de l'objecte per a fer que el mapa celeste coincidisca amb la vista a través de l'ocular. Esta correcció s'activa seleccionant la casella de selecció <guilabel
 >Correcció de l'observador estant dret</guilabel
 > des del submenú <menuchoice
 ><guimenu
@@ -2194,15 +2194,15 @@
 ></listitem>
       <listitem
 ><para
->Ús de binoculars: la mateixa configuració que amb l'observació a simple vista.</para
+>Ús de prismàtic: la mateixa configuració que amb l'observació a simple vista.</para
 ></listitem>
       <listitem
 ><para
->Utilitzant un telescopi buscador RACI en un telescopi muntat en altazimut: la mateixa configuració que amb l'observació a simple vista, excepte que pot ser haureu d'ajustar manualment una vegada l'orientació si el teniu muntat en un angle.</para
+>Utilitzant un instrument de visió buscador RACI en un telescopi muntat en altazimut: la mateixa configuració que amb l'observació a simple vista, excepte que potser haureu d'ajustar manualment una vegada l'orientació si el teniu muntat en un angle.</para
 ></listitem>
       <listitem
 ><para
->Utilitzant un telescopi de busca directa (vista invertida) en un telescopi muntat en altazimut: trieu Coordenades horitzontals i una orientació del mapa celeste de <guilabel
+>Utilitzant un instrument de visió de busca directa (vista invertida) en un telescopi muntat en altazimut: trieu Coordenades horitzontals i una orientació del mapa celeste de <guilabel
 >Zenit cap avall</guilabel
 > en el submenú <menuchoice
 ><guimenu
@@ -2222,7 +2222,7 @@
 ></menuchoice
 >, seleccioneu <guilabel
 >Zenit cap avall</guilabel
-> i marqueu l'opció <guilabel
+> i seleccioneu l'opció <guilabel
 >Correcció de l'observador estant dret</guilabel
 >. Després ajusteu manualment una vegada l'orientació per a fer coincidir la vista de l'ocular del telescopi, i d'ara en avant el seguiment hauria de ser correcte.</para
 ></listitem>

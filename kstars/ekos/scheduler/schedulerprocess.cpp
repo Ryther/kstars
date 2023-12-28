@@ -5,7 +5,9 @@
 */
 #include "schedulerprocess.h"
 #include "schedulermodulestate.h"
+#include "schedulerutils.h"
 #include "schedulerjob.h"
+#include "ekos/capture/sequencejob.h"
 #include "Options.h"
 #include "ksmessagebox.h"
 #include "ksnotification.h"
@@ -408,7 +410,7 @@ void SchedulerProcess::startCapture(bool restart)
     }
 
 
-    SchedulerJob::CapturedFramesMap fMap = activeJob()->getCapturedFramesMap();
+    CapturedFramesMap fMap = activeJob()->getCapturedFramesMap();
 
     for (auto &e : fMap.keys())
     {
@@ -1749,6 +1751,146 @@ bool SchedulerProcess::saveScheduler(const QUrl &fileURL)
     return true;
 }
 
+bool SchedulerProcess::appendEkosScheduleList(const QString &fileURL)
+{
+    SchedulerState const old_state = moduleState()->schedulerState();
+    moduleState()->setSchedulerState(SCHEDULER_LOADING);
+
+    QFile sFile;
+    sFile.setFileName(fileURL);
+
+    if (!sFile.open(QIODevice::ReadOnly))
+    {
+        QString message = i18n("Unable to open file %1", fileURL);
+        KSNotification::sorry(message, i18n("Could Not Open File"));
+        moduleState()->setSchedulerState(old_state);
+        return false;
+    }
+
+    LilXML *xmlParser = newLilXML();
+    char errmsg[MAXRBUF];
+    XMLEle *root = nullptr;
+    XMLEle *ep   = nullptr;
+    XMLEle *subEP = nullptr;
+    char c;
+
+    // We expect all data read from the XML to be in the C locale - QLocale::c()
+    QLocale cLocale = QLocale::c();
+
+    while (sFile.getChar(&c))
+    {
+        root = readXMLEle(xmlParser, c, errmsg);
+
+        if (root)
+        {
+            for (ep = nextXMLEle(root, 1); ep != nullptr; ep = nextXMLEle(root, 0))
+            {
+                const char *tag = tagXMLEle(ep);
+                if (!strcmp(tag, "Job"))
+                {
+                    emit addJob(SchedulerUtils::createJob(ep));
+                }
+                else if (!strcmp(tag, "Mosaic"))
+                {
+                    // If we have mosaic info, load it up.
+                    auto tiles = KStarsData::Instance()->skyComposite()->mosaicComponent()->tiles();
+                    tiles->fromXML(fileURL);
+                }
+                else if (!strcmp(tag, "Profile"))
+                {
+                    moduleState()->setCurrentProfile(pcdataXMLEle(ep));
+                }
+                // disabled, there is only one algorithm
+                else if (!strcmp(tag, "SchedulerAlgorithm"))
+                {
+                    int algIndex = cLocale.toInt(findXMLAttValu(ep, "value"));
+                    if (algIndex != ALGORITHM_GREEDY)
+                        emit newLog(i18n("Warning: The Classic scheduler algorithm has been retired. Switching you to the Greedy algorithm."));
+                }
+                else if (!strcmp(tag, "ErrorHandlingStrategy"))
+                {
+                    Options::setErrorHandlingStrategy(static_cast<ErrorHandlingStrategy>(cLocale.toInt(findXMLAttValu(ep,
+                                                      "value"))));
+
+                    subEP = findXMLEle(ep, "delay");
+                    if (subEP)
+                    {
+                        Options::setErrorHandlingStrategyDelay(cLocale.toInt(pcdataXMLEle(subEP)));
+                    }
+                    subEP = findXMLEle(ep, "RescheduleErrors");
+                    Options::setRescheduleErrors(subEP != nullptr);
+                }
+                else if (!strcmp(tag, "StartupProcedure"))
+                {
+                    XMLEle *procedure;
+                    Options::setSchedulerUnparkDome(false);
+                    Options::setSchedulerUnparkMount(false);
+                    Options::setSchedulerOpenDustCover(false);
+
+                    for (procedure = nextXMLEle(ep, 1); procedure != nullptr; procedure = nextXMLEle(ep, 0))
+                    {
+                        const char *proc = pcdataXMLEle(procedure);
+
+                        if (!strcmp(proc, "StartupScript"))
+                        {
+                            moduleState()->setStartupScriptURL(QUrl::fromUserInput(findXMLAttValu(procedure, "value")));
+                        }
+                        else if (!strcmp(proc, "UnparkDome"))
+                            Options::setSchedulerUnparkDome(true);
+                        else if (!strcmp(proc, "UnparkMount"))
+                            Options::setSchedulerUnparkMount(true);
+                        else if (!strcmp(proc, "UnparkCap"))
+                            Options::setSchedulerOpenDustCover(true);
+                    }
+                }
+                else if (!strcmp(tag, "ShutdownProcedure"))
+                {
+                    XMLEle *procedure;
+                    Options::setSchedulerWarmCCD(false);
+                    Options::setSchedulerParkDome(false);
+                    Options::setSchedulerParkMount(false);
+                    Options::setSchedulerCloseDustCover(false);
+
+                    for (procedure = nextXMLEle(ep, 1); procedure != nullptr; procedure = nextXMLEle(ep, 0))
+                    {
+                        const char *proc = pcdataXMLEle(procedure);
+
+                        if (!strcmp(proc, "ShutdownScript"))
+                        {
+                            moduleState()->setShutdownScriptURL(QUrl::fromUserInput(findXMLAttValu(procedure, "value")));
+                        }
+                        else if (!strcmp(proc, "WarmCCD"))
+                            Options::setSchedulerWarmCCD(true);
+                        else if (!strcmp(proc, "ParkDome"))
+                            Options::setSchedulerParkDome(true);
+                        else if (!strcmp(proc, "ParkMount"))
+                            Options::setSchedulerParkMount(true);
+                        else if (!strcmp(proc, "ParkCap"))
+                            Options::setSchedulerCloseDustCover(true);
+                    }
+                }
+            }
+            delXMLEle(root);
+            emit syncGUIToGeneralSettings();
+        }
+        else if (errmsg[0])
+        {
+            emit newLog(QString(errmsg));
+            delLilXML(xmlParser);
+            moduleState()->setSchedulerState(old_state);
+            return false;
+        }
+    }
+
+    moduleState()->setDirty(false);
+    delLilXML(xmlParser);
+    emit updateSchedulerURL(fileURL);
+
+    moduleState()->setSchedulerState(old_state);
+    return true;
+
+}
+
 void SchedulerProcess::setAlignStatus(AlignState status)
 {
     if (moduleState()->schedulerState() == SCHEDULER_PAUSED || activeJob() == nullptr)
@@ -2408,72 +2550,81 @@ bool SchedulerProcess::isDomeParked()
     return status == ISD::PARK_PARKED;
 }
 
-void SchedulerProcess::setupJob(SchedulerJob &job, const QString &name, const QString &group, const dms &ra, const dms &dec,
-                                double djd, double rotation, const QUrl &sequenceUrl, const QUrl &fitsUrl, StartupCondition startup,
-                                const QDateTime &startupTime, CompletionCondition completion, const QDateTime &completionTime, int completionRepeats,
-                                double minimumAltitude, double minimumMoonSeparation, bool enforceWeather, bool enforceTwilight,
-                                bool enforceArtificialHorizon, bool track, bool focus, bool align, bool guide)
+bool SchedulerProcess::createJobSequence(XMLEle *root, const QString &prefix, const QString &outputDir)
 {
-    /* Configure or reconfigure the observation job */
+    XMLEle *ep    = nullptr;
+    XMLEle *subEP = nullptr;
 
-    job.setName(name);
-    job.setGroup(group);
-    // djd should be ut.djd
-    job.setTargetCoords(ra, dec, djd);
-    job.setPositionAngle(rotation);
-
-    /* Consider sequence file is new, and clear captured frames map */
-    job.setCapturedFramesMap(SchedulerJob::CapturedFramesMap());
-    job.setSequenceFile(sequenceUrl);
-    job.setFITSFile(fitsUrl);
-    // #1 Startup conditions
-
-    job.setStartupCondition(startup);
-    if (startup == START_AT)
+    for (ep = nextXMLEle(root, 1); ep != nullptr; ep = nextXMLEle(root, 0))
     {
-        job.setStartupTime(startupTime);
+        if (!strcmp(tagXMLEle(ep), "Job"))
+        {
+            for (subEP = nextXMLEle(ep, 1); subEP != nullptr; subEP = nextXMLEle(ep, 0))
+            {
+                if (!strcmp(tagXMLEle(subEP), "Prefix"))
+                {
+                    XMLEle *rawPrefix = findXMLEle(subEP, "RawPrefix");
+                    if (rawPrefix)
+                    {
+                        editXMLEle(rawPrefix, prefix.toLatin1().constData());
+                    }
+                }
+                else if (!strcmp(tagXMLEle(subEP), "FITSDirectory"))
+                {
+                    editXMLEle(subEP, outputDir.toLatin1().constData());
+                }
+            }
+        }
     }
-    /* Store the original startup condition */
-    job.setFileStartupCondition(job.getStartupCondition());
-    job.setFileStartupTime(job.getStartupTime());
 
-    // #2 Constraints
+    QDir().mkpath(outputDir);
 
-    job.setMinAltitude(minimumAltitude);
-    job.setMinMoonSeparation(minimumMoonSeparation);
+    QString filename = QString("%1/%2.esq").arg(outputDir, prefix);
+    FILE *outputFile = fopen(filename.toLatin1().constData(), "w");
 
-    // Check enforce weather constraints
-    job.setEnforceWeather(enforceWeather);
-    // twilight constraints
-    job.setEnforceTwilight(enforceTwilight);
-    job.setEnforceArtificialHorizon(enforceArtificialHorizon);
-
-    job.setCompletionCondition(completion);
-    if (completion == FINISH_AT)
-        job.setCompletionTime(completionTime);
-    else if (completion == FINISH_REPEAT)
+    if (outputFile == nullptr)
     {
-        job.setRepeatsRequired(completionRepeats);
-        job.setRepeatsRemaining(completionRepeats);
+        QString message = i18n("Unable to write to file %1", filename);
+        KSNotification::sorry(message, i18n("Could Not Open File"));
+        return false;
     }
-    // Job steps
-    job.setStepPipeline(SchedulerJob::USE_NONE);
-    if (track)
-        job.setStepPipeline(static_cast<SchedulerJob::StepPipeline>(job.getStepPipeline() | SchedulerJob::USE_TRACK));
-    if (focus)
-        job.setStepPipeline(static_cast<SchedulerJob::StepPipeline>(job.getStepPipeline() | SchedulerJob::USE_FOCUS));
-    if (align)
-        job.setStepPipeline(static_cast<SchedulerJob::StepPipeline>(job.getStepPipeline() | SchedulerJob::USE_ALIGN));
-    if (guide)
-        job.setStepPipeline(static_cast<SchedulerJob::StepPipeline>(job.getStepPipeline() | SchedulerJob::USE_GUIDE));
 
-    /* Store the original startup condition */
-    job.setFileStartupCondition(job.getStartupCondition());
-    job.setFileStartupTime(job.getStartupTime());
+    fprintf(outputFile, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+    prXMLEle(outputFile, root, 0);
 
-    /* Reset job state to evaluate the changes */
-    job.reset();
+    fclose(outputFile);
 
+    return true;
+}
+
+XMLEle *SchedulerProcess::getSequenceJobRoot(const QString &filename) const
+{
+    QFile sFile;
+    sFile.setFileName(filename);
+
+    if (!sFile.open(QIODevice::ReadOnly))
+    {
+        KSNotification::sorry(i18n("Unable to open file %1", sFile.fileName()),
+                              i18n("Could Not Open File"));
+        return nullptr;
+    }
+
+    LilXML *xmlParser = newLilXML();
+    char errmsg[MAXRBUF];
+    XMLEle *root = nullptr;
+    char c;
+
+    while (sFile.getChar(&c))
+    {
+        root = readXMLEle(xmlParser, c, errmsg);
+
+        if (root)
+            break;
+    }
+
+    delLilXML(xmlParser);
+    sFile.close();
+    return root;
 }
 
 void SchedulerProcess::checkProcessExit(int exitCode)

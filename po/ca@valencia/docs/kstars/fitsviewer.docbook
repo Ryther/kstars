@@ -1,20 +1,18 @@
-<sect1 id="tool-fitsviewer">
+<chapter id="fitsviewer">
 <title
->Eina del visor <acronym
+>El visor de <acronym
 >FITS</acronym
 ></title>
 <indexterm
 ><primary
->Eines</primary>
-<secondary
->Visor FITS</secondary>
-</indexterm>
+>Visor de FITS</primary
+></indexterm>
 
 <para
->El sistema de transport flexible d'imatges (Flexible Image Transport System -FITS-) és el format estàndard per a representar imatges i dades en astronomia. Els visor FITS de &kstars; és una eina per a visualitzar-les. No està dissenyat per a editar les imatges FITS.</para>
+>El sistema de transport flexible d'imatges (Flexible Image Transport System -FITS-) és el format estàndard per a representar imatges i dades en astronomia. Els visor de FITS de &kstars; és una eina per a visualitzar-les. No està dissenyat per a editar les imatges FITS.</para>
 
 <para
->El visor FITS és invocat automàticament quan es reben imatges noves des de la càmera. També es pot invocar directament des del menú principal de &kstars;. Per a obrir un fitxer FITS, seleccioneu l'element de menú <menuchoice
+>El visor de FITS és invocat automàticament quan es reben imatges noves des de la càmera. També es pot invocar directament des del menú principal de &kstars;. Per a obrir un fitxer FITS, seleccioneu l'element de menú <menuchoice
 ><guimenu
 >Fitxer</guimenu
 > <guimenuitem
@@ -28,41 +26,41 @@
 
 <screenshot>
   <screeninfo
->L'eina del visor FITS</screeninfo>
+>El visor de FITS</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="fitsviewer1.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Eina del visor FITS</phrase>
+>Visor de FITS</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 
 <para
->El diagrama anterior il·lustra la finestra i l'àrea de treball principal del visor FITS. També hi ha una àrea oculta que es pot exposar movent el ratolí per damunt dels 6 punts petits que hi ha a la banda esquerra (prop del centre de la imatge verticalment) i prement i mantenint premut el botó del ratolí, fent lliscar una mica cap a la dreta.</para>
+>El diagrama anterior il·lustra la finestra i l'àrea de treball principal del visor de FITS. També hi ha una àrea oculta que es pot exposar movent el ratolí per damunt dels 6 punts petits que hi ha a la banda esquerra (prop del centre de la imatge verticalment) i prement i mantenint premut el botó del ratolí, fent lliscar una mica cap a la dreta.</para>
 
 <screenshot>
   <screeninfo
->L'eina del visor FITS amb un quadro lliscant obert</screeninfo>
+>El visor de FITS amb un quadro lliscant obert</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="fitsviewer2.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->L'eina del visor FITS amb un quadro lliscant obert</phrase>
+>El visor de FITS amb un quadro lliscant obert</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 
-<sect2 id="fits-viewer-main-controls">
+<sect1 id="fits-viewer-main-controls">
     <title
 >Controls principals</title>
 
 <para
->A continuació es mostren els diferents controls i pantalles del visor FITS. L'eina proporciona funcions bàsiques per a visualitzar les imatges. Si bé l'eina complix l'estàndard FITS, no admet totes les característiques possibles de FITS:</para>
+>A continuació es mostren els diferents controls i pantalles del visor de FITS. L'eina proporciona funcions bàsiques per a visualitzar les imatges. Si bé l'eina complix l'estàndard FITS, no admet totes les característiques possibles de FITS:</para>
 <itemizedlist>
   <listitem
 ><para
@@ -76,7 +74,7 @@
 ></listitem>
 </itemizedlist>
 <para
->La finestra del visor FITS es dividix en les següents regions:</para>
+>La finestra del visor de FITS es dividix en les següents regions:</para>
 <orderedlist>
     <listitem
 ><para
@@ -134,7 +132,7 @@
 ></listitem>
                 <listitem
 ><para
->Filtres: Estirat automàtic, Contrast, Passaalt, Gira, Invertix.</para
+>Filtres: Estirament automàtic, Contrast, Passaalt, Gira, Invertix.</para
 ></listitem>
                 <listitem
 ><para
@@ -182,7 +180,7 @@
 ></listitem>
                 <listitem
 ><para
->Visualitza a la mida real.</para
+>Visualitza en la mida real.</para
 ></listitem>
                 <listitem
 ><para
@@ -190,11 +188,11 @@
 ></listitem>
                 <listitem
 ><para
->Gira a la dreta.</para
+>Gira cap a la dreta.</para
 ></listitem>
                 <listitem
 ><para
->Gira a l'esquerra.</para
+>Gira cap a l'esquerra.</para
 ></listitem>
                 <listitem
 ><para
@@ -206,7 +204,7 @@
 ></listitem>
                 <listitem
 ><para
->Mostra els punts de mira: alterna els punts de mira al centre de la imatge.</para
+>Mostra els punts de mira: alterna els punts de mira en el centre de la imatge.</para
 ></listitem>
                 <listitem
 ><para
@@ -242,7 +240,7 @@
 ></listitem>
                 <listitem
 ><para
->Estirat automàtic: aplica el filtre d'estirat automàtic a la imatge.</para
+>Estirament automàtic: aplica el filtre d'estirament automàtic a la imatge.</para
 ></listitem>
                 <listitem
 ><para
@@ -293,14 +291,14 @@
 >Tecla de control: si manteniu premuda la tecla &Ctrl; i després moveu el ratolí, es mostrarà una part ampliada de la imatge.</para>
 <screenshot>
   <screeninfo
->La lupa en el visor FITS</screeninfo>
+>La lupa en el visor de FITS</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="fitsviewer-magnifier.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->La lupa en el visor FITS</phrase>
+>La lupa en el visor de FITS</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -312,7 +310,7 @@
 >Proporciona una mitjana estadística simple, una desviació estàndard mitjana i una mediana mitjana de la regió seleccionada per l'usuari en un consell d'eina. </para>
                 <screenshot>
                     <screeninfo
->Visor FITS </screeninfo>
+>Visor de FITS </screeninfo>
                     <mediaobject>
                         <imageobject>
                             <imagedata fileref="fitsviewer_selstat.png" format="PNG"/>
@@ -344,14 +342,14 @@
 >Controls d'estirament</para>
 <screenshot>
   <screeninfo
->Els controls d'estirament en el visor FITS</screeninfo>
+>Els controls d'estirament en el visor de FITS</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="fitsviewer-stretch.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Els controls d'estirament en el visor FITS</phrase>
+>Els controls d'estirament en el visor de FITS</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -394,21 +392,21 @@
 >Llums intenses:</guilabel
 >. Ajustar-los canviarà els valors mostrats. </para>
             <para
->L'histograma, si està habilitat, es pot fer zoom utilitzant la roda de desplaçament del ratolí i desplaçar-se arrossegant amb el ratolí. A davall del ratolí, un cursor en l'histograma mostra la posició del píxel en la imatge. </para>
+>L'histograma, si està habilitada, es pot fer zoom utilitzant la roda de desplaçament del ratolí i desplaçar-se arrossegant amb el ratolí. A davall del ratolí, un cursor en l'histograma mostra la posició del píxel en la imatge. </para>
     </listitem>
     <listitem
 ><para
 >Barra d'estat</para>
 <screenshot>
   <screeninfo
->La pantalla d'estat en el visor FITS</screeninfo>
+>La pantalla d'estat en el visor de FITS</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="fitsviewer-status.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->La pantalla d'estat en el visor FITS</phrase>
+>La pantalla d'estat en el visor de FITS</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -446,7 +444,7 @@
 ></listitem>
                 <listitem
 ><para
->Estreles retallades: si està activat el bote <guibutton
+>Estreles retallades: si se selecciona el bote <guibutton
 >Mostra el retallat</guibutton
 > en la barra d'eines principal, es mostrarà el nombre de píxels possiblement retallats. A dalt és de Retallats:403.</para
 ></listitem>
@@ -469,7 +467,7 @@
 ></keycombo
 >. </para>
 <para
->Atés que les operacions com ara la reconstrucció des de Bayer i el WCS automàtic són cares en recursos i posen èmfasi en el processador en dispositius incrustats amb poca potència, podeu canviar el seu comportament a la <link linkend="fits-configure"
+>Atés que les operacions com ara la reconstrucció des de Bayer i el WCS automàtic són cares en recursos i posen èmfasi en el processador en dispositius incrustats amb poca potència, podeu canviar el seu comportament en la <link linkend="fits-configure"
 >pàgina de configuració FITS de &kstars;</link
 >. </para>
 <screenshot>
@@ -487,8 +485,8 @@
 </screenshot>
 <para
 >Passant el cursor per damunt de qualsevol opció, es mostrarà un detallat consell d'eina explicant la seua funció. </para>
-</sect2>
-<sect2 id="fits-viewer-features">
+</sect1>
+<sect1 id="fits-viewer-features">
     <title
 >Característiques</title>
     <variablelist>
@@ -530,28 +528,28 @@
             </listitem>
         </varlistentry>
     </variablelist>
-</sect2>
+</sect1>
 
-<sect2 id="fits-viewer-solver">
+<sect1 id="fits-viewer-solver">
     <title
->Solucionador del visor FITS</title>
+>Solucionador del visor de FITS</title>
     <screenshot>
         <screeninfo
->Solucionador del visor FITS </screeninfo>
+>Solucionador del visor de FITS </screeninfo>
         <mediaobject>
             <imageobject>
                 <imagedata fileref="fitsviewer-solver.png" format="PNG"/>
             </imageobject>
             <textobject>
                 <phrase
->Solucionador del visor FITS</phrase>
+>Solucionador del visor de FITS</phrase>
             </textobject>
         </mediaobject>
     </screenshot>
     <para
->El solucionador del visor FITS s'utilitza per a resoldre la placa de la imatge carregada en la pestanya <guilabel
->Visor FITS</guilabel
->. Només funciona amb StellarSolver intern. Obté les coordenades RA i Dec per al centre de la imatge, l'escala de la imatge, l'angle de rotació i la quantitat d'estreles detectades a la imatge. El seu principal cas d'ús és la depuració de problemes en la resolució de plaques a Ekos, encara que la informació mostrada pot ser útil en general. Els controls i pantalles es descriuen a continuació. </para>
+>El solucionador del visor de FITS s'utilitza per a resoldre la placa de la imatge carregada en la pestanya <guilabel
+>Visor de FITS</guilabel
+>. Només funciona amb StellarSolver intern. Obté les coordenades AR i Dec per al centre de la imatge, l'escala de la imatge, l'angle de rotació i la quantitat d'estreles detectades en la imatge. El seu principal cas d'ús és la depuració de problemes en la resolució de plaques a Ekos, encara que la informació mostrada pot ser útil en general. Els controls i pantalles es descriuen a continuació. </para>
             <itemizedlist>
                 <listitem
 ><para
@@ -619,19 +617,19 @@
 ></listitem>
                 <listitem
 ><para
->Imatge: Per a qualsevol imatge on s'han detectat estreles, si està activat el botó <guibutton
+>Imatge: Per a qualsevol imatge on s'han detectat estreles, si se selecciona el botó <guibutton
 >Marca les estreles</guibutton
 > sobre la visualització de la imatge, les estreles detectades apareixeran en un cercle roig.</para>
     <screenshot>
         <screeninfo
->El botó «Marca les estreles» en el visor FITS </screeninfo>
+>El botó «Marca les estreles» en el visor de FITS </screeninfo>
         <mediaobject>
             <imageobject>
                 <imagedata fileref="fitsviewer-mark-stars.png" format="PNG"/>
             </imageobject>
             <textobject>
                 <phrase
->El botó «Marca les estreles» en el visor FITS</phrase>
+>El botó «Marca les estreles» en el visor de FITS</phrase>
             </textobject>
         </mediaobject>
     </screenshot>
@@ -660,7 +658,7 @@
 ><para
 >Després, <link linkend="developer"
 >es podria ubicar</link
-> una imatge difícil (en la que ha fallat l'alineació) i carregar-la dins del visor FITS.</para
+> una imatge difícil (en la que ha fallat l'alineació) i carregar-la dins del visor de FITS.</para
 ></listitem>
               <listitem
 ><para
@@ -674,7 +672,7 @@
 ></listitem>
               <listitem
 ><para
->L'usuari podrà carregar manualment la imatge a astrometry.net per a obtindre els valors d'escala i de posició (o senzillament veure si és una imatge problemàtica). </para
+>L'usuari podrà carregar manualment la imatge a «astrometry.net» per a obtindre els valors d'escala i de posició (o senzillament veure si és una imatge problemàtica). </para
 ></listitem>
               <listitem
 ><para
@@ -693,21 +691,21 @@
 >, seleccionarà la pestanya <guilabel
 >Opcions</guilabel
 > de StellarSolver, s'assegurarà que està seleccionat el perfil d'opcions correcte i farà clic damunt del botó de llapis per a veure o editar este perfil. </para>
-</sect2>
+</sect1>
 
-<sect2 id="fits-viewer-embedded">
+<sect1 id="fits-viewer-embedded">
     <title
->Visor FITS incrustat</title>
+>Visor de FITS incrustat</title>
     <screenshot>
         <screeninfo
->Visor FITS incrustat </screeninfo>
+>Visor de FITS incrustat </screeninfo>
         <mediaobject>
             <imageobject>
                 <imagedata fileref="fitsviewer_embedded.png" format="PNG"/>
             </imageobject>
             <textobject>
                 <phrase
->Visor FITS incrustat</phrase>
+>Visor de FITS incrustat</phrase>
             </textobject>
         </mediaobject>
     </screenshot>
@@ -718,7 +716,7 @@
 >Guiatge</link
 > i <link linkend="ekos-align"
 >Alineació</link
-> d'Ekos, les imatges capturades són mostrades al visor FITS incrustat. El visor incrustat inclou una <emphasis
+> d'Ekos, les imatges capturades són mostrades en el visor de FITS incrustat. El visor incrustat inclou una <emphasis
 >barra flotant</emphasis
 > que es pot utilitzar per a realitzar diverses funcions: </para>
     <itemizedlist>
@@ -756,10 +754,10 @@
         </listitem>
     </itemizedlist>
     <para
->La barra flotant s'ocultarà automàticament quan el ratolí isca de la zona del visor incrustat. Podeu utilitzar el ratolí per a fer panoràmiques i zoom igual que amb l'eina independent del visor FITS. El quadro de seguiment verd es pot utilitzar per a seleccionar una estrela específica o una regió dins de la imatge, per exemple, per a seleccionar una estrela guia. </para>
-</sect2>
+>La barra flotant s'ocultarà automàticament quan el ratolí isca de la zona del visor incrustat. Podeu utilitzar el ratolí per a fer panoràmiques i zoom igual que amb el visor de FITS independent. El quadro de seguiment verd es pot utilitzar per a seleccionar una estrela específica o una regió dins de la imatge, per exemple, per a seleccionar una estrela guia. </para>
+</sect1>
 
-<sect2 id="fits-viewer-3d-star-profile">
+<sect1 id="fits-viewer-3d-star-profile">
 <title
 >Eina de visualització del perfil de l'estrela i dades en 3D</title>
 <screenshot>
@@ -776,11 +774,11 @@
         </mediaobject>
     </screenshot>
     <para
->L'eina de visualització de les dades en 3D pot dibuixar gràfics en 3D de la regió seleccionada de la imatge. Açò és particularment útil per als astrofotògrafs que volen visualitzar el perfil d'una estrela, la qual consideren enfocar o guiar. Per als científics, els permet examinar una secció transversal de les dades per a entendre la lluminositat relativa dels diferents objectes de la imatge. A més, permet als usuaris que vullguen veure visualment què està passant en la seua recopilació de dades d'una altra manera. </para>
+>L'eina de visualització de les dades en 3D pot dibuixar gràfics en 3D de la regió seleccionada de la imatge. Açò és particularment útil per als astrofotògrafs que volen visualitzar el perfil d'una estrela, la qual consideren enfocar o guiar. Per als científics, els permet examinar una secció transversal de les dades per a entendre la brillantor relativa dels diferents objectes en la imatge. A més, permet als usuaris que vullguen veure visualment què està passant en la seua recopilació de dades d'una altra manera. </para>
     <para
 >Per a utilitzar la nova característica, l'usuari haurà de seleccionar la icona <guiicon
 >Visualitza el perfil de l'estrela</guiicon
-> en una de les vistes del mòdul Ekos o en el visor FITS. A continuació, la regió seleccionada en el quadro de seguiment verd apareixerà al gràfic en 3D tal com es mostra a dalt. L'usuari tindrà una de les següents barres d'eines a la part inferior. </para>
+> en una de les vistes del mòdul Ekos o en el visor de FITS. A continuació, la regió seleccionada en el quadro de seguiment verd apareixerà al gràfic en 3D tal com es mostra a dalt. L'usuari tindrà una de les següents barres d'eines a la part inferior. </para>
     <screenshot>
         <screeninfo
 >Barra d'eines 1 del perfil de l'estrela </screeninfo>
@@ -808,11 +806,11 @@
         </mediaobject>
     </screenshot>
     <para
->En l'extrem esquerre, el quadro combinat de mida de la mostra permetrà a l'usuari seleccionar la mida del retall de la imatge que es mostrarà en el gràfic. Esta opció només estarà disponible a la <guilabel
+>En l'extrem esquerre, el quadro combinat de mida de la mostra permetrà a l'usuari seleccionar la mida del retall de la imatge que es mostrarà en el gràfic. Esta opció només estarà disponible en la <guilabel
 >Pantalla de resum</guilabel
 >, al <link linkend="ekos-align"
->mòdul per a l'alineació</link
-> i al visor FITS. El segon quadro combinat permet controlar a l'usuari si se selecciona un element individual, una fila o una columna de píxels. El botó dividix estarà habilitat si l'usuari selecciona <guimenuitem
+>mòdul «Alinea»</link
+> i en el visor de FITS. El segon quadro combinat permet controlar a l'usuari si se selecciona un element individual, una fila o una columna de píxels. El botó dividix estarà habilitat si l'usuari selecciona <guimenuitem
 >Fila</guimenuitem
 > o <guimenuitem
 >Columna</guimenuitem
@@ -835,7 +833,7 @@
     <para
 >A continuació, l'usuari té el quadro combinat <guilabel
 >Zoom a</guilabel
->, que l'usuari pot utilitzar per a ampliar el gràfic a diferents ubicacions predefinides. A continuació es mostra el quadro combinat que permet a l'usuari seleccionar l'esquema de color del gràfic. A continuació, es mostren les caselles de selecció HFR i Pic, les quals activaran les etiquetes HFR i Pic de cada estrela trobada en la imatge, però també mostraran una d'elles a la part inferior de la pantalla. Finalment, apareix la casella de selecció d'escalat, la qual habilita el quadro lateral <guilabel
+>, el qual pot utilitzar l'usuari per a ampliar el gràfic a ubicacions diferents predefinides. A continuació es mostra el quadro combinat que permet a l'usuari seleccionar l'esquema de color del gràfic. A continuació, es mostren les caselles de selecció HFR i Pic, les quals activaran les etiquetes HFR i Pic de cada estrela trobada en la imatge, però també mostraran una d'elles a la part inferior de la pantalla. Finalment, apareix la casella de selecció d'escalat, la qual habilita el quadro lateral <guilabel
 >Escalat</guilabel
 >. Hi ha tres controls lliscants en este quadro, un per a controlar el valor mínim que es mostra al gràfic o <quote
 >punt negre</quote
@@ -872,5 +870,5 @@
             </textobject>
         </mediaobject>
     </screenshot>
-</sect2>
 </sect1>
+</chapter>

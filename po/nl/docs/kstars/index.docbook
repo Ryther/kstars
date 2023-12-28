@@ -56,10 +56,9 @@
   <!ENTITY tool-altvstime SYSTEM "altvstime.docbook">
   <!ENTITY tool-calculator SYSTEM "calculator.docbook">
   <!ENTITY tool-details SYSTEM "details.docbook">
-  <!ENTITY tool-ekos SYSTEM "ekos.docbook">
+  <!ENTITY ekos SYSTEM "ekos.docbook">
   <!ENTITY tool-ekos-align SYSTEM "ekos-align.docbook">
   <!ENTITY tool-ekos-capture SYSTEM "ekos-capture.docbook">
-  <!ENTITY tool-ekos-fits-viewer SYSTEM "ekos-fits-viewer.docbook">
   <!ENTITY tool-ekos-focus SYSTEM "ekos-focus.docbook">
   <!ENTITY tool-ekos-guide SYSTEM "ekos-guide.docbook">
   <!ENTITY tool-ekos-logs SYSTEM "ekos-logs.docbook">
@@ -71,7 +70,7 @@
   <!ENTITY tool-ekos-tutorials SYSTEM "ekos-tutorials.docbook">
   <!ENTITY tool-ekos-user-interface SYSTEM "ekos-user-interface.docbook">
   <!ENTITY tool-eyepieceview SYSTEM "eyepieceview.docbook">
-  <!ENTITY tool-fitsviewer SYSTEM "fitsviewer.docbook">
+  <!ENTITY fitsviewer SYSTEM "fitsviewer.docbook">
   <!ENTITY tool-jmoons SYSTEM "jmoons.docbook">
   <!ENTITY tool-obsplanner SYSTEM "obsplanner.docbook">
   <!ENTITY tool-scriptbuilder SYSTEM "scriptbuilder.docbook">
@@ -91,18 +90,8 @@
 <bookinfo>
 
 <authorgroup>
-<author
-><firstname
->Jason</firstname
-> <surname
->Harris</surname
-> <affiliation
-> <address
->&Jason.Harris.mail;</address>
-</affiliation>
-</author>
 
-<othercredit role="developer"
+<author
 ><firstname
 >Jasem</firstname
 > <surname
@@ -113,6 +102,19 @@
 </affiliation>
 <contrib
 >Belangrijkste ontwikkelaar &amp; onderhoud</contrib>
+</author>
+
+<othercredit role="developer"
+><firstname
+>Jason</firstname
+> <surname
+>Harris</surname
+> <affiliation
+> <address
+>&Jason.Harris.mail;</address>
+</affiliation>
+<contrib
+>Oorspronkelijke auteur</contrib>
 </othercredit>
 
 <othercredit role="developer"
@@ -296,16 +298,39 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2023-08-01</date>
+>2023-12-01</date>
 <releaseinfo
->3.6.6</releaseinfo>
+>3.6.8</releaseinfo>
 
 <abstract>
 <para
->&kstars; is vrije, opensource software voor Astronomie, die voor meerdere platforms (typen computers) beschikbaar is. Hiermee kunt u een accurate grafische simulatie verkrijgen van de nachtelijke hemel, voor iedere locatie op aarde, en voor elk tijdstip. Er worden tot 100 miljoen sterren weergegeven, 13000 deep-sky objecten, alle 8 planeten, de zon en de maan, en duizenden kometen, planetoïden, supernova's en satellieten. Voor leerlingen en hun leraren is de simulatiesnelheid te variëren, zodat gebeurtenissen die een lange tijd in beslag nemen, kunnen worden bekeken. Verder bevat &kstars; een Astrorekenmachine voor het voorspellen van conjuncties (samenstanden), en voor vele andere astronomische berekeningen. Voor de amateur astronoom heeft het een waarnemingenplanner, een hemelagenda, en een bewerkingsprogramma (editor) voor het gezichtsveld, waarmee het gezichtsveld van de apparatuur kan worden berekend en getoond. Vind uit welke interessante objecten er te zien zijn met het hulpmiddel <quote
+>&kstars; is vrije, open-source, cross-platform astronomiesoftware. Het levert de hemelkaart van &kstars;, een digitaal planetarium met overlays en hulpmiddelen voor simulatie, de Ekos astrofotografie suite die acteert als een client voor INDI-apparaatbesturingsprogramma's en de FITS -viewer die opgenomen hemelafbeeldingen toont. </para>
+
+<para>
+<itemizedlist>
+ <listitem>
+   <para
+>De hemelkaart van &kstars; levert een nauwkeurige grafische simulatie van de nachtelijke hemel, vanaf elke locatie op aarde, voor elke datum en op elk tijdstip. Er kunnen tot aan 100 miljoen sterren worden afgebeeld, 13.000 zogenaamde deepsky-objecten, alle 8 planeten, de zon en de maan en duizenden kometen, planetoïden, supernova's en satellieten. </para>
+   <para
+>Voor leerlingen en hun leraren is de simulatiesnelheid te variëren, zodat gebeurtenissen die een lange tijd in beslag nemen, kunnen worden bekeken. Verder bevat &kstars; een Astrorekenmachine voor het voorspellen van conjuncties (samenstanden) en voor vele andere astronomische berekeningen. Voor de amateur astronoom heeft het een waarnemingenplanner, een hemelagenda, en een bewerkingsprogramma (editor) voor het gezichtsveld, waarmee het gezichtsveld van de apparatuur kan worden berekend en getoond. Vind uit welke interessante objecten er te zien zijn met het hulpmiddel <quote
 >Wat is er vanavond te zien</quote
->, plot voor elk object een grafiek van de hoogte als functie van de tijd, druk hemelkaarten van hoge kwaliteit af, en verkrijg toegang tot een schat aan informatie, om u te helpen bij het onderzoeken van het heelal! Bij &kstars; inbegrepen is de suite voor astrofotografie van Ekos, een compleet programma voor astrofotografie, waarmee u alle INDI-apparaten kunt besturen, waaronder tal van telescopen, CCD's, DSLR's, focusers, filters, en nog veel meer. Met Ekos kunt u zeer nauwkeurig sterren volgen, gebruik makend van een online en offline oplosser voor astrometrie, heeft mogelijkheden voor autofocus en autovolgen, en enkele of meerdere afbeeldingen vastleggen met behulp van de krachtige ingebouwde "sequence manager" (beheerprogramma voor rijen). </para>
+>, plot voor elk object een grafiek van de hoogte als functie van de tijd, druk hemelkaarten van hoge kwaliteit af, en verkrijg toegang tot een schat aan informatie, om u te helpen bij het onderzoeken van het heelal! De HiPS gehel hemel progressieve overlay levert fantastische weergaven van talrijke overzichten die het gehele elektromagnetisch spectrum omvatten. </para>
+ </listitem>
+
+ <listitem>
+   <para
+>Bij &kstars; inbegrepen is de suite voor astrofotografie van Ekos, een compleet programma voor astrofotografie, waarmee u alle INDI-apparaten kunt besturen, waaronder tal van telescopen, CCD's, DSLR's, focusers, filters, en nog veel meer. Met Ekos kunt u zeer nauwkeurig sterren volgen, gebruik makend van een online en offline oplosser voor astrometrie, heeft mogelijkheden voor autofocus en automatisch volgen en enkele of meerdere afbeeldingen vastleggen met behulp van de krachtige ingebouwde "sequentiebeheerder" (beheerprogramma voor rijen). Het integreert goed met de hemelkaart en FITS-viewer. Het heeft ook hulpmiddelen voor polaire uitlijning en het meten van optische aberraties. </para>
+ </listitem>
+
+ <listitem>
+   <para
+>De FITS-viewer kan FITS en ander formaat afbeeldingen tonen, inclusief die zijn opgenomen door Ekos. Je kunt zoomen en rondkijken, uitgerekte versies van de afbeeldingen bekijken, afbeeldingshistogrammen zien, plaat-oplossen en sterren en coördinaten in de afbeeldingen vinden. </para>
+ </listitem>
+
+</itemizedlist>
+</para>
 </abstract>
+   
 
 <keywordset>
 <keyword
@@ -375,15 +400,17 @@
 >HiPS all-sky progressive overlay</link
 > aanzet, kunt u afbeeldingen met een hoge resolutie ophalen en die direct in de hemelkaart weergeven. U kunt uit talrijke catalogi kiezen van diverse missies in de ruimte en op aarde. Hiervoor is een snelle internetverbinding nodig, voor het ophalen van de afbeeldingen. De afbeeldingen worden lokaal opgeslagen om de nodige bandbreedte te reduceren. U kunt dit via opties optimaliseren voor een zo goed mogelijke balans tussen ruimte op de schijf en de nodige te downloaden gegevens. </para>
 <para
->Echter, &kstars; is niet alleen geschikt voor studenten en leerlingen. U kunt (GoTo-) telescopen en camera's met &kstars; besturen, gebruik makend van het mooie en krachtige <link linkend="indi"
+>&kstars; is er ook voor astrofotografen. U kunt telescopen en camera's besturen, gebruik makend van het mooie en krachtige <link linkend="indi"
 >INDI</link
->-protocol. Door &kstars; worden enkele populaire telescopen ondersteund, waaronder de Meade LX200-familie en de Celestron GPS. Ook worden enkele populaire CCD-camera's, webcams en computergestuurde focusers ondersteund. Eenvoudige draai-/volgopdrachten zijn direct geïntegreerd in het contextmenu van het hoofdscherm, en het INDI-bedieningspaneel geeft u volledige toegang tot alle functies van uw telescoop. De INDI-client/serverarchitectuur maakt een naadloze besturing mogelijk van elk willekeurig aantal telescopen, <link linkend="indi-kstars-setup"
+>-protocol. Door Ekos worden vele populaire telescopen ondersteund, waaronder de Meade LX200-familie en de Celestron GPS. Ook worden vele populaire CCD, CMOS en DSLR-astrofotografiecamera's, webcams en computergestuurde focusers ondersteund. Eenvoudige draai-/volgopdrachten zijn direct geïntegreerd in het contextmenu van de hemelkaart en het INDI-bedieningspaneel geeft u volledige toegang tot alle functies van uw telescoop. De INDI-client/serverarchitectuur maakt een naadloze besturing mogelijk van elk willekeurig aantal telescopen, <link linkend="indi-kstars-setup"
 >lokaal</link
 > of <link linkend="indi-remote-control"
 >op afstand</link
->, binnen één enkele sessie met &kstars;. Voor gevorderde gebruikers is er Ekos, een complete programma-suite voor Linux  voor astrofotografie. <ulink url="https://indilib.org/about/ekos.html"
+>, binnen één enkele sessie met &kstars;. Voor gevorderde gebruikers is er Ekos, een complete programma-suite voor Linux, Mac and Windows voor astrofotografie. <ulink url="https://indilib.org/about/ekos.html"
 >Ekos</ulink
-> is gebaseerd op een modulair uitbreidbaar raamwerk voor het uitvoeren van algemene astrofotografie-taken. Hiertoe behoren zeer nauwkeurige GOTO's met behulp van de astrometrie-oplosser, de mogelijkheid uitlijnfouten op de poolster te meten en corrigeren, mogelijkheden voor autofocus en auto-volgen, en het vastleggen van enkele of meerdere afbeeldingen met gebruik van filterwielen. </para>
+> is gebaseerd op een modulair uitbreidbaar raamwerk voor het uitvoeren van algemene astrofotografie-taken. Hiertoe behoren zeer nauwkeurige GOTO's met behulp van de astrometrie-oplosser, de mogelijkheid uitlijnfouten op de poolster te meten en corrigeren, mogelijkheden voor autofocus en auto-volgen en het vastleggen van enkele of meerdere afbeeldingen met gebruik van filterwielen, rotator en koepel. Complexe taken kunnen gepland worden en automatisch uitgevoerd met de Ekos planner, die met beperkingen in prioriteit, hoogte, terrein, maan en schemering rekening houdt. U kunt de voorgang van een nachtelijke astrofotografie sessie bekijken met de Ekos analyse module en de opgenomen afbeeldingen bekijken met de FITS-viewer. Ekos is beschreven in <link linkend="ekos"
+>Chapter 5.</link
+> </para>
 <para
 >Wij vinden uw mening erg belangrijk. Indien u programmeerfouten vindt, of iets mist in &kstars; dat u er toch graag in wilt hebben, wordt u vriendelijk gevraagd dit aan de "&kstars; development mailing list" (de mailinglijst voor de ontwikkeling van &kstars;) <email
 >kstars-devel AT kde.org</email
@@ -393,6 +420,8 @@
 &quicktour;   <!--A Quick Tour of &kstars;-->
 &config;      <!--Configuring &kstars;-->
 &commands;    <!--Command Reference-->
+&ekos;        <!--Ekos-->
+&fitsviewer;        <!--FITS Viewer-->
 &tools;       <!--&kstars; Tools-->
 &dumpmode;    <!--Command-line image-dump mode-->
 &indi;        <!-- INDI-->

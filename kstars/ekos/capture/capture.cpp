@@ -717,13 +717,13 @@ void Capture::refreshCameraSettings()
     // Make sure we have a valid chip and valid base device.
     // Make sure we are not in capture process.
     auto camera = activeCamera();
-
-    if (!camera)
+    auto targetChip = devices()->getActiveChip();
+    // If camera is restarted, try again in one second
+    if (!camera || !targetChip || !targetChip->getCCD() || targetChip->isCapturing())
+    {
+        QTimer::singleShot(1000, this, &Capture::refreshCameraSettings);
         return;
-
-    ISD::CameraChip *targetChip = devices()->getActiveChip();
-    if (!targetChip || !targetChip->getCCD() || targetChip->isCapturing())
-        return;
+    }
 
     if (camera->hasCoolerControl())
     {
@@ -1232,7 +1232,7 @@ void Capture::processCameraNumber(INDI::Property prop)
         updateFrameProperties();
     else if ((prop.isNameMatch("CCD_INFO") && state()->useGuideHead() == false) ||
              (prop.isNameMatch("GUIDER_INFO") && state()->useGuideHead()))
-        updateFrameProperties(2);
+        updateFrameProperties(1);
     else if (prop.isNameMatch("CCD_TRANSFER_FORMAT") || prop.isNameMatch("CCD_CAPTURE_FORMAT"))
         updateCaptureFormats();
     else if (prop.isNameMatch("CCD_CONTROLS"))
@@ -2750,32 +2750,47 @@ void Capture::setPresetSettings(const QJsonObject &settings)
     int bin = settings["bin"].toInt(1);
     setBinning(bin, bin);
 
-    double temperature = settings["temperature"].toDouble(INVALID_VALUE);
-    if (temperature > INVALID_VALUE && devices()->getActiveCamera()
-            && devices()->getActiveCamera()->hasCoolerControl())
-    {
-        setForceTemperature(true);
-        setTargetTemperature(temperature);
-    }
-    else
+    if (settings["temperature"].isString() && settings["temperature"].toString() == "--")
         setForceTemperature(false);
-
-    double gain = settings["gain"].toDouble(GainSpinSpecialValue);
-    if (devices()->getActiveCamera() && devices()->getActiveCamera()->hasGain())
+    else
     {
-        if (gain == GainSpinSpecialValue)
-            captureGainN->setValue(GainSpinSpecialValue);
+        double temperature = settings["temperature"].toDouble(INVALID_VALUE);
+        if (temperature > INVALID_VALUE && devices()->getActiveCamera()
+                && devices()->getActiveCamera()->hasCoolerControl())
+        {
+            setForceTemperature(true);
+            setTargetTemperature(temperature);
+        }
         else
-            setGain(gain);
+            setForceTemperature(false);
     }
 
-    double offset = settings["offset"].toDouble(OffsetSpinSpecialValue);
-    if (devices()->getActiveCamera() && devices()->getActiveCamera()->hasOffset())
+    if (settings["gain"].isString() && settings["gain"].toString() == "--")
+        captureGainN->setValue(GainSpinSpecialValue);
+    else
     {
-        if (offset == OffsetSpinSpecialValue)
-            captureOffsetN->setValue(OffsetSpinSpecialValue);
-        else
-            setOffset(offset);
+        double gain = settings["gain"].toDouble(GainSpinSpecialValue);
+        if (devices()->getActiveCamera() && devices()->getActiveCamera()->hasGain())
+        {
+            if (gain == GainSpinSpecialValue)
+                captureGainN->setValue(GainSpinSpecialValue);
+            else
+                setGain(gain);
+        }
+    }
+
+    if (settings["offset"].isString() && settings["offset"].toString() == "--")
+        captureOffsetN->setValue(OffsetSpinSpecialValue);
+    else
+    {
+        double offset = settings["offset"].toDouble(OffsetSpinSpecialValue);
+        if (devices()->getActiveCamera() && devices()->getActiveCamera()->hasOffset())
+        {
+            if (offset == OffsetSpinSpecialValue)
+                captureOffsetN->setValue(OffsetSpinSpecialValue);
+            else
+                setOffset(offset);
+        }
     }
 
     int transferFormat = settings["transferFormat"].toInt(-1);

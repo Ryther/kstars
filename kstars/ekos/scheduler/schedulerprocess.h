@@ -7,6 +7,7 @@
 #pragma once
 
 #include "schedulertypes.h"
+#include "ekos/auxiliary/modulelogger.h"
 #include "ekos/align/align.h"
 #include "indi/indiweather.h"
 #include "dms.h"
@@ -163,6 +164,13 @@ public:
      */
     bool saveScheduler(const QUrl &fileURL);
 
+    /**
+     * @brief appendEkosScheduleList Append the contents of an ESL file to the queue.
+     * @param fileURL File URL to load contents from.
+     * @return True if contents were loaded successfully, else false.
+     */
+    bool appendEkosScheduleList(const QString &fileURL);
+
     // ////////////////////////////////////////////////////////////////////
     // device handling
     // ////////////////////////////////////////////////////////////////////
@@ -274,18 +282,22 @@ public:
     {
         m_capInterface = newInterface;
     }
-    // ////////////////////////////////////////////////////////////////////
-    // helper functions
-    // ////////////////////////////////////////////////////////////////////
 
     /**
-     * @brief setupJob Initialize a job with all fields accessible from the UI.
+     * @brief createJobSequence Creates a job sequence for the mosaic tool given the prefix and output dir. The currently selected sequence file is modified
+     * and a new version given the supplied parameters are saved to the output directory
+     * @param prefix Prefix to set for the job sequence
+     * @param outputDir Output dir to set for the job sequence
+     * @return True if new file is saved, false otherwise
      */
-    static void setupJob(SchedulerJob &job, const QString &name, const QString &group, const dms &ra, const dms &dec,
-                         double djd, double rotation, const QUrl &sequenceUrl, const QUrl &fitsUrl, StartupCondition startup,
-                         const QDateTime &startupTime, CompletionCondition completion, const QDateTime &completionTime, int completionRepeats,
-                         double minimumAltitude, double minimumMoonSeparation, bool enforceWeather, bool enforceTwilight,
-                         bool enforceArtificialHorizon, bool track, bool focus, bool align, bool guide);
+    bool createJobSequence(XMLEle *root, const QString &prefix, const QString &outputDir);
+
+    /**
+     * @brief getSequenceJobRoot Read XML data from capture sequence job
+     * @param filename
+     * @return
+     */
+    XMLEle *getSequenceJobRoot(const QString &filename) const;
 
     /**
      * @brief getGuidingStatus Retrieve the guiding status.
@@ -305,6 +317,10 @@ signals:
     void stopCurrentJobAction();
     void findNextJob();
     void getNextAction();
+    // loading jobs
+    void addJob(SchedulerJob *job);
+    void syncGUIToGeneralSettings();
+    void updateSchedulerURL(const QString &fileURL);
 
 private:
     // DBus interfaces to devices

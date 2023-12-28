@@ -1,9 +1,9 @@
 <chapter id="using-kstars">
 <title
->Una volta ràpida per &kstars;</title>
+>Una volta ràpida pel mapa celeste de &kstars;</title>
 
 <para
->Este capítol presenta una visita guiada per &kstars;, introduint-vos a la majoria de característiques importants. </para>
+>Este capítol presenta una visita guiada pel mapa celeste de &kstars;, introduint-vos a la majoria de característiques importants. </para>
 
 <screenshot>
 <screeninfo
@@ -22,7 +22,7 @@
 <para
 >La captura de pantalla de dalt mostra la vista típica del programa &kstars;. Podeu veure la vista del cel centrada sobre Betelgeuse, l'estrela brillant en la constel·lació d'Orió. Orió està a punt d'ocultar-se per davall de l'horitzó. Les estreles es mostren amb <link linkend="ai-colorandtemp"
 >colors realistes</link
-> i lluminositat relativa. En tres racons de la vista del cel, hi ha tres rètols informatius en pantalla mostrant la data sobre l'hora actual («TL: 18:10:30 dimecres, 6 de juliol de 2016»), l'actual emplaçament geogràfic («València, Espanya») i l'objecte al centre de la vista («Apuntat sobre: Betelgeuse (alpha Orionis)»). Sobre la vista del cel hi ha dues barres d'eines. La barra d'eines principal conté dreceres per a les <link linkend="kstars-menus"
+> i brillantor relativa. En tres racons de la vista del cel, hi ha tres rètols informatius en pantalla mostrant la data sobre l'hora actual («TL: 18:10:30 dimecres, 6 de juliol de 2016»), l'actual emplaçament geogràfic («València, Espanya») i l'objecte en el centre de la vista («Apuntat sobre: Betelgeuse (alpha Orionis)»). Sobre la vista del cel hi ha dues barres d'eines. La barra d'eines principal conté dreceres per a les <link linkend="kstars-menus"
 >funcions del menú</link
 >, així com un giny regulador de passos temporals que controla la velocitat de simulació del rellotge. La barra d'eines de vista conté botons que vos permeten canviar la vista de diferents tipus d'objectes en el cel. En la part inferior de la finestra, hi ha una barra d'estat que mostra el nom de qualsevol objecte sobre el qual feu clic i les <link linkend="ai-skycoords"
 >coordenades celestes</link
@@ -41,14 +41,14 @@
 > en qualsevol moment per a eixir de l'assistent d'iniciada. </para>
 
 <para
->La segona pàgina de l'assistent d'iniciada permet escollir l'emplaçament geogràfic inicial seleccionant-lo des d'una llista a la part dreta de la finestra amb més de 3.400 emplaçaments coneguts. És possible filtrar la llista per a trobar el text a introduir en els quadros d'edició <guilabel
->Filtre de ciutat:</guilabel
+>La segona pàgina de l'assistent d'iniciada permet escollir l'emplaçament geogràfic inicial seleccionant-lo des d'una llista a la part dreta de la finestra amb més de 3.400 emplaçaments coneguts. És possible filtrar la llista per a trobar el text a introduir en els quadros de filtratge <guilabel
+>Ciutat:</guilabel
 >, <guilabel
->Filtre de província:</guilabel
+>Província:</guilabel
 > i <guilabel
->Filtre de país:</guilabel
+>País:</guilabel
 >. Si l'emplaçament que esteu buscant no apareix en la llista, per ara podeu seleccionar-ne un altra que siga proper. Més avant podreu afegir el vostre emplaçament de forma manual utilitzant l'<link linkend="setgeo"
->eina Establiu l'emplaçament geogràfic</link
+>eina «Establiu l'emplaçament geogràfic»</link
 >. Una vegada seleccionat un emplaçament inicial, premeu el botó <guilabel
 >Següent</guilabel
 >. </para>
@@ -185,7 +185,7 @@
 ><primary
 >Objectes en el cel</primary>
 <secondary
->Descripció</secondary
+>Resum</secondary
 ></indexterm
 >&kstars; mostra milers d'objectes celestes: estreles, planetes, cometes, asteroides, cúmuls, nebuloses i galàxies. Podeu interactuar amb estos objectes per a realitzar accions sobre seu o obtindre més informació. Fent clic damunt d'un objecte, s'identificarà en la barra d'estat, i senzillament mantenint el cursor del ratolí sobre un objecte s'etiquetarà temporalment sobre el mapa. Fent doble clic, se centrarà la pantalla sobre l'objecte i es començarà a seguir (de manera que seguirà estant centrat a mesura que transcorre el temps). Fent clic amb el &BDR; sobre un objecte es desplegarà el seu menú emergent, el qual us permetrà més opcions. </para>
 
@@ -246,7 +246,7 @@
 <seealso
 >Menú emergent</seealso
 ></indexterm
->La secció inferior conté enllaços cap a imatges i/o pàgines web informatives sobre l'objecte seleccionat. Si coneixeu algun &URL; addicional amb informació o una imatge d'algun objecte, podeu afegir un enllaç personalitzat al menú emergent de l'objecte. Utilitzeu l'element <guimenuitem
+>La secció inferior conté enllaços cap a imatges i/o pàgines web informatives sobre l'objecte seleccionat. Si coneixeu algun &URL; addicional amb informació o una imatge d'algun objecte, podeu afegir un enllaç personalitzat cap al menú emergent de l'objecte. Utilitzeu l'element <guimenuitem
 >Detalls</guimenuitem
 > en el menú emergent per a obrir el diàleg <guilabel
 >Detalls de l'objecte</guilabel
@@ -262,7 +262,7 @@
 >Trobar objectes</title>
 <indexterm
 ><primary
->Eina Busqueu un objecte</primary
+>Eina Busca un objecte</primary
 ></indexterm>
 <indexterm
 ><primary
@@ -272,7 +272,7 @@
 ></indexterm>
 <para
 >Podeu buscar els objectes per nom utilitzant l'eina <guilabel
->Busqueu un objecte</guilabel
+>Busca un objecte</guilabel
 >, la qual es pot obrir fent clic damunt de la icona <guiicon
 >Busca un objecte</guiicon
 > de la barra d'eines, seleccionant l'element de menú <menuchoice
@@ -286,17 +286,17 @@
 >F</keycap
 ></keycombo
 >. La finestra <guilabel
->Busqueu un objecte</guilabel
+>Busca un objecte</guilabel
 > es mostra davall: <screenshot>
 <screeninfo
->Finestra «Busqueu un objecte» amb la característica de busca en línia</screeninfo>
+>Finestra «Busca un objecte» amb la característica de busca en línia</screeninfo>
 <mediaobject>
   <imageobject>
     <imagedata fileref="find2.png" format="PNG"/>
   </imageobject>
   <textobject>
     <phrase
->Finestra «Busqueu un objecte» amb la característica de busca en línia</phrase>
+>Finestra «Busca un objecte» amb la característica de busca en línia</phrase>
   </textobject>
 </mediaobject>
 </screenshot>
@@ -312,7 +312,7 @@
 >. Una vegada trobat el vostre objecte, el podreu utilitzar exactament com qualsevol objecte que ja estiga carregat en &kstars; (&ead;, afegir-lo a la llista de desitjos de l'observació). Si no s'ha trobat l'objecte en les bases de dades en línia, es mostrarà un diàleg d'avís. Una vegada resoleu un objecte utilitzant este mètode, s'emmagatzemarà en la base de dades de &kstars;, de manera que si tanqueu &kstars; i l'obriu de nou, l'objecte encara hi serà. </para>
 
 <para
->Podeu optar per habilitar o inhabilitar esta característica marcant o desmarcant la casella de selecció <guibutton
+>Podeu optar per habilitar o inhabilitar esta característica seleccionant o desseleccionant la casella de selecció <guibutton
 >Resoldre els noms desconeguts per &kstars; emprant els serveis en línia</guibutton
 > de la pàgina <guilabel
 >Catàlegs</guilabel
@@ -324,21 +324,21 @@
 > <guimenuitem
 >Configura &kstars;...</guimenuitem
 ></menuchoice
->). Si es marca esta casella de selecció, quan s'introduïsca un nom d'objecte desconegut per &kstars; al diàleg <guilabel
+>). Si se selecciona esta casella de selecció, quan s'introduïsca un nom d'objecte desconegut per &kstars; al diàleg <guilabel
 >Busca</guilabel
->, &kstars; contactarà amb els serveis en línia per a aprendre sobre l'objecte desitjat i després l'afegirà directament a la base de dades de &kstars;. Els objectes adquirits d'esta manera, s'emmagatzemen en un catàleg fals, anomenat «_Internet_Resolved». Per tant, podreu activar o desactivar la visualització d'estos objectes marcant o desmarcant el catàleg «_Internet_Resolved» de la llista de catàlegs. Recordeu que no podreu eliminar este catàleg fals, com ho feu amb un catàleg personalitzat. Si no es marca esta casella de selecció, llavors el diàleg <guilabel
->Busqueu un objecte</guilabel
+>, &kstars; contactarà amb els serveis en línia per a aprendre sobre l'objecte desitjat i després l'afegirà directament a la base de dades de &kstars;. Els objectes adquirits d'esta manera, s'emmagatzemen en un catàleg fals, anomenat «_Internet_Resolved». Per tant, podreu activar o desactivar la visualització d'estos objectes marcant o desmarcant el catàleg «_Internet_Resolved» de la llista de catàlegs. Recordeu que no podreu eliminar este catàleg fals, com ho feu amb un catàleg personalitzat. Si no se selecciona esta casella de selecció, llavors el diàleg <guilabel
+>Busca un objecte</guilabel
 > serà exactament el mateix, a excepció d'un xicotet canvi: el botó de busca en línia ja no serà visible. </para>
 <screenshot>
 <screeninfo
->Finestra «Busqueu un objecte»</screeninfo>
+>Finestra «Busca un objecte»</screeninfo>
 <mediaobject>
   <imageobject>
     <imagedata fileref="find.png" format="PNG"/>
   </imageobject>
   <textobject>
     <phrase
->Finestra «Busqueu un objecte»</phrase>
+>Finestra «Busca un objecte»</phrase>
   </textobject>
 </mediaobject>
 </screenshot>
@@ -362,8 +362,8 @@
 >Seguiment</secondary
 ></indexterm>
 <para
->&kstars; seguix automàticament els objectes en el moment en el qual un és centrat a la pantalla, ja siga emprant la finestra <guilabel
->Busqueu un objecte</guilabel
+>&kstars; seguix automàticament els objectes en el moment en el qual un és centrat en la pantalla, ja siga emprant la finestra <guilabel
+>Busca un objecte</guilabel
 >, fent doble clic damunt del mateix o seleccionant <guimenuitem
 >Centra i seguix</guimenuitem
 > des del menú emergent del clic <mousebutton
@@ -478,7 +478,7 @@
 <title
 >Final de la visita guiada</title>
 <para
->Ací conclou la volta ràpida per &kstars;, tot i que encara no hem arrapat la superfície de les característiques disponibles. &kstars; inclou <link linkend="tools"
+>Ací conclou la volta ràpida pel mapa celeste de &kstars;, tot i que encara no hem arrapat la superfície de les característiques disponibles. &kstars; inclou <link linkend="tools"
 >eines astronòmiques</link
 > molt útils, podeu <link linkend="indi"
 >controlar el vostre telescopi</link
