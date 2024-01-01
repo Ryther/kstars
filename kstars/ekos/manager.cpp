@@ -337,6 +337,28 @@ Manager::Manager(QWidget * parent) : QDialog(parent)
     // Scheduler <---> EkosLive connections
     connect(schedulerModule(), &Ekos::Scheduler::jobsUpdated, ekosLiveClient.get()->message(),
             &EkosLive::Message::sendSchedulerJobs, Qt::UniqueConnection);
+    connect(schedulerModule(), &Ekos::Scheduler::settingsUpdated, ekosLiveClient.get()->message(),
+            &EkosLive::Message::sendSchedulerSettings, Qt::UniqueConnection);
+    connect(schedulerModule(), &Ekos::Scheduler::newLog, ekosLiveClient.get()->message(),
+            [this]()
+    {
+        QJsonObject cStatus =
+        {
+            {"log", schedulerModule()->getLogText()}
+        };
+
+        ekosLiveClient.get()->message()->sendSchedulerStatus(cStatus);
+    });
+    connect(schedulerModule(), &Ekos::Scheduler::newStatus, ekosLiveClient.get()->message(),
+            [this](Ekos::SchedulerState state)
+    {
+        QJsonObject cStatus =
+        {
+            {"status", state}
+        };
+
+        ekosLiveClient.get()->message()->sendSchedulerStatus(cStatus);
+    });
 
     // Initialize Ekos Analyze Module
     analyzeProcess.reset(new Ekos::Analyze());

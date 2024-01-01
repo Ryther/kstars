@@ -16,6 +16,7 @@
 #include "ekos/manager.h"
 #include "catalogsdb.h"
 #include "nodemanager.h"
+#include <QQueue>
 
 namespace EkosLive
 {
@@ -45,10 +46,11 @@ class Message : public QObject
         void sendDevices();
         void sendTrains();
         void sendTrainProfiles();
-        void sendSchedulerJobList(QJsonArray jobsList);
 
         // Scheduler
         void sendSchedulerJobs();
+        void sendSchedulerJobList(QJsonArray jobsList);
+        void sendSchedulerStatus(const QJsonObject &status);
 
     signals:
         void connected();
@@ -86,7 +88,7 @@ class Message : public QObject
         void sendDarkLibrarySettings(const QVariantMap &settings);
 
         //Scheduler
-        void sendSchedulerSettings(const QJsonObject &settings);
+        void sendSchedulerSettings(const QVariantMap &settings);
 
         // Polar
         void setPAHStage(Ekos::PolarAlignmentAssistant::Stage stage);
@@ -194,6 +196,9 @@ class Message : public QObject
 
         // Process Astronomy Library command
         void processAstronomyCommands(const QString &command, const QJsonObject &payload);
+
+        void dispatchDebounceQueue();
+
         KStarsDateTime getNextDawn();
 
         void sendResponse(const QString &command, const QJsonObject &payload);
@@ -222,7 +227,6 @@ class Message : public QObject
 
         bool m_sendBlobs { true};
 
-        QMap<int, bool> m_Options;
         QMap<QString, QSet<QString>> m_PropertySubscriptions;
         QLineF correctionVector;
         QRect m_BoundingRect;
@@ -231,6 +235,8 @@ class Message : public QObject
 
         QSet<INDI::Property *> m_PendingProperties;
         QTimer m_PendingPropertiesTimer;
+        QTimer m_DebouncedSend;
+        QMap<QString, QVariantMap> m_DebouncedMap;
 
         QDateTime m_ThrottleTS;
         CatalogsDB::DBManager m_DSOManager;        
