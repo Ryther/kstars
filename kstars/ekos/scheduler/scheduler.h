@@ -521,7 +521,7 @@ private:
              * Given that score, the scheduler will decide which is the best job that needs to be executed.
              */
         void evaluateJobs(bool evaluateOnly);
-        void processJobs(QList<SchedulerJob *> sortedJobs, bool jobEvaluationOnly);
+        void selectActiveJob(const QList<SchedulerJob *> &jobs);
 
         /**
          * @brief resetJobs Reset all jobs counters
@@ -545,7 +545,7 @@ private:
         /** @internal Change the current job, updating associated widgets.
          * @param job is an existing SchedulerJob to set as current, or nullptr.
          */
-        void setCurrentJob(SchedulerJob *job);
+        void setActiveJob(SchedulerJob *job);
 
         /**
          * @brief processFITSSelection When a FITS file is selected, open it and try to guess
