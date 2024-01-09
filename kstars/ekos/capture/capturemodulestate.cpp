@@ -7,6 +7,7 @@
 #include "capturemodulestate.h"
 #include "ekos/manager/meridianflipstate.h"
 #include "ekos/capture/sequencejob.h"
+#include "ekos/capture/sequencequeue.h"
 #include "ekos/capture/refocusstate.h"
 #include "fitsviewer/fitsdata.h"
 
@@ -19,6 +20,7 @@ namespace Ekos
 {
 CaptureModuleState::CaptureModuleState(QObject *parent): QObject{parent}
 {
+    m_sequenceQueue.reset(new SequenceQueue());
     m_refocusState.reset(new RefocusState());
     m_TargetADUTolerance = Options::calibrationADUValueTolerance();
     connect(m_refocusState.get(), &RefocusState::newLog, this, &CaptureModuleState::newLog);
@@ -31,6 +33,21 @@ CaptureModuleState::CaptureModuleState(QObject *parent): QObject{parent}
     wallCoord().setAz(Options::calibrationWallAz());
     wallCoord().setAlt(Options::calibrationWallAlt());
     setTargetADU(Options::calibrationADUValue());
+}
+
+QList<SequenceJob *> &CaptureModuleState::allJobs()
+{
+    return m_sequenceQueue->allJobs();
+}
+
+const QUrl &CaptureModuleState::sequenceURL() const
+{
+    return m_sequenceQueue->sequenceURL();
+}
+
+void CaptureModuleState::setSequenceURL(const QUrl &newSequenceURL)
+{
+    m_sequenceQueue->setSequenceURL(newSequenceURL);
 }
 
 void CaptureModuleState::setActiveJob(SequenceJob *value)
@@ -308,6 +325,18 @@ void CaptureModuleState::decreaseDitherCounter()
         --m_ditherCounter;
 }
 
+void CaptureModuleState::resetDitherCounter()
+{
+    uint value = 0;
+    if (m_activeJob)
+        value = m_activeJob->getCoreProperty(SequenceJob::SJ_DitherPerJobFrequency).toInt(0);
+
+    if (value > 0)
+        m_ditherCounter = value;
+    else
+        m_ditherCounter = Options::ditherFrames();
+}
+
 bool CaptureModuleState::checkDithering()
 {
     // No need if preview only
@@ -324,7 +353,8 @@ bool CaptureModuleState::checkDithering()
             // Check dither counter
             && m_ditherCounter == 0)
     {
-        m_ditherCounter = Options::ditherFrames();
+        // reset the dither counter
+        resetDitherCounter();
 
         qCInfo(KSTARS_EKOS_CAPTURE) << "Dithering...";
         appendLogText(i18n("Dithering..."));
@@ -413,12 +443,7 @@ void CaptureModuleState::updateMeridianFlipStage(const MeridianFlipState::MFStag
 
             // after a meridian flip we do not need to dither
             if ( Options::ditherEnabled() || Options::ditherNoGuiding())
-            {
-                uint value = 0;
-                if (m_activeJob)
-                    value = m_activeJob->getCoreProperty(SequenceJob::SJ_DitherPerJobFrequency).toInt(0);
-                resetDitherCounter(value);
-            }
+                resetDitherCounter();
 
             // if requested set flag so it perform refocus before next frame
             if (Options::refocusAfterMeridianFlip() == true)
@@ -925,7 +950,7 @@ void CaptureModuleState::setGuideDeviation(double deviation_rms)
 
     // Find the first aborted job
     SequenceJob *abortedJob = nullptr;
-    for(auto &job : m_allJobs)
+    for(auto &job : allJobs())
     {
         if (job->getStatus() == JOB_ABORTED)
         {

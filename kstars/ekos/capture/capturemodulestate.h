@@ -32,6 +32,8 @@ namespace Ekos
 {
 
 class SequenceJob;
+class SequenceQueue;
+class CaptureDeviceAdaptor;
 class RefocusState;
 
 class CaptureModuleState: public QObject
@@ -105,9 +107,11 @@ class CaptureModuleState: public QObject
         // ////////////////////////////////////////////////////////////////////
         // sequence jobs
         // ////////////////////////////////////////////////////////////////////
-        QList<SequenceJob *> &allJobs()
+        QList<SequenceJob *> &allJobs();
+
+        QSharedPointer<SequenceQueue> getSequenceQueue()
         {
-            return m_allJobs;
+            return m_sequenceQueue;
         }
 
         SequenceJob *getActiveJob() const
@@ -116,14 +120,8 @@ class CaptureModuleState: public QObject
         }
         void setActiveJob(SequenceJob *value);
 
-        const QUrl &sequenceURL() const
-        {
-            return m_SequenceURL;
-        }
-        void setSequenceURL(const QUrl &newSequenceURL)
-        {
-            m_SequenceURL = newSequenceURL;
-        }
+        const QUrl &sequenceURL() const;
+        void setSequenceURL(const QUrl &newSequenceURL);
 
         // ////////////////////////////////////////////////////////////////////
         // pointer to last captured frame
@@ -469,13 +467,12 @@ class CaptureModuleState: public QObject
             return m_ditherCounter;
         }
         void decreaseDitherCounter();
-        void resetDitherCounter(uint value = 0)
-        {
-            if (value > 0)
-                m_ditherCounter = value;
-            else
-                m_ditherCounter = Options::ditherFrames();
-        }
+
+        /**
+         * @brief resetDitherCounter Reset the dither counter to its start value. If a per job counter is
+         * set to > 0, this value is used and the general dither counter otherwise.
+         */
+        void resetDitherCounter();
 
         /**
          * @brief checkSeqBoundary Determine the next file number sequence.
@@ -938,14 +935,6 @@ class CaptureModuleState: public QObject
         {
             return m_DSLRInfos;
         }
-        QMap<ScriptTypes, QString> &scripts()
-        {
-            return m_Scripts;
-        }
-        void setScripts(QMap<ScriptTypes, QString> value)
-        {
-            m_Scripts = value;
-        }
 
     signals:
         // controls for capture execution
@@ -990,10 +979,8 @@ class CaptureModuleState: public QObject
         void newLog(const QString &text);
 
 private:
-        // list of all sequence jobs
-        QList<SequenceJob *> m_allJobs;
-        // file URL of the current capture sequence
-        QUrl m_SequenceURL;
+        // Container for the list of SequenceJobs.
+        QSharedPointer<SequenceQueue> m_sequenceQueue;
         // Currently active sequence job.
         SequenceJob *m_activeJob { nullptr };
         // pointer to the image data
@@ -1010,8 +997,6 @@ private:
         QString m_CurrentFilterName { "--" };
         // holds the filter name used for focusing or "--" if the current one is used
         QString m_CurrentFocusFilterName { "--" };
-        // pre/post capture/sequence scripts
-        QMap<ScriptTypes, QString> m_Scripts;
         // HFR value as loaded from the sequence file
         double m_fileHFR { 0 };
         // Captured Frames Map

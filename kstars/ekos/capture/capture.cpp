@@ -41,12 +41,6 @@
 #define MF_TIMER_TIMEOUT    90000
 #define MF_RA_DIFF_LIMIT    4
 
-
-// Current Sequence File Format:
-#define SQ_FORMAT_VERSION 2.6
-// We accept file formats with version back to:
-#define SQ_COMPAT_VERSION 2.0
-
 // Qt version calming
 #include <qtendl.h>
 
@@ -103,6 +97,7 @@ Capture::Capture()
     m_LimitsDialog = new QDialog(this);
     m_LimitsUI.reset(new Ui::Limits());
     m_LimitsUI->setupUi(m_LimitsDialog);
+    m_scriptsManager = new ScriptsManager(this);
 
     dirPath = QUrl::fromLocalFile(QDir::homePath());
 
@@ -486,6 +481,7 @@ Capture::Capture()
     connect(m_captureModuleState.data(), &CaptureModuleState::newFocusStatus, this, &Capture::updateFocusStatus);
     connect(m_captureModuleState.data(), &CaptureModuleState::newMeridianFlipStage, this, &Capture::updateMeridianFlipStage);
     connect(m_captureModuleState.data(), &CaptureModuleState::meridianFlipStarted, this, &Capture::meridianFlipStarted);
+
     // forward signals from capture process
     connect(m_captureProcess.data(), &CaptureProcess::cameraReady, this, &Capture::ready);
     connect(m_captureProcess.data(), &CaptureProcess::refreshCamera, this, &Capture::updateCamera);
@@ -1533,9 +1529,6 @@ void Capture::updateRotatorAngle(double value)
 
 void Capture::addJob(SequenceJob *job)
 {
-    // add the job to the job list
-    state()->allJobs().append(job);
-
     // create a new row
     createNewJobTableRow(job);
 }
@@ -1822,10 +1815,8 @@ void Capture::updatePrepareState(CaptureState prepareState)
                                            Qt::yellow);
             break;
         case CAPTURE_GUIDER_DRIFT:
-            appendLogText(i18n("Waiting for guide drift below %1\"...",
-                               activeJob()->getTargetStartGuiderDrift()));
-            captureStatusWidget->setStatus(i18n("Wait for Guider < %1\"...",
-                                                activeJob()->getTargetStartGuiderDrift()), Qt::yellow);
+            appendLogText(i18n("Waiting for guide drift below %1\"...", Options::startGuideDeviation()));
+            captureStatusWidget->setStatus(i18n("Wait for Guider < %1\"...", Options::startGuideDeviation()), Qt::yellow);
             break;
 
         case CAPTURE_SETTING_ROTATOR:
@@ -2142,9 +2133,9 @@ void Capture::syncGUIToJob(SequenceJob * job)
         cameraTemperatureN->setValue(job->getTargetTemperature());
 
     // Start guider drift options
-    m_LimitsUI->startGuiderDriftS->setChecked(job->getCoreProperty(SequenceJob::SJ_EnforceStartGuiderDrift).toBool());
-    if (job->getCoreProperty(SequenceJob::SJ_EnforceStartGuiderDrift).toBool())
-        m_LimitsUI->startGuiderDriftN->setValue(job->getTargetStartGuiderDrift());
+    m_LimitsUI->startGuiderDriftS->setChecked(Options::enforceStartGuiderDrift());
+    if (Options::enforceStartGuiderDrift())
+        m_LimitsUI->startGuiderDriftN->setValue(Options::startGuideDeviation());
 
     // Flat field options
     calibrationB->setEnabled(job->getFrameType() != FRAME_LIGHT);
@@ -2154,9 +2145,7 @@ void Capture::syncGUIToJob(SequenceJob * job)
     state()->setTargetADU(job->getCoreProperty(SequenceJob::SJ_TargetADU).toDouble());
     state()->setTargetADUTolerance(job->getCoreProperty(SequenceJob::SJ_TargetADUTolerance).toDouble());
     state()->setWallCoord(job->getWallCoord());
-
-    // Script options
-    state()->setScripts(job->getScripts());
+    m_scriptsManager->setScripts(job->getScripts());
 
     // Custom Properties
     customPropertiesDialog->setCustomProperties(job->getCustomProperties());
@@ -3206,14 +3195,11 @@ void Capture::editFilterName()
 
 void Capture::handleScriptsManager()
 {
-    QScopedPointer<ScriptsManager> manager(new ScriptsManager(this));
+    QMap<ScriptTypes, QString> old_scripts = m_scriptsManager->getScripts();
 
-    manager->setScripts(state()->scripts());
-
-    if (manager->exec() == QDialog::Accepted)
-    {
-        state()->setScripts(manager->getScripts());
-    }
+    if (m_scriptsManager->exec() != QDialog::Accepted)
+        // reset to old value
+        m_scriptsManager->setScripts(old_scripts);
 }
 
 void Capture::showTemperatureRegulation()
@@ -3331,18 +3317,14 @@ void Capture::updateJobFromUI(SequenceJob *job, FilenamePreviewType filenamePrev
         job->setTargetTemperature(cameraTemperatureN->value());
     }
 
+    job->setScripts(m_scriptsManager->getScripts());
     job->setUploadMode(static_cast<ISD::Camera::UploadMode>(fileUploadModeS->currentIndex()));
-    job->setScripts(state()->scripts());
     job->setFlatFieldDuration(state()->flatFieldDuration());
     job->setCalibrationPreAction(state()->calibrationPreAction());
     job->setWallCoord(state()->wallCoord());
     job->setCoreProperty(SequenceJob::SJ_TargetADU, state()->targetADU());
     job->setCoreProperty(SequenceJob::SJ_TargetADUTolerance, state()->targetADUTolerance());
     job->setFrameType(static_cast<CCDFrameType>(qMax(0, captureTypeS->currentIndex())));
-
-    job->setCoreProperty(SequenceJob::SJ_EnforceStartGuiderDrift, (job->getFrameType() == FRAME_LIGHT
-                         && Options::enforceStartGuiderDrift()));
-    job->setTargetStartGuiderDrift(Options::startGuideDeviation());
 
     if (FilterPosCombo->currentIndex() != -1 && devices()->filterWheel() != nullptr)
         job->setTargetFilter(FilterPosCombo->currentIndex() + 1, FilterPosCombo->currentText());
