@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-09 00:38+0000\n"
-"PO-Revision-Date: 2024-01-07 14:02+0100\n"
+"POT-Creation-Date: 2024-01-14 01:57+0000\n"
+"PO-Revision-Date: 2024-01-11 10:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -463,14 +463,14 @@ msgctxt "@title:window"
 msgid "Save Image"
 msgstr "Afbeelding opslaan"
 
-#: auxiliary/imageviewer.cpp:320 ekos/align/align.cpp:3858
+#: auxiliary/imageviewer.cpp:320 ekos/align/align.cpp:3859
 #: ekos/guide/guidedriftgraph.cpp:466 kstarsactions.cpp:1335
 #: printing/pwizprint.cpp:77 tools/scriptbuilder.cpp:879
 #, kde-format
 msgid "A file named \"%1\" already exists. Overwrite it?"
 msgstr "Een bestand met de naam  \"%1\" bestaat reeds. Dit overschrijven?"
 
-#: auxiliary/imageviewer.cpp:323 ekos/align/align.cpp:3861
+#: auxiliary/imageviewer.cpp:323 ekos/align/align.cpp:3862
 #: ekos/guide/guidedriftgraph.cpp:469 kstarsactions.cpp:1336
 #: printing/pwizprint.cpp:78 tools/scriptbuilder.cpp:882
 #, kde-format
@@ -2543,7 +2543,7 @@ msgstr ""
 "Het URL-adres is ongeldig. Wilt u een venster openen in een\n"
 "bladerprogramma voor de zoekmachine Google?"
 
-#: dialogs/addlinkdialog.cpp:60 ekos/align/align.cpp:3869
+#: dialogs/addlinkdialog.cpp:60 ekos/align/align.cpp:3870
 #: ekos/align/mountmodel.cpp:265 ekos/align/mountmodel.cpp:391
 #: ekos/analyze/analyze.cpp:1191 ekos/capture/capture.cpp:1948
 #: ekos/capture/capture.cpp:2034 ekos/guide/guidedriftgraph.cpp:477
@@ -3731,7 +3731,7 @@ msgstr "0,0 pc"
 #: ekos/auxiliary/darklibrary.ui:733 ekos/auxiliary/darklibrary.ui:753
 #: ekos/auxiliary/darklibrary.ui:773 ekos/auxiliary/darklibrary.ui:793
 #: ekos/capture/capture.cpp:902 ekos/capture/capture.cpp:942
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:886
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:898
 #: ekos/focus/focus.cpp:415 ekos/guide/guide.ui:553 ekos/guide/guide.ui:677
 #: indi/streamform.ui:418 oal/equipmentwriter.ui:1163
 #, kde-format
@@ -5109,7 +5109,7 @@ msgstr "GV berekenen"
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #. i18n: ectx: property (text), widget (QLabel, indiCameraLabel)
 #: dialogs/newfov.ui:433
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:157
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:169
 #, kde-format
 msgid "Camera"
 msgstr "Camera"
@@ -5930,7 +5930,7 @@ msgstr ""
 "Kan geen opnames maken wanneer rotator bezig is! Nieuwe poging over %1 "
 "seconden..."
 
-#: ekos/align/align.cpp:1517 ekos/align/align.cpp:2993
+#: ekos/align/align.cpp:1517 ekos/align/align.cpp:2994
 #, kde-format
 msgid "No remote astrometry driver detected, switching to StellarSolver."
 msgstr ""
@@ -6120,40 +6120,40 @@ msgstr ""
 msgid "Mount is synced to solution coordinates."
 msgstr "Opstelling is synchroon met oplossingscoördinaten."
 
-#: ekos/align/align.cpp:2666 ekos/align/align.cpp:2683
-#: ekos/align/align.cpp:3994 ekos/align/polaralignmentassistant.cpp:639
+#: ekos/align/align.cpp:2667 ekos/align/align.cpp:2684
+#: ekos/align/align.cpp:3995 ekos/align/polaralignmentassistant.cpp:639
 #, kde-format
 msgid "Settling..."
 msgstr "Bezig met instellen..."
 
-#: ekos/align/align.cpp:2673
+#: ekos/align/align.cpp:2674
 #, kde-format
 msgid "Slew complete. Target accuracy is not met, running solver again..."
 msgstr ""
 "Draaien is voltooid. Gewenste nauwkeurigheid is niet bereikt, oplossen wordt "
 "voortgezet..."
 
-#: ekos/align/align.cpp:2675
+#: ekos/align/align.cpp:2676
 #, kde-format
 msgid "Slew complete. Solving Alignment Point. . ."
 msgstr "Draaien voltooid. Uitlijnpunt wordt opgelost. . ."
 
-#: ekos/align/align.cpp:2718 ekos/align/align.cpp:2870
+#: ekos/align/align.cpp:2719 ekos/align/align.cpp:2871
 #, kde-format
 msgid "Syncing failed."
 msgstr "Synchroniseren is mislukt."
 
-#: ekos/align/align.cpp:2720
+#: ekos/align/align.cpp:2721
 #, kde-format
 msgid "Slewing failed."
 msgstr "Draaien is mislukt."
 
-#: ekos/align/align.cpp:2763
+#: ekos/align/align.cpp:2764
 #, kde-format
 msgid "Rotator reached camera position angle."
 msgstr "Rotator heeft gewenste positiehoek van camera bereikt."
 
-#: ekos/align/align.cpp:2775
+#: ekos/align/align.cpp:2776
 #, kde-format
 msgid ""
 "Rotator failed to arrive at the requested position angle (Deviation %1 "
@@ -6162,22 +6162,22 @@ msgstr ""
 "De rotator is niet op de gevraagde positiehoek gekomen (Afwijking %1 "
 "boogmin)."
 
-#: ekos/align/align.cpp:2820
+#: ekos/align/align.cpp:2821
 #, kde-format
 msgid "Slew detected, suspend solving..."
 msgstr "Draaien gedetecteerd, oplossen wordt onderbroken..."
 
-#: ekos/align/align.cpp:2864
+#: ekos/align/align.cpp:2865
 #, kde-format
 msgid "Syncing to RA (%1) DEC (%2)"
 msgstr "Syncen naar RK (%1) Dec (%2)"
 
-#: ekos/align/align.cpp:2888
+#: ekos/align/align.cpp:2889
 #, kde-format
 msgid "Slewing to target coordinates: RA (%1) DEC (%2)."
 msgstr "Naar gewenste coördinaten draaien: RK (%1) DEC (%2)."
 
-#: ekos/align/align.cpp:2893
+#: ekos/align/align.cpp:2894
 #, kde-format
 msgid ""
 "Slewing to target coordinates: RA (%1) DEC (%2) is rejected. (see "
@@ -6185,114 +6185,114 @@ msgid ""
 msgstr ""
 "Naar doelcoördinaten draaien: RA (%1) DEC (%2) is afgewezen. (Zie melding)"
 
-#: ekos/align/align.cpp:2912
+#: ekos/align/align.cpp:2913
 #, kde-format
 msgid "Ekos job (%1) - Telescope synced"
 msgstr "Ekos-taak (%1) - Telescoop gesynct"
 
-#: ekos/align/align.cpp:2962
+#: ekos/align/align.cpp:2963
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Image"
 msgstr "Afbeelding Inlezen"
 
-#: ekos/align/align.cpp:3192
+#: ekos/align/align.cpp:3193
 #, kde-format
 msgid "World Coordinate System (WCS) is enabled."
 msgstr "World Coordinate System (WCS) is ingeschakeld."
 
-#: ekos/align/align.cpp:3197
+#: ekos/align/align.cpp:3198
 #, kde-format
 msgid "World Coordinate System (WCS) is disabled."
 msgstr "World Coordinate System (WCS) is uitgezet."
 
-#: ekos/align/align.cpp:3216
+#: ekos/align/align.cpp:3217
 #, kde-format
 msgid "Capture error. Aborting..."
 msgstr "Fout bij opname! Wordt afgebroken..."
 
-#: ekos/align/align.cpp:3221 ekos/capture/captureprocess.cpp:1478
+#: ekos/align/align.cpp:3222 ekos/capture/captureprocess.cpp:1478
 #: ekos/capture/captureprocess.cpp:1988
 #, kde-format
 msgid "Restarting capture attempt #%1"
 msgstr "Volgende poging tot opnemen #%1"
 
-#: ekos/align/align.cpp:3345
+#: ekos/align/align.cpp:3346
 #, kde-format
 msgctxt "@title:window"
 msgid "Align Frame"
 msgstr "Frame uitlijnen"
 
-#: ekos/align/align.cpp:3420
+#: ekos/align/align.cpp:3421
 #, kde-format
 msgid "StellarSolver Options"
 msgstr "Opties voor StellarSolver"
 
-#: ekos/align/align.cpp:3425
+#: ekos/align/align.cpp:3426
 #, kde-format
 msgid "External & Online Programs"
 msgstr "Externe & online programma's"
 
-#: ekos/align/align.cpp:3429
+#: ekos/align/align.cpp:3430
 #, kde-format
 msgid "Scale & Position"
 msgstr "Schaal & Positie"
 
-#: ekos/align/align.cpp:3433
+#: ekos/align/align.cpp:3434
 #, kde-format
 msgid "Align Options Profiles Editor"
 msgstr "Uitlijnopties voor  bewerken Profiel"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ekos/align/align.cpp:3451 ekos/align/opsastrometryindexfiles.ui:329
+#: ekos/align/align.cpp:3452 ekos/align/opsastrometryindexfiles.ui:329
 #, kde-format
 msgid "Index Files"
 msgstr "Indexbestanden"
 
-#: ekos/align/align.cpp:3516 ekos/guide/guidetargetplot.cpp:55
+#: ekos/align/align.cpp:3517 ekos/guide/guidetargetplot.cpp:55
 #, kde-format
 msgid "dRA (arcsec)"
 msgstr "dRK (arcsec)"
 
-#: ekos/align/align.cpp:3517 ekos/guide/guidetargetplot.cpp:56
+#: ekos/align/align.cpp:3518 ekos/guide/guidetargetplot.cpp:56
 #, kde-format
 msgid "dDE (arcsec)"
 msgstr "dDe (arcsec)"
 
-#: ekos/align/align.cpp:3563 ekos/capture/capture.cpp:2651
+#: ekos/align/align.cpp:3564 ekos/capture/capture.cpp:2651
 #: ekos/focus/focus.cpp:4698
 #, kde-format
 msgid "Filter operation failed."
 msgstr "Filteren is mislukt!"
 
-#: ekos/align/align.cpp:3575 ekos/capture/capture.cpp:2587
+#: ekos/align/align.cpp:3576 ekos/capture/capture.cpp:2587
 #, kde-format
 msgid "Changing focus offset by %1 steps..."
 msgstr "Focus-offset wijzigen in stappen van %1..."
 
-#: ekos/align/align.cpp:3582 ekos/auxiliary/buildfilteroffsets.cpp:466
+#: ekos/align/align.cpp:3583 ekos/auxiliary/buildfilteroffsets.cpp:466
 #: ekos/capture/capture.cpp:2592
 #, kde-format
 msgid "Changing filter to %1..."
 msgstr "Ander filter: %1..."
 
-#: ekos/align/align.cpp:3587 ekos/capture/capture.cpp:2597
+#: ekos/align/align.cpp:3588 ekos/capture/capture.cpp:2597
 #, kde-format
 msgid "Auto focus on filter change..."
 msgstr "Autofocus na filterwissel..."
 
-#: ekos/align/align.cpp:3708
+#: ekos/align/align.cpp:3709
 #, kde-format
 msgid "Invalid FOV."
 msgstr "Ongeldige GV."
 
-#: ekos/align/align.cpp:3845
+#: ekos/align/align.cpp:3846
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Solution Points"
 msgstr "Oplospunten exporteren"
 
-#: ekos/align/align.cpp:3868 ekos/align/mountmodel.cpp:264
+#: ekos/align/align.cpp:3869 ekos/align/mountmodel.cpp:264
 #: ekos/align/mountmodel.cpp:390 ekos/capture/capture.cpp:1947
 #: ekos/capture/capture.cpp:2033 ekos/guide/guidedriftgraph.cpp:476
 #: ekos/scheduler/scheduler.cpp:2723 ekos/scheduler/scheduler.cpp:2813
@@ -6302,7 +6302,7 @@ msgstr "Oplospunten exporteren"
 msgid "Invalid URL: %1"
 msgstr "Ongeldige URL: %1"
 
-#: ekos/align/align.cpp:3877 ekos/align/mountmodel.cpp:401
+#: ekos/align/align.cpp:3878 ekos/align/mountmodel.cpp:401
 #: ekos/capture/sequencequeue.cpp:213 ekos/guide/guidedriftgraph.cpp:485
 #: ekos/scheduler/schedulerprocess.cpp:1575
 #: ekos/scheduler/schedulerprocess.cpp:2587
@@ -6310,7 +6310,7 @@ msgstr "Ongeldige URL: %1"
 msgid "Unable to write to file %1"
 msgstr "Kon niet schrijven naar bestand %1"
 
-#: ekos/align/align.cpp:3878 ekos/align/mountmodel.cpp:284
+#: ekos/align/align.cpp:3879 ekos/align/mountmodel.cpp:284
 #: ekos/align/mountmodel.cpp:402 ekos/capture/capture.cpp:1963
 #: ekos/capture/captureprocess.cpp:2302 ekos/capture/sequencequeue.cpp:33
 #: ekos/guide/guidedriftgraph.cpp:486 ekos/scheduler/schedulerprocess.cpp:1576
@@ -6330,27 +6330,27 @@ msgstr "Kon niet schrijven naar bestand %1"
 msgid "Could Not Open File"
 msgstr "Het bestand kon niet worden geopend"
 
-#: ekos/align/align.cpp:3899
+#: ekos/align/align.cpp:3900
 #, kde-format
 msgid "Error in table structure."
 msgstr "Fout in tabelstructuur"
 
-#: ekos/align/align.cpp:3908
+#: ekos/align/align.cpp:3909
 #, kde-format
 msgid "Solution Points Saved as: %1"
 msgstr "Oplospunten opgeslagen als: %1"
 
-#: ekos/align/align.cpp:3922
+#: ekos/align/align.cpp:3923
 #, kde-format
 msgid "Polar Alignment"
 msgstr "Uitlijnen op de pool"
 
-#: ekos/align/align.cpp:4450
+#: ekos/align/align.cpp:4451
 #, kde-format
 msgid "Capture timed out."
 msgstr "Tijd voor opnemen is verlopen."
 
-#: ekos/align/align.cpp:4459
+#: ekos/align/align.cpp:4460
 #, kde-format
 msgid "Capturing still running, Retrying in %1 seconds..."
 msgstr "Nog bezig met opnemen, probeer het opnieuw in %1 seconden..."
@@ -8363,7 +8363,7 @@ msgstr "Map toevoegen voor indexbestanden"
 #. i18n: ectx: property (text), widget (QCheckBox, northDECGuideEnabled)
 #: ekos/align/opsastrometryindexfiles.ui:256 ekos/analyze/analyze.ui:199
 #: ekos/auxiliary/stellarsolverprofileeditor.ui:213
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:553
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:565
 #: ekos/guide/guide.ui:304 ekos/guide/guide.ui:456
 #: kstarslite/qml/indi/modules/MotionControl.qml:294
 #, kde-format, kde-kuit-format
@@ -12006,7 +12006,7 @@ msgid "Waiting..."
 msgstr "Wachten..."
 
 #: ekos/auxiliary/ledstatuswidget.cpp:46
-#: ekos/capture/capturemodulestate.cpp:360
+#: ekos/capture/capturemodulestate.cpp:361
 #, kde-format
 msgid "Dithering..."
 msgstr "Ditheren ..."
@@ -14155,7 +14155,7 @@ msgstr "Wachtrij kon niet worden opgeslagen"
 msgid "Are you sure you want to reset status of all jobs?"
 msgstr "Wilt u status van alle jobs werkelijk terugzetten?"
 
-#: ekos/capture/capture.cpp:2068 ekos/capture/captureprocess.cpp:2415
+#: ekos/capture/capture.cpp:2068 ekos/capture/captureprocess.cpp:2412
 #, kde-format
 msgid "Reset job status"
 msgstr "Jobstatus terugzetten"
@@ -14479,10 +14479,8 @@ msgstr "Rotatorbesturing"
 #. i18n: ectx: property (toolTip), widget (QPushButton, exposureCalcB)
 #: ekos/capture/capture.ui:785
 #, kde-format
-msgid "<html><head/><body><p>Optimal sub-exposure calculator</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Rekenmachine voor optimale onderbelichting</p></body></"
-"html>"
+msgid "<html><head/><body><p>Exposure calculator</p></body></html>"
+msgstr "<html><head/><body><p>Rekenmachine voor belichting</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_15)
 #: ekos/capture/capture.ui:872
@@ -15252,113 +15250,113 @@ msgid ""
 "Warning: Guide deviation is selected but autoguide process was not started."
 msgstr "Waarschuwing: Volgafwijking gekozen maar autovolgen is niet gestart."
 
-#: ekos/capture/capturemodulestate.cpp:215
+#: ekos/capture/capturemodulestate.cpp:216
 #, kde-format
 msgid "Dithering succeeded."
 msgstr "Ditheren gelukt"
 
 #. i18np since guidingRate is DOUBLE value (e.g. 1.36) so we always use plural with that.
-#: ekos/capture/capturemodulestate.cpp:222
+#: ekos/capture/capturemodulestate.cpp:223
 #, kde-format
 msgid "Dither complete. Resuming in %1 seconds..."
 msgstr "Ditheren voltooid. Wordt hervat binnen %1 seconden...."
 
-#: ekos/capture/capturemodulestate.cpp:230
+#: ekos/capture/capturemodulestate.cpp:231
 #, kde-format
 msgid "Dither complete."
 msgstr "Ditheren voltooid."
 
 #. i18np since guidingRate is DOUBLE value (e.g. 1.36) so we always use plural with that.
-#: ekos/capture/capturemodulestate.cpp:244
+#: ekos/capture/capturemodulestate.cpp:245
 #, kde-format
 msgid "Warning: Dithering failed. Resuming in %1 seconds..."
 msgstr "Waarschuwing: Ditheren mislukt. Wordt hervat binnen %1 seconden..."
 
-#: ekos/capture/capturemodulestate.cpp:253
+#: ekos/capture/capturemodulestate.cpp:254
 #, kde-format
 msgid "Warning: Dithering failed."
 msgstr "Waarschuwing: ditheren is mislukt."
 
-#: ekos/capture/capturemodulestate.cpp:455
+#: ekos/capture/capturemodulestate.cpp:456
 #, kde-format
 msgid "Meridian flip is successfully completed"
 msgstr "Meridiaanflip is met succes voltooid"
 
-#: ekos/capture/capturemodulestate.cpp:551
+#: ekos/capture/capturemodulestate.cpp:552
 #, kde-format
 msgid "Performing post flip re-calibration and guiding..."
 msgstr "Opnieuw uitlijnen en volgen na meridiaanflip telescoop..."
 
-#: ekos/capture/capturemodulestate.cpp:564
+#: ekos/capture/capturemodulestate.cpp:565
 #, kde-format
 msgid "Post meridian flip calibration error. Restarting..."
 msgstr "Calibratie na meridiaanflip mislukt. Wordt herstart..."
 
-#: ekos/capture/capturemodulestate.cpp:584
+#: ekos/capture/capturemodulestate.cpp:585
 #, kde-format
 msgid "Autoguiding stopped. Waiting for autofocus to finish..."
 msgstr "Autovolgen gestopt. Wacht op eindigen van autofocus..."
 
-#: ekos/capture/capturemodulestate.cpp:593
+#: ekos/capture/capturemodulestate.cpp:594
 #, kde-format
 msgid "Autoguiding stopped. Aborting..."
 msgstr "Autovolgen gestopt. Wordt afgebroken..."
 
-#: ekos/capture/capturemodulestate.cpp:600
+#: ekos/capture/capturemodulestate.cpp:601
 #, kde-format
 msgid "Post meridian flip calibration error. Aborting..."
 msgstr "Calibratie na meridiaanflip mislukt. Wordt afgebroken..."
 
-#: ekos/capture/capturemodulestate.cpp:622
+#: ekos/capture/capturemodulestate.cpp:623
 #, kde-format
 msgid "Adaptive focus complete."
 msgstr "Aanpassend focusseren voltooid."
 
-#: ekos/capture/capturemodulestate.cpp:646
+#: ekos/capture/capturemodulestate.cpp:647
 #, kde-format
 msgid "Autofocus failed. Aborting exposure..."
 msgstr "Autofocus is mislukt. Belichten afgebroken..."
 
-#: ekos/capture/capturemodulestate.cpp:793
+#: ekos/capture/capturemodulestate.cpp:794
 #, kde-format
 msgid "Performing post flip re-alignment..."
 msgstr "Opnieuw uitlijnen telescoop na meridiaanflip..."
 
-#: ekos/capture/capturemodulestate.cpp:811
+#: ekos/capture/capturemodulestate.cpp:812
 #, kde-format
 msgid "Guide module timed out."
 msgstr "Volgtijd is verlopen."
 
-#: ekos/capture/capturemodulestate.cpp:843
+#: ekos/capture/capturemodulestate.cpp:844
 #, kde-format
 msgid "Initial guiding deviation %1 below limit value of %2 arcsecs"
 msgstr "Initiële volgafwijking %1 is onder de grenswaarde van %2 boogseconden."
 
-#: ekos/capture/capturemodulestate.cpp:852
+#: ekos/capture/capturemodulestate.cpp:853
 #, kde-format
 msgid "Initial guiding deviation %1 exceeded limit value of %2 arcsecs"
 msgstr "Initiële volgafwijking %1 is boven de grenswaarde van %2 boogseconden."
 
-#: ekos/capture/capturemodulestate.cpp:874
+#: ekos/capture/capturemodulestate.cpp:875
 #, kde-format
 msgid "Post meridian flip calibration completed successfully."
 msgstr "Calibratie na meridiaanflip met succes voltooid."
 
-#: ekos/capture/capturemodulestate.cpp:888
+#: ekos/capture/capturemodulestate.cpp:889
 #, kde-format
 msgid "Guiding deviation at capture startup %1 exceeded limit %2 arcsecs."
 msgstr ""
 "Volgafwijking bij begin van opname %1 is boven de grenswaarde van %2 "
 "boogseconden."
 
-#: ekos/capture/capturemodulestate.cpp:902
+#: ekos/capture/capturemodulestate.cpp:903
 #, kde-format
 msgid "Guiding deviation at capture startup %1 below limit value of %2 arcsecs"
 msgstr ""
 "Volgafwijking bij begin van opname %1 is onder de grenswaarde van %2 "
 "boogseconden."
 
-#: ekos/capture/capturemodulestate.cpp:929
+#: ekos/capture/capturemodulestate.cpp:930
 #, kde-format
 msgid ""
 "Guiding deviation %1 exceeded limit value of %2 arcsecs for %4 consecutive "
@@ -15367,7 +15365,7 @@ msgstr ""
 "Volgafwijking %1 meer dan toegestane %2 boogseconden voor %4 opeenvolgende "
 "samples, belichting gestopt. Tot %3 seconden wachten op opstarten van volger."
 
-#: ekos/capture/capturemodulestate.cpp:976
+#: ekos/capture/capturemodulestate.cpp:977
 #, kde-format
 msgid ""
 "Guiding deviation %1 is now lower than limit value of %2 arcsecs, resuming "
@@ -15375,7 +15373,7 @@ msgid ""
 msgstr ""
 "Volgafwijking %1 is nu &lt; toegestane %2 boogseconden, belichting hervat."
 
-#: ekos/capture/capturemodulestate.cpp:980
+#: ekos/capture/capturemodulestate.cpp:981
 #, kde-format
 msgid ""
 "Guiding deviation %1 is now lower than limit value of %2 arcsecs, resuming "
@@ -15384,22 +15382,22 @@ msgstr ""
 "Volgafwijking %1 is nu lager dan de toegestane %2 boogseconden, belichting "
 "wordt binnen %3 seconden hervat."
 
-#: ekos/capture/capturemodulestate.cpp:995
+#: ekos/capture/capturemodulestate.cpp:996
 #, kde-format
 msgid "Guiding deviation %1 is still higher than limit value of %2 arcsecs."
 msgstr "Volgafwijking %1 is nog groter dan de toegestane %2 boogseconden."
 
-#: ekos/capture/capturemodulestate.cpp:1370
+#: ekos/capture/capturemodulestate.cpp:1371
 #, kde-format
 msgid "Post flip re-alignment completed successfully."
 msgstr "Opnieuw uitlijnen na meridiaanflip met succes voltooid."
 
-#: ekos/capture/capturemodulestate.cpp:1389
+#: ekos/capture/capturemodulestate.cpp:1390
 #, kde-format
 msgid "Post-flip alignment failed."
 msgstr "Uitlijnen na flip is mislukt!"
 
-#: ekos/capture/capturemodulestate.cpp:1394
+#: ekos/capture/capturemodulestate.cpp:1395
 #, kde-format
 msgid "Post-flip alignment failed. Retrying..."
 msgstr "Uitlijnen na flip is mislukt! Wordt opnieuw geprobeerd..."
@@ -15677,7 +15675,7 @@ msgstr ""
 msgid "Sequence paused."
 msgstr "Serie tijdelijk gestopt"
 
-#: ekos/capture/captureprocess.cpp:2414
+#: ekos/capture/captureprocess.cpp:2411
 #, kde-format
 msgid ""
 "All jobs are complete. Do you want to reset the status of all jobs and "
@@ -15686,7 +15684,7 @@ msgstr ""
 "Alle jobs zijn gedaan. Wilt u de status van alle jobs terugzetten en opnames "
 "herstarten?"
 
-#: ekos/capture/captureprocess.cpp:2428
+#: ekos/capture/captureprocess.cpp:2425
 #, kde-format
 msgid ""
 "Warning: option \"Always Reset Sequence When Starting\" is enabled and "
@@ -15695,12 +15693,12 @@ msgstr ""
 "Waarschuwing: \"Eerst altijd rij op nul stellen\" is aangezet, en dit stelt "
 "alle rij-tellingen op 0."
 
-#: ekos/capture/captureprocess.cpp:2543
+#: ekos/capture/captureprocess.cpp:2540
 #, kde-format
 msgid "Are you sure you want to restart %1 camera driver?"
 msgstr "Wilt u echt cameradriver %1 herstarten?"
 
-#: ekos/capture/captureprocess.cpp:2544
+#: ekos/capture/captureprocess.cpp:2541
 #, kde-format
 msgid "Driver Restart"
 msgstr "Driver herstarten"
@@ -15892,8 +15890,8 @@ msgstr "Ongeldige waarden. Stel aub. alle waarden in."
 #. i18n: ectx: property (windowTitle), widget (QDialog, ExposureCalculatorDialog)
 #: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:32
 #, kde-format
-msgid "Sub-Exposure Calculator"
-msgstr "Rekenmachines onderbelichting"
+msgid "Exposure Calculator"
+msgstr "Rekenmachine voor belichting"
 
 #. i18n: ectx: property (text), widget (QLabel, SQMLabel)
 #: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:92
@@ -15923,206 +15921,206 @@ msgid "Alter the bias of the noise sources"
 msgstr "Wijzig de basis van de ruisbronnen"
 
 #. i18n: ectx: property (text), widget (QLabel, bortleScaleLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:170
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:182
 #, kde-format
 msgid "Bortle Class"
 msgstr "Klasse van Bortle"
 
 #. i18n: ectx: property (text), widget (QLabel, gainSpinnerLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:215
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:227
 #, kde-format
 msgid "Gain"
 msgstr "Versterking"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, gainSelector)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:240
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:252
 #, kde-format
 msgid "Select Camera Sensor Gain"
 msgstr "Versterking van camerasensor selecteren"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, gainISODiscreteSelector)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:259
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:271
 #, kde-format
 msgid "Select DSLR ISO Value"
 msgstr "DSLR ISO-waarde selecteren"
 
 #. i18n: ectx: property (text), widget (QLabel, gainISOSelectorLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:278
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:290
 #, kde-format
 msgid "ISO"
 msgstr "ISO"
 
 #. i18n: ectx: property (text), widget (QLabel, gainSelectionFixedLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:297
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:309
 #, kde-format
 msgid "Read noise constant"
 msgstr "Ruisconstante lezen"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, subShotNoise)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:363
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:375
 #, kde-format
 msgid "Noise in the sub-exposure from light pollution"
 msgstr "Ruis in de onderbelichting uit lichtvervuiling"
 
 #. i18n: ectx: property (text), widget (QLabel, subTotalNoiseLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:379
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:391
 #, kde-format
 msgid "Total Noise"
 msgstr "Totale ruis"
 
 #. i18n: ectx: property (text), widget (QLabel, subPollutionLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:386
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:398
 #, kde-format
 msgid "Pollution Electrons"
 msgstr "Vervuilende elektronen"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, subTotalNoise)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:405
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:417
 #, kde-format
 msgid "Total noise in the sub-exposure (light pollution + read-noise)"
 msgstr "Totale ruis in de onderbelichting (lichtvervuiling + leesruis)"
 
 #. i18n: ectx: property (text), widget (QLabel, subShotNoiseLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:421
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:433
 #, kde-format
 msgid "Shot Noise"
 msgstr "Shot-ruis"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, subPollutionElectrons)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:440
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:452
 #, kde-format
 msgid "Estimated light pollution electrons in the sub-exposure."
 msgstr "Geschatte elektronen uit lichtvervuiling in de onderbelichting."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, subExposureTime)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:494
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:506
 #, kde-format
 msgid "Duration of Sub-exposure"
 msgstr "Duur van onderbelichting"
 
 #. i18n: ectx: property (text), widget (QLabel, subTimeLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:510
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:522
 #, kde-format
 msgid "Exposure Time (sec)"
 msgstr "Belichtingstijd (sec)"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, downloadCameraB)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:550
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:562
 #, kde-format
 msgid "Download additional camera data files"
 msgstr "Download additionele gegevensbestanden van camera's"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, skyQualityColor)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:581
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:593
 #, kde-format
 msgid "Bortle Zone Color"
 msgstr "Zonekleur van Bortle"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, bortleScaleValue)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:600
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:612
 #, kde-format
 msgid "Bortle class value"
 msgstr "Klassewaarde van Bortle"
 
 #. i18n: ectx: property (text), widget (QLabel, bortleScaleValue)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:603
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:615
 #, kde-format
 msgid "9"
 msgstr "9"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, cameraReadModeSelector)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:626
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:638
 #, kde-format
 msgid "Select read mode on cameras with multiple read modes."
 msgstr "Leesmodus selecteren op camera's met meerdere leesmodi."
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, userSkyQuality)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:645
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:657
 #, kde-format
 msgid "Adjust the quality of the sky"
 msgstr "De kwaliteit van de hemel aanpassen"
 
 #. i18n: ectx: property (text), widget (QLabel, indiCameraReadMode)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:655
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:667
 #, kde-format
 msgid "Read Mode"
 msgstr "Leesmodus"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, filterBandwidth)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:680
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:692
 #, kde-format
 msgid "Apply a compensation for an optical filter"
 msgstr "Een compensatie voor een optisch filter toepassen"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, imagingCameraSelector)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:703
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:715
 #, kde-format
 msgid "Camera Data Selection"
 msgstr "Selectie van cameragegevens"
 
 #. i18n: ectx: property (toolTip), widget (QCustomPlot, qCustomPlotSubExposure)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:738
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:750
 #, kde-format
 msgid "Potential exposure time graph"
 msgstr "Potentiële grafiek van belichtingstijd"
 
 #. i18n: ectx: property (text), widget (QLabel, allowableNoiseLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:757
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:769
 #, no-c-format, kde-format
 msgid "Noise Increase %"
 msgstr "Vermeerdering van ruis %"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:777
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:789
 #, kde-format
 msgid "Table"
 msgstr "Tabel"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:809
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:821
 #, kde-format
 msgid "Graph"
 msgstr "Grafiek"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, exposureCountDifferential)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:842
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:854
 #, kde-format
 msgid "Slope of time to noise ratio curve at current exposure count"
 msgstr ""
 "Helling van tijd tor ruisverhoudingskromme bij huidige telling van belichting"
 
 #. i18n: ectx: property (text), widget (QLabel, exposureCountLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:864
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:876
 #, kde-format
 msgid "Exposures"
 msgstr "Belichtingen"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, exposureCount)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:883
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:895
 #, kde-format
 msgid "Calculated exposure count for integration"
 msgstr "Berekende telling van belichting voor integration"
 
 #. i18n: ectx: property (toolTip), widget (QCustomPlot, qCustomPlotIntegrationNoise)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:905
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:917
 #, kde-format
 msgid "Integration Time to Noise Ratio"
 msgstr "Verhouding integratietijd tot ruis"
 
 #. i18n: ectx: property (text), widget (QLabel, targetNoiseLable)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:937
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:949
 #, kde-format
 msgid "Time/Noise Ratio"
 msgstr "Tijd/ruisverhouding"
 
 #. i18n: ectx: property (text), widget (QLabel, exposureDiffLabel)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:956
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:968
 #, kde-format
 msgid "dy ="
 msgstr "dy ="
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, targetNoiseRatio)
-#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:969
+#: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:981
 #, kde-format
 msgid "Integration time to noise ratio (potential quality)"
 msgstr "Verhouding integratietijd tot ruis (potentiële kwaliteit)"
@@ -78820,7 +78818,7 @@ msgstr "&Afdrukken..."
 msgid "Print the Altitude vs. time plot"
 msgstr "Druk plot af van hoogte vs tijd"
 
-#: tools/altvstime.cpp:579 tools/altvstime.cpp:937
+#: tools/altvstime.cpp:579 tools/altvstime.cpp:949
 #, kde-format
 msgid ""
 "<table><tr><th colspan=\"2\">%1</th></tr><tr><td>LST:   </td><td>%3</td></"
@@ -78831,13 +78829,13 @@ msgstr ""
 "tr><tr><td>LT:   </td><td>%2</td></tr><tr><td>Hoogte:   </td><td>%4</td></"
 "tr></table>"
 
-#: tools/altvstime.cpp:1393
+#: tools/altvstime.cpp:1405
 #, kde-format
 msgctxt "@title:window"
 msgid "Print elevation vs time plot"
 msgstr "Druk plot af van hoogte vs tijd"
 
-#: tools/altvstime.cpp:1407
+#: tools/altvstime.cpp:1419
 #, kde-format
 msgid "Elevation vs. Time Plot"
 msgstr "Plot van hoogte als functie van de tijd"
