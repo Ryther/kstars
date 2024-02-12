@@ -10,16 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 01:41+0000\n"
-"PO-Revision-Date: 2024-02-04 08:35+0100\n"
+"POT-Creation-Date: 2024-02-12 01:35+0000\n"
+"PO-Revision-Date: 2024-02-11 15:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -400,8 +400,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, AddDSLRLens)
 #. i18n: ectx: property (text), widget (QPushButton, SavePreset)
 #: auxiliary/imageviewer.cpp:134 ekos/align/mountmodel.cpp:384
-#: ekos/auxiliary/buildfilteroffsets.cpp:343 ekos/capture/capture.cpp:2302
-#: ekos/scheduler/scheduler.cpp:1845
+#: ekos/auxiliary/buildfilteroffsets.cpp:343 ekos/capture/capture.cpp:2301
+#: ekos/scheduler/scheduler.cpp:1846
 #: kstarslite/qml/dialogs/helpers/DetailsAddLink.qml:88
 #: kstarslite/qml/dialogs/helpers/LocationEdit.qml:375
 #: oal/equipmentwriter.ui:291 oal/equipmentwriter.ui:702
@@ -551,8 +551,8 @@ msgstr "Отказ"
 #. i18n: ectx: property (text), widget (QTableWidget, solutionTable)
 #: auxiliary/ksmessagebox.h:39 auxiliary/ksnotification.h:42
 #: ekos/analyze/analyze.cpp:139 ekos/analyze/analyze.cpp:141
-#: ekos/capture/sequencejob.cpp:24 ekos/manager.cpp:1094 ekos/manager.cpp:1109
-#: ekos/manager.cpp:1139 ekos/scheduler/scheduler.cpp:1384
+#: ekos/capture/sequencejob.cpp:24 ekos/manager.cpp:1096 ekos/manager.cpp:1111
+#: ekos/manager.cpp:1141 ekos/scheduler/scheduler.cpp:1384
 #: fitsviewer/solveInfo.ui:86 indi/indidome.cpp:22 indi/indidustcap.cpp:18
 #: indi/indimount.cpp:33 kstarsactions.cpp:489 kstarsactions.cpp:497
 #: kstarsactions.cpp:507 skycomponents/imageoverlaycomponent.cpp:523
@@ -1258,7 +1258,7 @@ msgstr ""
 "Последните версии на изображението на XPlanet, след като то е било преместено"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: auxiliary/xplanetimageviewer.cpp:296 ekos/align/align.ui:372
+#: auxiliary/xplanetimageviewer.cpp:296 ekos/align/align.ui:371
 #, kde-format
 msgid "FOV:"
 msgstr "Зрително поле:"
@@ -1781,7 +1781,7 @@ msgstr "1x"
 #. i18n: ectx: property (text), widget (QCheckBox, RACheckBatch)
 #: data/qml/mount/mountbox.qml:545 data/qml/mount/mountbox.qml:737
 #: data/qml/mount/mountbox.qml:826 dialogs/catalogcsvimport.ui:178
-#: dialogs/focusdialog.ui:107 ekos/align/align.ui:328 ekos/align/align.ui:416
+#: dialogs/focusdialog.ui:107 ekos/align/align.ui:327 ekos/align/align.ui:415
 #: ekos/manager.ui:789 ekos/mount/mount.ui:144 tools/altvstime.ui:97
 #: tools/argsetradec.ui:37 tools/modcalcgalcoord.ui:288
 #: tools/modcalcplanets.ui:251 tools/modcalcvlsr.ui:508
@@ -1802,7 +1802,7 @@ msgstr "AZ:"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: data/qml/mount/mountbox.qml:585 data/qml/mount/mountbox.qml:768
 #: data/qml/mount/mountbox.qml:827 data/qml/mount/mountbox.qml:911
-#: dialogs/focusdialog.ui:64 ekos/align/align.ui:284 ekos/align/align.ui:386
+#: dialogs/focusdialog.ui:64 ekos/align/align.ui:283 ekos/align/align.ui:385
 #: ekos/manager.ui:773
 #, kde-format, kde-kuit-format
 msgid "DE:"
@@ -1919,14 +1919,14 @@ msgstr "Състояние:"
 #. i18n: ectx: property (text), widget (QLabel, jobStatus)
 #: data/qml/mount/mountbox.qml:1054 ekos/align/polaralignmentassistant.cpp:28
 #: ekos/analyze/analyze.cpp:127 ekos/analyze/analyze.cpp:146
-#: ekos/analyze/analyze.cpp:3041 ekos/auxiliary/buildfilteroffsets.cpp:153
+#: ekos/analyze/analyze.cpp:3061 ekos/auxiliary/buildfilteroffsets.cpp:153
 #: ekos/auxiliary/darklibrary.cpp:46 ekos/auxiliary/ledstatuswidget.cpp:19
 #: ekos/auxiliary/ledstatuswidget.cpp:27 ekos/capture/sequencejob.cpp:24
 #: ekos/ekos.h:20 ekos/ekos.h:71 ekos/ekos.h:118 ekos/ekos.h:138
 #: ekos/ekos.h:161 ekos/ekos.h:198 ekos/guide/guidestatewidget.ui:38
-#: ekos/manager.cpp:598 ekos/manager/guidemanager.cpp:135
+#: ekos/manager.cpp:600 ekos/manager/guidemanager.cpp:135
 #: ekos/manager/guidemanager.ui:117 ekos/scheduler/scheduler.cpp:1377
-#: ekos/scheduler/scheduler.cpp:2040 ekos/scheduler/scheduler.ui:1279
+#: ekos/scheduler/scheduler.cpp:2041 ekos/scheduler/scheduler.ui:1279
 #: indi/indidome.cpp:20 indi/indidustcap.cpp:17 indi/indimount.cpp:31
 #, kde-format, kde-kuit-format
 msgid "Idle"
@@ -2299,7 +2299,7 @@ msgstr "Изберете, ако магнитудът е неизвестен"
 
 #. i18n: ectx: property (text), widget (QCheckBox, magUnknown)
 #: dialogs/addcatalogobject.ui:113 ekos/scheduler/scheduler.cpp:1385
-#: ekos/scheduler/scheduler.cpp:2055 fitsviewer/fitscommon.h:16
+#: ekos/scheduler/scheduler.cpp:2056 fitsviewer/fitscommon.h:16
 #: fitsviewer/fitshistogram.cpp:781 fitsviewer/fitshistogramcommand.cpp:267
 #: indi/indigroup.cpp:30 skycomponents/constellationboundarylines.cpp:275
 #, kde-format
@@ -2543,11 +2543,10 @@ msgstr ""
 
 #: dialogs/addlinkdialog.cpp:60 ekos/align/align.cpp:3902
 #: ekos/align/mountmodel.cpp:265 ekos/align/mountmodel.cpp:391
-#: ekos/analyze/analyze.cpp:1255 ekos/capture/capture.cpp:2223
-#: ekos/capture/capture.cpp:2311 ekos/guide/guidedriftgraph.cpp:477
-#: ekos/scheduler/scheduler.cpp:1759 ekos/scheduler/scheduler.cpp:1855
-#: fitsviewer/fitstab.cpp:501 tools/scriptbuilder.cpp:832
-#: tools/scriptbuilder.cpp:930
+#: ekos/capture/capture.cpp:2222 ekos/capture/capture.cpp:2310
+#: ekos/guide/guidedriftgraph.cpp:477 ekos/scheduler/scheduler.cpp:1759
+#: ekos/scheduler/scheduler.cpp:1856 fitsviewer/fitstab.cpp:501
+#: tools/scriptbuilder.cpp:832 tools/scriptbuilder.cpp:930
 #, kde-format
 msgid "Invalid URL"
 msgstr "Невалиден адрес"
@@ -3074,7 +3073,7 @@ msgstr "Редактиране"
 #. i18n: ectx: property (text), widget (QLabel, l_01)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, FitsSolverRALabel)
-#: dialogs/catalogobjectlistmodel.cpp:67 ekos/align/align.ui:911
+#: dialogs/catalogobjectlistmodel.cpp:67 ekos/align/align.ui:909
 #: ekos/align/opsastrometry.ui:409 ekos/guide/guide.ui:424
 #: ekos/guide/opscalibration.ui:235 ekos/guide/opsguide.ui:138
 #: ekos/scheduler/scheduler.ui:465 fitsviewer/platesolve.ui:177
@@ -3566,7 +3565,7 @@ msgstr "Връзката не може да бъде добавена."
 msgid "Advanced"
 msgstr "Разширени"
 
-#: dialogs/detaildialog.cpp:781 ekos/analyze/analyze.cpp:539
+#: dialogs/detaildialog.cpp:781 ekos/analyze/analyze.cpp:541
 #: kstarslite/qml/dialogs/DetailsDialog.qml:55
 #: kstarslite/qml/dialogs/DetailsDialog.qml:453
 #, kde-format, kde-kuit-format
@@ -3727,7 +3726,7 @@ msgstr "0.0 pc"
 #: ekos/auxiliary/darklibrary.ui:733 ekos/auxiliary/darklibrary.ui:753
 #: ekos/auxiliary/darklibrary.ui:773 ekos/auxiliary/darklibrary.ui:793
 #: ekos/capture/capture.cpp:163 ekos/capture/capture.cpp:167
-#: ekos/capture/capture.cpp:1172 ekos/capture/capture.cpp:1212
+#: ekos/capture/capture.cpp:1171 ekos/capture/capture.cpp:1211
 #: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:898
 #: ekos/focus/focus.cpp:415 ekos/guide/guide.ui:553 ekos/guide/guide.ui:677
 #: indi/streamform.ui:418 oal/equipmentwriter.ui:1163
@@ -5888,7 +5887,7 @@ msgstr ""
 #: ekos/align/align.cpp:1443
 #, kde-format
 msgid "Error: lost connection to filter wheel."
-msgstr "Грешка: загубена връзка с филтърния барабан."
+msgstr "Грешка: загубена връзка с филтърното колело."
 
 #: ekos/align/align.cpp:1463 ekos/capture/captureprocess.cpp:191
 #: ekos/capture/captureprocess.cpp:584 ekos/focus/focus.cpp:4954
@@ -6096,10 +6095,10 @@ msgstr "Заснемането е прекъснато."
 msgid "Solver aborted after %1 seconds."
 msgstr "Решаването е прекъснато след %1 секунди."
 
-#: ekos/align/align.cpp:2569 ekos/capture/capture.cpp:1758
-#: ekos/focus/focus.cpp:4030 ekos/guide/guide.cpp:1143 ekos/manager.cpp:1929
-#: ekos/mount/mount.cpp:829 ekos/observatory/observatory.cpp:952
-#: ekos/scheduler/scheduler.cpp:562
+#: ekos/align/align.cpp:2569 ekos/analyze/analyze.cpp:3716
+#: ekos/capture/capture.cpp:1757 ekos/focus/focus.cpp:4030
+#: ekos/guide/guide.cpp:1143 ekos/manager.cpp:1933 ekos/mount/mount.cpp:829
+#: ekos/observatory/observatory.cpp:952 ekos/scheduler/scheduler.cpp:562
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
 msgid "%1 %2"
@@ -6210,8 +6209,8 @@ msgstr "Световната координатна система (WCS) е де
 msgid "Capture error. Aborting..."
 msgstr "Грешка при заснемане. Прекъсване..."
 
-#: ekos/align/align.cpp:3252 ekos/capture/captureprocess.cpp:1478
-#: ekos/capture/captureprocess.cpp:1988
+#: ekos/align/align.cpp:3252 ekos/capture/captureprocess.cpp:1488
+#: ekos/capture/captureprocess.cpp:1998
 #, kde-format
 msgid "Restarting capture attempt #%1"
 msgstr "Рестартиране на опита за заснемане #%1"
@@ -6258,24 +6257,24 @@ msgstr "ΔРА (дъг. сек.)"
 msgid "dDE (arcsec)"
 msgstr "ΔДекл (дъг. сек.)"
 
-#: ekos/align/align.cpp:3596 ekos/capture/capture.cpp:2933
+#: ekos/align/align.cpp:3596 ekos/capture/capture.cpp:2932
 #: ekos/focus/focus.cpp:4842
 #, kde-format
 msgid "Filter operation failed."
 msgstr "Операцията на филтъра е неуспешна."
 
-#: ekos/align/align.cpp:3608 ekos/capture/capture.cpp:2869
+#: ekos/align/align.cpp:3608 ekos/capture/capture.cpp:2868
 #, kde-format
 msgid "Changing focus offset by %1 steps..."
 msgstr "Промяна на изместването на фокуса с %1 стъпки ..."
 
 #: ekos/align/align.cpp:3615 ekos/auxiliary/buildfilteroffsets.cpp:466
-#: ekos/capture/capture.cpp:2874
+#: ekos/capture/capture.cpp:2873
 #, kde-format
 msgid "Changing filter to %1..."
 msgstr "Филтърът се сменя на  %1..."
 
-#: ekos/align/align.cpp:3620 ekos/capture/capture.cpp:2879
+#: ekos/align/align.cpp:3620 ekos/capture/capture.cpp:2878
 #, kde-format
 msgid "Auto focus on filter change..."
 msgstr "Автоматичен фокус при смяна на филтъра..."
@@ -6292,9 +6291,9 @@ msgid "Export Solution Points"
 msgstr "Експортиране на точките на решението"
 
 #: ekos/align/align.cpp:3901 ekos/align/mountmodel.cpp:264
-#: ekos/align/mountmodel.cpp:390 ekos/capture/capture.cpp:2222
-#: ekos/capture/capture.cpp:2310 ekos/guide/guidedriftgraph.cpp:476
-#: ekos/scheduler/scheduler.cpp:1758 ekos/scheduler/scheduler.cpp:1854
+#: ekos/align/mountmodel.cpp:390 ekos/capture/capture.cpp:2221
+#: ekos/capture/capture.cpp:2309 ekos/guide/guidedriftgraph.cpp:476
+#: ekos/scheduler/scheduler.cpp:1758 ekos/scheduler/scheduler.cpp:1855
 #: fitsviewer/fitstab.cpp:500 tools/scriptbuilder.cpp:832
 #: tools/scriptbuilder.cpp:929
 #, kde-format
@@ -6310,8 +6309,8 @@ msgid "Unable to write to file %1"
 msgstr "Не може да се записва във файл %1"
 
 #: ekos/align/align.cpp:3911 ekos/align/mountmodel.cpp:284
-#: ekos/align/mountmodel.cpp:402 ekos/capture/capture.cpp:2238
-#: ekos/capture/captureprocess.cpp:2302 ekos/capture/sequencequeue.cpp:33
+#: ekos/align/mountmodel.cpp:402 ekos/capture/capture.cpp:2237
+#: ekos/capture/captureprocess.cpp:2312 ekos/capture/sequencequeue.cpp:33
 #: ekos/guide/guidedriftgraph.cpp:486 ekos/scheduler/schedulerprocess.cpp:2797
 #: ekos/scheduler/schedulerprocess.cpp:2986
 #: ekos/scheduler/schedulerprocess.cpp:3808
@@ -6365,19 +6364,19 @@ msgid "Train:"
 msgstr "Система:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, controlBox)
-#: ekos/align/align.ui:94
+#: ekos/align/align.ui:93
 #, kde-format
 msgid "Solver Control"
 msgstr "Управление на решаващия модул"
 
 #. i18n: ectx: property (text), widget (QPushButton, solveB)
-#: ekos/align/align.ui:121
+#: ekos/align/align.ui:120
 #, kde-format
 msgid "Capture && Solve"
 msgstr "Заснемане & & решаване"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, loadSlewB)
-#: ekos/align/align.ui:134
+#: ekos/align/align.ui:133
 #, kde-format
 msgid "Load a FITS image and solve. Slew mount to image central coordinates."
 msgstr ""
@@ -6385,7 +6384,7 @@ msgstr ""
 "централните координати на изображението."
 
 #. i18n: ectx: property (text), widget (QPushButton, loadSlewB)
-#: ekos/align/align.ui:137
+#: ekos/align/align.ui:136
 #, kde-format
 msgid "Load && Slew..."
 msgstr "Зареждане и завъртане..."
@@ -6394,7 +6393,7 @@ msgstr "Зареждане и завъртане..."
 #. i18n: ectx: property (toolTip), widget (QPushButton, PAHStopB)
 #. i18n: ectx: property (text), widget (QPushButton, PAHStopB)
 #. i18n: ectx: property (text), widget (QPushButton, stopFocusB)
-#: ekos/align/align.ui:149 ekos/align/polaralignmentassistant.ui:819
+#: ekos/align/align.ui:148 ekos/align/polaralignmentassistant.ui:819
 #: ekos/align/polaralignmentassistant.ui:822 ekos/auxiliary/darklibrary.ui:585
 #: ekos/focus/focus.ui:385 ekos/guide/guide.ui:153 ekos/manager.cpp:226
 #: ekos/observatory/observatorydomemodel.cpp:132
@@ -6406,7 +6405,7 @@ msgid "Stop"
 msgstr "Спиране"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, gotoBox)
-#: ekos/align/align.ui:161
+#: ekos/align/align.ui:160
 #, kde-format
 msgid "Select which action to perform after the captured image is solved"
 msgstr ""
@@ -6414,31 +6413,31 @@ msgstr ""
 "заснетата снимка"
 
 #. i18n: ectx: property (statusTip), widget (QGroupBox, gotoBox)
-#: ekos/align/align.ui:164
+#: ekos/align/align.ui:163
 #, kde-format
 msgid "Select what action to take once a solution is found."
 msgstr "Изберете какво действие да се предприеме след намирането на решение."
 
 #. i18n: ectx: property (title), widget (QGroupBox, gotoBox)
-#: ekos/align/align.ui:167
+#: ekos/align/align.ui:166
 #, kde-format
 msgid "Solver Action"
 msgstr "Действие на решаващият модул"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, syncR)
-#: ekos/align/align.ui:188
+#: ekos/align/align.ui:187
 #, kde-format
 msgid "Synchronize the telescope to the solution coordinates"
 msgstr "Синхронизиране на телескопа с координатите на решението"
 
 #. i18n: ectx: property (text), widget (QRadioButton, syncR)
-#: ekos/align/align.ui:194
+#: ekos/align/align.ui:193
 #, kde-format
 msgid "S&ync"
 msgstr "С&инхронизиране"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, slewR)
-#: ekos/align/align.ui:207
+#: ekos/align/align.ui:206
 #, kde-format
 msgid ""
 "Synchronize the telescope to the solution coordinates and then slew to the "
@@ -6448,32 +6447,32 @@ msgstr ""
 "придвижване до целевите координати"
 
 #. i18n: ectx: property (text), widget (QRadioButton, slewR)
-#: ekos/align/align.ui:213
+#: ekos/align/align.ui:212
 #, kde-format
 msgid "S&lew to Target"
 msgstr "За&въртване до целта"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, nothingR)
-#: ekos/align/align.ui:223
+#: ekos/align/align.ui:222
 #, kde-format
 msgid "Just solve"
 msgstr "Само решение"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingR)
-#: ekos/align/align.ui:229
+#: ekos/align/align.ui:228
 #, kde-format
 msgid "&Nothing"
 msgstr "&Нищо"
 
 #. i18n: ectx: property (title), widget (QGroupBox, telescopeCoordinateGroup)
-#: ekos/align/align.ui:244
+#: ekos/align/align.ui:243
 #, kde-format
 msgid "Telescope Coordinates (JNow)"
 msgstr "Координати на телескопа (JNow)"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, alignAccuracyThreshold)
 #. i18n: ectx: property (toolTip), widget (QLabel, label_9)
-#: ekos/align/align.ui:265 ekos/align/align.ui:335
+#: ekos/align/align.ui:264 ekos/align/align.ui:334
 #, kde-format
 msgid ""
 "Accuracy threshold in arcseconds between solution and target coordinates. "
@@ -6486,7 +6485,7 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_22)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, alignSettlingTime)
-#: ekos/align/align.ui:298 ekos/align/align.ui:315
+#: ekos/align/align.ui:297 ekos/align/align.ui:314
 #, kde-format
 msgid ""
 "After telescope completes slewing, wait until it settles for this many "
@@ -6496,33 +6495,33 @@ msgstr ""
 "брой милисекунди, преди да заснемете следващото изображение."
 
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: ekos/align/align.ui:301
+#: ekos/align/align.ui:300
 #, kde-format
 msgid "Settle:"
 msgstr "Стабилизация:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: ekos/align/align.ui:338
+#: ekos/align/align.ui:337
 #, kde-format
 msgid "Accuracy:"
 msgstr "Точност:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, solutionCoordinatesGroupBox)
-#: ekos/align/align.ui:348
+#: ekos/align/align.ui:347
 #, kde-format
 msgid "Solution Coordinates (JNow)"
 msgstr "Координати на решение (JNow)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_8)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, FOVOut)
-#: ekos/align/align.ui:369 ekos/align/align.ui:504
+#: ekos/align/align.ui:368 ekos/align/align.ui:503
 #, kde-format
 msgid "Effective field of view size in arcminutes."
 msgstr "Ефективен размер на зрителното поле в дъгови минути."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, err)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, errOut)
-#: ekos/align/align.ui:393 ekos/align/align.ui:403
+#: ekos/align/align.ui:392 ekos/align/align.ui:402
 #, kde-format
 msgid ""
 "Difference between telescope coordinates and solution coordinates in arcsec"
@@ -6531,50 +6530,50 @@ msgstr ""
 "сек"
 
 #. i18n: ectx: property (text), widget (QLabel, err)
-#: ekos/align/align.ui:396
+#: ekos/align/align.ui:395
 #, kde-format
 msgid "Err:"
 msgstr "Грш:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_17)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, pixScaleOut)
-#: ekos/align/align.ui:423 ekos/align/align.ui:460
+#: ekos/align/align.ui:422 ekos/align/align.ui:459
 #, kde-format
 msgid "Image scale in arcsecs/pixel"
 msgstr "Мащаб на изображението в дъгови секунди/пиксел"
 
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: ekos/align/align.ui:426
+#: ekos/align/align.ui:425
 #, kde-format
 msgid "Pix:"
 msgstr "Пикс:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_10)
-#: ekos/align/align.ui:440
+#: ekos/align/align.ui:439
 #, kde-format
 msgid "Image rotation angle, East of North"
 msgstr "Ъгъл на завъртане на изображението, на изток от север"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: ekos/align/align.ui:443
+#: ekos/align/align.ui:442
 #, kde-format
 msgid "PA:"
 msgstr "PA:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, PAOut)
-#: ekos/align/align.ui:450
+#: ekos/align/align.ui:449
 #, kde-format
 msgid "Position angle in degrees, East of North"
 msgstr "Позиционен ъгъл в градуси, на изток от север"
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: ekos/align/align.ui:470
+#: ekos/align/align.ui:469
 #, kde-format
 msgid "FL:"
 msgstr "FL:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, FocalLengthOut)
-#: ekos/align/align.ui:477
+#: ekos/align/align.ui:476
 #, kde-format
 msgid ""
 "<html><head/><body><p>Calculated telescope (effective) focal length in "
@@ -6586,13 +6585,13 @@ msgstr ""
 "измерване - plate solving.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: ekos/align/align.ui:487
+#: ekos/align/align.ui:486
 #, kde-format
 msgid "F/:"
 msgstr "F/:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, FocalRatioOut)
-#: ekos/align/align.ui:494
+#: ekos/align/align.ui:493
 #, kde-format
 msgid ""
 "<html><head/><body><p>Calculated telescope (effective) focal ratio. The "
@@ -6603,19 +6602,19 @@ msgstr ""
 "данни.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/align/align.ui:517
+#: ekos/align/align.ui:516
 #, kde-format
 msgid "R:"
 msgstr "R:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, ReducerOut)
-#: ekos/align/align.ui:524
+#: ekos/align/align.ui:523
 #, kde-format
 msgid "<html><head/><body><p>Reducer or Barlow factor.</p></body></html>"
 msgstr "<html><head/><body><p>Редуктор или фактор на Барлоу.</p></body></html>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, plateSolverOptionsGroup)
-#: ekos/align/align.ui:534
+#: ekos/align/align.ui:533
 #, kde-format
 msgid "Plate Solve Capture Options"
 msgstr "Опции за заснемане на решаване на плочи"
@@ -6623,7 +6622,7 @@ msgstr "Опции за заснемане на решаване на плочи
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_21)
 #. i18n: ectx: property (text), widget (QLabel, gainLabel)
-#: ekos/align/align.ui:555 ekos/auxiliary/darklibrary.ui:477
+#: ekos/align/align.ui:554 ekos/auxiliary/darklibrary.ui:477
 #: ekos/capture/capture.ui:153 ekos/capture/captureprocessoverlay.ui:296
 #: ekos/focus/focus.ui:526
 #, kde-format
@@ -6632,19 +6631,19 @@ msgstr "Усилване:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_18)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: ekos/align/align.ui:562 ekos/focus/focus.ui:574 ekos/guide/guide.ui:401
+#: ekos/align/align.ui:561 ekos/focus/focus.ui:574 ekos/guide/guide.ui:401
 #, kde-format
 msgid "Bin:"
 msgstr "Бин:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, showFITSViewerB)
-#: ekos/align/align.ui:584 ekos/focus/focus.ui:673 ekos/guide/guide.ui:166
+#: ekos/align/align.ui:583 ekos/focus/focus.ui:673 ekos/guide/guide.ui:166
 #, kde-format
 msgid "Show in FITS Viewer..."
 msgstr "Показване в програма за преглед на FITS..."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, alignDarkFrame)
-#: ekos/align/align.ui:600
+#: ekos/align/align.ui:599
 #, kde-format
 msgid ""
 "Subtract dark frame. If no suitable dark frame is available, a dark frame "
@@ -6656,25 +6655,25 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, alignDarkFrame)
 #. i18n: ectx: property (text), widget (QCheckBox, darkB)
 #. i18n: ectx: property (text), widget (QCheckBox, guideDarkFrame)
-#: ekos/align/align.ui:603 ekos/capture/capture.ui:2223 ekos/guide/guide.ui:240
+#: ekos/align/align.ui:602 ekos/capture/capture.ui:2223 ekos/guide/guide.ui:240
 #, kde-format
 msgid "Dark"
 msgstr "Тъмни"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, alignBinning)
-#: ekos/align/align.ui:610
+#: ekos/align/align.ui:609
 #, kde-format
 msgid "Camera binning"
 msgstr "Биннинг на камера"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, toggleFullScreenB)
-#: ekos/align/align.ui:629 ekos/focus/focus.ui:651
+#: ekos/align/align.ui:628 ekos/focus/focus.ui:651
 #, kde-format
 msgid "Toggle Full Screen"
 msgstr "Превключване на пълен екран"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, alignExposure)
-#: ekos/align/align.ui:645
+#: ekos/align/align.ui:644
 #, kde-format
 msgid "Exposure duration in seconds"
 msgstr "Продължителност на експозицията в секунди"
@@ -6682,7 +6681,7 @@ msgstr "Продължителност на експозицията в секу
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, alignGain)
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_21)
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, captureGainN)
-#: ekos/align/align.ui:670 ekos/auxiliary/darklibrary.ui:471
+#: ekos/align/align.ui:669 ekos/auxiliary/darklibrary.ui:471
 #: ekos/auxiliary/darklibrary.ui:490 ekos/capture/capture.ui:147
 #, kde-format
 msgid "Camera Gain"
@@ -6692,7 +6691,7 @@ msgstr "Вировитица"
 #. i18n: ectx: property (text), widget (QLabel, filterLabel)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: ekos/align/align.ui:686 ekos/capture/capture.ui:522 ekos/focus/focus.ui:732
+#: ekos/align/align.ui:685 ekos/capture/capture.ui:522 ekos/focus/focus.ui:732
 #: ekos/profileeditor.ui:644 fitsviewer/fitsdebayer.ui:22 oal/execute.ui:358
 #, kde-format
 msgid "Filter:"
@@ -6700,7 +6699,7 @@ msgstr "Филтър:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, alignISO)
 #. i18n: ectx: property (toolTip), widget (QComboBox, captureISOS)
-#: ekos/align/align.ui:693 ekos/auxiliary/darklibrary.ui:516
+#: ekos/align/align.ui:692 ekos/auxiliary/darklibrary.ui:516
 #: ekos/capture/capture.ui:187
 #, kde-format
 msgid "Camera ISO"
@@ -6708,28 +6707,28 @@ msgstr "ISO на камера"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ekos/align/align.ui:700 ekos/focus/focus.ui:551 ekos/guide/guide.ui:375
+#: ekos/align/align.ui:699 ekos/focus/focus.ui:551 ekos/guide/guide.ui:375
 #, kde-format
 msgid "Exp:"
 msgstr "Експ.:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, rotatorB)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ekos/align/align.ui:716 ekos/align/opsalign.ui:263
+#: ekos/align/align.ui:715 ekos/align/opsalign.ui:263
 #, kde-format
 msgid "Rotator Settings"
 msgstr "Настройки на ротатора"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: property (text), widget (QLabel, ISOLabel)
-#: ekos/align/align.ui:736 ekos/auxiliary/darklibrary.ui:506
+#: ekos/align/align.ui:734 ekos/auxiliary/darklibrary.ui:506
 #: ekos/capture/capture.ui:1214 ekos/focus/focus.ui:864
 #, kde-format
 msgid "ISO:"
 msgstr "ISO:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, alignUseCurrentFilter)
-#: ekos/align/align.ui:743
+#: ekos/align/align.ui:741
 #, kde-format
 msgid ""
 "<html><head/><body><p>If checked, the currently selected filter will be used "
@@ -6742,37 +6741,37 @@ msgstr ""
 "ръчно.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, alignUseCurrentFilter)
-#: ekos/align/align.ui:746
+#: ekos/align/align.ui:744
 #, kde-format
 msgid "Use current"
 msgstr "Използване на текущата"
 
 #. i18n: ectx: property (title), widget (QGroupBox, stellarSolverOptionsGroup)
-#: ekos/align/align.ui:756
+#: ekos/align/align.ui:754
 #, kde-format
 msgid "Solver Mode"
 msgstr "Режим на разрешаване"
 
 #. i18n: ectx: property (text), widget (QRadioButton, localSolverR)
-#: ekos/align/align.ui:777
+#: ekos/align/align.ui:775
 #, kde-format
 msgid "StellarSolver"
 msgstr "StellarSolver"
 
 #. i18n: ectx: property (text), widget (QRadioButton, remoteSolverR)
-#: ekos/align/align.ui:793
+#: ekos/align/align.ui:791
 #, kde-format
 msgid "Remote"
 msgstr "Отдалечени"
 
 #. i18n: ectx: attribute (title), widget (QWidget, solutionResults)
-#: ekos/align/align.ui:848
+#: ekos/align/align.ui:846
 #, kde-format
 msgid "Solution Results"
 msgstr "Резултати от решението"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: ekos/align/align.ui:875
+#: ekos/align/align.ui:873
 #, kde-format
 msgid ""
 "The results from Astrometric Solutions from the Capture and Solve Tool, the "
@@ -6790,7 +6789,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, l_02)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, FitsSolverDECLabel)
-#: ekos/align/align.ui:916 ekos/align/opsastrometry.ui:389
+#: ekos/align/align.ui:914 ekos/align/opsastrometry.ui:389
 #: ekos/guide/guide.ui:342 ekos/guide/guide.ui:1247
 #: ekos/guide/opscalibration.ui:300 ekos/guide/opsguide.ui:128
 #: ekos/scheduler/scheduler.ui:485 fitsviewer/platesolve.ui:222
@@ -6800,32 +6799,32 @@ msgid "DEC"
 msgstr "DEC"
 
 #. i18n: ectx: property (text), widget (QTableWidget, solutionTable)
-#: ekos/align/align.ui:921
+#: ekos/align/align.ui:919
 #, kde-format
 msgid "Obj Name"
 msgstr "Име на обект"
 
 #. i18n: ectx: property (text), widget (QTableWidget, solutionTable)
 #. i18n: ectx: property (text), widget (QTableWidget, alignTable)
-#: ekos/align/align.ui:926 ekos/align/mountmodel.ui:463
+#: ekos/align/align.ui:924 ekos/align/mountmodel.ui:463
 #, kde-format
 msgid "~~"
 msgstr "~~"
 
 #. i18n: ectx: property (text), widget (QTableWidget, solutionTable)
-#: ekos/align/align.ui:931
+#: ekos/align/align.ui:929
 #, kde-format
 msgid "dRA"
 msgstr "dRA"
 
 #. i18n: ectx: property (text), widget (QTableWidget, solutionTable)
-#: ekos/align/align.ui:936
+#: ekos/align/align.ui:934
 #, kde-format
 msgid "dDE"
 msgstr "dDE"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, clearAllSolutionsB)
-#: ekos/align/align.ui:961
+#: ekos/align/align.ui:959
 #, kde-format
 msgid ""
 "Clear all of the solutions from the solutions table.  Be careful because you "
@@ -6835,7 +6834,7 @@ msgstr ""
 "не можете да ги върнете."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, removeSolutionB)
-#: ekos/align/align.ui:983
+#: ekos/align/align.ui:981
 #, kde-format
 msgid ""
 "Remove the selected row from the solutions table.  This can be useful for "
@@ -6849,7 +6848,7 @@ msgstr ""
 "както в графиката, така и в таблицата."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, exportSolutionsCSV)
-#: ekos/align/align.ui:1005
+#: ekos/align/align.ui:1003
 #, kde-format
 msgid ""
 "Export all of the solutions in the Solution Results table to CSV file of "
@@ -6859,14 +6858,14 @@ msgstr ""
 "вас CSV файл за по-нататъшен анализ в електронна таблица."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, autoScaleGraphB)
-#: ekos/align/align.ui:1027
+#: ekos/align/align.ui:1025
 #, kde-format
 msgid "Auto scale and center the Solution Results graph."
 msgstr ""
 "Автоматично мащабиране и центриране на графиката \"Резултати от решението\"."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mountModelB)
-#: ekos/align/align.ui:1050
+#: ekos/align/align.ui:1048
 #, kde-format
 msgid ""
 "Launch the mount model tool. This tool enables you to create pre-programmed "
@@ -6879,7 +6878,7 @@ msgstr ""
 "добра точност."
 
 #. i18n: ectx: property (text), widget (QPushButton, mountModelB)
-#: ekos/align/align.ui:1053
+#: ekos/align/align.ui:1051
 #, kde-format
 msgid "Mount Model"
 msgstr "Модел на монтировката"
@@ -6961,8 +6960,8 @@ msgctxt "@title:window"
 msgid "Open Ekos Alignment List"
 msgstr "Отваряне на списък за подравняване на Ekos"
 
-#: ekos/align/mountmodel.cpp:283 ekos/capture/capture.cpp:2237
-#: ekos/capture/captureprocess.cpp:2301 ekos/capture/sequencequeue.cpp:32
+#: ekos/align/mountmodel.cpp:283 ekos/capture/capture.cpp:2236
+#: ekos/capture/captureprocess.cpp:2311 ekos/capture/sequencequeue.cpp:32
 #: ekos/scheduler/schedulerprocess.cpp:2985
 #: ekos/scheduler/schedulerprocess.cpp:3827
 #, kde-format
@@ -8381,7 +8380,7 @@ msgstr "Добавяне на папка, в която се съхранява�
 #. i18n: ectx: property (text), widget (QPushButton, downloadCameraB)
 #. i18n: ectx: property (text), widget (QCheckBox, eastRAGuideEnabled)
 #. i18n: ectx: property (text), widget (QCheckBox, northDECGuideEnabled)
-#: ekos/align/opsastrometryindexfiles.ui:256 ekos/analyze/analyze.ui:199
+#: ekos/align/opsastrometryindexfiles.ui:256 ekos/analyze/analyze.ui:215
 #: ekos/auxiliary/stellarsolverprofileeditor.ui:213
 #: ekos/capture/exposurecalculator/exposurecalculatordialog.ui:565
 #: ekos/guide/guide.ui:304 ekos/guide/guide.ui:456
@@ -8401,7 +8400,7 @@ msgstr "Премахване на местоположение на индекс
 #. i18n: ectx: property (text), widget (QPushButton, removeOptionProfile)
 #. i18n: ectx: property (text), widget (QCheckBox, westRAGuideEnabled)
 #. i18n: ectx: property (text), widget (QCheckBox, southDECGuideEnabled)
-#: ekos/align/opsastrometryindexfiles.ui:266 ekos/analyze/analyze.ui:247
+#: ekos/align/opsastrometryindexfiles.ui:266 ekos/analyze/analyze.ui:263
 #: ekos/auxiliary/stellarsolverprofileeditor.ui:235 ekos/guide/guide.ui:314
 #: ekos/guide/guide.ui:466 kstarslite/qml/indi/modules/MotionControl.qml:264
 #, kde-format, kde-kuit-format
@@ -9942,7 +9941,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, startB)
 #: ekos/align/polaralignmentassistant.ui:806
 #: ekos/align/polaralignmentassistant.ui:809 ekos/auxiliary/darklibrary.ui:575
-#: ekos/manager.cpp:143 ekos/manager.cpp:232 ekos/manager.cpp:606
+#: ekos/manager.cpp:143 ekos/manager.cpp:232 ekos/manager.cpp:608
 #: ekos/observatory/observatorydomemodel.cpp:132
 #: ekos/observatory/observatorydomemodel.cpp:135
 #: kstarslite/qml/indi/INDIControlPanel.qml:166
@@ -9958,7 +9957,7 @@ msgstr "Начало"
 #. i18n: ectx: property (text), widget (QPushButton, captureB)
 #. i18n: ectx: attribute (title), widget (QWidget, captureTab)
 #: ekos/align/polaralignwidget.ui:37 ekos/align/polaralignwidget.ui:157
-#: ekos/align/polaralignwidget.ui:277 ekos/analyze/analyze.cpp:2058
+#: ekos/align/polaralignwidget.ui:277 ekos/analyze/analyze.cpp:2078
 #: ekos/auxiliary/opslogs.ui:285 ekos/capture/capturepreviewwidget.ui:79
 #: ekos/guide/guide.ui:137 ekos/opsekos.ui:551
 #, kde-format
@@ -10050,7 +10049,7 @@ msgid "Parking"
 msgstr "Паркиране"
 
 #: ekos/analyze/analyze.cpp:133 ekos/analyze/analyze.cpp:152 ekos/ekos.h:140
-#: ekos/scheduler/scheduler.cpp:2041 indi/indimount.cpp:31
+#: ekos/scheduler/scheduler.cpp:2042 indi/indimount.cpp:31
 #, kde-format
 msgid "Slewing"
 msgstr "Завъртване"
@@ -10068,17 +10067,17 @@ msgstr "Преместване"
 msgid "Tracking"
 msgstr "Проследяване"
 
-#: ekos/analyze/analyze.cpp:512 ekos/analyze/analyze.cpp:524
+#: ekos/analyze/analyze.cpp:514 ekos/analyze/analyze.cpp:526
 #, kde-format
 msgid "Current Session"
 msgstr "Текуща сесия"
 
-#: ekos/analyze/analyze.cpp:513
+#: ekos/analyze/analyze.cpp:515
 #, kde-format
 msgid "Read from File"
 msgstr "Четене от файл"
 
-#: ekos/analyze/analyze.cpp:514
+#: ekos/analyze/analyze.cpp:516
 #, kde-format
 msgid "Set alternative image-file base directory"
 msgstr "Задаване на алтернативна базова директория за файлове с изображения"
@@ -10086,33 +10085,38 @@ msgstr "Задаване на алтернативна базова директ
 #. i18n call below is broken up (and the word "analyze" is protected from it) because i18n
 #. translates "analyze" to "analyse" for the English UK locale, but we need to keep it ".analyze"
 #. because that's what how the files are named.
-#: ekos/analyze/analyze.cpp:538
+#: ekos/analyze/analyze.cpp:540
 #, kde-format
 msgctxt "@title:window"
 msgid "Select input file"
 msgstr "Избор на входен файл"
 
-#: ekos/analyze/analyze.cpp:539
+#: ekos/analyze/analyze.cpp:541
 #, kde-format
 msgid "All Files (*)"
 msgstr "Всички файлове (*)"
 
-#: ekos/analyze/analyze.cpp:559
+#: ekos/analyze/analyze.cpp:561
 #, kde-format
 msgid "Set an alternate base directory for your captured images"
 msgstr "Задаване на алтернативна базова директория за заснетите изображения"
 
-#: ekos/analyze/analyze.cpp:1254
+#: ekos/analyze/analyze.cpp:1260
 #, kde-format
 msgid "Could not find image file: %1"
 msgstr "Не може да се намери файл с изображение: %1"
+
+#: ekos/analyze/analyze.cpp:1263
+#, kde-format
+msgid "Cannot display temporary image file: %1"
+msgstr "Не може да се покаже временния файл: %1"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_FocusLogging)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: ectx: property (text), widget (QCheckBox, focusStepCheck)
 #. i18n: ectx: property (text), widget (QCheckBox, schedulerFocusStep)
-#: ekos/analyze/analyze.cpp:2059 ekos/auxiliary/opslogs.ui:377
-#: ekos/manager.cpp:2058 ekos/manager/focusmanager.ui:101
+#: ekos/analyze/analyze.cpp:2079 ekos/auxiliary/opslogs.ui:377
+#: ekos/manager.cpp:2064 ekos/manager/focusmanager.ui:101
 #: ekos/scheduler/framingassistant.ui:1490 ekos/scheduler/scheduler.ui:442
 #: fitsviewer/fitscommon.h:15 fitsviewer/fitsviewer.cpp:467
 #, kde-format
@@ -10121,7 +10125,7 @@ msgstr "Фокус"
 
 #. i18n: ectx: property (text), widget (QCheckBox, alignStepCheck)
 #. i18n: ectx: property (text), widget (QCheckBox, schedulerAlignStep)
-#: ekos/analyze/analyze.cpp:2060 ekos/manager.cpp:2032
+#: ekos/analyze/analyze.cpp:2080 ekos/manager.cpp:2038
 #: ekos/scheduler/framingassistant.ui:1262 ekos/scheduler/scheduler.ui:395
 #: fitsviewer/fitscommon.h:16 fitsviewer/fitsviewer.cpp:475
 #, kde-format
@@ -10132,15 +10136,15 @@ msgstr "Подравняване"
 #. i18n: ectx: property (text), widget (QPushButton, guideB)
 #. i18n: ectx: property (text), widget (QCheckBox, guideStepCheck)
 #. i18n: ectx: property (text), widget (QCheckBox, schedulerGuideStep)
-#: ekos/analyze/analyze.cpp:2061 ekos/auxiliary/opslogs.ui:120
-#: ekos/guide/guide.cpp:58 ekos/guide/guide.ui:263 ekos/manager.cpp:2217
+#: ekos/analyze/analyze.cpp:2081 ekos/auxiliary/opslogs.ui:120
+#: ekos/guide/guide.cpp:58 ekos/guide/guide.ui:263 ekos/manager.cpp:2223
 #: ekos/scheduler/framingassistant.ui:1226 ekos/scheduler/scheduler.ui:417
 #: fitsviewer/fitscommon.h:15 fitsviewer/fitsviewer.cpp:471
 #, kde-format
 msgid "Guide"
 msgstr "Гидиране"
 
-#: ekos/analyze/analyze.cpp:2062
+#: ekos/analyze/analyze.cpp:2082
 #, kde-format
 msgid "Flip"
 msgstr "Обръщане"
@@ -10148,19 +10152,19 @@ msgstr "Обръщане"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_INDIMountLogging)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_MountLogging)
 #. i18n: ectx: property (text), widget (QLabel, mountLabel)
-#: ekos/analyze/analyze.cpp:2063 ekos/auxiliary/opslogs.ui:77
-#: ekos/auxiliary/opslogs.ui:420 ekos/manager.cpp:2142 ekos/manager.ui:665
+#: ekos/analyze/analyze.cpp:2083 ekos/auxiliary/opslogs.ui:77
+#: ekos/auxiliary/opslogs.ui:420 ekos/manager.cpp:2148 ekos/manager.ui:665
 #, kde-format
 msgid "Mount"
 msgstr "Монтиране"
 
 #. i18n: ectx: property (text), widget (QLabel, jobLabel)
-#: ekos/analyze/analyze.cpp:2064 ekos/capture/capturecountswidget.ui:473
+#: ekos/analyze/analyze.cpp:2084 ekos/capture/capturecountswidget.ui:473
 #, kde-format
 msgid "Job"
 msgstr "Задания"
 
-#: ekos/analyze/analyze.cpp:2322
+#: ekos/analyze/analyze.cpp:2342
 #, kde-format
 msgid ""
 "The \"Auto Compute HFR\" option in the KStars FITS options menu is not set. "
@@ -10171,7 +10175,7 @@ msgstr ""
 "не е зададена. Без нея няма да получите стойности на HFR. След като я "
 "зададете, новозаснетите изображения ще имат изчислени HFR стойности."
 
-#: ekos/analyze/analyze.cpp:2338
+#: ekos/analyze/analyze.cpp:2358
 #, kde-format
 msgid ""
 "The \"Auto Compute HFR\" option in the KStars FITS options menu is not set. "
@@ -10183,7 +10187,7 @@ msgstr ""
 "изображението за заснемане. След като я зададете, в новозаснетите "
 "изображения ще бъдат открити звездите."
 
-#: ekos/analyze/analyze.cpp:3043 ekos/auxiliary/ledstatuswidget.cpp:78
+#: ekos/analyze/analyze.cpp:3063 ekos/auxiliary/ledstatuswidget.cpp:78
 #: ekos/capture/sequencejob.cpp:24 ekos/ekos.h:21 ekos/ekos.h:72
 #: ekos/ekos.h:119 ekos/ekos.h:139 ekos/ekos.h:199
 #: ekos/scheduler/scheduler.cpp:1383
@@ -10191,97 +10195,97 @@ msgstr ""
 msgid "Aborted"
 msgstr "Прекъснато"
 
-#: ekos/analyze/analyze.cpp:3045 ekos/ekos.h:22
+#: ekos/analyze/analyze.cpp:3065 ekos/ekos.h:22
 #, kde-format
 msgid "Connected"
 msgstr "Свързан"
 
-#: ekos/analyze/analyze.cpp:3047 ekos/ekos.h:23
+#: ekos/analyze/analyze.cpp:3067 ekos/ekos.h:23
 #, kde-format
 msgid "Disconnected"
 msgstr "Несвързан"
 
-#: ekos/analyze/analyze.cpp:3049 ekos/auxiliary/ledstatuswidget.cpp:68
-#: ekos/ekos.h:24 ekos/ekos.h:71 ekos/scheduler/scheduler.cpp:2054
+#: ekos/analyze/analyze.cpp:3069 ekos/auxiliary/ledstatuswidget.cpp:68
+#: ekos/ekos.h:24 ekos/ekos.h:71 ekos/scheduler/scheduler.cpp:2055
 #, kde-format
 msgid "Capturing"
 msgstr "Заснемане"
 
-#: ekos/analyze/analyze.cpp:3051 ekos/ekos.h:25
+#: ekos/analyze/analyze.cpp:3071 ekos/ekos.h:25
 #, kde-format
 msgid "Looping"
 msgstr "Цикъл"
 
-#: ekos/analyze/analyze.cpp:3053 ekos/ekos.h:26
+#: ekos/analyze/analyze.cpp:3073 ekos/ekos.h:26
 #, kde-format
 msgid "Subtracting"
 msgstr "Изваждане"
 
-#: ekos/analyze/analyze.cpp:3055 ekos/ekos.h:27
+#: ekos/analyze/analyze.cpp:3075 ekos/ekos.h:27
 #, kde-format
 msgid "Subframing"
 msgstr "Изграждане на подкадри"
 
-#: ekos/analyze/analyze.cpp:3057 ekos/ekos.h:28
+#: ekos/analyze/analyze.cpp:3077 ekos/ekos.h:28
 #, kde-format
 msgid "Selecting star"
 msgstr "Избор на звезда"
 
-#: ekos/analyze/analyze.cpp:3059 ekos/ekos.h:29 ekos/ekos.h:74
+#: ekos/analyze/analyze.cpp:3079 ekos/ekos.h:29 ekos/ekos.h:74
 #, kde-format
 msgid "Calibrating"
 msgstr "Калибриране"
 
-#: ekos/analyze/analyze.cpp:3061 ekos/ekos.h:30
+#: ekos/analyze/analyze.cpp:3081 ekos/ekos.h:30
 #, kde-format
 msgid "Calibration error"
 msgstr "Грешка при калибриране"
 
-#: ekos/analyze/analyze.cpp:3063 ekos/ekos.h:31
+#: ekos/analyze/analyze.cpp:3083 ekos/ekos.h:31
 #, kde-format
 msgid "Calibrated"
 msgstr "Калибрирано"
 
 #. i18n("Calibrating");
-#: ekos/analyze/analyze.cpp:3065 ekos/ekos.h:32
-#: ekos/scheduler/scheduler.cpp:2052
+#: ekos/analyze/analyze.cpp:3085 ekos/ekos.h:32
+#: ekos/scheduler/scheduler.cpp:2053
 #, kde-format
 msgid "Guiding"
 msgstr "Гидиране"
 
-#: ekos/analyze/analyze.cpp:3067 ekos/auxiliary/ledstatuswidget.cpp:33
+#: ekos/analyze/analyze.cpp:3087 ekos/auxiliary/ledstatuswidget.cpp:33
 #: ekos/ekos.h:33 ekos/ekos.h:72 ekos/ekos.h:141
 #, kde-format
 msgid "Suspended"
 msgstr "Спряно"
 
-#: ekos/analyze/analyze.cpp:3069 ekos/ekos.h:34
+#: ekos/analyze/analyze.cpp:3089 ekos/ekos.h:34
 #, kde-format
 msgid "Reacquiring"
 msgstr "Повторно придобиване"
 
-#: ekos/analyze/analyze.cpp:3071 ekos/ekos.h:35 ekos/ekos.h:73
+#: ekos/analyze/analyze.cpp:3091 ekos/ekos.h:35 ekos/ekos.h:73
 #, kde-format
 msgid "Dithering"
 msgstr "Смесване"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ManualDither)
-#: ekos/analyze/analyze.cpp:3073 ekos/ekos.h:36 ekos/guide/manualdither.ui:14
+#: ekos/analyze/analyze.cpp:3093 ekos/ekos.h:36 ekos/guide/manualdither.ui:14
 #, kde-format
 msgid "Manual Dithering"
 msgstr "Ръчно дитериране"
 
-#: ekos/analyze/analyze.cpp:3075 ekos/ekos.h:37
+#: ekos/analyze/analyze.cpp:3095 ekos/ekos.h:37
 #, kde-format
 msgid "Dithering error"
 msgstr "Грешка при дитериране"
 
-#: ekos/analyze/analyze.cpp:3077 ekos/ekos.h:38
+#: ekos/analyze/analyze.cpp:3097 ekos/ekos.h:38
 #, kde-format
 msgid "Dithering successful"
 msgstr "Успешно дитериране"
 
-#: ekos/analyze/analyze.cpp:3079 ekos/ekos.h:39
+#: ekos/analyze/analyze.cpp:3099 ekos/ekos.h:39
 #, kde-format
 msgid "Settling"
 msgstr "Настройки"
@@ -10359,8 +10363,28 @@ msgstr "Помощ..."
 msgid "Statistics"
 msgstr "Статистика"
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, prevSessionB)
+#: ekos/analyze/analyze.ui:202
+#, kde-format
+msgid ""
+"<html><head/><body><p>Move from the selected session to its previous session "
+"(on its left). Keyboard: control-left.</p></body></html>"
+msgstr ""
+"<html><head/><body><p>Преместване от избраната сесия към предишната сесия "
+"(вляво). Клавиатура: Ctr-ляво.</p></body></html>"
+
+#. i18n: ectx: property (text), widget (QPushButton, prevSessionB)
+#. i18n: ectx: property (text), widget (QPushButton, focusDetailPrevButton)
+#. i18n: ectx: property (text), widget (QPushButton, guideDetailPrevButton)
+#. i18n: ectx: property (text), widget (QPushButton, previousButton)
+#: ekos/analyze/analyze.ui:205 ekos/manager/focusmanager.ui:267
+#: ekos/manager/guidemanager.ui:415 printing/foveditordialog.ui:115
+#, kde-format
+msgid "<"
+msgstr "<"
+
 #. i18n: ectx: property (toolTip), widget (QPushButton, zoomInB)
-#: ekos/analyze/analyze.ui:196
+#: ekos/analyze/analyze.ui:212
 #, kde-format
 msgid ""
 "<html><head/><body><p>Zoom in to the x-axis on the Timeline and Statistics "
@@ -10371,7 +10395,7 @@ msgstr ""
 "html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, cursorTimeOut)
-#: ekos/analyze/analyze.ui:212
+#: ekos/analyze/analyze.ui:228
 #, kde-format
 msgid ""
 "<html><head/><body><p>The number of seconds from the start of the log to the "
@@ -10383,7 +10407,7 @@ msgstr ""
 "времето в дясната страна на графиката.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, cursorClockTimeOut)
-#: ekos/analyze/analyze.ui:231
+#: ekos/analyze/analyze.ui:247
 #, kde-format
 msgid ""
 "<html><head/><body><p>The clock-time for the statistics plot cursor. If "
@@ -10395,7 +10419,7 @@ msgstr ""
 "часовника от дясната страна на графиката.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, zoomOutB)
-#: ekos/analyze/analyze.ui:244
+#: ekos/analyze/analyze.ui:260
 #, kde-format
 msgid ""
 "<html><head/><body><p>Zoom out on the x-axis on the Timeline and Statistics "
@@ -10405,8 +10429,28 @@ msgstr ""
 "линия и статистиката, за да покажете по-голям период от време.</p></body></"
 "html>"
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, nextSessionB)
+#: ekos/analyze/analyze.ui:276
+#, kde-format
+msgid ""
+"<html><head/><body><p>Move from the selected session to its next session (on "
+"its right). Keyboard: control-right.</p></body></html>"
+msgstr ""
+"<html><head/><body><p>Преместване от избраната сесия към следващата сесия "
+"(вдясно). Клавиатура: Ctr-дясно.</p></body></html>"
+
+#. i18n: ectx: property (text), widget (QPushButton, nextSessionB)
+#. i18n: ectx: property (text), widget (QPushButton, focusDetailNextButton)
+#. i18n: ectx: property (text), widget (QPushButton, guideDetailNextButton)
+#. i18n: ectx: property (text), widget (QPushButton, nextButton)
+#: ekos/analyze/analyze.ui:279 ekos/manager/focusmanager.ui:339
+#: ekos/manager/guidemanager.ui:503 printing/foveditordialog.ui:122
+#, kde-format
+msgid ">"
+msgstr ">"
+
 #. i18n: ectx: property (toolTip), widget (QScrollBar, analyzeSB)
-#: ekos/analyze/analyze.ui:296
+#: ekos/analyze/analyze.ui:328
 #, kde-format
 msgid ""
 "<html><head/><body><p>If possible display previous (scroll to left) or "
@@ -10418,7 +10462,7 @@ msgstr ""
 "линия и статистиката.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label2)
-#: ekos/analyze/analyze.ui:338
+#: ekos/analyze/analyze.ui:370
 #, kde-format
 msgid "Guide:"
 msgstr "Гидиране:"
@@ -10426,20 +10470,20 @@ msgstr "Гидиране:"
 #. i18n: ectx: property (text), widget (QLabel, label3)
 #. i18n: ectx: property (text), widget (QLabel, mountLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: ekos/analyze/analyze.ui:356 ekos/auxiliary/opticaltrains.ui:163
+#: ekos/analyze/analyze.ui:388 ekos/auxiliary/opticaltrains.ui:163
 #: ekos/profileeditor.ui:658
 #, kde-format
 msgid "Mount:"
 msgstr "Монтировка:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/analyze/analyze.ui:374
+#: ekos/analyze/analyze.ui:406
 #, kde-format
 msgid "Capture:"
 msgstr "Заснемане:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, raCB)
-#: ekos/analyze/analyze.ui:387
+#: ekos/analyze/analyze.ui:419
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the right ascension (RA) drift error in arc-"
@@ -10450,13 +10494,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, raCB)
 #. i18n: ectx: property (text), widget (QCheckBox, mountRaCB)
-#: ekos/analyze/analyze.ui:393 ekos/analyze/analyze.ui:798
+#: ekos/analyze/analyze.ui:425 ekos/analyze/analyze.ui:830
 #, kde-format
 msgid "ra"
 msgstr "ra"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, raOut)
-#: ekos/analyze/analyze.ui:406
+#: ekos/analyze/analyze.ui:438
 #, kde-format
 msgid ""
 "<html><head/><body><p>The right ascension (RA) drift error in arc-seconds. "
@@ -10469,7 +10513,7 @@ msgstr ""
 "да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, decCB)
-#: ekos/analyze/analyze.ui:428
+#: ekos/analyze/analyze.ui:460
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the declination (DEC) drift error in arc-seconds."
@@ -10481,14 +10525,14 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, decCB)
 #. i18n: ectx: property (text), widget (QCheckBox, decPulseCB)
 #. i18n: ectx: property (text), widget (QCheckBox, mountDecCB)
-#: ekos/analyze/analyze.ui:434 ekos/analyze/analyze.ui:522
-#: ekos/analyze/analyze.ui:845
+#: ekos/analyze/analyze.ui:466 ekos/analyze/analyze.ui:554
+#: ekos/analyze/analyze.ui:877
 #, kde-format
 msgid "dec"
 msgstr "дек"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, decOut)
-#: ekos/analyze/analyze.ui:447
+#: ekos/analyze/analyze.ui:479
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the declination (DEC) drift error in arc-seconds. "
@@ -10501,7 +10545,7 @@ msgstr ""
 "два пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, raPulseCB)
-#: ekos/analyze/analyze.ui:469
+#: ekos/analyze/analyze.ui:501
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the right ascension (RA) guide pulses in "
@@ -10511,13 +10555,13 @@ msgstr ""
 "(РА) в милисекунди.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, raPulseCB)
-#: ekos/analyze/analyze.ui:475
+#: ekos/analyze/analyze.ui:507
 #, kde-format
 msgid "ra pulse"
 msgstr "ra пулс"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, raPulseOut)
-#: ekos/analyze/analyze.ui:488
+#: ekos/analyze/analyze.ui:520
 #, kde-format
 msgid ""
 "<html><head/><body><p>The right ascension (RA) guide pulses in milliseconds. "
@@ -10529,7 +10573,7 @@ msgstr ""
 "пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, decPulseCB)
-#: ekos/analyze/analyze.ui:516
+#: ekos/analyze/analyze.ui:548
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the declination (DEC) guide pulses in "
@@ -10539,7 +10583,7 @@ msgstr ""
 "(Декл) в милисекунди.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, decPulseOut)
-#: ekos/analyze/analyze.ui:535
+#: ekos/analyze/analyze.ui:567
 #, kde-format
 msgid ""
 "<html><head/><body><p>The declination (DEC) guide pulses in milliseconds. "
@@ -10551,7 +10595,7 @@ msgstr ""
 "пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, driftCB)
-#: ekos/analyze/analyze.ui:563
+#: ekos/analyze/analyze.ui:595
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the combined RA and DEC drift error in arc-"
@@ -10561,13 +10605,13 @@ msgstr ""
 "РА и Декл в дъгови секунди.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, driftCB)
-#: ekos/analyze/analyze.ui:569
+#: ekos/analyze/analyze.ui:601
 #, kde-format
 msgid "drift"
 msgstr "изместване"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, driftOut)
-#: ekos/analyze/analyze.ui:582
+#: ekos/analyze/analyze.ui:614
 #, kde-format
 msgid ""
 "<html><head/><body><p>The combined RA and DEC drift error in arc-seconds. "
@@ -10580,7 +10624,7 @@ msgstr ""
 "актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, rmsCB)
-#: ekos/analyze/analyze.ui:610
+#: ekos/analyze/analyze.ui:642
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the root-mean-squared (RMS) value of the combined "
@@ -10593,13 +10637,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, rmsCB)
 #. i18n: ectx: property (text), widget (QCheckBox, rmsCCB)
-#: ekos/analyze/analyze.ui:616 ekos/analyze/analyze.ui:1291
+#: ekos/analyze/analyze.ui:648 ekos/analyze/analyze.ui:1323
 #, kde-format
 msgid "rms"
 msgstr "rms"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, rmsOut)
-#: ekos/analyze/analyze.ui:629
+#: ekos/analyze/analyze.ui:661
 #, kde-format
 msgid ""
 "<html><head/><body><p>The root-mean-squared (RMS) value of the combined RA "
@@ -10614,7 +10658,7 @@ msgstr ""
 "стойностите. Щракнете два пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, skyBgCB)
-#: ekos/analyze/analyze.ui:657
+#: ekos/analyze/analyze.ui:689
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the sky background light (computed by SEP from "
@@ -10624,13 +10668,13 @@ msgstr ""
 "SEP на базата на гид изображения).</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, skyBgCB)
-#: ekos/analyze/analyze.ui:663
+#: ekos/analyze/analyze.ui:695
 #, kde-format
 msgid "sky"
 msgstr "небе"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, skyBgOut)
-#: ekos/analyze/analyze.ui:676
+#: ekos/analyze/analyze.ui:708
 #, kde-format
 msgid ""
 "<html><head/><body><p>The sky background light level (computed by SEP from "
@@ -10643,7 +10687,7 @@ msgstr ""
 "body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, numStarsCB)
-#: ekos/analyze/analyze.ui:698
+#: ekos/analyze/analyze.ui:730
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the number of stars detected in the guide images."
@@ -10658,7 +10702,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_23)
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: ekos/analyze/analyze.ui:704 ekos/analyze/analyze.ui:1121
+#: ekos/analyze/analyze.ui:736 ekos/analyze/analyze.ui:1153
 #: ekos/auxiliary/stellarsolverprofileeditor.ui:812
 #: ekos/auxiliary/stellarsolverprofileeditor.ui:874 ekos/guide/opsguide.ui:434
 #: ekos/guide/opsguide.ui:540
@@ -10667,7 +10711,7 @@ msgid "stars"
 msgstr "звезди"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, numStarsOut)
-#: ekos/analyze/analyze.ui:717
+#: ekos/analyze/analyze.ui:749
 #, kde-format
 msgid ""
 "<html><head/><body><p>The number of stars detected in the guide images. "
@@ -10679,7 +10723,7 @@ msgstr ""
 "актуализирате оста..</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, snrCB)
-#: ekos/analyze/analyze.ui:745
+#: ekos/analyze/analyze.ui:777
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the signal-to-noise ratio (SNR) of the guide star."
@@ -10689,13 +10733,13 @@ msgstr ""
 "водещата звезда.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, snrCB)
-#: ekos/analyze/analyze.ui:751
+#: ekos/analyze/analyze.ui:783
 #, kde-format
 msgid "snr"
 msgstr "snr"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, snrOut)
-#: ekos/analyze/analyze.ui:764
+#: ekos/analyze/analyze.ui:796
 #, kde-format
 msgid ""
 "<html><head/><body><p>The signal-to-noise ratio (SNR) of the guide star. "
@@ -10707,7 +10751,7 @@ msgstr ""
 "пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mountRaCB)
-#: ekos/analyze/analyze.ui:792
+#: ekos/analyze/analyze.ui:824
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the Right Ascension (RA) where the telescope is "
@@ -10717,7 +10761,7 @@ msgstr ""
 "телескопът.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mountRaOut)
-#: ekos/analyze/analyze.ui:817
+#: ekos/analyze/analyze.ui:849
 #, kde-format
 msgid ""
 "<html><head/><body><p>The Right Ascension (RA) in HMS where the telescope is "
@@ -10729,7 +10773,7 @@ msgstr ""
 "Щракнете два пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mountDecCB)
-#: ekos/analyze/analyze.ui:839
+#: ekos/analyze/analyze.ui:871
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the Declination (DEC) in where the telescope is "
@@ -10739,7 +10783,7 @@ msgstr ""
 "телескопът.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mountDecOut)
-#: ekos/analyze/analyze.ui:864
+#: ekos/analyze/analyze.ui:896
 #, kde-format
 msgid ""
 "<html><head/><body><p>The Declination (DEC) in degrees:arc-minutes:arc-"
@@ -10752,7 +10796,7 @@ msgstr ""
 "оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, azCB)
-#: ekos/analyze/analyze.ui:886
+#: ekos/analyze/analyze.ui:918
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the telescope's azimuth (degrees).</p></body></"
@@ -10762,13 +10806,13 @@ msgstr ""
 "body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, azCB)
-#: ekos/analyze/analyze.ui:892
+#: ekos/analyze/analyze.ui:924
 #, kde-format
 msgid "az"
 msgstr "az"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, azOut)
-#: ekos/analyze/analyze.ui:905
+#: ekos/analyze/analyze.ui:937
 #, kde-format
 msgid ""
 "<html><head/><body><p>The telescope's azimuth (degrees). Click here to view "
@@ -10779,7 +10823,7 @@ msgstr ""
 "актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, altCB)
-#: ekos/analyze/analyze.ui:933
+#: ekos/analyze/analyze.ui:965
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the telescope's altitude (degrees).</p></body></"
@@ -10789,13 +10833,13 @@ msgstr ""
 "body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, altCB)
-#: ekos/analyze/analyze.ui:939
+#: ekos/analyze/analyze.ui:971
 #, kde-format
 msgid "alt"
 msgstr "височина"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, altOut)
-#: ekos/analyze/analyze.ui:952
+#: ekos/analyze/analyze.ui:984
 #, kde-format
 msgid ""
 "<html><head/><body><p>The telescope's altitude (degrees). Click here to view "
@@ -10806,7 +10850,7 @@ msgstr ""
 "да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, pierSideCB)
-#: ekos/analyze/analyze.ui:980
+#: ekos/analyze/analyze.ui:1012
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the mount's pier side (left) -> where the mount "
@@ -10816,13 +10860,13 @@ msgstr ""
 "в която е насочена монтировката</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, pierSideCB)
-#: ekos/analyze/analyze.ui:986
+#: ekos/analyze/analyze.ui:1018
 #, kde-format
 msgid "side"
 msgstr "страна"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, pierSideOut)
-#: ekos/analyze/analyze.ui:999
+#: ekos/analyze/analyze.ui:1031
 #, kde-format
 msgid ""
 "<html><head/><body><p>The mount's pier side (left) -> where the mount is "
@@ -10834,7 +10878,7 @@ msgstr ""
 "лявата ос. Кликнете два пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mountHaCB)
-#: ekos/analyze/analyze.ui:1027
+#: ekos/analyze/analyze.ui:1059
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the mount's hour angle value.</p></body></html>"
@@ -10843,13 +10887,13 @@ msgstr ""
 "монтировката.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mountHaCB)
-#: ekos/analyze/analyze.ui:1033
+#: ekos/analyze/analyze.ui:1065
 #, kde-format
 msgid "ha"
 msgstr "ha"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mountHaOut)
-#: ekos/analyze/analyze.ui:1052
+#: ekos/analyze/analyze.ui:1084
 #, kde-format
 msgid ""
 "<html><head/><body><p>The mount's hour angle value. Click here to view this "
@@ -10860,7 +10904,7 @@ msgstr ""
 "да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, hfrCB)
-#: ekos/analyze/analyze.ui:1074
+#: ekos/analyze/analyze.ui:1106
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the Half-Flux Radius (in pixels) of the captured "
@@ -10870,13 +10914,13 @@ msgstr ""
 "Flux Radius) в пиксели на заснетите изображения.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, hfrCB)
-#: ekos/analyze/analyze.ui:1080
+#: ekos/analyze/analyze.ui:1112
 #, kde-format
 msgid "hfr"
 msgstr "hfr"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, hfrOut)
-#: ekos/analyze/analyze.ui:1093
+#: ekos/analyze/analyze.ui:1125
 #, kde-format
 msgid ""
 "<html><head/><body><p>The Half-Flux Radius (in pixels) of the captured "
@@ -10889,7 +10933,7 @@ msgstr ""
 "body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, numCaptureStarsCB)
-#: ekos/analyze/analyze.ui:1115
+#: ekos/analyze/analyze.ui:1147
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the number of stars detected in the captured "
@@ -10899,7 +10943,7 @@ msgstr ""
 "изображения.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, numCaptureStarsOut)
-#: ekos/analyze/analyze.ui:1134
+#: ekos/analyze/analyze.ui:1166
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the number of stars detected in the captured "
@@ -10911,7 +10955,7 @@ msgstr ""
 "Щракнете два пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, medianCB)
-#: ekos/analyze/analyze.ui:1156
+#: ekos/analyze/analyze.ui:1188
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the median sample value in the captured images.</"
@@ -10921,13 +10965,13 @@ msgstr ""
 "заснетите изображения.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, medianCB)
-#: ekos/analyze/analyze.ui:1162
+#: ekos/analyze/analyze.ui:1194
 #, kde-format
 msgid "median"
 msgstr "медиана"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, medianOut)
-#: ekos/analyze/analyze.ui:1175
+#: ekos/analyze/analyze.ui:1207
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the median sample value in the captured images. "
@@ -10939,7 +10983,7 @@ msgstr ""
 "лявата ос.Щракнете два пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, eccentricityCB)
-#: ekos/analyze/analyze.ui:1197
+#: ekos/analyze/analyze.ui:1229
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the median star eccentricity in the captured "
@@ -10949,13 +10993,13 @@ msgstr ""
 "заснетите изображения.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, eccentricityCB)
-#: ekos/analyze/analyze.ui:1203
+#: ekos/analyze/analyze.ui:1235
 #, kde-format
 msgid "ecc"
 msgstr "ecc"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, eccentricityOut)
-#: ekos/analyze/analyze.ui:1216
+#: ekos/analyze/analyze.ui:1248
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the median star eccentricity in the captured "
@@ -10967,20 +11011,20 @@ msgstr ""
 "лявата ос. Щракнете два пъти, за да актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, temperatureCB)
-#: ekos/analyze/analyze.ui:1238
+#: ekos/analyze/analyze.ui:1270
 #, kde-format
 msgid "<html><head/><body><p>Plot the ambient temperature.</p></body></html>"
 msgstr ""
 "<html><head/><body><p>Показване на външната температурата.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, temperatureCB)
-#: ekos/analyze/analyze.ui:1244
+#: ekos/analyze/analyze.ui:1276
 #, kde-format
 msgid "temp"
 msgstr "темп"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, temperatureOut)
-#: ekos/analyze/analyze.ui:1257
+#: ekos/analyze/analyze.ui:1289
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the ambient temperature. Click here to view this "
@@ -10991,7 +11035,7 @@ msgstr ""
 "актуализирате оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, rmsCCB)
-#: ekos/analyze/analyze.ui:1285
+#: ekos/analyze/analyze.ui:1317
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the root-mean-squared (RMS) value of the combined "
@@ -11004,7 +11048,7 @@ msgstr ""
 "заснемането.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, rmsCOut)
-#: ekos/analyze/analyze.ui:1304
+#: ekos/analyze/analyze.ui:1336
 #, kde-format
 msgid ""
 "<html><head/><body><p>The root-mean-squared (RMS) value of the combined RA "
@@ -11021,7 +11065,7 @@ msgstr ""
 "p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, targetDistanceCB)
-#: ekos/analyze/analyze.ui:1332
+#: ekos/analyze/analyze.ui:1364
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the distance between the plate-solved captured "
@@ -11033,13 +11077,13 @@ msgstr ""
 "разрешено в настройките на инструмента за планиране.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, targetDistanceCB)
-#: ekos/analyze/analyze.ui:1338
+#: ekos/analyze/analyze.ui:1370
 #, kde-format
 msgid "dist a-s"
 msgstr "dist a-s"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, targetDistanceOut)
-#: ekos/analyze/analyze.ui:1351
+#: ekos/analyze/analyze.ui:1383
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the distance between the plate-solved captured "
@@ -11054,7 +11098,7 @@ msgstr ""
 "оста.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, focusPositionCB)
-#: ekos/analyze/analyze.ui:1379
+#: ekos/analyze/analyze.ui:1411
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the autofocus solution position.</p></body></html>"
@@ -11063,13 +11107,13 @@ msgstr ""
 "</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, focusPositionCB)
-#: ekos/analyze/analyze.ui:1385
+#: ekos/analyze/analyze.ui:1417
 #, kde-format
 msgid "focus"
 msgstr "фокус"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, focusPositionOut)
-#: ekos/analyze/analyze.ui:1398
+#: ekos/analyze/analyze.ui:1430
 #, kde-format
 msgid ""
 "<html><head/><body><p>Plot the autofocus solution position. Click here to "
@@ -11082,7 +11126,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, detailsCB)
 #. i18n: ectx: property (text), widget (QPushButton, DetailsButton)
-#: ekos/analyze/analyze.ui:1417 kstarslite/qml/modules/menus/ContextMenu.qml:71
+#: ekos/analyze/analyze.ui:1449 kstarslite/qml/modules/menus/ContextMenu.qml:71
 #: tools/starhopperdialog.ui:39
 #, kde-format, kde-kuit-format
 msgid "Details"
@@ -12009,7 +12053,7 @@ msgstr "Настройки на филтъра"
 #: ekos/profileeditor.ui:641
 #, kde-format
 msgid "Filter Wheel"
-msgstr "Филтър"
+msgstr "Филтърно колело"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ekos/auxiliary/filtersettings.ui:84
@@ -12038,7 +12082,7 @@ msgid ""
 "for light frames in each filter. Before a flat frame is captured, the "
 "focuser is moved to the same focus point as light frames.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Ако се използва филтърен барабан и фокусер с абсолютна "
+"<html><head/><body><p>Ако се използва филтърно колело и фокусер с абсолютна "
 "позиция, винаги да се запомня позицията на фокуса на процеса на автоматично "
 "фокусиране за светлите кадри във всеки филтър. Преди да бъде заснет "
 "изглаждащ кадър, фокусерът се премества в същата точка на фокусиране като "
@@ -12091,7 +12135,7 @@ msgstr "Смяна на филтъра..."
 msgid "Aligning..."
 msgstr "Подравняване......"
 
-#: ekos/auxiliary/ledstatuswidget.cpp:61 ekos/capture/capture.cpp:1707
+#: ekos/auxiliary/ledstatuswidget.cpp:61 ekos/capture/capture.cpp:1706
 #, kde-format
 msgid "Calibrating..."
 msgstr "Калибриране..."
@@ -12357,7 +12401,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ObservatoryLogging)
 #. i18n: ectx: property (windowTitle), widget (QWidget, Observatory)
-#: ekos/auxiliary/opslogs.ui:328 ekos/manager.cpp:2257
+#: ekos/auxiliary/opslogs.ui:328 ekos/manager.cpp:2263
 #: ekos/observatory/observatory.ui:14
 #, kde-format
 msgid "Observatory"
@@ -12706,14 +12750,14 @@ msgid ""
 "<html><head/><body><p>Select a filter wheel.</p><p>This could be a dedicated "
 "filter wheel or part of a camera driver.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Изберете барабан за филтър.</p><p>Това може да е "
-"специален филтърен барабан или част от драйвер на камерата.</p></body></html>"
+"<html><head/><body><p>Изберете филтърно колело.</p><p>Това може да е "
+"специално филтърно колело или част от драйвер на камерата.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, filterLabel)
 #: ekos/auxiliary/opticaltrains.ui:278
 #, kde-format
 msgid "Filter wheel:"
-msgstr "Филтърен барабан:"
+msgstr "Филтърно колело:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, guiderLabel)
 #: ekos/auxiliary/opticaltrains.ui:298
@@ -14088,7 +14132,7 @@ msgid ""
 "sequence using the Capture tab.<br>It is not recommended to overwrite a "
 "sequence file currently running, please rename it instead.</p><p>"
 msgstr ""
-"<b>Използване на атрибутите на камерата и филтърния барабан от сесията за "
+"<b>Използване на атрибутите на камерата и филтърното колело от сесията за "
 "заснемане, стартирана в %1.</b><p>Ако желаете да използвате други камери/"
 "филтри, редактирайте последователността, като използвате раздела Заснемане."
 "<br>Не е препоръчително да презаписвате файл с последователност, който се "
@@ -14099,22 +14143,22 @@ msgstr ""
 msgid "Capture Sequence Editor: %1"
 msgstr "Редактор на последователности от заснемания: %1"
 
-#: ekos/capture/capture.cpp:450 ekos/capture/capture.cpp:2588
+#: ekos/capture/capture.cpp:449 ekos/capture/capture.cpp:2587
 #, kde-format
 msgid "Add job to sequence queue"
 msgstr "Добавяне на задание към опашката за последователност"
 
-#: ekos/capture/capture.cpp:451 ekos/capture/capture.cpp:2589
+#: ekos/capture/capture.cpp:450 ekos/capture/capture.cpp:2588
 #, kde-format
 msgid "Remove job from sequence queue"
 msgstr "Премахване на задание от опашката за последователност"
 
-#: ekos/capture/capture.cpp:757
+#: ekos/capture/capture.cpp:756
 #, kde-format
 msgid "Downloading..."
 msgstr "Изтегляне..."
 
-#: ekos/capture/capture.cpp:950
+#: ekos/capture/capture.cpp:949
 #, kde-format
 msgid ""
 "Warning: in-sequence focusing is selected but autofocus process was not "
@@ -14123,7 +14167,7 @@ msgstr ""
 "Предупреждение: избрано е последователно фокусиране, но процесът на "
 "автоматично фокусиране не е стартиран."
 
-#: ekos/capture/capture.cpp:952
+#: ekos/capture/capture.cpp:951
 #, kde-format
 msgid ""
 "Warning: temperature delta check is selected but autofocus process was not "
@@ -14132,216 +14176,216 @@ msgstr ""
 "Предупреждение: избрана е проверка на температурната делта, но процесът на "
 "автофокус не е стартиран."
 
-#: ekos/capture/capture.cpp:1648
+#: ekos/capture/capture.cpp:1647
 #, kde-format
 msgid "Framing..."
 msgstr "Кадриране..."
 
-#: ekos/capture/capture.cpp:1659
+#: ekos/capture/capture.cpp:1658
 #, kde-format
 msgid "Captured image received"
 msgstr "Получено е заснето изображение"
 
 #. i18n: ectx: property (text), widget (QLabel, frameInfoLabel)
-#: ekos/capture/capture.cpp:1677 ekos/capture/capture.ui:2261
+#: ekos/capture/capture.cpp:1676 ekos/capture/capture.ui:2261
 #, kde-format
 msgid "Expose (-/-):"
 msgstr "Експониране (-/-):"
 
-#: ekos/capture/capture.cpp:1741
+#: ekos/capture/capture.cpp:1740
 #, kde-format
 msgid "Capturing %1-second %2 image..."
 msgstr "Заснема се %1 секунда %2 изображение..."
 
-#: ekos/capture/capture.cpp:1916
+#: ekos/capture/capture.cpp:1915
 #, kde-format
 msgid "Job #%1 changes applied."
 msgstr "Приложени са промени в задача #%1."
 
-#: ekos/capture/capture.cpp:2092
+#: ekos/capture/capture.cpp:2091
 #, kde-format
 msgid "Setting temperature to %1 °C..."
 msgstr "Задаване на температура на %1 °C..."
 
-#: ekos/capture/capture.cpp:2093
+#: ekos/capture/capture.cpp:2092
 #, kde-format
 msgid "Set Temp to %1 °C..."
 msgstr "Задаване на температура на %1 °C..."
 
-#: ekos/capture/capture.cpp:2097
+#: ekos/capture/capture.cpp:2096
 #, kde-format
 msgid "Waiting for guide drift below %1\"..."
 msgstr "Изчакване за изместване на насочването под %1\"..."
 
-#: ekos/capture/capture.cpp:2098
+#: ekos/capture/capture.cpp:2097
 #, kde-format
 msgid "Wait for Guider < %1\"..."
 msgstr "Изчакване на гидиращия модул < %1\"..."
 
-#: ekos/capture/capture.cpp:2102
+#: ekos/capture/capture.cpp:2101
 #, kde-format
 msgid "Setting camera to %1 degrees E of N..."
 msgstr "Камерата се настройва на %1 градуса И от С..."
 
-#: ekos/capture/capture.cpp:2103
+#: ekos/capture/capture.cpp:2102
 #, kde-format
 msgid "Set Camera to %1 deg..."
 msgstr "Задаване на камерата на %1 градуса..."
 
-#: ekos/capture/capture.cpp:2146 ekos/capture/capture.cpp:2147
+#: ekos/capture/capture.cpp:2145 ekos/capture/capture.cpp:2146
 #, kde-format
 msgid "Focus complete."
 msgstr "Фокусирането е завършено."
 
-#: ekos/capture/capture.cpp:2151
+#: ekos/capture/capture.cpp:2150
 #, kde-format
 msgid "Autofocus failed."
 msgstr "Автофокусирането е неуспешено."
 
-#: ekos/capture/capture.cpp:2173
+#: ekos/capture/capture.cpp:2172
 #, kde-format
 msgid "Paused..."
 msgstr "На пауза..."
 
-#: ekos/capture/capture.cpp:2178
+#: ekos/capture/capture.cpp:2177
 #, kde-format
 msgid "Meridian Flip..."
 msgstr "Обръщане на меридиана..."
 
-#: ekos/capture/capture.cpp:2179
+#: ekos/capture/capture.cpp:2178
 #, kde-format
 msgid "Meridian flip started"
 msgstr "Обръщането на меридиана започна"
 
-#: ekos/capture/capture.cpp:2183
+#: ekos/capture/capture.cpp:2182
 #, kde-format
 msgid "Flip complete."
 msgstr "Обръщането е завършено."
 
-#: ekos/capture/capture.cpp:2204 ekos/scheduler/framingassistant.cpp:221
+#: ekos/capture/capture.cpp:2203 ekos/scheduler/framingassistant.cpp:221
 #, kde-format
 msgctxt "@title:window"
 msgid "FITS Save Directory"
 msgstr "Директория за запазване на FITS изображения"
 
-#: ekos/capture/capture.cpp:2214
+#: ekos/capture/capture.cpp:2213
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Ekos Sequence Queue"
 msgstr "Отваряне на опашката за последователности на Ekos"
 
-#: ekos/capture/capture.cpp:2280
+#: ekos/capture/capture.cpp:2279
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Ekos Sequence Queue"
 msgstr "Запазване на опашката за последователности на Ekos"
 
-#: ekos/capture/capture.cpp:2302
+#: ekos/capture/capture.cpp:2301
 #, kde-format
 msgid "Failed to save sequence queue"
 msgstr "Неуспешно запазване на опашката от последователности"
 
-#: ekos/capture/capture.cpp:2345
+#: ekos/capture/capture.cpp:2344
 #, kde-format
 msgid "Are you sure you want to reset status of all jobs?"
 msgstr "Сигурни ли сте, че искате да нулирате състоянието на всички задачи?"
 
-#: ekos/capture/capture.cpp:2345 ekos/capture/captureprocess.cpp:2416
+#: ekos/capture/capture.cpp:2344 ekos/capture/captureprocess.cpp:2426
 #, kde-format
 msgid "Reset job status"
 msgstr "Нулиране на състоянието на задачата"
 
-#: ekos/capture/capture.cpp:2567
+#: ekos/capture/capture.cpp:2566
 #, kde-format
 msgid "Editing job #%1..."
 msgstr "Редактиране на задания #%1..."
 
-#: ekos/capture/capture.cpp:2570 ekos/scheduler/scheduler.cpp:1222
+#: ekos/capture/capture.cpp:2569 ekos/scheduler/scheduler.cpp:1222
 #, kde-format
 msgid "Apply job changes."
 msgstr "Прилагане на промени в заданието."
 
-#: ekos/capture/capture.cpp:2571
+#: ekos/capture/capture.cpp:2570
 #, kde-format
 msgid "Cancel job changes."
 msgstr "Отмяна на промените в заданието."
 
-#: ekos/capture/capture.cpp:2583
+#: ekos/capture/capture.cpp:2582
 #, kde-format
 msgid "Editing job canceled."
 msgstr "Заданието за редактиране е отменено."
 
-#: ekos/capture/capture.cpp:2721
+#: ekos/capture/capture.cpp:2720
 #, kde-format
 msgid "Wall coordinates are invalid."
 msgstr "Координатите на стената са невалидни."
 
-#: ekos/capture/capture.cpp:2808
+#: ekos/capture/capture.cpp:2807
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Current Observer"
 msgstr "Избиране на текущия наблюдател"
 
-#: ekos/capture/capture.cpp:2810
+#: ekos/capture/capture.cpp:2809
 #, kde-format
 msgid "Current Observer:"
 msgstr "Текущ наблюдател:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ObserverAdd)
-#: ekos/capture/capture.cpp:2821 oal/execute.cpp:38 oal/observeradd.ui:26
+#: ekos/capture/capture.cpp:2820 oal/execute.cpp:38 oal/observeradd.ui:26
 #, kde-format
 msgid "Manage Observers"
 msgstr "Управление на наблюдатели"
 
-#: ekos/capture/capture.cpp:2886
+#: ekos/capture/capture.cpp:2885
 #, kde-format
 msgid "Filter set to %1."
 msgstr "Филтърът е настроен на %1."
 
-#: ekos/capture/capture.cpp:3240
+#: ekos/capture/capture.cpp:3239
 #, kde-format
 msgid "Reset %1 configuration to default?"
 msgstr "Възстановяване на конфигурацията %1 по подразбиране?"
 
-#: ekos/capture/capture.cpp:3242
+#: ekos/capture/capture.cpp:3241
 #, kde-format
 msgid "Confirmation"
 msgstr "Потвърждение"
 
-#: ekos/capture/capture.cpp:3281 ekos/capture/capture.cpp:3387
+#: ekos/capture/capture.cpp:3280 ekos/capture/capture.cpp:3386
 #, kde-format
 msgid "Dark Flat"
 msgstr "Тъмни изглаждащи"
 
-#: ekos/capture/capture.cpp:3364
+#: ekos/capture/capture.cpp:3363
 #, kde-format
 msgid "You must set remote directory for Local & Both modes."
 msgstr ""
 "Трябва да зададете отдалечена директория за режимите \"Локално\" и \"И двата"
 "\"."
 
-#: ekos/capture/capture.cpp:3370
+#: ekos/capture/capture.cpp:3369
 #, kde-format
 msgid "You must set local directory for Client & Both modes."
 msgstr "Трябва да зададете локална директория за режимите Клиент и И двата."
 
-#: ekos/capture/capture.cpp:3408
+#: ekos/capture/capture.cpp:3407
 #, kde-format
 msgid "Cooler is on"
 msgstr "Охлаждането е включено"
 
-#: ekos/capture/capture.cpp:3408
+#: ekos/capture/capture.cpp:3407
 #, kde-format
 msgid "Cooler is off"
 msgstr "Охладителят е изключен"
 
-#: ekos/capture/capture.cpp:3621
+#: ekos/capture/capture.cpp:3620
 #, kde-format
 msgctxt "Maximum temperature variation over time when regulating."
 msgid "Ramp (°C/min):"
 msgstr "Рампа (°C/min):"
 
-#: ekos/capture/capture.cpp:3627
+#: ekos/capture/capture.cpp:3626
 #, kde-format
 msgid ""
 "<html><body><p>Maximum temperature change per minute when cooling or warming "
@@ -14353,13 +14397,13 @@ msgstr ""
 "настройка се чете и съхранява в конфигурацията на драйвера на камерата INDI."
 "</body></html>"
 
-#: ekos/capture/capture.cpp:3632
+#: ekos/capture/capture.cpp:3631
 #, kde-format
 msgctxt "Temperature threshold above which regulation triggers."
 msgid "Threshold (°C):"
 msgstr "Прагова стойност (°C):"
 
-#: ekos/capture/capture.cpp:3638
+#: ekos/capture/capture.cpp:3637
 #, kde-format
 msgid ""
 "<html><body><p>Maximum difference between camera and target temperatures "
@@ -14370,23 +14414,23 @@ msgstr ""
 "температура, която задейства регулирането.<p>Тази настройка се чете и "
 "съхранява в конфигурацията на драйвера на камерата INDI.</body></html>"
 
-#: ekos/capture/capture.cpp:3651
+#: ekos/capture/capture.cpp:3650
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Temperature Regulation"
 msgstr "Задаване на температурната регулация"
 
-#: ekos/capture/capture.cpp:3669
+#: ekos/capture/capture.cpp:3668
 #, kde-format
 msgid "Stop Sequence"
 msgstr "Спиране на последователността"
 
-#: ekos/capture/capture.cpp:3675
+#: ekos/capture/capture.cpp:3674
 #, kde-format
 msgid "Resume Sequence"
 msgstr "Възстановяване на последователност"
 
-#: ekos/capture/capture.cpp:3700
+#: ekos/capture/capture.cpp:3699
 #, kde-format
 msgid "One dark flats job was created."
 msgid_plural "%1 dark flats jobs were created."
@@ -14398,7 +14442,7 @@ msgstr[1] "Създадени са %1 задания за изграждане �
 #: ekos/capture/capture.ui:126 ekos/focus/focus.ui:484
 #, kde-format
 msgid "Camera && Filter Wheel"
-msgstr "Камера и барабан с филтри"
+msgstr "Камера и филтърно колело"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ekos/capture/capture.ui:165
@@ -14444,8 +14488,9 @@ msgstr "Вертикално биниране"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_8)
 #: ekos/capture/capture.ui:315
-#, kde-format
-msgid "Delay in seconds between consecutive images"
+#, fuzzy, kde-format
+#| msgid "Delay in seconds between consecutive images"
+msgid "Delay in seconds before capturing an image"
 msgstr "Изчакване в секунди между последователните изображения"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_8)
@@ -15693,114 +15738,114 @@ msgstr "Автонасочването е възобновено."
 #: ekos/capture/captureprocess.cpp:821
 #, kde-format
 msgid "Failed to set sub frame."
-msgstr "Неуспешно задаване на подрамка."
+msgstr "Неуспешно задаване на подкадър."
 
 #: ekos/capture/captureprocess.cpp:826
 #, kde-format
 msgid "Failed to set binning."
 msgstr "Неуспешно задаване на групиране."
 
-#: ekos/capture/captureprocess.cpp:1077
+#: ekos/capture/captureprocess.cpp:1088
 #, kde-format
 msgid "Remote image saved to %1"
 msgstr "Отдалеченото изображение е запазено в %1"
 
-#: ekos/capture/captureprocess.cpp:1176
+#: ekos/capture/captureprocess.cpp:1187
 #, kde-format
 msgid "Autoguiding suspended."
 msgstr "Автоматичното насочване е спряно."
 
-#: ekos/capture/captureprocess.cpp:1205
+#: ekos/capture/captureprocess.cpp:1216
 #, kde-format
 msgid "Warning: Calibration process was prematurely terminated."
 msgstr "Предупреждение: Процесът на калибриране е прекратен преждевременно."
 
 #. i18n("CCD capture sequence completed"));
-#: ekos/capture/captureprocess.cpp:1271
+#: ekos/capture/captureprocess.cpp:1282
 #, kde-format
 msgid "CCD capture sequence completed"
 msgstr "CCD последователността на заснемане е завършена"
 
-#: ekos/capture/captureprocess.cpp:1328
+#: ekos/capture/captureprocess.cpp:1339
 #, kde-format
 msgid "Error: Lost connection to CCD."
 msgstr "Грешка: Загубена връзка с CCD."
 
-#: ekos/capture/captureprocess.cpp:1357
+#: ekos/capture/captureprocess.cpp:1367
 #, kde-format
 msgid "Cannot calculate ADU levels in non-FITS images."
 msgstr ""
 "Не може да се изчислят нивата на ADU в изображения, които не са във формат "
 "FITS."
 
-#: ekos/capture/captureprocess.cpp:1470 ekos/capture/captureprocess.cpp:1980
+#: ekos/capture/captureprocess.cpp:1480 ekos/capture/captureprocess.cpp:1990
 #, kde-format
 msgid "Capture failed. Check INDI Control Panel for details."
 msgstr ""
 "Заснемането е неуспешно. Проверете контролния панел на INDI за подробности."
 
-#: ekos/capture/captureprocess.cpp:1571
+#: ekos/capture/captureprocess.cpp:1581
 #, kde-format
 msgid "Download Time: %1 s, New Download Time Estimate: %2 s."
 msgstr "Време за изтегляне: %1 s, нова оценка на времето за изтегляне: %2 s."
 
-#: ekos/capture/captureprocess.cpp:1619
+#: ekos/capture/captureprocess.cpp:1629
 #, kde-format
 msgid "Received image %1 out of %2."
 msgstr "Получено изображение %1 от %2."
 
-#: ekos/capture/captureprocess.cpp:1652
+#: ekos/capture/captureprocess.cpp:1662
 #, kde-format
 msgid "Captured %1"
 msgstr "Изображение %1 е заснето"
 
-#: ekos/capture/captureprocess.cpp:1657
+#: ekos/capture/captureprocess.cpp:1667
 #, kde-format
 msgid "WARNING: remaining and potentially unknown placeholders %1 in %2"
 msgstr "ПРЕДУПРЕЖДЕНИЕ: останали и потенциално неизвестни заместители %1 в %2"
 
-#: ekos/capture/captureprocess.cpp:1690
+#: ekos/capture/captureprocess.cpp:1700
 #, kde-format
 msgid "Executing capture script %1"
 msgstr "Изпълнява се скрипт за улавяне %1"
 
-#: ekos/capture/captureprocess.cpp:1705
+#: ekos/capture/captureprocess.cpp:1715
 #, kde-format
 msgid "Pre capture script finished with code %1."
 msgstr "Скриптът за предварително заснемане завърши с код %1."
 
-#: ekos/capture/captureprocess.cpp:1713
+#: ekos/capture/captureprocess.cpp:1723
 #, kde-format
 msgid "Post capture script finished with code %1."
 msgstr "Скриптът за последващо заснемане завърши с код %1."
 
-#: ekos/capture/captureprocess.cpp:1725
+#: ekos/capture/captureprocess.cpp:1735
 #, kde-format
 msgid "Processing meridian flip..."
 msgstr "Обръщане на меридиана се обработва..."
 
-#: ekos/capture/captureprocess.cpp:1735
+#: ekos/capture/captureprocess.cpp:1745
 #, kde-format
 msgid "Pre job script finished with code %1."
 msgstr "Скриптът за предварителна работа завърши с код %1."
 
-#: ekos/capture/captureprocess.cpp:1740
+#: ekos/capture/captureprocess.cpp:1750
 #, kde-format
 msgid "Post job script finished with code %1."
 msgstr "Скриптът за последваща работа завърши с код %1."
 
-#: ekos/capture/captureprocess.cpp:1921 ekos/focus/focus.cpp:4996
+#: ekos/capture/captureprocess.cpp:1931 ekos/focus/focus.cpp:4996
 #, kde-format
 msgid "Exposure timeout. Aborting..."
 msgstr "Изчакване на експозицията. Прекъсване..."
 
-#: ekos/capture/captureprocess.cpp:1945 ekos/focus/focus.cpp:5001
+#: ekos/capture/captureprocess.cpp:1955 ekos/focus/focus.cpp:5001
 #: ekos/guide/guide.cpp:915
 #, kde-format
 msgid "Exposure timeout. Restarting exposure..."
 msgstr "Изчакване на експозицията. Експозицията се рестартира..."
 
-#: ekos/capture/captureprocess.cpp:2039
+#: ekos/capture/captureprocess.cpp:2049
 #, kde-format
 msgid ""
 "Flat calibration failed. Captured image is only %1-bit while requested ADU "
@@ -15809,19 +15854,19 @@ msgstr ""
 "Изглаждащото калибриране е неуспешно. Заснетото изображение е само %1-"
 "битово, а исканото ADU е %2."
 
-#: ekos/capture/captureprocess.cpp:2050
+#: ekos/capture/captureprocess.cpp:2060
 #, kde-format
 msgid "Current image is saturated (%1). Next exposure is %2 seconds."
 msgstr ""
 "Текущото изображение е наситено (%1). Следващата експозиция е %2 секунди."
 
-#: ekos/capture/captureprocess.cpp:2072
+#: ekos/capture/captureprocess.cpp:2082
 #, kde-format
 msgid "Current ADU %1 within target ADU tolerance range."
 msgstr ""
 "Текущо ADU %1 в рамките на целевия диапазон на допустимите отклонения на ADU."
 
-#: ekos/capture/captureprocess.cpp:2105
+#: ekos/capture/captureprocess.cpp:2115
 #, kde-format
 msgid ""
 "Unable to calculate optimal exposure settings, please capture the flats "
@@ -15830,17 +15875,17 @@ msgstr ""
 "При невъзможност за изчисляване на оптимални настройки на експозицията, "
 "моля, заснемете плоските снимки ръчно."
 
-#: ekos/capture/captureprocess.cpp:2113
+#: ekos/capture/captureprocess.cpp:2123
 #, kde-format
 msgid "Current ADU is %1 Next exposure is %2 seconds."
 msgstr "Текущото ADU е %1 Следващата експозиция е %2 секунди."
 
-#: ekos/capture/captureprocess.cpp:2365
+#: ekos/capture/captureprocess.cpp:2375
 #, kde-format
 msgid "Sequence paused."
 msgstr "Последователността е паузирана."
 
-#: ekos/capture/captureprocess.cpp:2415
+#: ekos/capture/captureprocess.cpp:2425
 #, kde-format
 msgid ""
 "All jobs are complete. Do you want to reset the status of all jobs and "
@@ -15849,7 +15894,7 @@ msgstr ""
 "Всички задачи са завършени. Искате ли да нулирате състоянието на всички "
 "задачи и да рестартирате заснемането?"
 
-#: ekos/capture/captureprocess.cpp:2429
+#: ekos/capture/captureprocess.cpp:2439
 #, kde-format
 msgid ""
 "Warning: option \"Always Reset Sequence When Starting\" is enabled and "
@@ -15858,12 +15903,12 @@ msgstr ""
 "Предупреждение: опцията \"Винаги нулиране на последователността при "
 "стартиране\" е активирана и нулира броячите на последователността."
 
-#: ekos/capture/captureprocess.cpp:2544
+#: ekos/capture/captureprocess.cpp:2554
 #, kde-format
 msgid "Are you sure you want to restart %1 camera driver?"
 msgstr "Сигурни ли сте, че искате да рестартирате %1 драйвер за камера?"
 
-#: ekos/capture/captureprocess.cpp:2545
+#: ekos/capture/captureprocess.cpp:2555
 #, kde-format
 msgid "Driver Restart"
 msgstr "Презареждане на драйвера"
@@ -17035,7 +17080,7 @@ msgstr "Изчакване"
 msgid "Image Received"
 msgstr "Изображение е получено"
 
-#: ekos/ekos.h:73 ekos/scheduler/scheduler.cpp:2044
+#: ekos/ekos.h:73 ekos/scheduler/scheduler.cpp:2045
 #, kde-format
 msgid "Focusing"
 msgstr "Фокусиране"
@@ -17065,7 +17110,7 @@ msgstr "Задаване на температурата"
 msgid "Setting Rotator"
 msgstr "Настройване на ротатора"
 
-#: ekos/ekos.h:74 ekos/scheduler/scheduler.cpp:2047
+#: ekos/ekos.h:74 ekos/scheduler/scheduler.cpp:2048
 #, kde-format
 msgid "Aligning"
 msgstr "Подравняване"
@@ -17781,7 +17826,7 @@ msgstr "Обновяване"
 #: ekos/focus/advisor.ui:69
 #, kde-format
 msgid "Camera & Filter Wheel Parameters"
-msgstr "Параметри на камерата и филтърния барабан"
+msgstr "Параметри на камерата и филтърното колело"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, focusAdvOutStepMultLabel)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, focusAdvOutStepMult)
@@ -17812,7 +17857,7 @@ msgstr ""
 #: ekos/focus/advisor.ui:79 ekos/focus/opsfocusmechanics.ui:116
 #, kde-format
 msgid "Out Step Multiple:"
-msgstr "Външна стъпка многократно:"
+msgstr "Множество стъпки навън:"
 
 #. i18n: ectx: property (text), widget (QLabel, focusAdvSettingsLabel)
 #: ekos/focus/advisor.ui:105
@@ -17900,7 +17945,7 @@ msgstr "Толеранс (τ):"
 #: ekos/focus/cfz.ui:103
 #, kde-format
 msgid "<html><head/><body><p>CFZ:</p></body></html>"
-msgstr "<html><head/><body><p>КФЗ:</p></body></html>"
+msgstr "<html><head/><body><p>CFZ:</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, focusCFZApertureLabel)
 #: ekos/focus/cfz.ui:119
@@ -17915,7 +17960,7 @@ msgid ""
 "<html><head/><body><p>Check to display the CFZ on the V-curve after a "
 "successful Autofocus run.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Поставете отметка, за да покажете КФЗ върху V-кривата "
+"<html><head/><body><p>Поставете отметка, за да покажете CFZ върху V-кривата "
 "след успешно изпълнение на автофокуса.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, focusCFZDisplayVCurve)
@@ -17948,14 +17993,14 @@ msgid ""
 "<html><head/><body><p>The CFZ of the camera (resolution limit) in the active "
 "optical train.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>КФЗ на камерата (граница на разделителната способност) "
+"<html><head/><body><p>CFZ на камерата (граница на разделителната способност) "
 "в активната оптична система..</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, focusCFZ)
 #: ekos/focus/cfz.ui:204
 #, kde-format
 msgid "<html><head/><body><p>The calculated CFZ in μm.</p></body></html>"
-msgstr "<html><head/><body><p>Изчисленият КФЗ в μm.</p></body></html>"
+msgstr "<html><head/><body><p>Изчисленият CFZ в μm.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, focusCFZTolerance)
 #: ekos/focus/cfz.ui:223
@@ -17976,8 +18021,8 @@ msgid ""
 "<html><head/><body><p>The Final CFZ is the greater of the calculated CFZ and "
 "camera CFZ.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Крайната стойност на КФЗ е по-голямата от изчислената "
-"КФЗ и КФЗ на камерата. </p></body></html>"
+"<html><head/><body><p>Крайната стойност на CFZ е по-голямата от изчислената "
+"CFZ и CFZ на камерата. </p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_37)
 #: ekos/focus/cfz.ui:264
@@ -18028,7 +18073,7 @@ msgstr " %"
 #: ekos/focus/cfz.ui:324
 #, kde-format
 msgid "<html><head/><body><p>The calculated CFZ in steps.</p></body></html>"
-msgstr "<html><head/><body><p>Изчисленият КФЗ в стъпки.</p></body></html>"
+msgstr "<html><head/><body><p>Изчисленият CFZ в стъпки.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, focusCFZFormula)
 #: ekos/focus/cfz.ui:340
@@ -18037,7 +18082,7 @@ msgid ""
 "<html><head/><body><p>CFZ = 4.88 t λ f<span style=\" vertical-align:super;"
 "\">2</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p>КФЗ = 4.88 t λ f<span style=\" vertical-align:super;"
+"<html><head/><body><p>CFZ = 4.88 t λ f<span style=\" vertical-align:super;"
 "\">2</span></p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, focusCFZStepsLabel)
@@ -18102,7 +18147,7 @@ msgstr ""
 #: ekos/focus/cfz.ui:450
 #, kde-format
 msgid "Reset To OT"
-msgstr "Възстановяване до OT"
+msgstr "Нулиране"
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ekos/focus/cfz.ui:463
@@ -18145,17 +18190,17 @@ msgstr ""
 "емпирично t=1/3.</li></ul><ul style=\"margin-top: 0px; margin-bottom: 0px; "
 "margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" "
 "margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;"
-"\">Wavefront: </span>Използва се формулата CFZ = 4 t λ f<span style=\" "
-"vertical-align:super;\">2</span>.  Формула, получена от теорията за "
-"аберацията на вълновия фронт. Някои предлагат t=1/3 или дори t=1/10.</li></"
-"ul><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-"
-"right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"><span style=\" font-weight:600;\">Голд: </span>Използва се "
-"формулата CFZ = 0,00225 √τ θ f<span style=\" vertical-align:super;\">2.</"
-"span>A.  За повече информация вижте http://www.goldastro.com/goldfocus/ncfz."
-"php.</li></ul></body></html>"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Вълнов "
+"фронт: </span>Използва се формулата CFZ = 4 t λ f<span style=\" vertical-"
+"align:super;\">2</span>.  Формула, получена от теорията за аберацията на "
+"вълновия фронт. Някои предлагат t=1/3 или дори t=1/10.</li></ul><ul style="
+"\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -"
+"qt-list-indent: 1;\"><li style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Голд: </span>Използва се формулата CFZ = 0,00225 "
+"√τ θ f<span style=\" vertical-align:super;\">2.</span>A.  За повече "
+"информация вижте http://www.goldastro.com/goldfocus/ncfz.php.</li></ul></"
+"body></html>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, focusCFZAlgorithm)
 #. i18n: ectx: property (text), item, widget (QComboBox, focusWalk)
@@ -18357,12 +18402,12 @@ msgstr "Грешка: Загубена връзка с камерата."
 #: ekos/focus/focus.cpp:1437
 #, kde-format
 msgid "Error: No Filter Wheel detected."
-msgstr "Грешка: Не е открит филтърен барабан."
+msgstr "Грешка: Не е открито филтърно колело."
 
 #: ekos/focus/focus.cpp:1443
 #, kde-format
 msgid "Error: Lost connection to Filter Wheel."
-msgstr "Грешка: Загубена връзка с филтърния барабан."
+msgstr "Грешка: Загубена връзка с филтърното колело."
 
 #: ekos/focus/focus.cpp:1561
 #, kde-format
@@ -18747,18 +18792,18 @@ msgstr ""
 "познания, как да ги настройвате, за да получите добър фокус.\n"
 "Той ще препоръча стойности за по-голямата част от настройките. Някои "
 "настройки обаче ще изискват малко работа от ваша страна, за да я коригирате. "
-"Те са изброени по-долу с обяснение как да ги регулирате.\n"
+"Те са изброени по-долу с обяснение, как да ги регулирате.\n"
 "Първата стъпка е да настроите хлабината или луфта. В ръководството на вашия "
 "мотор за фокусиране вероятно има информация как да направите това. След като "
 "имате стойността за луфта на вашата система, задайте го в полето, за да може "
-"моторът да изпълни компенсация за обратна реакция или полето AF Overscan, за "
-"да има компенсация при автофокусиране. Задайте само едното поле, а другото "
-"задайте на нула.\n"
+"моторът да изпълни компенсация за обратна реакция или полето Прескачане на "
+"АФ, за да има компенсация при автофокусиране. Задайте само едното поле, а "
+"другото задайте на нула.\n"
 "Втората стъпка е да зададете размера на стъпката. Това може да стане от "
 "критичната зона на фокусиране (CFZ) на вашето оборудване, така че не "
 "забравяйте да я зададете в раздела CFZ.\n"
-"Третата стъпка е да зададете кратност на външната стъпка в полето Външна "
-"стъпка многократно. Стартирайте като използвате предложената стойност по "
+"Третата стъпка е да зададете кратност на външната стъпка в полето Множество "
+"стъпки навън. Стартирайте като използвате предложената стойност по "
 "подразбиране."
 
 #: ekos/focus/focus.cpp:6584
@@ -18776,8 +18821,8 @@ msgstr ""
 "отдалечавате твърде много от фокуса, тъй като звездите ще се превърнат в "
 "понички и оборудването няма да може да ги открие правилно. Експериментирайте "
 "с намирането на фокуса и преместването с големина на стъпката * деления на "
-"Външна стъпка многократно и заснемане на фокусен кадър. Увеличете мащаба, за "
-"да наблюдавате за откриване на звезди. Ако то не работи добре, преместете "
+"Множество стъпки навън и заснемане на фокусен кадър. Увеличете мащаба, за да "
+"наблюдавате за откриване на звезди. Ако то не работи добре, преместете "
 "инструмента за фокусиране обратно към фокуса, докато се постигне приемлив "
 "резултат за откриване на звезди. Регулирайте коефициента на външна стъпка, "
 "за да съответства на този диапазон на движение на фокуса."
@@ -18810,12 +18855,12 @@ msgstr ""
 "натиснете Обновяване на параметри.\n"
 "1. Свойства на камерата - Забележете, че трябва да се убедите, че усилването "
 "е зададено по подходящ начин, напр.  единен коефициент на усилване \n"
-"2. Раздел Настройки (Изскачащи опции): Всички те имат препоръчителни "
+"2. Настройки на фокуса (Изскачащи опции): Всички те имат препоръчителни "
 "стойности.\n"
-"3. Раздел Процес (Изскачащи опции): Всички те имат препоръчителни "
+"3. Процес на фокусиране (Изскачащи опции): Всички те имат препоръчителни "
 "стойности.\n"
-"4. Раздел Механика (Изскачащи опции): не забравяйте, че \" Размер на стъпката"
-"\" и \"Kратност на външната стъпка\" се настройват както по-горе..\n"
+"4. Механика на фокусиране (Изскачащи опции): не забравяйте, че \" Размер на "
+"стъпката\" и \"Множество стъпки навън\" се настройват както по-горе..\n"
 "\n"
 "Сега преместете фокусера, за да приближите фокуса и изберете широколентов "
 "филтър, напр. Осветеност\n"
@@ -19088,22 +19133,22 @@ msgstr "Изчистване"
 msgid "Called newMeasurement after a solution was found."
 msgstr "Извикване на newMeasurement след намиране на решение."
 
-#: ekos/focus/focusalgorithms.cpp:803
+#: ekos/focus/focusalgorithms.cpp:804
 #, kde-format
 msgid "Failed to fit curve to data."
 msgstr "Неуспешно напасване на кривата към данните."
 
-#: ekos/focus/focusalgorithms.cpp:955
+#: ekos/focus/focusalgorithms.cpp:956
 #, kde-format
 msgid "Solution found."
 msgstr "Намеренео е решенеие."
 
-#: ekos/focus/focusalgorithms.cpp:999
+#: ekos/focus/focusalgorithms.cpp:1000
 #, kde-format
 msgid "Too many steps."
 msgstr "Твърде много стъпки."
 
-#: ekos/focus/focusalgorithms.cpp:1028
+#: ekos/focus/focusalgorithms.cpp:1029
 #, kde-format
 msgid "Solution lies outside max travel."
 msgstr "Решението се намира извън максималното пътуване."
@@ -19140,7 +19185,7 @@ msgstr ""
 #: ekos/focus/opsfocusmechanics.ui:37
 #, kde-format
 msgid "Driver Backlash:"
-msgstr "Луфт на водача:"
+msgstr "Луфт на механиката:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ekos/focus/opsfocusmechanics.ui:59
@@ -19152,7 +19197,7 @@ msgstr "Първоначален размер на стъпката:"
 #: ekos/focus/opsfocusmechanics.ui:75
 #, kde-format
 msgid "Focuser Settle:"
-msgstr "Стабилизиране на мотора за фокусиране"
+msgstr "Стабилизиране на фокусера:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, focusSettleTime)
 #: ekos/focus/opsfocusmechanics.ui:91
@@ -19199,7 +19244,7 @@ msgstr ""
 "<html><head/><body><p>За фокусери с отчитане на луфт. Размерът на "
 "корекцията, който се прилага при промяна на посоката на движение. Задайте 0, "
 "за да я деактивирате.</p><p>Обикновено се задава или луфт на фокусера или "
-"Overscan на АФ.</p><p>Тази настройка задава полето за луфт на фокусер на "
+"Прескачане на АФ.</p><p>Тази настройка задава полето за луфт на фокусер на "
 "Indi и може да бъде въведена тук или на контролния панел на Indi.</p></"
 "body></html>"
 
@@ -19214,15 +19259,14 @@ msgid ""
 msgstr ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Първоначален размер "
 "на стъпката</span> в  деления, за да предизвика забележима промяна в "
-"стойността на HFR. За фокусер, базиран на таймер, това е първоначалното "
-"време в милисекунди за преместване на фокуса навътре или навън.</p></body></"
-"html>"
+"стойността на HFR. За време-базиран фокусер, това е първоначалното време в "
+"милисекунди за преместване на фокуса навътре или навън.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ekos/focus/opsfocusmechanics.ui:202
 #, kde-format
 msgid "AF Overscan:"
-msgstr "AF Overscan:"
+msgstr "Прескачане на АФ:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, focusWalk)
 #: ekos/focus/opsfocusmechanics.ui:221
@@ -19250,11 +19294,11 @@ msgid ""
 "experimental.</p><p><br/></p></body></html>"
 msgstr ""
 "<html><head/><body><p>Изберете типа на движение на фокусера, когато "
-"използвате <span style=\" font-weight:600;\">първо линейно обработване</"
+"използвате <span style=\" font-weight:600;\">единично линейно преминаване</"
 "span>.  За <span style=\" font-weight:600;\">линейния ход е на разположение</"
 "span> само <span style=\" font-weight:600;\">класически метод</span>.</"
 "p><p><span style=\" font-weight:600;\">Класически</span>: Фокусерът "
-"предприема стъпки за фокусиране навън &quot;Външна стъпка многократно&quot;, "
+"предприема стъпки за фокусиране навън &quot;Множество стъпки навън&quot;, "
 "заснема кадър и след това преминава през фокуса с постоянни стъпки, като "
 "прави и анализира кадри на всяка стъпка. Точната точка, в която фокусирането "
 "спира, зависи от данните, така че тази процедура е толерантна към започване "
@@ -19264,7 +19308,7 @@ msgstr ""
 "кадър и тогава предприема точния &quot;Брой стъпки&quot;. Тази процедура "
 "трябва да започне близо до фокуса, за да бъде ефективна, но е предвидима по "
 "отношение на броя на направените стъпки. Това е експериментална функция.</"
-"p><p><span style=\" font-weight:600;\">Разбъркване на CFZ</span>: Подобно на "
+"p><p><span style=\" font-weight:600;\">CFZ разбъркване</span>: Подобно на "
 "<span style=\" font-weight:600;\">Фиксирани стъпки</span> с изключение на "
 "това,че при този  ход се правят половин стъпки в близост до точката на "
 "фокусиране, за да се предаде по-голяма тежест на точките, които са по-близо "
@@ -19283,7 +19327,7 @@ msgstr "Фиксирани стъпки"
 #: ekos/focus/opsfocusmechanics.ui:235
 #, kde-format
 msgid "CFZ Shuffle"
-msgstr "Разбъркване на CFZ"
+msgstr "CFZ разбъркване"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #: ekos/focus/opsfocusmechanics.ui:252
@@ -19344,13 +19388,13 @@ msgid ""
 "movements initiated by the Focus module.</p><p>Typically either Focuser "
 "Backlash or AF Overscan is set.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Определя луфтът при повторно сканиране в деления за "
-"външни движения на фокусера по време на стартирането на автофокуса. Тази "
+"<html><head/><body><p>Определя прескачането вследствие на луфта (в деления) "
+"за външни движения на фокусера по време на изпълнение на автофокуса. Тази "
 "стойност ще бъде добавена към стойността за луфта, предоставена от драйвера "
-"на устройството. Задайте 0, за да забраните.</p><p>Ако е зададено, Overscan "
-"на AФ ще се прилага за всички движения на фокусера, инициирани от модула за "
-"фокусиране.</p><p>Обикновено се задава или луфтът или Overscan на AФ.</p></"
-"body></html>"
+"на устройството. Задайте 0, за да забраните.</p><p>Ако е зададено, "
+"Прескачане на AФ ще се прилага за всички движения на фокусера, инициирани от "
+"модула за фокусиране.</p><p>Обикновено се задава или луфтът на фокусера или "
+"Прескачане на AФ.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, focusMaxTravel)
 #: ekos/focus/opsfocusmechanics.ui:372
@@ -19394,8 +19438,8 @@ msgid ""
 "body></html>"
 msgstr ""
 "<html><head/><body><p>Общият брой стъпки, които трябва да се използват, ако "
-"преходът е зададен като един от фиксирания брой преходи и се използва линеен "
-"алгоритъм с едно преминаване.</p></body></html>"
+"преходът е зададен като един от фиксирания брой преходи и се използва "
+"алгоритъм с единично линейно обработване.</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, focusR2Limit)
 #: ekos/focus/opsfocusprocess.ui:34
@@ -19411,7 +19455,7 @@ msgstr ""
 "работа с автофокус.  Стойността е между 0 (няма съответствие) и 1 (перфектно "
 "съответствие).  0,8 е добро начало.  Ако минималната стойност не е "
 "достигната, aвтофокусирането ще се стартира повторно, за да се опита да "
-"подобри R². Понастоящем е налична само за алгоритъма Първо линейно "
+"подобри R². Понастоящем е налична само за алгоритъма Единично линейно "
 "обработване, когато се използва регресионна крива на Хипербола или Парабола. "
 "</p></body></html>"
 
@@ -19425,7 +19469,7 @@ msgstr "Измерване:"
 #: ekos/focus/opsfocusprocess.ui:78
 #, kde-format
 msgid "Detection:"
-msgstr "Разпознаване:"
+msgstr "Откриване:"
 
 #. i18n: ectx: property (text), widget (QLabel, focusFramesCountLabel)
 #: ekos/focus/opsfocusprocess.ui:97
@@ -19488,15 +19532,15 @@ msgstr ""
 "text-indent:0px;\"><span style=\" font-weight:600;\">Квадратични</span>: "
 "Използва се полиномно съответствие от 2 степен. В момента това е опцията по "
 "подразбиране и в момента е единствената опция за всички алгоритми, с "
-"изключение на първо линейно обработване .</li><li style=\" margin-top:0px; "
-"margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\"><span style=\" font-weight:600;\">Хипербола</span>: "
-"Поставя хипербола на точките с данни. Понастоящем това е налично само за "
-"алгоритъма първо линейно обработване.</li><li style=\" margin-top:0px; "
+"изключение на единично линейно обработване .</li><li style=\" margin-"
+"top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Хипербола</"
+"span>: Поставя хипербола на точките с данни. Понастоящем това е налично само "
+"за алгоритъма единично линейно обработване.</li><li style=\" margin-top:0px; "
 "margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
 "text-indent:0px;\"><span style=\" font-weight:600;\"> Парабола</span>: "
 "Поставя парабола върху точките с данни. Понастоящем това е налично само за "
-"линейния алгоритъма първо линейно обработване.</li></ul></body></html>"
+"линейния алгоритъма единично линейно обработване.</li></ul></body></html>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, focusCurveFit)
 #: ekos/focus/opsfocusprocess.ui:190
@@ -19554,29 +19598,29 @@ msgid ""
 "the power in frequency space [result of the fourier transform] will be a "
 "maximum. This is an experimental feature.</li></ul></body></html>"
 msgstr ""
-"<html><head/><body><p>Изберете мерните единици, които да се използват при "
-"напасване на крива за първо линейно обработване:</p><ul style=\"margin-top: "
-"0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-"
-"indent: 1;\"><li style=\" margin-top:0px; margin-bottom:12px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">HFR</span>: Half Flux Radius Радиус на "
-"полуосветеност. Използва алгоритъм за изчисляване на радиуса на окръжност с "
-"център върху центроида на звездата, който обхваща половината от осветеността "
-"на звездата.</li><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-"
-"left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-"
-"top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">HFR Adj</"
-"span>: Коригиран радиус на полуосветеност. Нормализира HFR за пиковия "
-"интензитет. Това е експериментална функция.</li></ul><li style=\" margin-"
-"top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">FWHM </span>: "
-"Full Width Half Maximum - Пълна ширина, половин максимум. Кривата приляга на "
-"PSF към центроида на всяка звезда и използва кривата, за да изчисли FWHM. "
-"Това е експериментална функция.</li><li style=\" margin-top:0px; margin-"
+"head/><body><p>Изберете мерните единици, които да се използват при напасване "
+"на крива за единично линейно обработване:</p><ul style=\"margin-top: 0px; "
+"margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"
+"\"><li style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">HFR</span>: Half Flux Radius Радиус на полуосветеност. "
+"Използва алгоритъм за изчисляване на радиуса на окръжност с център върху "
+"центроида на звездата, който обхваща половината от осветеността на звездата."
+"</li><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; "
+"margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; margin-"
 "bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"><span style=\" font-weight:600;\"># Звезди</span>: Брой "
-"звезди. Броят на откритите звезди при оптимален фокус ще бъде максимален. "
-"Това е експериментална функция.</li><li style=\" margin-top:0px; margin-"
+"indent:0px;\"><span style=\" font-weight:600;\">HFR Adj</span>: Коригиран "
+"радиус на полуосветеност. Нормализира HFR за пиковия интензитет. Това е "
+"експериментална функция.</li></ul><li style=\" margin-top:0px; margin-"
+"bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">FWHM </span>: Full Width "
+"Half Maximum - Пълна ширина, половин максимум. Кривата приляга на PSF към "
+"центроида на всяка звезда и използва кривата, за да изчисли FWHM. Това е "
+"експериментална функция.</li><li style=\" margin-top:0px; margin-"
+"bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Брой Звезди</span>: Броят на "
+"откритите звезди при оптимален фокус ще бъде максимален. Това е "
+"експериментална функция.</li><li style=\" margin-top:0px; margin-"
 "bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"><span style=\" font-weight:600;\">Фурие</span>: Изчисляване на "
 "мощността по Фурие. Използва подхода за изчисляване на мощността с "
@@ -19608,7 +19652,7 @@ msgstr "FWHM"
 #: ekos/focus/opsfocusprocess.ui:246
 #, kde-format
 msgid "# Stars"
-msgstr "# Звезди"
+msgstr "Брой звезди"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, focusStarMeasure)
 #: ekos/focus/opsfocusprocess.ui:251
@@ -19627,8 +19671,8 @@ msgid ""
 "highlighted on the v-curve. </p></body></html>"
 msgstr ""
 "<html><head/><body><p>Проверка за извършване на пропуск за отклонение, "
-"когато всички точки от данни имат са взети. Проверката използва критериите "
-"на Пиърс за откриване на праг на отклонение. Ако има отклонения, те се "
+"когато всички точки от данни са взети. Проверката използва критериите на "
+"Пиърс за откриване на праг на отклонение. Ако има отклонения, те се "
 "отстраняват и се извършва повторно изравняване на кривата. Ако R² се "
 "подобрява от процеса, тогава се използва тази нова съвкупност от данни, а "
 "отклоненията се открояват на V-образната крива. </p></body></html>"
@@ -19654,7 +19698,7 @@ msgstr ""
 "кривата. Ако не е поставена отметка, на всички точки от данни се дава "
 "еднаква тежест. Понастоящем е налично само при използване на пълно поле "
 "(множество звезди) и регресионна крива на Хипербола или Парабола при "
-"алгоритъм първо линейно обработване. </p></body></html>"
+"алгоритъм единично линейно обработване. </p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, focusUseWeights)
 #: ekos/focus/opsfocusprocess.ui:278
@@ -19747,7 +19791,7 @@ msgstr "Линейно"
 #: ekos/focus/opsfocusprocess.ui:313
 #, kde-format
 msgid "Linear 1 Pass"
-msgstr "Линейно 1 преминаване"
+msgstr "Единично линейно обработване"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, focusDetection)
 #: ekos/focus/opsfocusprocess.ui:344
@@ -19847,12 +19891,13 @@ msgid ""
 "indent:0px;\"><span style=\" font-weight:600;\">Gaussian</span>: Uses a 2D "
 "Gaussian. This is an experimental feature.</li></ul></body></html>"
 msgstr ""
-"<html><head/><body><p>Типът на PSF, който се използва, когато измерваната "
-"единица е зададена на FWHM:</p><ul style=\"margin-top: 0px; margin-bottom: "
-"0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" "
-"margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Гаусов</"
-"span>: Използва двуизмерен Гаус. Това е експериментална функция.</li></ul></"
+"<html><body><p>Типът на PSF (Point spread function - функция за разсейване "
+"на точките), който се използва, когато измерваната единица е зададена на "
+"FWHM:</p><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; "
+"margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; margin-"
+"bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Гаусова</span>: Използва "
+"двуизмерна гаусова функция. Това е експериментална функция.</li></ul></"
 "body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, focusGaussianKernelSize)
@@ -20064,7 +20109,7 @@ msgstr ""
 #: ekos/focus/opsfocussettings.ui:161
 #, kde-format
 msgid "Sub Frame"
-msgstr "Име:"
+msgstr "Под кадър:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, focusGuideSettleTime)
 #: ekos/focus/opsfocussettings.ui:177
@@ -20235,7 +20280,7 @@ msgstr ""
 #: ekos/focus/opsfocussettings.ui:445 ekos/focus/opsfocussettings.ui:525
 #, kde-format
 msgid "Adaptive Focus"
-msgstr "Адаптивне фокусування"
+msgstr "Адаптивно фокусиране"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, focusAdaptiveMinMove)
 #: ekos/focus/opsfocussettings.ui:472
@@ -20538,9 +20583,10 @@ msgid "PHD2: Star Selected."
 msgstr "PHD2: Избрана е звезда."
 
 #: ekos/guide/externalguide/phd2.cpp:656
-#, kde-format
-msgid "PHD2: Guiding resumed."
-msgstr "PHD2: Гидирането е възобновено."
+#, fuzzy, kde-format
+#| msgid "PHD2: Dithering succesdsful."
+msgid "PHD2: Dithering successful."
+msgstr "PHD2: Успешно дитериране."
 
 #: ekos/guide/externalguide/phd2.cpp:661
 #, kde-format
@@ -22964,23 +23010,23 @@ msgstr "Свързване... Кликнете, за да прекъснете."
 msgid "Logging"
 msgstr "Регистриране"
 
-#: ekos/manager.cpp:366
+#: ekos/manager.cpp:368
 #, kde-format
 msgid "Analyze"
 msgstr "Анализиране"
 
-#: ekos/manager.cpp:630
+#: ekos/manager.cpp:632
 #, kde-format
 msgctxt "@title:window"
 msgid "Ekos"
 msgstr "Ekos"
 
-#: ekos/manager.cpp:835 ekos/manager.cpp:861
+#: ekos/manager.cpp:837 ekos/manager.cpp:863
 #, kde-format
 msgid "Ekos requires at least one CCD or Guider to operate."
 msgstr "Ekos изисква поне един CCD или гид модул, за да работи."
 
-#: ekos/manager.cpp:923
+#: ekos/manager.cpp:925
 #, kde-format
 msgid ""
 "Ekos detected that PTP Camera is running and may prevent a Canon or Nikon "
@@ -22989,17 +23035,17 @@ msgstr ""
 "Ekos е открила, че PTP камера е стартирана и може да попречи на камера Canon "
 "или Nikon да се свърже с Ekos. Искате ли да прекратите PTP камера сега?"
 
-#: ekos/manager.cpp:924
+#: ekos/manager.cpp:926
 #, kde-format
 msgid "PTP Camera"
 msgstr "Камера PTP"
 
-#: ekos/manager.cpp:939
+#: ekos/manager.cpp:941
 #, kde-format
 msgid "Starting INDI services..."
 msgstr "Стартиране на INDI услуги..."
 
-#: ekos/manager.cpp:970
+#: ekos/manager.cpp:972
 #, kde-format
 msgid ""
 "Ekos detected an instance of INDI server running. Do you wish to shut down "
@@ -23009,47 +23055,47 @@ msgstr ""
 "изключите съществуващата инстанция, преди да стартирате нова?"
 
 #. i18n: ectx: property (title), widget (QGroupBox, indiServerGroup)
-#: ekos/manager.cpp:972 indi/opsindi.ui:375
+#: ekos/manager.cpp:974 indi/opsindi.ui:375
 #, kde-format
 msgid "INDI Server"
 msgstr "Сървър на INDI"
 
-#: ekos/manager.cpp:987
+#: ekos/manager.cpp:989
 #, kde-format
 msgid "Connecting to remote INDI server at %1 on port %2 ..."
 msgstr "Свързване към отдалечен INDI сървър на %1 на порт %2"
 
-#: ekos/manager.cpp:1007
+#: ekos/manager.cpp:1009
 #, kde-format
 msgid "Failed to start profile on remote INDI Web Manager."
 msgstr "Неуспешно стартиране на профил в отдалечен INDI уеб мениджър."
 
-#: ekos/manager.cpp:1011
+#: ekos/manager.cpp:1013
 #, kde-format
 msgid "Starting profile on remote INDI Web Manager..."
 msgstr "Стартиране на профил на отдалечения INDI уеб мениджър..."
 
-#: ekos/manager.cpp:1024
+#: ekos/manager.cpp:1026
 #, kde-format
 msgid "Establishing communication with remote INDI Web Manager..."
 msgstr "Установява се комуникация с отдалечен INDI уеб мениджър..."
 
-#: ekos/manager.cpp:1044
+#: ekos/manager.cpp:1046
 #, kde-format
 msgid "Warning: INDI Web Manager is not online."
 msgstr "Предупреждение: Уеб мениджърът на INDI не е онлайн."
 
-#: ekos/manager.cpp:1067
+#: ekos/manager.cpp:1069
 #, kde-format
 msgid "INDI services started on port %1."
 msgstr "INDI услугите стартираха на порт %1."
 
-#: ekos/manager.cpp:1070
+#: ekos/manager.cpp:1072
 #, kde-format
 msgid "INDI services started on port %1. Please connect devices."
 msgstr "Услугите INDI са стартирани на порт %1. Моля, свържете устройствата."
 
-#: ekos/manager.cpp:1075
+#: ekos/manager.cpp:1077
 #, kde-format
 msgid ""
 "INDI services started. Connection to remote INDI server %1:%2 is successful. "
@@ -23058,27 +23104,27 @@ msgstr ""
 "Стартиране на услугите на INDI. Връзката с отдалечения INDI сървър %1:%2 е "
 "успешна. Изчакваме устройства..."
 
-#: ekos/manager.cpp:1085
+#: ekos/manager.cpp:1087
 #, kde-format
 msgid "Failed to connect to local INDI server %1:%2"
 msgstr "Неуспешно свързване с локален INDI сървър %1:%2"
 
-#: ekos/manager.cpp:1087
+#: ekos/manager.cpp:1089
 #, kde-format
 msgid "Failed to connect to remote INDI server %1:%2"
 msgstr "Неуспешно свързване с отдалечен INDI сървър %1:%2"
 
-#: ekos/manager.cpp:1100
+#: ekos/manager.cpp:1102
 #, kde-format
 msgid "Lost connection to local INDI server %1:%2"
 msgstr "Загубена връзка с локалния INDI сървър %1:%2"
 
-#: ekos/manager.cpp:1102
+#: ekos/manager.cpp:1104
 #, kde-format
 msgid "Lost connection to remote INDI server %1:%2"
 msgstr "Загубена връзка с отдалечен INDI сървър %1:%2"
 
-#: ekos/manager.cpp:1179
+#: ekos/manager.cpp:1181
 #, kde-format
 msgid ""
 "Failed to connect to %1. Please ensure device is connected and powered on."
@@ -23086,7 +23132,7 @@ msgstr ""
 "Не успя да се свърже с %1. Моля, уверете се, че устройството е свързано и "
 "включено."
 
-#: ekos/manager.cpp:1181
+#: ekos/manager.cpp:1183
 #, kde-format
 msgid ""
 "Failed to connect to \n"
@@ -23097,7 +23143,7 @@ msgstr ""
 "%1\n"
 "Моля, уверете се, че всяко устройство е свързано и включено."
 
-#: ekos/manager.cpp:1209
+#: ekos/manager.cpp:1211
 #, kde-format
 msgid ""
 "Unable to establish:\n"
@@ -23108,13 +23154,13 @@ msgstr ""
 "%1\n"
 "Моля, уверете се, че устройството е свързано и включено."
 
-#: ekos/manager.cpp:1213 ekos/manager.cpp:1221 ekos/manager.cpp:1251
-#: ekos/manager.cpp:1259
+#: ekos/manager.cpp:1215 ekos/manager.cpp:1223 ekos/manager.cpp:1253
+#: ekos/manager.cpp:1261
 #, kde-format
 msgid "Ekos startup error"
 msgstr "Грешка при стартиране на Ekos"
 
-#: ekos/manager.cpp:1217
+#: ekos/manager.cpp:1219
 #, kde-format
 msgid ""
 "Unable to establish the following devices:\n"
@@ -23125,7 +23171,7 @@ msgstr ""
 "%1\n"
 "Моля, уверете се, че всяко устройство е свързано и включено."
 
-#: ekos/manager.cpp:1247
+#: ekos/manager.cpp:1249
 #, kde-format
 msgid ""
 "Unable to remotely establish:\n"
@@ -23136,7 +23182,7 @@ msgstr ""
 "%1\n"
 "Моля, уверете се, че устройството е свързано и включено."
 
-#: ekos/manager.cpp:1255
+#: ekos/manager.cpp:1257
 #, kde-format
 msgid ""
 "Unable to remotely establish the following devices:\n"
@@ -23147,32 +23193,32 @@ msgstr ""
 "%1\n"
 "Моля, уверете се, че всяко устройство е свързано и включено."
 
-#: ekos/manager.cpp:1310
+#: ekos/manager.cpp:1312
 #, kde-format
 msgid "Connecting INDI devices..."
 msgstr "Свързване на INDI устройства..."
 
-#: ekos/manager.cpp:1321
+#: ekos/manager.cpp:1323
 #, kde-format
 msgid "Disconnecting INDI devices..."
 msgstr "Прекъсване на INDI устройствата..."
 
-#: ekos/manager.cpp:1359
+#: ekos/manager.cpp:1361
 #, kde-format
 msgid "INDI services stopped."
 msgstr "Услугите на INDI са спрени."
 
-#: ekos/manager.cpp:1433
+#: ekos/manager.cpp:1435
 #, kde-format
 msgid "Remote devices established."
 msgstr "Установени са отдалечени устройства."
 
-#: ekos/manager.cpp:1435
+#: ekos/manager.cpp:1437
 #, kde-format
 msgid "Remote devices established. Please connect devices."
 msgstr "Установени са отдалечени устройства. Моля, свържете устройствата."
 
-#: ekos/manager.cpp:1496
+#: ekos/manager.cpp:1498
 #, kde-format
 msgid ""
 "%1 failed to connect.\n"
@@ -23181,104 +23227,104 @@ msgstr ""
 "%1 не успя да се свърже.\n"
 "Моля, уверете се, че устройството е свързано и включено."
 
-#: ekos/manager.cpp:1503
+#: ekos/manager.cpp:1505
 #, kde-format
 msgid "%1 is disconnected."
 msgstr "%1 е разкачен."
 
-#: ekos/manager.cpp:1522 ekos/manager.cpp:1531 ekos/manager.cpp:1564
+#: ekos/manager.cpp:1524 ekos/manager.cpp:1533 ekos/manager.cpp:1566
 #: indi/indistd.cpp:689
 #, kde-format
 msgid "%1 is online."
 msgstr "%1 е достъпен."
 
-#: ekos/manager.cpp:1539
+#: ekos/manager.cpp:1541
 #, kde-format
 msgid "%1 filter is online."
 msgstr "%1 филтър е онлайн."
 
-#: ekos/manager.cpp:1548
+#: ekos/manager.cpp:1550
 #, kde-format
 msgid "%1 focuser is online."
 msgstr "%1 фокусер е достъпен."
 
-#: ekos/manager.cpp:1555
+#: ekos/manager.cpp:1557
 #, kde-format
 msgid "Rotator %1 is online."
 msgstr "Ротатор %1 е онлайн."
 
-#: ekos/manager.cpp:1571
+#: ekos/manager.cpp:1573
 #, kde-format
 msgid "%1 Weather is online."
 msgstr "%1 Времето е онлайн."
 
-#: ekos/manager.cpp:1578
+#: ekos/manager.cpp:1580
 #, kde-format
 msgid "%1 GPS is online."
 msgstr "%1 GPS е онлайн."
 
-#: ekos/manager.cpp:1587
+#: ekos/manager.cpp:1589
 #, kde-format
 msgid "%1 Dust cap is online."
 msgstr "%1 Защитната капачка е онлайн."
 
-#: ekos/manager.cpp:1594
+#: ekos/manager.cpp:1596
 #, kde-format
 msgid "%1 Light box is online."
 msgstr "%1 Светлинен източник е онлайн."
 
-#: ekos/manager.cpp:1732
+#: ekos/manager.cpp:1734
 #, kde-format
 msgid "%1 is offline."
 msgstr "%1 е недостъпен."
 
-#: ekos/manager.cpp:1979
+#: ekos/manager.cpp:1985
 #, kde-format
 msgctxt "Charge-Coupled Device"
 msgid "CCD"
 msgstr "CCD"
 
-#: ekos/manager.cpp:2274
+#: ekos/manager.cpp:2280
 #, kde-format
 msgid "Guider port from %1 is ready."
 msgstr "Портът на гид модула от %1 е готов."
 
-#: ekos/manager.cpp:2463
+#: ekos/manager.cpp:2469
 #, kde-format
 msgid "Are you sure you want to delete the profile?"
 msgstr "Сигурни ли сте, че искате да изтриете профила?"
 
-#: ekos/manager.cpp:2464
+#: ekos/manager.cpp:2470
 #, kde-format
 msgid "Confirm Delete"
 msgstr "Потвърждение за изтриване"
 
-#: ekos/manager.cpp:2516
+#: ekos/manager.cpp:2522
 #, kde-format
 msgid "Site location updated to %1."
 msgstr "Местоположението е актуализирано на %1."
 
-#: ekos/manager.cpp:2518
+#: ekos/manager.cpp:2524
 #, kde-format
 msgid "Failed to update site location to %1. City not found."
 msgstr "Не успя да актуализира местоположението до %1. Градът не е намерен."
 
-#: ekos/manager.cpp:2778
+#: ekos/manager.cpp:2784
 #, kde-format
 msgid "Enabling debug logging for %1..."
 msgstr "Включване на регистрирането на грешки за %1..."
 
-#: ekos/manager.cpp:2786
+#: ekos/manager.cpp:2792
 #, kde-format
 msgid "Disabling debug logging for %1..."
 msgstr "Изключване на регистрирането на грешки за %1..."
 
-#: ekos/manager.cpp:2814
+#: ekos/manager.cpp:2820
 #, kde-format
 msgid "Re-enabling debug logging for %1..."
 msgstr "Повторно активиране на регистрирането на грешки за %1..."
 
-#: ekos/manager.cpp:2826
+#: ekos/manager.cpp:2832
 #, kde-format
 msgid "Re-disabling debug logging for %1..."
 msgstr "Повторно деактивиране на регистрирането на грешки за %1..."
@@ -23408,15 +23454,6 @@ msgstr "Разширени опции на Ekos"
 msgid "Options..."
 msgstr "Настройки..."
 
-#. i18n: ectx: property (text), widget (QPushButton, focusDetailPrevButton)
-#. i18n: ectx: property (text), widget (QPushButton, guideDetailPrevButton)
-#. i18n: ectx: property (text), widget (QPushButton, previousButton)
-#: ekos/manager/focusmanager.ui:267 ekos/manager/guidemanager.ui:415
-#: printing/foveditordialog.ui:115
-#, kde-format
-msgid "<"
-msgstr "<"
-
 #. i18n: ectx: property (toolTip), widget (FocusProfilePlot, profilePlot)
 #: ekos/manager/focusmanager.ui:275
 #, kde-format
@@ -23429,15 +23466,6 @@ msgstr "Фокусен профила HFR"
 #, kde-format
 msgid "Focus star"
 msgstr "Звезда за фокусиране"
-
-#. i18n: ectx: property (text), widget (QPushButton, focusDetailNextButton)
-#. i18n: ectx: property (text), widget (QPushButton, guideDetailNextButton)
-#. i18n: ectx: property (text), widget (QPushButton, nextButton)
-#: ekos/manager/focusmanager.ui:339 ekos/manager/guidemanager.ui:503
-#: printing/foveditordialog.ui:122
-#, kde-format
-msgid ">"
-msgstr ">"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #: ekos/manager/guidemanager.ui:92
@@ -24397,7 +24425,7 @@ msgstr "Затваряне на затвора"
 #. i18n: ectx: property (text), widget (QCheckBox, weatherAlertSchedulerCB)
 #. i18n: ectx: property (text), widget (QCheckBox, weatherWarningSchedulerCB)
 #: ekos/observatory/observatory.ui:951 ekos/observatory/observatory.ui:1086
-#: ekos/scheduler/scheduler.cpp:2572
+#: ekos/scheduler/scheduler.cpp:2573
 #, kde-format
 msgid "Stop Scheduler"
 msgstr "Прекратяване на изпълнението на плана"
@@ -26947,7 +26975,7 @@ msgstr ""
 "Имайте предвид, че алгоритъмът първо изчислява всички височини, като "
 "използва едно и също време, след което оценява заданията."
 
-#: ekos/scheduler/scheduler.cpp:372 ekos/scheduler/scheduler.cpp:1981
+#: ekos/scheduler/scheduler.cpp:372 ekos/scheduler/scheduler.cpp:1982
 #: ekos/scheduler/schedulerprocess.cpp:3029
 #, kde-format
 msgid ""
@@ -27112,18 +27140,18 @@ msgctxt "@title:window"
 msgid "Open Ekos Scheduler List"
 msgstr "Отваряне на списък с планувания на Ekos"
 
-#: ekos/scheduler/scheduler.cpp:1826
+#: ekos/scheduler/scheduler.cpp:1827
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Ekos Scheduler List"
 msgstr "Затваряне на списък с планувания на Ekos"
 
-#: ekos/scheduler/scheduler.cpp:1845
+#: ekos/scheduler/scheduler.cpp:1846
 #, kde-format
 msgid "Failed to save scheduler list"
 msgstr "Неуспешно запазване на списъка с график"
 
-#: ekos/scheduler/scheduler.cpp:2013
+#: ekos/scheduler/scheduler.cpp:2014
 #, kde-format
 msgid ""
 "Turning off astronomial twilight check may cause the observatory to run "
@@ -27133,42 +27161,42 @@ msgstr ""
 "продължаване на работата на обсерваторията през деня. Това може да причини "
 "необратими повреди на оборудването ви!"
 
-#: ekos/scheduler/scheduler.cpp:2015
+#: ekos/scheduler/scheduler.cpp:2016
 #, kde-format
 msgid "Astronomial Twilight Warning"
 msgstr "Предупреждение за астрономически полумрак"
 
-#: ekos/scheduler/scheduler.cpp:2042
+#: ekos/scheduler/scheduler.cpp:2043
 #, kde-format
 msgid "Slew complete"
 msgstr "Завъртването е  завършено"
 
-#: ekos/scheduler/scheduler.cpp:2046
+#: ekos/scheduler/scheduler.cpp:2047
 #, kde-format
 msgid "Focus complete"
 msgstr "Фокусирането е завършено"
 
-#: ekos/scheduler/scheduler.cpp:2048
+#: ekos/scheduler/scheduler.cpp:2049
 #, kde-format
 msgid "Align complete"
 msgstr "Подравняването е завършено"
 
-#: ekos/scheduler/scheduler.cpp:2049
+#: ekos/scheduler/scheduler.cpp:2050
 #, kde-format
 msgid "Repositioning"
 msgstr "Репозициониране"
 
-#: ekos/scheduler/scheduler.cpp:2050
+#: ekos/scheduler/scheduler.cpp:2051
 #, kde-format
 msgid "Repositioning complete"
 msgstr "Репозиционирането е завършено"
 
-#: ekos/scheduler/scheduler.cpp:2053
+#: ekos/scheduler/scheduler.cpp:2054
 #, kde-format
 msgid "Guiding complete"
 msgstr "Гидирането е завършено"
 
-#: ekos/scheduler/scheduler.cpp:2091
+#: ekos/scheduler/scheduler.cpp:2092
 #, kde-format
 msgid ""
 "Sleeping for %1 on simulation clock update until next observation job is "
@@ -27177,12 +27205,12 @@ msgstr ""
 "Преминаване в режим на заспиване за %1 при обновяване на часовника за "
 "симулация, докато следващата задача за наблюдение е готова..."
 
-#: ekos/scheduler/scheduler.cpp:2401
+#: ekos/scheduler/scheduler.cpp:2402
 #, kde-format
 msgid "Warning: job '%1' failed to capture target."
 msgstr "Предупреждение: заданието \"%1\" не успя да улови целта."
 
-#: ekos/scheduler/scheduler.cpp:2414
+#: ekos/scheduler/scheduler.cpp:2415
 #, kde-format
 msgid ""
 "Job '%1' is capturing, is restarting its guiding procedure (attempt #%2 of "
@@ -27191,85 +27219,85 @@ msgstr ""
 "Задание '%1' извършва заснеман и рестартира процедурата за насочване (опит #"
 "%2 на %3)."
 
-#: ekos/scheduler/scheduler.cpp:2423
+#: ekos/scheduler/scheduler.cpp:2424
 #, kde-format
 msgid "Warning: job '%1' failed its capture procedure, restarting capture."
 msgstr ""
 "Предупреждение: заданието \"%1\" не успя с процедурата за заснемане, "
 "рестартиране на заснемането."
 
-#: ekos/scheduler/scheduler.cpp:2429
+#: ekos/scheduler/scheduler.cpp:2430
 #, kde-format
 msgid "Warning: job '%1' failed its capture procedure, marking aborted."
 msgstr ""
 "Предупреждение: задачата \"%1\" не успя да изпълни процедурата за заснемане, "
 "маркира се като прекратена."
 
-#: ekos/scheduler/scheduler.cpp:2438
+#: ekos/scheduler/scheduler.cpp:2439
 #, kde-format
 msgid "Ekos job (%1) - Capture finished"
 msgstr "Задача на Ekos (%1) - Заснемането завърши"
 
-#: ekos/scheduler/scheduler.cpp:2482
+#: ekos/scheduler/scheduler.cpp:2483
 #, kde-format
 msgid "Weather conditions are OK."
 msgstr "Метеорологичните условия са добри."
 
-#: ekos/scheduler/scheduler.cpp:2486
+#: ekos/scheduler/scheduler.cpp:2487
 #, kde-format
 msgid "Warning: weather conditions are in the WARNING zone."
 msgstr ""
 "Предупреждение: метеорологичните условия са в зоната на ПРЕДУПРЕЖДЕНИЕ."
 
-#: ekos/scheduler/scheduler.cpp:2490
+#: ekos/scheduler/scheduler.cpp:2491
 #, kde-format
 msgid "Caution: weather conditions are in the DANGER zone!"
 msgstr "Внимание: метеорологичните условия са в зоната на ОПАСНОСТ!"
 
-#: ekos/scheduler/scheduler.cpp:2512
+#: ekos/scheduler/scheduler.cpp:2513
 #, kde-format
 msgid "Weather conditions in warning zone"
 msgstr "Метеорологични условия в предупредителната зона"
 
-#: ekos/scheduler/scheduler.cpp:2521
+#: ekos/scheduler/scheduler.cpp:2522
 #, kde-format
 msgid "Weather conditions are critical. Observatory shutdown is imminent"
 msgstr ""
 "Метеорологичните условия са критични. Неотложно изключване на обсерваторията."
 
-#: ekos/scheduler/scheduler.cpp:2542
+#: ekos/scheduler/scheduler.cpp:2543
 #, kde-format
 msgid "Starting shutdown procedure due to severe weather."
 msgstr ""
 "Започване на процедура за изключване поради поради тежки метеорологични "
 "условия.."
 
-#: ekos/scheduler/scheduler.cpp:2560
+#: ekos/scheduler/scheduler.cpp:2561
 #, kde-format
 msgid "Scheduler is in sleep mode"
 msgstr "Планирането е в режим на заспиване"
 
-#: ekos/scheduler/scheduler.cpp:2685
+#: ekos/scheduler/scheduler.cpp:2686
 #, kde-format
 msgid "Solver timed out: %1s %2"
 msgstr "Времето за изчакване на решаващия инструмент е изтекло: %1s %2"
 
-#: ekos/scheduler/scheduler.cpp:2687
+#: ekos/scheduler/scheduler.cpp:2688
 #, kde-format
 msgid "Solver failed: %1s %2"
 msgstr "Неуспешно решаване: %1s %2"
 
-#: ekos/scheduler/scheduler.cpp:2722
+#: ekos/scheduler/scheduler.cpp:2723
 #, kde-format
 msgid "Captured frame is %1 arcminutes away from target, re-aligning..."
 msgstr "Заснетият кадър е на %1 дъгови минути от целта. Пренастройване..."
 
-#: ekos/scheduler/scheduler.cpp:2759
+#: ekos/scheduler/scheduler.cpp:2760
 #, kde-format
 msgid "Manual startup procedure completed successfully."
 msgstr "Процедурата за ръчно стартиране завърши успешно."
 
-#: ekos/scheduler/scheduler.cpp:2763
+#: ekos/scheduler/scheduler.cpp:2764
 #, kde-format
 msgid "Manual startup procedure terminated due to errors."
 msgstr "Процедурата за ръчно стартиране е прекратена поради грешки."
@@ -29506,10 +29534,9 @@ msgid "Flip Vertical"
 msgstr "Обръщане по вертикал"
 
 #: fitsviewer/fitsviewer.cpp:132 kstarsinit.cpp:160
-#, fuzzy, kde-format
-#| msgid "Open Logs Directory..."
+#, kde-format
 msgid "Open/Blink Directory"
-msgstr "Отваряне на директорията с дневници..."
+msgstr "Отваряне на Blink директория"
 
 #: fitsviewer/fitsviewer.cpp:151
 #, kde-format
@@ -29541,38 +29568,34 @@ msgid "Zoom To Fit"
 msgstr "Оптимално мащабиране"
 
 #: fitsviewer/fitsviewer.cpp:272
-#, fuzzy, kde-format
-#| msgid "Next >"
+#, kde-format
 msgid "Next Tab"
-msgstr "Напред>"
+msgstr "Следващ раздел"
 
 #: fitsviewer/fitsviewer.cpp:277
-#, fuzzy, kde-format
-#| msgid "Previous Year"
+#, kde-format
 msgid "Previous Tab"
-msgstr "Предходна година"
+msgstr "Предишен раздел"
 
 #: fitsviewer/fitsviewer.cpp:282
-#, fuzzy, kde-format
-#| msgid "Objects in Image"
+#, kde-format
 msgid "Next Blink Image"
-msgstr "Обекти в изображението"
+msgstr "Следващо Blink изображение"
 
 #: fitsviewer/fitsviewer.cpp:287
-#, fuzzy, kde-format
-#| msgid "Preview image"
+#, kde-format
 msgid "Previous Blink Image"
-msgstr "Преглед на изображението"
+msgstr "Предишно Blink изображение"
 
 #: fitsviewer/fitsviewer.cpp:292
 #, kde-format
 msgid "Zoom all tabs in"
-msgstr ""
+msgstr "Увеличаване на мащаба на всички раздели"
 
 #: fitsviewer/fitsviewer.cpp:297
 #, kde-format
 msgid "Zoom all tabs out"
-msgstr ""
+msgstr "Намаляване на мащаба на всички раздели"
 
 #: fitsviewer/fitsviewer.cpp:302 fitsviewer/fitsviewer.cpp:1560
 #, kde-format
@@ -29646,12 +29669,10 @@ msgid "HiPS Overlay"
 msgstr "Наслагване на HiPS"
 
 #: fitsviewer/fitsviewer.cpp:866
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Jobs Directory"
+#, kde-format
 msgctxt "@title:window"
 msgid "Blink Top Directory"
-msgstr "Избор на каталог на задания"
+msgstr "Основна директория на Blink"
 
 #: fitsviewer/fitsviewer.cpp:994
 #, kde-format
@@ -33012,7 +33033,7 @@ msgstr "Активиране на воденето на дневник на INDI
 #: kstars.kcfg:290
 #, kde-format
 msgid "Enable INDI Filter Wheel logging"
-msgstr "Активиране на воденето на дневник на филтърен барабан на INDI"
+msgstr "Активиране на воденето на дневник на филтърно колело на INDI"
 
 #. i18n: ectx: label, entry (INDIDomeLogging), group (indi)
 #: kstars.kcfg:294
@@ -37049,7 +37070,7 @@ msgstr "Източник на температурата на фокусния �
 #: kstars.kcfg:1993
 #, kde-format
 msgid "Default Filter Wheel filter"
-msgstr "Подразбиращ се филтър на филтърния барабан"
+msgstr "Подразбиращ се филтър на филтърното колело"
 
 #. i18n: ectx: label, entry (UseFocusDarkFrame), group (Focus)
 #: kstars.kcfg:1996
@@ -37253,8 +37274,9 @@ msgstr "Видът на измерването на звездите, който
 #, kde-format
 msgid "The type of star PSF to use if curve fitting star profiles."
 msgstr ""
-"Видът на PSF на звездите, който се използва при изравняване на профилите на "
-"звездите по крива."
+"Видът на PSF (Point spread function - функция за разсейване на точките) на "
+"звездите, който се използва при изравняване на профилите на звездите по "
+"крива."
 
 #. i18n: ectx: whatsthis, entry (FocusUseWeights), group (Focus)
 #: kstars.kcfg:2099
@@ -37393,8 +37415,8 @@ msgstr "Броят на стъпките за придвижване навън 
 msgid ""
 "The total number of steps for a Fixed Steps or CFZ Shuffle Autofocus run."
 msgstr ""
-"Общ брой стъпки за стартиране на автоматично фокусиране с фиксирани стъпки "
-"или с разместване на CCD"
+"Общ брой стъпки, които се изпълняват при автоматично фокусиране с фиксирани "
+"стъпки или с CFZ разбъркване."
 
 #. i18n: ectx: label, entry (FocusMaxTravel), group (Focus)
 #: kstars.kcfg:2166
@@ -37418,13 +37440,13 @@ msgstr "Максималният размер на една стъпка."
 #: kstars.kcfg:2175
 #, kde-format
 msgid "The amount of driver backlash."
-msgstr "Размерът на луфта на драйвера."
+msgstr "Размерът на луфта на механиката."
 
 #. i18n: ectx: whatsthis, entry (FocusAFOverscan), group (Focus)
 #: kstars.kcfg:2179
 #, kde-format
 msgid "The amount of Autofocus Overscan."
-msgstr "Размерът на Overscan на автофокуса."
+msgstr "Размерът на прескачане на автофокуса."
 
 #. i18n: ectx: whatsthis, entry (FocusMotionTimeout), group (Focus)
 #: kstars.kcfg:2187
@@ -37448,7 +37470,7 @@ msgstr "Видът на алгоритъма CFZ, който се използв
 msgid "The user defined tolerance to use for Classic and Wavefront algos."
 msgstr ""
 "Дефинираното от потребителя допустимо отклонение, което да се използва за "
-"класическия и Wavefront алгоритми."
+"алгоритмите класически и вълнов фронт."
 
 #. i18n: ectx: whatsthis, entry (focusCFZTau), group (Focus)
 #: kstars.kcfg:2200
@@ -37503,7 +37525,7 @@ msgstr "Препоръчителен размер на стъпката от п�
 #: kstars.kcfg:2233
 #, kde-format
 msgid "Focus Advisor recommended Out Step Multiple"
-msgstr "Външна стъпка многократно е препоръчано от съветника за фокусиране"
+msgstr "Множество стъпки навън, препоръчано от помощника за фокусиране"
 
 #. i18n: ectx: whatsthis, entry (focusAdvStepSize), group (Focus)
 #: kstars.kcfg:2237
@@ -37518,8 +37540,8 @@ msgstr ""
 #, kde-format
 msgid "Whether to accept Focus Advisor recommendation on Out Step Multiple."
 msgstr ""
-"Дали да се приеме препоръката на съветника за фокусиране относно Външна "
-"стъпка многократно."
+"Дали да се приеме препоръката на съветника за фокусиране относно Множество "
+"стъпки навън."
 
 #. i18n: ectx: whatsthis, entry (focusAdvCamera), group (Focus)
 #: kstars.kcfg:2245
@@ -37529,7 +37551,7 @@ msgid ""
 "Parameters."
 msgstr ""
 "Дали да се приеме препоръката на съветника за фокусиране за параметрите на "
-"камерата и филтърния барабан."
+"камерата и филтърното колело."
 
 #. i18n: ectx: whatsthis, entry (focusAdvSettingsTab), group (Focus)
 #: kstars.kcfg:2249
@@ -37803,7 +37825,7 @@ msgstr ""
 #: kstars.kcfg:2401
 #, kde-format
 msgid "Default filter wheel filter in alignment mode"
-msgstr "Подразбиращ се филтър на филтърния барабан в режим на подравняване"
+msgstr "Подразбиращ се филтър на филтърното колело в режим на подравняване"
 
 #. i18n: ectx: label, entry (AlignUseCurrentFilter), group (Align)
 #: kstars.kcfg:2404
@@ -67732,7 +67754,7 @@ msgstr "Допълнителни ORBCOMM"
 #, kde-kuit-format
 msgctxt "Advanced URLs: description or category"
 msgid "Simbad"
-msgstr "Симбад"
+msgstr "SIMBAD"
 
 #: kstars_i18n.cpp:4831
 #, kde-kuit-format
@@ -67744,7 +67766,7 @@ msgstr "Аладин"
 #, kde-kuit-format
 msgctxt "Advanced URLs: description or category"
 msgid "Skyview"
-msgstr "Небе"
+msgstr "Skyview"
 
 #: kstars_i18n.cpp:4833
 #, kde-kuit-format
@@ -67792,7 +67814,7 @@ msgstr "Радио"
 #, kde-kuit-format
 msgctxt "Advanced URLs: description or category"
 msgid "High Energy Astrophysical Archive (HEASARC)"
-msgstr "Високоенергиен Астрофизически архив на  (HEASARC)"
+msgstr "High Energy Astrophysical Archive (HEASARC)"
 
 #: kstars_i18n.cpp:4841
 #, kde-kuit-format
@@ -67834,7 +67856,7 @@ msgstr "Многовълнови каталози"
 #, kde-kuit-format
 msgctxt "Advanced URLs: description or category"
 msgid "NASA Extragalactic Database (NED)"
-msgstr "Извънгалактическа база от данни на НАСА (NED)"
+msgstr "NASA Extragalactic Database (NED)"
 
 #: kstars_i18n.cpp:4848
 #, kde-kuit-format
@@ -67846,7 +67868,7 @@ msgstr "Позиции"
 #, kde-kuit-format
 msgctxt "Advanced URLs: description or category"
 msgid "NASA Astrophysics Data System (ADS)"
-msgstr "Система с астрофизически данни на НАСА (ADS)"
+msgstr "NASA Astrophysics Data System (ADS)"
 
 #: kstars_i18n.cpp:4850
 #, kde-kuit-format
@@ -67876,7 +67898,7 @@ msgstr "Астрофизически публикации"
 #, kde-kuit-format
 msgctxt "Advanced URLs: description or category"
 msgid "Multimission Archive at Space Telescope (MAST)"
-msgstr "Многомисиен архив на Института по космически телескопи (MAST)"
+msgstr "Multimission Archive at Space Telescope (MAST)"
 
 #: kstars_i18n.cpp:4855
 #, kde-kuit-format
@@ -68400,10 +68422,9 @@ msgid "Downloads new data"
 msgstr "Изтегляне на нови данни"
 
 #: kstarsinit.cpp:156
-#, fuzzy, kde-format
-#| msgid "Open Image..."
+#, kde-format
 msgid "Open Image(s)..."
-msgstr "Отваряне на изображение..."
+msgstr "Отваряне на изображения..."
 
 #: kstarsinit.cpp:165
 #, kde-format
@@ -71288,7 +71309,7 @@ msgstr "Филтърен слот"
 #, kde-kuit-format
 msgctxt "string from libindi, used in the config dialog"
 msgid "Filter Wheel"
-msgstr "Филтър"
+msgstr "Филтърно колело"
 
 #: libindi_strings.cpp:166
 #, kde-kuit-format
@@ -74328,7 +74349,7 @@ msgstr "Запазване и прекратяване на текущата с�
 #, kde-format
 msgctxt "@title:window"
 msgid "Execute Session"
-msgstr "Изпълнение на сесията"
+msgstr "Изпълнение на сесия"
 
 #: oal/execute.cpp:154 oal/execute.cpp:419
 #, kde-format
@@ -74365,7 +74386,7 @@ msgstr "Запазване на сесията"
 #: oal/execute.ui:14
 #, kde-format
 msgid "Execute Session"
-msgstr "Изпълнение на сесията"
+msgstr "Изпълнение на сесия"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: oal/execute.ui:29
@@ -74519,7 +74540,7 @@ msgstr "Напред>"
 #: oal/execute.ui:485
 #, kde-format
 msgid "Step 1: Session Details"
-msgstr "Step 1: Подробности на сесията"
+msgstr "Стъпка 1: Подробности на сесията"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, AddObject)
 #: oal/execute.ui:503
@@ -80444,7 +80465,7 @@ msgstr "Зрително поле на окуляра"
 #, kde-format
 msgctxt "Export image"
 msgid "Export"
-msgstr "Изнасяне"
+msgstr "Експортиране"
 
 #: tools/eyepiecefield.cpp:75
 #, kde-format
@@ -80459,12 +80480,12 @@ msgstr "Огледално обръщане"
 #: tools/eyepiecefield.cpp:79
 #, kde-format
 msgid "Fetch DSS image"
-msgstr "Получаване на DSS на изображение"
+msgstr "Извличане на DSS на изображение"
 
 #: tools/eyepiecefield.cpp:103
 #, kde-format
 msgid "Vanilla"
-msgstr "Vanilla"
+msgstr "Стандартно"
 
 #: tools/eyepiecefield.cpp:104
 #, kde-format
@@ -81885,7 +81906,7 @@ msgstr "Добавяне на пакет от задачи към сесията
 #: tools/observinglist.cpp:775
 #, kde-format
 msgid "Batch add to observing wishlist"
-msgstr "Партидно добавяне към списък с желания за наблюдение"
+msgstr "Пакетно добавяне към списък с желания за наблюдение"
 
 #: tools/observinglist.cpp:776
 #, kde-format
@@ -81895,10 +81916,10 @@ msgid ""
 "settings, to the CDS Sesame resolver. Objects that are internet resolved "
 "will be added to the database."
 msgstr ""
-"Посочете списък с обекти, като на всеки ред се добавя по един обект. Имената "
-"трябва да се разпознават от KStars или, ако в настройките е разрешено "
-"интернет разпознаване, с модула за разпознаване на CDS Sesame. Обектите, "
-"които са разпознати в интернет, ще бъдат добавени в базата данни."
+"Посочете списък с обекти, като на всеки ред се добавя по един обект.\n"
+"Имената трябва да се разпознават от KStars или, ако в настройките е \n"
+"разрешено интернет разпознаване, с модула за разпознаване на CDS Sesame.\n"
+"Обектите, които са разпознати в интернет, ще бъдат добавени в базата данни."
 
 #: tools/observinglist.cpp:808
 #, kde-format
@@ -82037,9 +82058,9 @@ msgstr[0] ""
 msgstr[1] ""
 "%1 обекти не бяха открити в базата данни и ще бъдат премахнати от списъка с "
 "желания за наблюдение. Препоръчваме ви да копирате подробния списък като "
-"резервно копие, за да можете по-късно да използвате функцията Batch Add "
-"(Пакетно добавяне) в програмата за планиране на наблюдения, за да ги "
-"добавите обратно, като използвате търсене в интернет."
+"резервно копие, за да можете по-късно да използвате функцията Пакетно "
+"добавяне в програмата за планиране на наблюдения, за да ги добавите обратно, "
+"като използвате търсене в интернет."
 
 #: tools/observinglist.cpp:1163
 #, kde-format
@@ -82200,7 +82221,7 @@ msgstr "Изтриване на всички изображения"
 #: tools/observinglist.ui:279
 #, kde-format
 msgid "Adding objects:"
-msgstr "Добавяне на обектив:"
+msgstr "Добавяне на обекти:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, WizardButton)
 #. i18n: ectx: property (windowTitle), widget (QWidget, ObsListWizard)
@@ -82288,7 +82309,7 @@ msgstr "Планиран час"
 #: tools/observinglist.ui:545
 #, kde-format
 msgid "Select an Object to View Information here"
-msgstr "Избор на обект, за да видите информация тук"
+msgstr "Изберете обект, за да видите информация тук"
 
 #. i18n: ectx: property (text), widget (QLabel, ImagePreview)
 #: tools/observinglist.ui:597
@@ -82318,7 +82339,7 @@ msgstr "Изтриване на изображение"
 #: tools/observinglist.ui:685
 #, kde-format
 msgid "Record object notes here."
-msgstr "Запишете тук бележките за предметите."
+msgstr "Запишете тук бележките за обектите."
 
 #: tools/obslistpopupmenu.cpp:27
 #, kde-format
@@ -82458,16 +82479,16 @@ msgstr ""
 "<html><head></head><body><p>Добре дошли в съветника за списъци за "
 "наблюдение</p><p></p><p>С този инструмент можете да съставите списък за "
 "наблюдение, като филтрирате списъка с всички обекти по различни начини.  "
-"Първо, ще изберете обекти по <span style=\" font-weight:600;\"> вид.</"
-"span>.  След това можете да изберете само обектите, които заемат определена "
-"<span style=\" font-weight:600;\">област на небето. </span>.  Можете "
-"допълнително да съкратите списъка за наблюдение, като изберете обекти в "
-"определен <span style=\" font-weight:600;\">обхват на звездна величина</"
-"span>. И накрая, можете да изберете да запазите само тези обекти, които "
-"могат да се <span style=\" font-weight:600;\">наблюдават на определена дата</"
-"span>.</p><p></p><p>Натиснете бутона <span style=\" font-weight:600;"
-"\">Напред</span>, за да започнете, като изберете типовете обекти, които "
-"искате да присъстват в списъка за наблюдение.</p></body></html>"
+"Първо, ще изберете обекти по <span style=\" font-weight:600;\"> вид</span>.  "
+"След това можете да изберете само обектите, които заемат определена <span "
+"style=\" font-weight:600;\">област на небето</span>.  Можете допълнително да "
+"съкратите списъка за наблюдение, като изберете обекти в определен <span "
+"style=\" font-weight:600;\">обхват на звездна величина</span>. И накрая, "
+"можете да изберете да запазите само тези обекти, които могат да се <span "
+"style=\" font-weight:600;\">наблюдават на определена дата</span>.</p><p></"
+"p><p>Натиснете бутона <span style=\" font-weight:600;\">Напред</span>, за да "
+"започнете, като изберете типовете обекти, които искате да присъстват в "
+"списъка за наблюдение.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, ObjTypeLabel)
 #: tools/obslistwizard.ui:74
@@ -82536,7 +82557,7 @@ msgstr ""
 "да ограничите списъка си с обекти само до тези, които заемат определена "
 "област на небето.  Има три начина да посочите региона за вашия списък: чрез "
 "<span style=\" font-weight:600;\">съзвездие</span>, като посочите <span "
-"style=\" font-weight:600;\">правоъгълна област</span>или чрез посочване на "
+"style=\" font-weight:600;\">правоъгълна област</span> или чрез посочване на "
 "<span style=\" font-weight:600;\">кръгова област</span>.  Можете също така "
 "да пропуснете избора по регион, като по този начин се включват обекти от "
 "<span style=\" font-weight:600;\">цялото небе</span>.</p><p></p><p>Направете "
@@ -82755,8 +82776,8 @@ msgstr ""
 "желаете да изключвате слаби обекти с тази селекция, просто оставете "
 "отметката в квадратчето по-долу.</p><p>Това е последната страница на "
 "съветника за списък с наблюдения. Можете да се върнете назад и да промените "
-"предишните страници с помощта на <span style=\" font-weight:600;\">Назад</"
-"span> бутон. Когато сте доволни, натиснете бутона <span style=\" font-"
+"предишните страници с помощта на бутона <span style=\" font-weight:600;"
+"\">Назад</span>. Когато сте доволни, натиснете бутона <span style=\" font-"
 "weight:600;\">Добре</span>, за да излезете от съветника, а инструментът "
 "Списък на наблюденията ще бъде попълнен с обектите, които сте посочили тук.</"
 "p><p><br/></p></body></html>"
@@ -85344,6 +85365,9 @@ msgstr "Цвят на фона:"
 #, kde-format
 msgid "Set the color for the background."
 msgstr "Задаване на цвета на фона."
+
+#~ msgid "PHD2: Guiding resumed."
+#~ msgstr "PHD2: Гидирането е възобновено."
 
 #~ msgid "No job running"
 #~ msgstr "Няма изпълняваща се задача"
