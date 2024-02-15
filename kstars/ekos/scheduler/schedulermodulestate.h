@@ -566,12 +566,31 @@ public:
 
      static uint maxFailureAttempts();
 
+     QStringList &logText()
+     {
+         return m_logText;
+     }
+     QString getLogText()
+     {
+         return logText().join("\n");
+     }
+     void clearLog();
+
      /**
       * @brief checkRepeatSequence Check if the entire job sequence might be repeated
       * @return true if the checkbox is set and the number of iterations is below the
       * configured threshold
       */
      bool checkRepeatSequence();
+
+     void resetSolverIteration()
+     {
+         m_solverIteration = 0;
+     }
+     uint32_t increaseSolverIteration()
+     {
+         return ++m_solverIteration;
+     }
 
 signals:
     // ////////////////////////////////////////////////////////////////////
@@ -634,6 +653,8 @@ private:
     QString m_currentProfile;
     // all profiles
     QStringList m_profiles;
+    /// Store all log strings
+    QStringList m_logText;
     // Was job modified and needs saving?
     bool m_dirty { false };
 
@@ -661,6 +682,10 @@ private:
     // Check if initial autofocus is completed and do not run autofocus until
     // there is a change is telescope position/alignment.
     bool m_autofocusCompleted { false };
+
+    // Used when solving position every nth capture.
+    uint32_t m_solverIteration {0};
+
 
     // Keep watch of weather status
     ISD::Weather::Status m_weatherStatus { ISD::Weather::WEATHER_IDLE };

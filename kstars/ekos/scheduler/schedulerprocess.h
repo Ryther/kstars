@@ -9,6 +9,7 @@
 #include "schedulertypes.h"
 #include "ekos/auxiliary/modulelogger.h"
 #include "ekos/align/align.h"
+#include "ekos/auxiliary/solverutils.h"
 #include "indi/indiweather.h"
 #include "dms.h"
 
@@ -32,10 +33,20 @@ class SchedulerModuleState;
 class SchedulerProcess : public QObject, public ModuleLogger
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.kstars.Ekos.SchedulerProcess")
+    Q_CLASSINFO("D-Bus Interface", "org.kde.kstars.Ekos.Scheduler")
+    Q_PROPERTY(Ekos::SchedulerState status READ status NOTIFY newStatus)
+    Q_PROPERTY(QString profile READ profile WRITE setProfile)
+    Q_PROPERTY(QStringList logText READ logText NOTIFY newLog)
 
 public:
     SchedulerProcess(QSharedPointer<SchedulerModuleState> state, const QString &ekosPathStr, const QString &ekosInterfaceStr);
+
+
+    // ////////////////////////////////////////////////////////////////////
+    // external DBUS interface
+    // ////////////////////////////////////////////////////////////////////
+
+    SchedulerState status();
 
     // ////////////////////////////////////////////////////////////////////
     // process steps
@@ -69,16 +80,39 @@ public:
      */
     void wakeUpScheduler();
 
-    /**
+    /** DBUS interface function.
      * @brief Setup the main loop and start.
      */
-    void startScheduler();
+    Q_SCRIPTABLE Q_NOREPLY void start();
 
-    /**
-     * @brief stopScheduler Stop the scheduler execution. If stopping succeeded,
+    /** DBUS interface function.
+     * @brief stop Stop the scheduler execution. If stopping succeeded,
      * a {@see #schedulerStopped()} signal is emitted
      */
-    void stopScheduler();
+    Q_SCRIPTABLE Q_NOREPLY void stop();
+
+    /** DBUS interface function.
+     * @brief Remove all scheduler jobs
+     */
+    Q_SCRIPTABLE Q_NOREPLY void removeAllJobs();
+
+    /** DBUS interface function.
+     * @brief Loads the Ekos Scheduler List (.esl) file.
+     * @param fileURL path to a file
+     * @return true if loading file is successful, false otherwise.
+     */
+    Q_SCRIPTABLE bool loadScheduler(const QString &fileURL);
+
+    /** DBUS interface function.
+     * @brief Set the file URL pointing to the capture sequence file
+     * @param sequenceFileURL URL of the capture sequence file
+     */
+    Q_SCRIPTABLE Q_NOREPLY void setSequence(const QString &sequenceFileURL);
+
+    /** DBUS interface function.
+     * @brief Resets all jobs to IDLE
+     */
+    Q_SCRIPTABLE void resetAllJobs();
 
     /**
      * @brief shouldSchedulerSleep Check if the scheduler needs to sleep until the job is ready
@@ -281,10 +315,7 @@ public:
     /**
      * @brief appendLogText Append a new line to the logging.
      */
-    void appendLogText(const QString &logentry) override
-    {
-        emit newLog(logentry);
-    }
+    void appendLogText(const QString &logentry) override;
 
     /**
      * @return True if mount is parked
@@ -294,6 +325,9 @@ public:
      * @return True if dome is parked
      */
     bool isDomeParked();
+
+    void simClockScaleChanged(float);
+    void simClockTimeChanged();
 
     // ////////////////////////////////////////////////////////////////////
     // state machine and scheduler
@@ -510,10 +544,17 @@ public:
         return m_scriptProcess;
     }
 
+    const QString &profile() const;
+    void setProfile(const QString &newProfile);
+
+    QStringList logText();
+
 signals:
     // new log text for the module log window
     void newLog(const QString &text);
     // status updates
+    void newStatus(SchedulerState state);
+    void newWeatherStatus(ISD::Weather::Status state);
     void schedulerStopped();
     void shutdownStarted();
     void schedulerSleeping(bool shutdown, bool sleep);
@@ -522,14 +563,17 @@ signals:
     // state changes
     void jobsUpdated(QJsonArray jobsList);
     void updateJobTable(SchedulerJob *job = nullptr);
+    void clearJobTable();
+    void changeCurrentSequence(const QString &sequenceFileURL);
     void interfaceReady(QDBusInterface *iface);
     // loading jobs
     void addJob(SchedulerJob *job);
     void syncGreedyParams();
     void syncGUIToGeneralSettings();
     void updateSchedulerURL(const QString &fileURL);
-    // check the alignment after a completed capture
-    void checkAlignment(const QVariantMap &metadata);
+    // distance in arc-seconds measured by plate solving the a captured image and
+    // comparing that position to the target position.
+    void targetDistance(double distance);
     // required for Analyze timeline
     void jobStarted(const QString &jobName);
     void jobEnded(const QString &jobName, const QString &endReason);
@@ -546,8 +590,27 @@ private slots:
     void syncProperties()
     {
         checkInterfaceReady(qobject_cast<QDBusInterface*>(sender()));
-
     }
+
+    // ////////////////////////////////////////////////////////////////////
+    // alignment checks
+    // ////////////////////////////////////////////////////////////////////
+
+    /**
+     * @brief checkAlignment Handle one sequence image completion. This is used now only to run alignment check
+     * to ensure it does not deviation from current scheduler job target.
+     * @param metadata Metadata for image including filename, exposure, filter, hfr..etc.
+     */
+    void checkAlignment(const QVariantMap &metadata);
+
+    /**
+     * @brief solverDone Process solver solution after it is done.
+     * @param timedOut True if the process timed out.
+     * @param success True if successful, false otherwise.
+     * @param solution The solver solution if successful.
+     * @param elapsedSeconds How many seconds elapsed to solve the image.
+     */
+    void solverDone(bool timedOut, bool success, const FITSImage::Solution &solution, double elapsedSeconds);
 
     /**
      * @brief checkInterfaceReady Sometimes syncProperties() is not sufficient since the ready signal could have fired already
@@ -594,11 +657,13 @@ private:
 
     // Startup and Shutdown scripts process
     QProcess m_scriptProcess;
+    // solver for alignment checks
+    QSharedPointer<SolverUtils> m_Solver;
     // ////////////////////////////////////////////////////////////////////
     // DBUS interfaces
     // ////////////////////////////////////////////////////////////////////
     // Interface strings for the dbus. Changeable for mocks when testing. Private so only tests can change.
-    QString schedulerProcessPathString { "/KStars/Ekos/SchedulerProcess" };
+    QString schedulerProcessPathString { "/KStars/Ekos/Scheduler" };
     QString kstarsInterfaceString { "org.kde.kstars" };
     // This is only used in the constructor
     QString ekosInterfaceString { "org.kde.kstars.Ekos" };

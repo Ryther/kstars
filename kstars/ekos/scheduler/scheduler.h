@@ -14,7 +14,6 @@
 #include "ekos/align/align.h"
 #include "indi/indiweather.h"
 #include "schedulerjob.h"
-#include "ekos/auxiliary/modulelogger.h"
 
 #include <lilxml.h>
 
@@ -48,13 +47,9 @@ class SequenceEditor;
  * @author Jasem Mutlaq
  * @version 1.2
  */
-class Scheduler : public QWidget, public Ui::Scheduler, public ModuleLogger
+class Scheduler : public QWidget, public Ui::Scheduler
 {
         Q_OBJECT
-        Q_CLASSINFO("D-Bus Interface", "org.kde.kstars.Ekos.Scheduler")
-        Q_PROPERTY(Ekos::SchedulerState status READ status NOTIFY newStatus)
-        Q_PROPERTY(QStringList logText READ logText NOTIFY newLog)
-        Q_PROPERTY(QString profile READ profile WRITE setProfile)
 
         friend class FramingAssistantUI;
 
@@ -83,17 +78,6 @@ public:
         // shortcut
         SchedulerJob *activeJob();
 
-        void appendLogText(const QString &) override;
-        QStringList logText()
-        {
-            return m_LogText;
-        }
-        QString getLogText()
-        {
-            return m_LogText.join("\n");
-        }
-        Q_SCRIPTABLE void clearLog();
-
         /**
          * @brief handleConfigChanged Update UI after changes to the global configuration
          */
@@ -114,45 +98,16 @@ public:
 
         /*@{*/
 
-        /** DBUS interface function.
-             * @brief Start the scheduler main loop and evaluate jobs and execute them accordingly.
-             */
-        Q_SCRIPTABLE Q_NOREPLY void start();
-
-        /** DBUS interface function.
-             * @brief Stop the scheduler.
-             */
-        Q_SCRIPTABLE Q_NOREPLY void stop();
-
-        /** DBUS interface function.
-             * @brief Remove all scheduler jobs
-             */
-        Q_SCRIPTABLE Q_NOREPLY void removeAllJobs();
-
-        /** DBUS interface function.
-             * @brief Loads the Ekos Scheduler List (.esl) file.
-             * @param fileURL path to a file
-             * @return true if loading file is successful, false otherwise.
-             */
-        Q_SCRIPTABLE bool loadScheduler(const QString &fileURL);
-
-        /** DBUS interface function.
+        /**
          * @brief Set the file URL pointing to the capture sequence file
          * @param sequenceFileURL URL of the capture sequence file
          */
-        Q_SCRIPTABLE void setSequence(const QString &sequenceFileURL);
-
-        /** DBUS interface function.
-             * @brief Resets all jobs to IDLE
-             */
-        Q_SCRIPTABLE void resetAllJobs();
+        void setSequence(const QString &sequenceFileURL);
 
         /** DBUS interface function.
              * @brief Resets all jobs to IDLE
              */
         Q_SCRIPTABLE void sortJobsPerAltitude();
-
-        Ekos::SchedulerState status();
 
         void setProfile(const QString &profile)
         {
@@ -211,28 +166,16 @@ public:
         void toggleScheduler();
 
         QJsonObject getSchedulerSettings();
-        /**
-             * @brief createJobSequence Creates a job sequence for the mosaic tool given the prefix and output dir. The currently selected sequence file is modified
-             * and a new version given the supplied parameters are saved to the output directory
-             * @param prefix Prefix to set for the job sequence
-             * @param outputDir Output dir to set for the job sequence
-             * @return True if new file is saved, false otherwise
-             */
-        bool createJobSequence(XMLEle *root, const QString &prefix, const QString &outputDir);
-
-        XMLEle *getSequenceJobRoot(const QString &filename);
-
-        /**
-             * @brief saveScheduler Save scheduler jobs to a file
-             * @param path path of a file
-             * @return true on success, false on failure.
-             */
-        Q_SCRIPTABLE bool saveScheduler(const QUrl &fileURL);
 
         // the state machine
         QSharedPointer<SchedulerModuleState> moduleState() const
         {
             return m_moduleState;
+        }
+        // the process engine
+        QSharedPointer<SchedulerProcess> process()
+        {
+            return m_process;
         }
 
         // Settings
@@ -361,6 +304,11 @@ protected slots:
         void clickQueueTable(QModelIndex index);
 
         /**
+         * @brief clearJobTable delete all rows in the job table
+         */
+        void clearJobTable();
+
+        /**
          * @brief Update scheduler parameters to the currently selected scheduler job
          * @param selected table position
          * @param deselected table position
@@ -438,27 +386,7 @@ protected slots:
              */
         void checkTwilightWarning(bool enabled);
 
-        void simClockScaleChanged(float);
-        void simClockTimeChanged();
-
-        /**
-         * @brief solverDone Process solver solution after it is done.
-         * @param timedOut True if the process timed out.
-         * @param success True if successful, false otherwise.
-         * @param solution The solver solution if successful.
-         * @param elapsedSeconds How many seconds elapsed to solve the image.
-         */
-        void solverDone(bool timedOut, bool success, const FITSImage::Solution &solution, double elapsedSeconds);
-
-        /**
-         * @brief setCaptureComplete Handle one sequence image completion. This is used now only to run alignment check
-         * to ensure it does not deviation from current scheduler job target.
-         * @param metadata Metadata for image including filename, exposure, filter, hfr..etc.
-         */
-        void checkAlignment(const QVariantMap &metadata);
-
 signals:
-        void newLog(const QString &text);
         void newStatus(Ekos::SchedulerState state);
         void weatherChanged(ISD::Weather::Status state);
         void newTarget(const QString &);
@@ -549,10 +477,6 @@ private:
         QSharedPointer<SchedulerModuleState> m_moduleState;
         // process engine implementing all process steps
         QSharedPointer<SchedulerProcess> m_process;
-        QSharedPointer<SchedulerProcess> process()
-        {
-            return m_process;
-        }
 
         // react upon changes of EKOS and INDI state
         void ekosStateChanged(EkosState state);
@@ -569,8 +493,6 @@ private:
         QUrl sequenceURL;
         /// FITS URL to solve
         QUrl fitsURL;
-        /// Store all log strings
-        QStringList m_LogText;
         /// Busy indicator widget
         QProgressIndicator *pi { nullptr };
         /// Are we editing a job right now? Job row index
@@ -591,8 +513,6 @@ private:
 
         /// Target coordinates for pointing check
         QSharedPointer<SolverUtils> m_Solver;
-        // Used when solving position every nth capture.
-        uint32_t m_SolverIteration {0};
 
         void syncGreedyParams();
 

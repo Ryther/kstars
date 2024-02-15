@@ -74,13 +74,6 @@ enum QueueTableColumns
 namespace Ekos
 {
 
-// Setup the main loop and start.
-void Scheduler::start()
-{
-    process()->startScheduler();
-}
-
-
 Scheduler::Scheduler()
 {
     // Use the default path and interface when running the scheduler.
@@ -118,11 +111,6 @@ void Scheduler::setupScheduler(const QString &ekosPathStr, const QString &ekosIn
     startupTimeEdit->setDateTime(currentDateTime);
     schedulerUntilValue->setDateTime(currentDateTime);
 
-    // Set up DBus interfaces
-    new SchedulerAdaptor(this);
-    QDBusConnection::sessionBus().unregisterObject(schedulerPathString);
-    if (!QDBusConnection::sessionBus().registerObject(schedulerPathString, this))
-        qCDebug(KSTARS_EKOS_SCHEDULER) << QString("Scheduler failed to register with dbus");
 
     sleepLabel->setPixmap(
         QIcon::fromTheme("chronometer").pixmap(QSize(32, 32)));
@@ -293,12 +281,7 @@ void Scheduler::setupScheduler(const QString &ekosPathStr, const QString &ekosIn
 
     connect(schedulerTwilight, &QCheckBox::toggled, this, &Scheduler::checkTwilightWarning);
 
-    // Connect simulation clock scale
-    connect(KStarsData::Instance()->clock(), &SimClock::scaleChanged, this, &Scheduler::simClockScaleChanged);
-    connect(KStarsData::Instance()->clock(), &SimClock::timeChanged, this, &Scheduler::simClockTimeChanged);
-
     // Connect to the state machine
-    connect(moduleState().data(), &SchedulerModuleState::newLog, this, &Scheduler::appendLogText);
     connect(moduleState().data(), &SchedulerModuleState::ekosStateChanged, this, &Scheduler::ekosStateChanged);
     connect(moduleState().data(), &SchedulerModuleState::indiStateChanged, this, &Scheduler::indiStateChanged);
     connect(moduleState().data(), &SchedulerModuleState::schedulerStateChanged, this, &Scheduler::handleSchedulerStateChanged);
@@ -314,15 +297,16 @@ void Scheduler::setupScheduler(const QString &ekosPathStr, const QString &ekosIn
         schedulerProfileCombo->setCurrentText(moduleState()->currentProfile());
     });
     // Connect to process engine
-    connect(process().data(), &SchedulerProcess::newLog, this, &Scheduler::appendLogText);
     connect(process().data(), &SchedulerProcess::schedulerStopped, this, &Scheduler::schedulerStopped);
     connect(process().data(), &SchedulerProcess::schedulerPaused, this, &Scheduler::handleSetPaused);
     connect(process().data(), &SchedulerProcess::shutdownStarted, this, &Scheduler::handleShutdownStarted);
     connect(process().data(), &SchedulerProcess::schedulerSleeping, this, &Scheduler::handleSchedulerSleeping);
     connect(process().data(), &SchedulerProcess::jobsUpdated, this, &Scheduler::handleJobsUpdated);
-    connect(process().data(), &SchedulerProcess::checkAlignment, this, &Scheduler::checkAlignment);
+    connect(process().data(), &SchedulerProcess::targetDistance, this, &Scheduler::targetDistance);
     connect(process().data(), &SchedulerProcess::updateJobTable, this, &Scheduler::updateJobTable);
+    connect(process().data(), &SchedulerProcess::clearJobTable, this, &Scheduler::clearJobTable);
     connect(process().data(), &SchedulerProcess::addJob, this, &Scheduler::addJob);
+    connect(process().data(), &SchedulerProcess::changeCurrentSequence, this, &Scheduler::setSequence);
     connect(process().data(), &SchedulerProcess::jobStarted, this, &Scheduler::jobStarted);
     connect(process().data(), &SchedulerProcess::jobEnded, this, &Scheduler::jobEnded);
     connect(process().data(), &SchedulerProcess::syncGreedyParams, this, &Scheduler::syncGreedyParams);
@@ -330,6 +314,7 @@ void Scheduler::setupScheduler(const QString &ekosPathStr, const QString &ekosIn
     connect(process().data(), &SchedulerProcess::changeSleepLabel, this, &Scheduler::changeSleepLabel);
     connect(process().data(), &SchedulerProcess::updateSchedulerURL, this, &Scheduler::updateSchedulerURL);
     connect(process().data(), &SchedulerProcess::interfaceReady, this, &Scheduler::interfaceReady);
+    connect(process().data(), &SchedulerProcess::newWeatherStatus, this, &Scheduler::setWeatherStatus);
     // Connect geographical location - when it is available
     //connect(KStarsData::Instance()..., &LocationDialog::locationChanged..., this, &Scheduler::simClockTimeChanged);
 
@@ -353,7 +338,8 @@ void Scheduler::setupScheduler(const QString &ekosPathStr, const QString &ekosIn
     // Retiring the Classic algorithm.
     if (Options::schedulerAlgorithm() != ALGORITHM_GREEDY)
     {
-        appendLogText(i18n("Warning: The Classic scheduler algorithm has been retired. Switching you to the Greedy algorithm."));
+        process()->appendLogText(
+            i18n("Warning: The Classic scheduler algorithm has been retired. Switching you to the Greedy algorithm."));
         Options::setSchedulerAlgorithm(ALGORITHM_GREEDY);
     }
 
@@ -534,27 +520,6 @@ void Scheduler::watchJobChanges(bool enable)
     jobChangesAreWatched = enable;
 }
 
-void Scheduler::appendLogText(const QString &text)
-{
-    /* FIXME: user settings for log length */
-    int const max_log_count = 2000;
-    if (m_LogText.size() > max_log_count)
-        m_LogText.removeLast();
-
-    m_LogText.prepend(i18nc("log entry; %1 is the date, %2 is the text", "%1 %2",
-                            SchedulerModuleState::getLocalTime().toString("yyyy-MM-ddThh:mm:ss"), text));
-
-    qCInfo(KSTARS_EKOS_SCHEDULER) << text;
-
-    emit newLog(text);
-}
-
-void Scheduler::clearLog()
-{
-    m_LogText.clear();
-    emit newLog(QString());
-}
-
 void Scheduler::handleConfigChanged()
 {
     repeatSequenceCB->setEnabled(Options::rememberJobProgress() == false);
@@ -644,7 +609,7 @@ void Scheduler::processFITSSelection(const QUrl &url)
         {
             fits_report_error(stderr, status);
             fits_get_errstatus(status, error_status);
-            appendLogText(i18n("FITS header: cannot find OBJCTRA (%1).", QString(error_status)));
+            process()->appendLogText(i18n("FITS header: cannot find OBJCTRA (%1).", QString(error_status)));
             return;
         }
 
@@ -663,7 +628,7 @@ void Scheduler::processFITSSelection(const QUrl &url)
         {
             fits_report_error(stderr, status);
             fits_get_errstatus(status, error_status);
-            appendLogText(i18n("FITS header: cannot find OBJCTDEC (%1).", QString(error_status)));
+            process()->appendLogText(i18n("FITS header: cannot find OBJCTDEC (%1).", QString(error_status)));
             return;
         }
 
@@ -779,20 +744,20 @@ bool Scheduler::fillJobFromUI(SchedulerJob *job)
 {
     if (nameEdit->text().isEmpty())
     {
-        appendLogText(i18n("Warning: Target name is required."));
+        process()->appendLogText(i18n("Warning: Target name is required."));
         return false;
     }
 
     if (sequenceEdit->text().isEmpty())
     {
-        appendLogText(i18n("Warning: Sequence file is required."));
+        process()->appendLogText(i18n("Warning: Sequence file is required."));
         return false;
     }
 
     // Coordinates are required unless it is a FITS file
     if ((raBox->isEmpty() || decBox->isEmpty()) && fitsURL.isEmpty())
     {
-        appendLogText(i18n("Warning: Target coordinates are required."));
+        process()->appendLogText(i18n("Warning: Target coordinates are required."));
         return false;
     }
 
@@ -802,13 +767,13 @@ bool Scheduler::fillJobFromUI(SchedulerJob *job)
 
     if (raOk == false)
     {
-        appendLogText(i18n("Warning: RA value %1 is invalid.", raBox->text()));
+        process()->appendLogText(i18n("Warning: RA value %1 is invalid.", raBox->text()));
         return false;
     }
 
     if (decOk == false)
     {
-        appendLogText(i18n("Warning: DEC value %1 is invalid.", decBox->text()));
+        process()->appendLogText(i18n("Warning: DEC value %1 is invalid.", decBox->text()));
         return false;
     }
 
@@ -923,23 +888,23 @@ void Scheduler::saveJob(SchedulerJob *job)
             int const a_job_row = moduleState()->jobs().indexOf(a_job);
 
             /* FIXME: Warning about duplicate jobs only checks the target name, doing it properly would require checking storage for each sequence job of each scheduler job. */
-            appendLogText(i18n("Warning: job '%1' at row %2 has a duplicate target at row %3, "
-                               "the scheduler may consider the same storage for captures.",
-                               job->getName(), currentRow, a_job_row));
+            process()->appendLogText(i18n("Warning: job '%1' at row %2 has a duplicate target at row %3, "
+                                          "the scheduler may consider the same storage for captures.",
+                                          job->getName(), currentRow, a_job_row));
 
             /* Warn the user in case the two jobs are really identical */
             if (a_job->getSequenceFile() == job->getSequenceFile())
             {
                 if (a_job->getRepeatsRequired() == job->getRepeatsRequired() && Options::rememberJobProgress())
-                    appendLogText(i18n("Warning: jobs '%1' at row %2 and %3 probably require a different repeat count "
-                                       "as currently they will complete simultaneously after %4 batches (or disable option 'Remember job progress')",
-                                       job->getName(), currentRow, a_job_row, job->getRepeatsRequired()));
+                    process()->appendLogText(i18n("Warning: jobs '%1' at row %2 and %3 probably require a different repeat count "
+                                                  "as currently they will complete simultaneously after %4 batches (or disable option 'Remember job progress')",
+                                                  job->getName(), currentRow, a_job_row, job->getRepeatsRequired()));
             }
 
             // Don't need to warn over and over.
             if (++numWarnings >= 1)
             {
-                appendLogText(i18n("Skipped checking for duplicates."));
+                process()->appendLogText(i18n("Skipped checking for duplicates."));
                 break;
             }
         }
@@ -1171,7 +1136,7 @@ void Scheduler::queueTableSelectionChanged(const QItemSelection &selected, const
         else if (jobUnderEdit != current.row())
         {
             // avoid changing the UI values for the currently edited job
-            appendLogText(i18n("Stop editing of job #%1, resetting to original value.", jobUnderEdit + 1));
+            process()->appendLogText(i18n("Stop editing of job #%1, resetting to original value.", jobUnderEdit + 1));
             resetJobEdit();
             syncGUIToJob(job);
         }
@@ -1622,22 +1587,16 @@ void Scheduler::toggleScheduler()
     if (moduleState()->schedulerState() == SCHEDULER_RUNNING)
     {
         moduleState()->disablePreemptiveShutdown();
-        stop();
+        process()->stop();
     }
     else
-        start();
-}
-
-void Scheduler::stop()
-{
-    process()->stopScheduler();
+        process()->start();
 }
 
 void Scheduler::pause()
 {
     moduleState()->setSchedulerState(SCHEDULER_PAUSED);
-    emit newStatus(moduleState()->schedulerState());
-    appendLogText(i18n("Scheduler pause planned..."));
+    process()->appendLogText(i18n("Scheduler pause planned..."));
     pauseB->setEnabled(false);
 
     startB->setIcon(QIcon::fromTheme("media-playback-start"));
@@ -1739,7 +1698,7 @@ void Scheduler::load(bool clearQueue, const QString &filename)
     dirPath = QUrl(fileURL.url(QUrl::RemoveFilename));
 
     if (clearQueue)
-        removeAllJobs();
+        process()->removeAllJobs();
     // remember toe number of rows to select the first one appended
     const int row = moduleState()->jobs().count();
 
@@ -1761,23 +1720,13 @@ void Scheduler::load(bool clearQueue, const QString &filename)
     }
 }
 
-void Scheduler::removeAllJobs()
+void Scheduler::clearJobTable()
 {
     if (jobUnderEdit >= 0)
         resetJobEdit();
 
     while (queueTable->rowCount() > 0)
         queueTable->removeRow(0);
-
-    qDeleteAll(moduleState()->jobs());
-    moduleState()->mutlableJobs().clear();
-    moduleState()->setCurrentPosition(-1);
-}
-
-bool Scheduler::loadScheduler(const QString &fileURL)
-{
-    removeAllJobs();
-    return process()->appendEkosScheduleList(fileURL);
 }
 
 void Scheduler::saveAs()
@@ -1817,7 +1766,7 @@ void Scheduler::save()
 
     if (schedulerURL.isValid())
     {
-        if ((saveScheduler(schedulerURL)) == false)
+        if ((process()->saveScheduler(schedulerURL)) == false)
         {
             KSNotification::error(i18n("Failed to save scheduler list"), i18n("Save"));
             return;
@@ -1941,7 +1890,8 @@ void Scheduler::setAlgorithm(int algIndex)
 {
     if (algIndex != ALGORITHM_GREEDY)
     {
-        appendLogText(i18n("Warning: The Classic scheduler algorithm has been retired. Switching you to the Greedy algorithm."));
+        process()->appendLogText(
+            i18n("Warning: The Classic scheduler algorithm has been retired. Switching you to the Greedy algorithm."));
         algIndex = ALGORITHM_GREEDY;
     }
     Options::setSchedulerAlgorithm(algIndex);
@@ -1951,19 +1901,6 @@ void Scheduler::setAlgorithm(int algIndex)
     queueTable->model()->setHeaderData(START_TIME_COLUMN, Qt::Horizontal, tr("Next Start"));
     queueTable->model()->setHeaderData(END_TIME_COLUMN, Qt::Horizontal, tr("Next End"));
     queueTable->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-}
-
-void Scheduler::resetAllJobs()
-{
-    if (moduleState()->schedulerState() == SCHEDULER_RUNNING)
-        return;
-
-    // Reset capture count of all jobs before re-evaluating
-    foreach (SchedulerJob *job, moduleState()->jobs())
-        job->setCompletedCount(0);
-
-    // Evaluate all jobs, this refreshes storage and resets job states
-    process()->startJobEvaluation();
 }
 
 void Scheduler::checkTwilightWarning(bool enabled)
@@ -1981,7 +1918,6 @@ void Scheduler::checkTwilightWarning(bool enabled)
         schedulerTwilight->setChecked(true);
     }
 }
-
 
 void Scheduler::updateProfiles()
 {
@@ -2024,33 +1960,6 @@ void Scheduler::updateJobStageUI(SchedulerJobStage stage)
         jobStatus->setText(QString("%1: %2").arg(activeJob()->getName(),
                            stageStrings.value(stage, stageStringUnknown)));
 
-}
-
-
-void Scheduler::simClockScaleChanged(float newScale)
-{
-    if (moduleState()->currentlySleeping())
-    {
-        QTime const remainingTimeMs = QTime::fromMSecsSinceStartOfDay(std::lround(static_cast<double>
-                                      (moduleState()->iterationTimer().remainingTime())
-                                      * KStarsData::Instance()->clock()->scale()
-                                      / newScale));
-        appendLogText(i18n("Sleeping for %1 on simulation clock update until next observation job is ready...",
-                           remainingTimeMs.toString("hh:mm:ss")));
-        moduleState()->iterationTimer().stop();
-        moduleState()->iterationTimer().start(remainingTimeMs.msecsSinceStartOfDay());
-    }
-}
-
-void Scheduler::simClockTimeChanged()
-{
-    moduleState()->calculateDawnDusk();
-
-    // If the Scheduler is not running, reset all jobs and re-evaluate from a new current start point
-    if (SCHEDULER_RUNNING != moduleState()->schedulerState())
-    {
-        process()->startJobEvaluation();
-    }
 }
 
 void Scheduler::interfaceReady(QDBusInterface *iface)
@@ -2108,7 +2017,6 @@ void Scheduler::interfaceReady(QDBusInterface *iface)
     }
 }
 
-
 void Scheduler::setWeatherStatus(ISD::Weather::Status status)
 {
     TEST_PRINT(stderr, "sch%d @@@setWeatherStatus(%d)\n", __LINE__, static_cast<int>(status));
@@ -2165,7 +2073,7 @@ void Scheduler::setWeatherStatus(ISD::Weather::Status status)
         weatherLabel->show();
         weatherLabel->setToolTip(statusString);
 
-        appendLogText(statusString);
+        process()->appendLogText(statusString);
 
         emit weatherChanged(moduleState()->weatherStatus());
     }
@@ -2217,148 +2125,12 @@ void Scheduler::handleSetPaused()
     pauseB->setChecked(true);
 }
 
-void Scheduler::checkAlignment(const QVariantMap &metadata)
-{
-    if (activeJob() &&
-            activeJob()->getStepPipeline() & SchedulerJob::USE_ALIGN &&
-            metadata["type"].toInt() == FRAME_LIGHT &&
-            Options::alignCheckFrequency() > 0 &&
-            ++m_SolverIteration >= Options::alignCheckFrequency())
-    {
-        m_SolverIteration = 0;
-
-        auto filename = metadata["filename"].toString();
-        auto exposure = metadata["exposure"].toDouble();
-
-        constexpr double minSolverSeconds = 5.0;
-        double solverTimeout = std::max(exposure - 2, minSolverSeconds);
-        if (solverTimeout >= minSolverSeconds)
-        {
-            auto profiles = getDefaultAlignOptionsProfiles();
-            auto parameters = profiles.at(Options::solveOptionsProfile());
-            // Double search radius
-            parameters.search_radius = parameters.search_radius * 2;
-            m_Solver.reset(new SolverUtils(parameters, solverTimeout),  &QObject::deleteLater);
-            connect(m_Solver.get(), &SolverUtils::done, this, &Ekos::Scheduler::solverDone, Qt::UniqueConnection);
-            //connect(m_Solver.get(), &SolverUtils::newLog, this, &Ekos::Scheduler::appendLogText, Qt::UniqueConnection);
-
-            auto width = metadata["width"].toUInt();
-            auto height = metadata["height"].toUInt();
-
-            auto lowScale = Options::astrometryImageScaleLow();
-            auto highScale = Options::astrometryImageScaleHigh();
-
-            // solver utils uses arcsecs per pixel only
-            if (Options::astrometryImageScaleUnits() == SSolver::DEG_WIDTH)
-            {
-                lowScale = (lowScale * 3600) / std::max(width, height);
-                highScale = (highScale * 3600) / std::min(width, height);
-            }
-            else if (Options::astrometryImageScaleUnits() == SSolver::ARCMIN_WIDTH)
-            {
-                lowScale = (lowScale * 60) / std::max(width, height);
-                highScale = (highScale * 60) / std::min(width, height);
-            }
-
-            m_Solver->useScale(Options::astrometryUseImageScale(), lowScale, highScale);
-            m_Solver->usePosition(Options::astrometryUsePosition(), activeJob()->getTargetCoords().ra().Degrees(),
-                                  activeJob()->getTargetCoords().dec().Degrees());
-            m_Solver->setHealpix(moduleState()->indexToUse(), moduleState()->healpixToUse());
-            m_Solver->runSolver(filename);
-        }
-    }
-}
-
 void Scheduler::handleJobsUpdated(QJsonArray jobsList)
 {
     syncGreedyParams();
     updateJobTable();
 
     emit jobsUpdated(jobsList);
-}
-
-void Scheduler::solverDone(bool timedOut, bool success, const FITSImage::Solution &solution, double elapsedSeconds)
-{
-    disconnect(m_Solver.get(), &SolverUtils::done, this, &Ekos::Scheduler::solverDone);
-
-    if (!activeJob())
-        return;
-
-    QString healpixString = "";
-    if (moduleState()->indexToUse() != -1 || moduleState()->healpixToUse() != -1)
-        healpixString = QString("Healpix %1 Index %2").arg(moduleState()->healpixToUse()).arg(moduleState()->indexToUse());
-
-    if (timedOut || !success)
-    {
-        // Don't use the previous index and healpix next time we solve.
-        moduleState()->setIndexToUse(-1);
-        moduleState()->setHealpixToUse(-1);
-    }
-    else
-    {
-        int index, healpix;
-        // Get the index and healpix from the successful solve.
-        m_Solver->getSolutionHealpix(&index, &healpix);
-        moduleState()->setIndexToUse(index);
-        moduleState()->setHealpixToUse(healpix);
-    }
-
-    if (timedOut)
-        appendLogText(i18n("Solver timed out: %1s %2", QString("%L1").arg(elapsedSeconds, 0, 'f', 1), healpixString));
-    else if (!success)
-        appendLogText(i18n("Solver failed: %1s %2", QString("%L1").arg(elapsedSeconds, 0, 'f', 1), healpixString));
-    else
-    {
-        const double ra = solution.ra;
-        const double dec = solution.dec;
-
-        const auto target = activeJob()->getTargetCoords();
-
-        SkyPoint alignCoord;
-        alignCoord.setRA0(ra / 15.0);
-        alignCoord.setDec0(dec);
-        alignCoord.apparentCoord(static_cast<long double>(J2000), KStars::Instance()->data()->ut().djd());
-        alignCoord.EquatorialToHorizontal(KStarsData::Instance()->lst(), KStarsData::Instance()->geo()->lat());
-        const double diffRa = (alignCoord.ra().deltaAngle(target.ra())).Degrees() * 3600;
-        const double diffDec = (alignCoord.dec().deltaAngle(target.dec())).Degrees() * 3600;
-
-        // This is an approximation, probably ok for small angles.
-        const double diffTotal = hypot(diffRa, diffDec);
-
-        // Note--the RA output is in DMS. This is because we're looking at differences in arcseconds
-        // and HMS coordinates are misleading (one HMS second is really 6 arc-seconds).
-        qCDebug(KSTARS_EKOS_SCHEDULER) <<
-                                       QString("Target Distance: %1\" Target (RA: %2 DE: %3) Current (RA: %4 DE: %5) %6 solved in %7s")
-                                       .arg(QString("%L1").arg(diffTotal, 0, 'f', 0),
-                                            target.ra().toDMSString(),
-                                            target.dec().toDMSString(),
-                                            alignCoord.ra().toDMSString(),
-                                            alignCoord.dec().toDMSString(),
-                                            healpixString,
-                                            QString("%L1").arg(elapsedSeconds, 0, 'f', 2));
-        emit targetDistance(diffTotal);
-
-        // If we exceed align check threshold, we abort and re-align.
-        if (diffTotal / 60 > Options::alignCheckThreshold())
-        {
-            appendLogText(i18n("Captured frame is %1 arcminutes away from target, re-aligning...", QString::number(diffTotal / 60.0,
-                               'f', 1)));
-            process()->stopCurrentJobAction();
-            process()->startAstrometry();
-        }
-    }
-}
-
-
-
-bool Scheduler::createJobSequence(XMLEle * root, const QString &prefix, const QString &outputDir)
-{
-    return process()->createJobSequence(root, prefix, outputDir);
-}
-
-XMLEle *Scheduler::getSequenceJobRoot(const QString &filename)
-{
-    return process()->getSequenceJobRoot(filename);
 }
 
 bool Scheduler::importMosaic(const QJsonObject &payload)
@@ -2378,11 +2150,11 @@ void Scheduler::startupStateChanged(StartupState state)
             break;
         case STARTUP_COMPLETE:
             startupB->setIcon(QIcon::fromTheme("media-playback-start"));
-            appendLogText(i18n("Manual startup procedure completed successfully."));
+            process()->appendLogText(i18n("Manual startup procedure completed successfully."));
             break;
         case STARTUP_ERROR:
             startupB->setIcon(QIcon::fromTheme("media-playback-start"));
-            appendLogText(i18n("Manual startup procedure terminated due to errors."));
+            process()->appendLogText(i18n("Manual startup procedure terminated due to errors."));
             break;
         default:
             // in all other cases startup is running
@@ -2415,16 +2187,6 @@ void Scheduler::parkWaitStateChanged(ParkWaitState state)
 SchedulerJob *Scheduler::activeJob()
 {
     return moduleState()->activeJob();
-}
-
-Ekos::SchedulerState Scheduler::status()
-{
-    return moduleState()->schedulerState();
-}
-
-bool Scheduler::saveScheduler(const QUrl &fileURL)
-{
-    return process()->saveScheduler(fileURL);
 }
 
 void Scheduler::loadGlobalSettings()
