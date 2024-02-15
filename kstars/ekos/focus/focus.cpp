@@ -1152,6 +1152,7 @@ void Focus::start()
                                << " Max Step Size:" << m_OpsFocusMechanics->focusMaxSingleStep->value()
                                << " Driver Backlash:" << m_OpsFocusMechanics->focusBacklash->value()
                                << " AF Overscan:" << m_OpsFocusMechanics->focusAFOverscan->value()
+                               << " Overscan Delay:" << m_OpsFocusMechanics->focusOverscanDelay->value()
                                << " Focuser Settle:" << m_OpsFocusMechanics->focusSettleTime->value()
                                << " Walk:" << m_OpsFocusMechanics->focusWalk->currentText()
                                << " Capture Timeout:" << m_OpsFocusMechanics->focusCaptureTimeout->value()
@@ -3638,13 +3639,19 @@ void Focus::autoFocusProcessPositionChange(IPState state)
         {
             int temp = focuserAdditionalMovement;
             focuserAdditionalMovement = 0;
-            qCDebug(KSTARS_EKOS_FOCUS) << QString("Undoing overscan extension. Moving back in by %1").arg(temp);
 
-            if (!changeFocus(-temp, focuserAdditionalMovementUpdateDir))
+            // JEE Senso Sesto
+            qCDebug(KSTARS_EKOS_FOCUS) << QString("Undoing overscan extension. Moving back in by %1 ticks in %2s")
+                                       .arg(temp).arg(m_OpsFocusMechanics->focusOverscanDelay->value());
+
+            QTimer::singleShot(m_OpsFocusMechanics->focusOverscanDelay->value() * 1000, this, [this, temp]()
             {
-                appendLogText(i18n("Focuser error, check INDI panel."));
-                completeFocusProcedure(Ekos::FOCUS_ABORTED);
-            }
+                if (!changeFocus(-temp, focuserAdditionalMovementUpdateDir))
+                {
+                    appendLogText(i18n("Focuser error, check INDI panel."));
+                    completeFocusProcedure(Ekos::FOCUS_ABORTED);
+                }
+            });
         }
         else if (inAutoFocus)
         {
@@ -3759,6 +3766,12 @@ void Focus::updateProperty(INDI::Property prop)
                 absTicksLabel->setText(QString::number(currentPosition));
                 emit absolutePositionChanged(currentPosition);
             }
+        }
+        else
+        {
+            // JEE Senso Sesto
+            qCDebug(KSTARS_EKOS_FOCUS) << "Can't access FOCUS_ABSOLUTE_POSITION. Current state:"
+                                       << pstateStr(currentPositionState) << " New state:" << pstateStr(newState);
         }
 
         if (newState != IPS_OK)
